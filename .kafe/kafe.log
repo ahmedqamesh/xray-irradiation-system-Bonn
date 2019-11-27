@@ -203,3 +203,119 @@ root 2019-11-25 17:07:16,676 :: INFO :: Start Plotting 8cm cm
 root 2019-11-25 17:07:17,266 :: INFO :: Start Plotting 51cm cm
 root 2019-11-25 17:07:17,274 :: INFO :: Start Plotting 51cm cm
 Plotting 2019-11-25 17:07:17,853 :: INFO :: Dose drop after filters
+Analysis 2019-11-26 10:56:29,980 :: INFO :: Analysis initialized
+Plotting 2019-11-26 10:56:30,011 :: INFO :: Plotting initialized
+Analysis 2019-11-26 11:01:56,612 :: INFO :: Analysis initialized
+Plotting 2019-11-26 11:01:56,614 :: INFO :: Plotting initialized
+Plotting 2019-11-26 11:01:56,614 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 11:02:02,017 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-26 11:02:02,843 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-26 11:02:02,946 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 11:02:05,282 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 11:02:07,452 :: INFO :: get the calibration curves for each current
+root 2019-11-26 11:02:07,480 :: INFO :: Start Plotting 3cm cm
+root 2019-11-26 11:02:07,491 :: INFO :: Start Plotting 3cm cm
+root 2019-11-26 11:02:08,234 :: INFO :: Start Plotting 5cm cm
+root 2019-11-26 11:02:08,254 :: INFO :: Start Plotting 5cm cm
+root 2019-11-26 11:02:08,999 :: INFO :: Start Plotting 8cm cm
+root 2019-11-26 11:02:09,014 :: INFO :: Start Plotting 8cm cm
+root 2019-11-26 11:02:09,702 :: INFO :: Start Plotting 51cm cm
+root 2019-11-26 11:02:09,714 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-26 11:02:10,375 :: INFO :: Dose drop after filters
+Analysis 2019-11-26 11:02:43,691 :: INFO :: Analysis initialized
+Plotting 2019-11-26 11:02:43,692 :: INFO :: Plotting initialized
+Plotting 2019-11-26 11:02:44,268 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-26 11:02:45,293 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-26 11:02:45,389 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 11:02:47,647 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 11:02:49,822 :: INFO :: get the calibration curves for each current
+root 2019-11-26 11:02:49,841 :: INFO :: Start Plotting 3cm cm
+root 2019-11-26 11:02:49,848 :: INFO :: Start Plotting 3cm cm
+root 2019-11-26 11:02:50,547 :: INFO :: Start Plotting 5cm cm
+root 2019-11-26 11:02:50,555 :: INFO :: Start Plotting 5cm cm
+root 2019-11-26 11:02:51,297 :: INFO :: Start Plotting 8cm cm
+root 2019-11-26 11:02:51,307 :: INFO :: Start Plotting 8cm cm
+root 2019-11-26 11:02:51,983 :: INFO :: Start Plotting 51cm cm
+root 2019-11-26 11:02:51,991 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-26 11:02:52,654 :: INFO :: Dose drop after filters
+Analysis 2019-11-26 11:06:03,510 :: INFO :: Analysis initialized
+Plotting 2019-11-26 11:06:03,512 :: INFO :: Plotting initialized
+Plotting 2019-11-26 11:06:03,512 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 11:06:20,287 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-26 11:06:21,598 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-26 11:06:21,695 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 11:06:24,085 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 11:06:26,352 :: INFO :: get the calibration curves for each current
+root 2019-11-26 11:06:26,373 :: INFO :: Start Plotting 3cm cm
+root 2019-11-26 11:06:26,381 :: INFO :: Start Plotting 3cm cm
+root 2019-11-26 11:06:27,115 :: INFO :: Start Plotting 5cm cm
+root 2019-11-26 11:06:27,124 :: INFO :: Start Plotting 5cm cm
+root 2019-11-26 11:06:27,830 :: INFO :: Start Plotting 8cm cm
+root 2019-11-26 11:06:27,838 :: INFO :: Start Plotting 8cm cm
+root 2019-11-26 11:06:28,531 :: INFO :: Start Plotting 51cm cm
+root 2019-11-26 11:06:28,540 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-26 11:06:29,211 :: INFO :: Dose drop after filters
+Analysis 2019-11-26 11:07:16,944 :: INFO :: Analysis initialized
+Analysis 2019-11-26 12:12:12,977 :: INFO :: Analysis initialized
+Plotting 2019-11-26 12:12:12,979 :: INFO :: Plotting initialized
+Plotting 2019-11-26 12:12:12,979 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 12:12:30,298 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-26 12:12:31,392 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-26 12:12:31,484 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 12:12:33,697 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 12:12:35,869 :: INFO :: get the calibration curves for each current
+root 2019-11-26 12:12:35,887 :: INFO :: Start Plotting 3cm cm
+root 2019-11-26 12:12:35,896 :: INFO :: Start Plotting 3cm cm
+root 2019-11-26 12:12:36,616 :: INFO :: Start Plotting 5cm cm
+root 2019-11-26 12:12:36,624 :: INFO :: Start Plotting 5cm cm
+root 2019-11-26 12:12:37,319 :: INFO :: Start Plotting 8cm cm
+root 2019-11-26 12:12:37,327 :: INFO :: Start Plotting 8cm cm
+root 2019-11-26 12:12:38,008 :: INFO :: Start Plotting 51cm cm
+root 2019-11-26 12:12:38,017 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-26 12:12:38,714 :: INFO :: Dose drop after filters
+Analysis 2019-11-26 12:13:53,454 :: INFO :: Analysis initialized
+Plotting 2019-11-26 12:13:53,455 :: INFO :: Plotting initialized
+Plotting 2019-11-26 12:13:53,455 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 12:14:10,924 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-26 12:14:12,074 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-26 12:14:12,173 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 12:14:14,730 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 12:14:17,348 :: INFO :: get the calibration curves for each current
+root 2019-11-26 12:14:17,370 :: INFO :: Start Plotting 3cm cm
+root 2019-11-26 12:14:17,378 :: INFO :: Start Plotting 3cm cm
+root 2019-11-26 12:14:18,135 :: INFO :: Start Plotting 5cm cm
+root 2019-11-26 12:14:18,144 :: INFO :: Start Plotting 5cm cm
+root 2019-11-26 12:14:18,824 :: INFO :: Start Plotting 8cm cm
+root 2019-11-26 12:14:18,832 :: INFO :: Start Plotting 8cm cm
+root 2019-11-26 12:14:19,491 :: INFO :: Start Plotting 51cm cm
+root 2019-11-26 12:14:19,499 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-26 12:14:20,134 :: INFO :: Dose drop after filters
+Analysis 2019-11-26 19:43:00,504 :: INFO :: Analysis initialized
+Plotting 2019-11-26 19:43:00,519 :: INFO :: Plotting initialized
+Analysis 2019-11-26 19:44:04,084 :: INFO :: Analysis initialized
+Plotting 2019-11-26 19:44:04,085 :: INFO :: Plotting initialized
+Plotting 2019-11-26 19:44:04,086 :: INFO :: plot the beamspot
+Analysis 2019-11-26 19:44:28,947 :: INFO :: Analysis initialized
+Plotting 2019-11-26 19:44:28,949 :: INFO :: Plotting initialized
+Plotting 2019-11-26 19:44:28,949 :: INFO :: plot the beamspot
+Plotting 2019-11-26 19:44:29,603 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 19:44:45,937 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-26 19:44:47,318 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-26 19:44:47,428 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 19:44:49,602 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-26 19:44:51,696 :: INFO :: get the calibration curves for each current
+root 2019-11-26 19:44:51,716 :: INFO :: Start Plotting 3cm cm
+root 2019-11-26 19:44:51,728 :: INFO :: Start Plotting 3cm cm
+root 2019-11-26 19:44:52,404 :: INFO :: Start Plotting 5cm cm
+root 2019-11-26 19:44:52,416 :: INFO :: Start Plotting 5cm cm
+root 2019-11-26 19:44:53,035 :: INFO :: Start Plotting 8cm cm
+root 2019-11-26 19:44:53,047 :: INFO :: Start Plotting 8cm cm
+root 2019-11-26 19:44:53,659 :: INFO :: Start Plotting 51cm cm
+root 2019-11-26 19:44:53,672 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-26 19:44:54,267 :: INFO :: Dose drop after filters
+Analysis 2019-11-26 19:46:09,222 :: INFO :: Analysis initialized
+Analysis 2019-11-26 19:46:52,316 :: INFO :: Analysis initialized
+Analysis 2019-11-26 19:47:14,109 :: INFO :: Analysis initialized
+Analysis 2019-11-26 19:48:17,067 :: INFO :: Analysis initialized
+Analysis 2019-11-26 19:49:57,620 :: INFO :: Analysis initialized
+Analysis 2019-11-26 19:50:59,170 :: INFO :: Analysis initialized
