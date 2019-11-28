@@ -359,41 +359,41 @@ if __name__ == '__main__':
     PdfPages = PdfPages('output_data/SimulationCurve_Bonn' + '.pdf')
     
     # X ray machine Simulation
-    #     Geant4_empenelope_Diffenergys = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=energy, hist_id=["h3", "h3", "h3", "h3", "h3", "h3"], labels=energy,
-    #                                                       logy=True, colors=colors, location="Geant4_empenelope_DiffEnergys", title=False)
-    #     Geant4_DiffModels = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=models, hist_id=["h3", "h3", "h3"], labels=models, colors=colors,
-    #                                           logy=True, outputname="DiffModels", location="Geant4_DiffModels", title=False)
-    #     Geant4_Filters = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=filters, hist_id=["28", "32", "32", "32", "32", "32", "32", "32", "32", "32"], labels=filters,
-    #                                        logy=True, Ratio=False, location="Geant4_Filters", colors=colors,
-    #                                        outputname="Diff_filters", title="Tungsten x-ray spectrum After Different Filters")
-    #     Geant4_Filters = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=filters_machine, hist_id=["28", "32", "32", "32", "32", "32", "32", "32"], labels=filters_machine,
-    #                                        logy=True, Ratio=False, location="machine_filters", colors=colors, outputname="machine_filters", title=False)
-        
-    # RD53 Simulation    
-        # Attenuation = get_attenuation(Directory=Directory, PdfPages=PdfPages, location="RD53", title="Attenuation of photons through metal layer stack", colors=colors)
-       # 
-        # Energy_deposition = Energy_deposition(Directory=Directory, PdfPages=PdfPages, test=["RD53", "RD53", "RD53", "RD53"], logy=True, hist_id=["9", "7", "8", "2"], xmin=0.0, xmax=60, location="RD53", colors=colors,
-        #                                           title=False,  # "Energy deposition of 50 keV endpoint X-rays through metal layer stack",
-        #                                           labels=["Total Edep in Sio2 Layers", "Total Edep in Al Layers", "Total Edep in Cu Layers", "TotalEnergy Deposited"],
-        #                                           outputname="Energy_deposition_depth", xtitle="distance[mm]")
-    #     Geant4_RD53 = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=spectrum, hist_id=["28", "32", "23", "32"], labels=["Tungsten-Spectrum", "Be-0.3mm-Spectrum", "Al-0.15mm-Spectrum","RD53 Last Layer"],
-    #                                     logy=True, Ratio=True, colors=colors, location="RD53", outputname="spectrum",
-    #                                      title="Tungsten x-ray spectrum in the back of the last metal layer stack of RD53")
-        
+    Geant4_empenelope_Diffenergys = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=energy, hist_id=["h3", "h3", "h3", "h3", "h3", "h3"], labels=energy,
+                                                      logy=True, colors=colors, location="Geant4_empenelope_DiffEnergys", title=False)
+    Geant4_DiffModels = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=models, hist_id=["h3", "h3", "h3"], labels=models, colors=colors,
+                                          logy=True, outputname="DiffModels", location="Geant4_DiffModels", title=False)
+    Geant4_Filters = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=filters, hist_id=["28", "32", "32", "32", "32", "32", "32", "32", "32", "32"], labels=filters,
+                                       logy=True, Ratio=False, location="Geant4_Filters", colors=colors,
+                                       outputname="Diff_filters", title="Tungsten x-ray spectrum After Different Filters")
+    Geant4_Filters = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=filters_machine, hist_id=["28", "32", "32", "32", "32", "32", "32", "32"], labels=filters_machine,
+                                       logy=True, Ratio=False, location="machine_filters", colors=colors, outputname="machine_filters", title=False)
+    
+# RD53 Simulation    
+    Attenuation = get_attenuation(Directory=Directory, PdfPages=PdfPages, location="RD53", title="Attenuation of photons through metal layer stack", colors=colors)
+    
+    Energy_deposition = Energy_deposition(Directory=Directory, PdfPages=PdfPages, test=["RD53", "RD53", "RD53", "RD53"], logy=True, hist_id=["9", "7", "8", "2"], xmin=0.0, xmax=60, location="RD53", colors=colors,
+                                              title=False,  # "Energy deposition of 50 keV endpoint X-rays through metal layer stack",
+                                              labels=["Total Edep in Sio2 Layers", "Total Edep in Al Layers", "Total Edep in Cu Layers", "TotalEnergy Deposited"],
+                                              outputname="Energy_deposition_depth", xtitle="distance[mm]")
+    Geant4_RD53 = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=spectrum, hist_id=["28", "32", "23", "32"], labels=["Tungsten-Spectrum", "Be-0.3mm-Spectrum", "Al-0.15mm-Spectrum","RD53 Last Layer"],
+                                    logy=True, Ratio=True, colors=colors, location="RD53", outputname="spectrum",
+                                     title="Tungsten x-ray spectrum in the back of the last metal layer stack of RD53")
+    
     RD53 = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=RD53_layers, hist_id=["32", "32"], outputname="RD53_Spectrum",
                              Ratio=False, colors=colors, labels=["Without metal layers", "With metal layers"], logy=True,
                               location="RD53", title="Tungsten x-ray spectrum in the back of the last metal layer stack of RD53")
 
-    #     tracklength = Metal_layers(Directory=Directory, PdfPages=PdfPages, test=["RD53"], hist_id=["39"], location="RD53", logx=False, logy=True, style="-", colors=colors,xmin=0.0, xmax=800,
-    #                                         title="Track length of charged secondaries",outputname="Secondary_electrons_depth", xtitle="Track Length [$\mu m $]")
-    # 
-    #     Vertex = Metal_layers(Directory=Directory, PdfPages=PdfPages, test=["RD53"], hist_id=["40"], location="RD53", colors=colors, style="--",
-    #                                                title="x-vertex of charged secondaries in RD53",outputname="Vertex",xtitle="Vertex position [$\mu m $]")
-    #     
-    #     Secondary_electrons = get_Secondary_spectrum(Directory=Directory, PdfPages=PdfPages, test=["RD53"], table=True,
-    #                                                       hist_id=["35", "37", "41", "42"], location="RD53", logy=True, logx=False, colors=colors,
-    #                                                       outputname="Secondary_electrons", title=["with metal layers"])
-    
+    tracklength = Metal_layers(Directory=Directory, PdfPages=PdfPages, test=["RD53"], hist_id=["39"], location="RD53", logx=False, logy=True, style="-", colors=colors,xmin=0.0, xmax=800,
+                                        title="Track length of charged secondaries",outputname="Secondary_electrons_depth", xtitle="Track Length [$\mu m $]")
+ 
+    Vertex = Metal_layers(Directory=Directory, PdfPages=PdfPages, test=["RD53"], hist_id=["40"], location="RD53", colors=colors, style="--",
+                                               title="x-vertex of charged secondaries in RD53",outputname="Vertex",xtitle="Vertex position [$\mu m $]")
+     
+    Secondary_electrons = get_Secondary_spectrum(Directory=Directory, PdfPages=PdfPages, test=["RD53"], table=True,
+                                                      hist_id=["35", "37", "41", "42"], location="RD53", logy=True, logx=False, colors=colors,
+                                                      outputname="Secondary_electrons", title=["with metal layers"])
+
 # Extra tests
     Sio2 = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=["RD53-sio2"], hist_id=["9"], outputname="RD53-SiO2", Ratio=False, colors=['black', '#7e0044'], style="-",
                              logx=False, logy=True, location="RD53", title="Energy deposition in all the silicon layers [$4.5 \mu m$] of RD53 Metal Stack")
@@ -417,13 +417,13 @@ if __name__ == '__main__':
                                     logy=True, Ratio=False, colors=colors, location="RD53", outputname="spectrum_Cu",
                                      title="Tungsten x-ray spectrum after [$5.8 \mu m$] $Cu$")
 
-#     Secondary_electrons = ro.get_Secondary_spectrum(Directory=Directory, PdfPages=PdfPages, test=["RD53"], table=True,xmin=0.0, xmax=60,style="-",
-#                                                       hist_id=["51", "52", "53", "54"], location="RD53", logy=True, logx=False, colors=colors,
-#                                                       outputname="Secondary_electrons", title=["with metal layers"])
-#     Radius = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=["RD53"], hist_id=["48"], outputname="radius", Ratio=False, colors=['black', '#7e0044'],style="-",xmin=0.0, xmax=0.02,
-#                              logx=False, logy=False, location="RD53", title="Radius of secondary charged tracks at the last layer of RD53", xtitle="Radius[mm]")
-#     
-#     projection = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=["RD53"], hist_id=["47"], outputname="radius", Ratio=False, colors=['black', '#7e0044'],style="-",
-#                              logy=False, location="RD53", title="projected position of secondary charged tracks at the last layer of RD53", xtitle="Projected Position [mm]")
-#          
+    Secondary_electrons = ro.get_Secondary_spectrum(Directory=Directory, PdfPages=PdfPages, test=["RD53"], table=True,xmin=0.0, xmax=60,style="-",
+                                                      hist_id=["51", "52", "53", "54"], location="RD53", logy=True, logx=False, colors=colors,
+                                                      outputname="Secondary_electrons", title=["with metal layers"])
+    Radius = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=["RD53"], hist_id=["48"], outputname="radius", Ratio=False, colors=['black', '#7e0044'],style="-",xmin=0.0, xmax=0.02,
+                             logx=False, logy=False, location="RD53", title="Radius of secondary charged tracks at the last layer of RD53", xtitle="Radius[mm]")
+     
+    projection = ro.get_spectrum(Directory=Directory, PdfPages=PdfPages, test=["RD53"], hist_id=["47"], outputname="radius", Ratio=False, colors=['black', '#7e0044'],style="-",
+                             logy=False, location="RD53", title="projected position of secondary charged tracks at the last layer of RD53", xtitle="Projected Position [mm]")
+          
     PdfPages.close()

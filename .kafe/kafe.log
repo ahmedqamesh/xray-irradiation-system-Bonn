@@ -319,3 +319,798 @@ Analysis 2019-11-26 19:47:14,109 :: INFO :: Analysis initialized
 Analysis 2019-11-26 19:48:17,067 :: INFO :: Analysis initialized
 Analysis 2019-11-26 19:49:57,620 :: INFO :: Analysis initialized
 Analysis 2019-11-26 19:50:59,170 :: INFO :: Analysis initialized
+Analysis 2019-11-28 11:29:17,860 :: INFO :: Analysis initialized
+Analysis 2019-11-28 11:29:55,171 :: INFO :: Analysis initialized
+Analysis 2019-11-28 11:30:11,874 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:30:11,923 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:30:11,923 :: INFO :: plot the beamspot
+Plotting 2019-11-28 11:30:12,596 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:30:27,687 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 11:30:28,642 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-28 11:30:28,819 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:30:30,582 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:30:32,327 :: INFO :: get the calibration curves for each current
+root 2019-11-28 11:30:32,346 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:30:32,354 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:30:32,960 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:30:32,968 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:30:33,550 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:30:33,561 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:30:34,141 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 11:30:34,149 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-28 11:30:34,870 :: INFO :: Dose drop after filters
+Analysis 2019-11-28 11:31:10,089 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:31:10,137 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:31:10,138 :: INFO :: plot the beamspot
+Plotting 2019-11-28 11:31:10,794 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:31:25,206 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 11:31:26,147 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-28 11:31:26,317 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:31:28,068 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:31:29,725 :: INFO :: get the calibration curves for each current
+root 2019-11-28 11:31:29,743 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:31:29,751 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:31:30,356 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:31:30,363 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:31:30,992 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:31:31,000 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:31:31,648 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 11:31:31,656 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-28 11:31:32,373 :: INFO :: Dose drop after filters
+Analysis 2019-11-28 11:33:12,947 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:33:12,997 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:33:12,998 :: INFO :: plot the beamspot
+Plotting 2019-11-28 11:33:13,625 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:33:28,185 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 11:33:29,093 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-28 11:33:29,260 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:33:31,050 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:33:32,843 :: INFO :: get the calibration curves for each current
+root 2019-11-28 11:33:32,862 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:33:32,871 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:33:33,544 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:33:33,558 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:33:34,299 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:33:34,308 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:33:35,008 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 11:33:35,017 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-28 11:33:35,798 :: INFO :: Dose drop after filters
+Analysis 2019-11-28 11:38:25,446 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:38:25,497 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:38:25,498 :: INFO :: plot the beamspot
+Plotting 2019-11-28 11:38:26,148 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:38:41,206 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 11:38:42,189 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-28 11:38:42,367 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:38:44,165 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:38:45,845 :: INFO :: get the calibration curves for each current
+root 2019-11-28 11:38:45,864 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:38:45,872 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:38:46,479 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:38:46,487 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:38:47,078 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:38:47,086 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:38:47,675 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 11:38:47,683 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-28 11:38:48,409 :: INFO :: Dose drop after filters
+Analysis 2019-11-28 11:39:14,162 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:39:14,210 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:39:14,211 :: INFO :: plot the beamspot
+Plotting 2019-11-28 11:39:14,845 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:39:30,236 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 11:39:31,190 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-28 11:39:31,359 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:39:33,167 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:39:34,851 :: INFO :: get the calibration curves for each current
+root 2019-11-28 11:39:34,869 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:39:34,877 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:39:35,564 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:39:35,572 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:39:36,170 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:39:36,178 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:39:36,816 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 11:39:36,824 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-28 11:39:37,578 :: INFO :: Dose drop after filters
+Analysis 2019-11-28 11:39:45,854 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:39:45,909 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:39:45,909 :: INFO :: plot the beamspot
+Plotting 2019-11-28 11:39:46,462 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:40:00,997 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 11:40:01,966 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-28 11:40:02,133 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:40:03,966 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:40:05,765 :: INFO :: get the calibration curves for each current
+root 2019-11-28 11:40:05,784 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:40:05,792 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:40:06,390 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:40:06,398 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:40:06,975 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:40:06,983 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:40:07,572 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 11:40:07,580 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-28 11:40:08,338 :: INFO :: Dose drop after filters
+Analysis 2019-11-28 11:41:07,535 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:41:07,587 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:41:07,587 :: INFO :: plot the beamspot
+Plotting 2019-11-28 11:41:08,218 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:41:23,637 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 11:41:24,576 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-28 11:41:24,739 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:41:26,500 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:41:28,391 :: INFO :: get the calibration curves for each current
+root 2019-11-28 11:41:28,409 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:41:28,417 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:41:29,049 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:41:29,058 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:41:29,715 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:41:29,725 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:41:30,337 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 11:41:30,345 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-28 11:41:31,091 :: INFO :: Dose drop after filters
+Analysis 2019-11-28 11:42:06,321 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:42:06,369 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:42:06,369 :: INFO :: plot the beamspot
+Plotting 2019-11-28 11:42:07,011 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:42:22,532 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 11:42:23,533 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-28 11:42:23,704 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:42:25,598 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 11:42:27,504 :: INFO :: get the calibration curves for each current
+root 2019-11-28 11:42:27,522 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:42:27,531 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:42:28,155 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:42:28,164 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:42:28,769 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:42:28,778 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:42:29,385 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 11:42:29,395 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-28 11:42:30,159 :: INFO :: Dose drop after filters
+Analysis 2019-11-28 11:43:32,873 :: INFO :: Analysis initialized
+Analysis 2019-11-28 11:43:32,926 :: INFO :: Analysis initialized
+Analysis 2019-11-28 11:48:18,651 :: INFO :: Analysis initialized
+Analysis 2019-11-28 11:48:18,712 :: INFO :: Analysis initialized
+Analysis 2019-11-28 11:48:27,215 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:48:27,277 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:48:27,277 :: INFO :: plot the beamspot
+Plotting 2019-11-28 11:48:27,893 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2019-11-28 11:49:11,383 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:49:11,431 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:49:11,431 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 11:49:12,224 :: INFO :: get the calibration curves for each current
+root 2019-11-28 11:49:12,242 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:49:12,250 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:49:12,885 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:49:12,892 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:49:13,516 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:49:13,524 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:49:14,159 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 11:49:14,166 :: INFO :: Start Plotting 51cm cm
+Analysis 2019-11-28 11:50:19,092 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:50:19,142 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:50:19,142 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 11:50:19,949 :: INFO :: get the calibration curves for each current
+root 2019-11-28 11:50:19,970 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:50:19,979 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:50:20,616 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:50:20,624 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:50:21,237 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:50:21,245 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:50:22,013 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 11:50:22,024 :: INFO :: Start Plotting 51cm cm
+Analysis 2019-11-28 11:50:40,295 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:50:40,350 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:50:40,350 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 11:50:41,145 :: INFO :: get the calibration curves for each current
+root 2019-11-28 11:50:41,165 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:50:41,173 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:50:41,884 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:50:41,892 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:50:42,581 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:50:42,589 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:50:43,345 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 11:50:43,357 :: INFO :: Start Plotting 51cm cm
+Analysis 2019-11-28 11:51:26,909 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:51:26,958 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:51:26,958 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 11:51:27,794 :: INFO :: get the calibration curves for each current
+root 2019-11-28 11:51:27,815 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:51:27,824 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:51:28,460 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:51:28,468 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:51:29,074 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:51:29,082 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:51:29,774 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 11:51:29,782 :: INFO :: Start Plotting 51cm cm
+Analysis 2019-11-28 11:51:53,171 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:51:53,218 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:51:53,218 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 11:51:53,983 :: INFO :: get the calibration curves for each current
+root 2019-11-28 11:51:54,005 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:51:54,016 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:51:54,777 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:51:54,788 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:51:55,418 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:51:55,426 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:51:56,079 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 11:51:56,087 :: INFO :: Start Plotting 51cm cm
+Analysis 2019-11-28 11:53:32,166 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:53:32,214 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:53:32,215 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 11:53:32,948 :: INFO :: get the calibration curves for each current
+root 2019-11-28 11:53:32,966 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:53:32,974 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:53:33,563 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:53:33,571 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:53:34,174 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:53:34,181 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:53:34,960 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 11:53:34,971 :: INFO :: Start Plotting 51cm cm
+Analysis 2019-11-28 11:57:12,055 :: INFO :: Analysis initialized
+Plotting 2019-11-28 11:57:12,104 :: INFO :: Plotting initialized
+Plotting 2019-11-28 11:57:12,104 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 11:57:13,198 :: INFO :: get the calibration curves for each current
+root 2019-11-28 11:57:13,220 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:57:13,228 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 11:57:13,859 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:57:13,867 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 11:57:14,522 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:57:14,531 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 11:57:15,125 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 11:57:15,133 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-28 11:57:15,733 :: INFO :: plot the beamspot
+Analysis 2019-11-28 12:00:25,545 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:00:25,601 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:00:25,601 :: INFO :: Calibration results for the diodes
+Analysis 2019-11-28 12:00:40,896 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:00:40,945 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:00:40,945 :: INFO :: Calibration results for the diodes
+Analysis 2019-11-28 12:01:04,154 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:01:04,204 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:01:04,204 :: INFO :: Calibration results for the diodes
+Analysis 2019-11-28 12:01:56,992 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:01:57,044 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:01:57,044 :: INFO :: Calibration results for the diodes
+Analysis 2019-11-28 12:02:22,108 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:02:22,159 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:02:22,159 :: INFO :: Calibration results for the diodes
+Analysis 2019-11-28 12:02:41,914 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:02:41,965 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:02:41,965 :: INFO :: Calibration results for the diodes
+Analysis 2019-11-28 12:03:13,239 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:03:13,290 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:03:13,290 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:03:14,473 :: INFO :: get the calibration curves for each current
+root 2019-11-28 12:03:14,492 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 12:03:14,500 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 12:03:15,148 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 12:03:15,156 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 12:03:15,900 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 12:03:15,909 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 12:03:16,537 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 12:03:16,545 :: INFO :: Start Plotting 51cm cm
+Plotting 2019-11-28 12:03:17,177 :: INFO :: plot the beamspot
+Analysis 2019-11-28 12:04:43,385 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:04:43,436 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:04:43,436 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:04:44,704 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-28 12:04:44,745 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 12:04:46,696 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2019-11-28 12:05:08,258 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:05:08,308 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:05:08,308 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:05:09,652 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-28 12:05:09,704 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 12:05:11,662 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2019-11-28 12:06:24,553 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:06:24,609 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:06:24,609 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:06:26,102 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-28 12:06:26,145 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 12:06:28,048 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2019-11-28 12:08:24,326 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:08:24,375 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:08:24,375 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:08:25,476 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-28 12:08:25,519 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 12:08:27,347 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2019-11-28 12:08:37,818 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:08:37,870 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:08:37,870 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:08:38,939 :: INFO :: Estimate the beam diameter relative to the depth
+Plotting 2019-11-28 12:08:38,992 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 12:08:40,931 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2019-11-28 12:11:32,397 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:11:32,459 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:11:32,459 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:11:33,489 :: INFO :: Estimate the beam diameter relative to the depth
+Analysis 2019-11-28 12:13:34,986 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:13:35,037 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:13:35,037 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:13:36,080 :: INFO :: Estimate the beam diameter relative to the depth
+Analysis 2019-11-28 12:14:14,708 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:14:14,758 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:14:14,758 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:14:15,795 :: INFO :: Estimate the beam diameter relative to the depth
+Analysis 2019-11-28 12:14:32,673 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:14:32,724 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:14:32,724 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:14:33,836 :: INFO :: Estimate the beam diameter relative to the depth
+Analysis 2019-11-28 12:16:20,290 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:16:20,338 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:16:20,338 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:16:21,082 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-28 12:16:21,379 :: INFO :: Estimate the beam diameter relative to the depth
+Analysis 2019-11-28 12:16:51,806 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:16:51,856 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:16:51,856 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:16:52,676 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-28 12:16:52,994 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-11-28 12:16:54,556 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2019-11-28 12:20:17,978 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:20:18,030 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:20:18,030 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:20:18,990 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-28 12:20:19,333 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-11-28 12:20:20,957 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2019-11-28 12:20:57,562 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:20:57,615 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:20:57,615 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:20:58,401 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-28 12:20:58,707 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-11-28 12:21:00,289 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2019-11-28 12:21:40,871 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:21:40,920 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:21:40,920 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:21:41,700 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-28 12:21:42,003 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-11-28 12:21:43,558 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2019-11-28 12:22:47,517 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:22:47,569 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:22:47,569 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:22:48,355 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-28 12:22:48,678 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-11-28 12:22:50,249 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2019-11-28 12:23:25,795 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:23:25,843 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:23:25,843 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:23:26,651 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-28 12:23:26,984 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-11-28 12:23:28,723 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2019-11-28 12:26:35,121 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:26:35,171 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:26:35,171 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:26:36,008 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-28 12:26:36,341 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-11-28 12:26:37,906 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2019-11-28 12:27:28,989 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:27:29,044 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:27:29,044 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:27:29,814 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-28 12:27:30,120 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-11-28 12:27:31,692 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2019-11-28 12:27:46,151 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:27:46,200 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:27:46,200 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 12:27:46,943 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-28 12:27:47,237 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-11-28 12:27:49,035 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2019-11-28 12:30:11,616 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:30:11,667 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:30:11,667 :: INFO :: get the calibration curves for each current
+root 2019-11-28 12:30:11,752 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 12:30:11,761 :: INFO :: Start Plotting 3cm cm
+root 2019-11-28 12:30:12,528 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 12:30:12,537 :: INFO :: Start Plotting 5cm cm
+root 2019-11-28 12:30:13,179 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 12:30:13,188 :: INFO :: Start Plotting 8cm cm
+root 2019-11-28 12:30:13,790 :: INFO :: Start Plotting 51cm cm
+root 2019-11-28 12:30:13,798 :: INFO :: Start Plotting 51cm cm
+Analysis 2019-11-28 12:32:23,036 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:32:23,085 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:32:23,085 :: INFO :: Get the calibration curves for each current
+root 2019-11-28 12:32:23,158 :: INFO :: Start Plotting 3cm 
+root 2019-11-28 12:32:23,168 :: INFO :: Start Plotting 3cm 
+root 2019-11-28 12:32:23,891 :: INFO :: Start Plotting 5cm 
+root 2019-11-28 12:32:23,898 :: INFO :: Start Plotting 5cm 
+root 2019-11-28 12:32:24,503 :: INFO :: Start Plotting 8cm 
+root 2019-11-28 12:32:24,511 :: INFO :: Start Plotting 8cm 
+root 2019-11-28 12:32:25,115 :: INFO :: Start Plotting 51cm 
+root 2019-11-28 12:32:25,124 :: INFO :: Start Plotting 51cm 
+Analysis 2019-11-28 12:35:35,306 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:35:35,355 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:35:35,355 :: INFO :: Get the calibration curves for each current
+root 2019-11-28 12:35:35,446 :: INFO :: Start Plotting 3cm at 40kV
+root 2019-11-28 12:35:35,455 :: INFO :: Start Plotting 3cm at 30kV
+root 2019-11-28 12:35:36,182 :: INFO :: Start Plotting 5cm at 40kV
+root 2019-11-28 12:35:36,190 :: INFO :: Start Plotting 5cm at 30kV
+root 2019-11-28 12:35:37,051 :: INFO :: Start Plotting 8cm at 40kV
+root 2019-11-28 12:35:37,059 :: INFO :: Start Plotting 8cm at 30kV
+root 2019-11-28 12:35:37,653 :: INFO :: Start Plotting 51cm at 40kV
+root 2019-11-28 12:35:37,661 :: INFO :: Start Plotting 51cm at 30kV
+Analysis 2019-11-28 12:36:55,656 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:36:55,714 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:36:55,714 :: INFO :: Get the calibration curves for each current
+Analysis 2019-11-28 12:37:07,424 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:37:07,478 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:37:07,478 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 12:37:07,561 :: INFO :: Start Plotting 3cm at 40kV
+Plotting 2019-11-28 12:37:07,573 :: INFO :: Start Plotting 3cm at 30kV
+Plotting 2019-11-28 12:37:08,338 :: INFO :: Start Plotting 5cm at 40kV
+Plotting 2019-11-28 12:37:08,347 :: INFO :: Start Plotting 5cm at 30kV
+Plotting 2019-11-28 12:37:09,022 :: INFO :: Start Plotting 8cm at 40kV
+Plotting 2019-11-28 12:37:09,031 :: INFO :: Start Plotting 8cm at 30kV
+Plotting 2019-11-28 12:37:09,615 :: INFO :: Start Plotting 51cm at 40kV
+Plotting 2019-11-28 12:37:09,623 :: INFO :: Start Plotting 51cm at 30kV
+Analysis 2019-11-28 12:37:39,874 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:37:39,921 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:37:39,921 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 12:37:39,987 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 12:37:39,996 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-11-28 12:37:40,702 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-11-28 12:37:40,711 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-11-28 12:37:41,331 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-11-28 12:37:41,339 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-11-28 12:37:41,939 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-11-28 12:37:41,947 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Analysis 2019-11-28 12:37:53,857 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:37:53,915 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:37:53,916 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 12:37:54,003 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 12:37:54,018 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-11-28 12:37:54,732 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-11-28 12:37:54,741 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-11-28 12:37:55,341 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-11-28 12:37:55,350 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-11-28 12:37:55,942 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-11-28 12:37:55,950 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Analysis 2019-11-28 12:39:11,177 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:39:11,238 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:39:11,238 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 12:39:11,303 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 12:39:11,313 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Analysis 2019-11-28 12:39:26,842 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:39:26,891 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:39:26,891 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 12:39:26,966 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 12:39:26,974 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-11-28 12:39:27,710 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-11-28 12:39:27,718 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-11-28 12:39:28,327 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-11-28 12:39:28,335 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-11-28 12:39:28,973 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-11-28 12:39:28,981 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Analysis 2019-11-28 12:40:00,762 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:40:00,811 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:40:00,812 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 12:40:00,927 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 12:40:00,936 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Analysis 2019-11-28 12:40:12,220 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:40:12,270 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:40:12,270 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 12:40:12,354 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 12:40:12,363 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-11-28 12:40:13,158 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-11-28 12:40:13,166 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-11-28 12:40:13,757 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-11-28 12:40:13,765 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-11-28 12:40:14,359 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-11-28 12:40:14,367 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Analysis 2019-11-28 12:40:53,968 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:40:54,024 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:40:54,024 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 12:40:54,107 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 12:40:54,122 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-11-28 12:40:54,881 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-11-28 12:40:54,893 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-11-28 12:40:55,610 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-11-28 12:40:55,620 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-11-28 12:40:56,233 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-11-28 12:40:56,242 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Analysis 2019-11-28 12:42:37,758 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:42:37,808 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:42:37,808 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 12:42:37,889 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 12:42:37,899 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Analysis 2019-11-28 12:42:57,521 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:42:57,570 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:42:57,570 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 12:42:57,642 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 12:42:57,655 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-11-28 12:42:58,414 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-11-28 12:42:58,422 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-11-28 12:42:59,018 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-11-28 12:42:59,029 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-11-28 12:42:59,624 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-11-28 12:42:59,632 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Analysis 2019-11-28 12:43:18,875 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:43:18,928 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:43:18,928 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 12:43:19,001 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 12:43:19,010 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-11-28 12:43:19,754 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-11-28 12:43:19,762 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-11-28 12:43:20,390 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-11-28 12:43:20,399 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-11-28 12:43:21,006 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-11-28 12:43:21,014 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Analysis 2019-11-28 12:43:52,089 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:43:52,137 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:43:52,137 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 12:43:52,214 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 12:43:52,226 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-11-28 12:43:53,013 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-11-28 12:43:53,025 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-11-28 12:43:53,695 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-11-28 12:43:53,703 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-11-28 12:43:54,292 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-11-28 12:43:54,299 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Analysis 2019-11-28 12:44:14,822 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:44:14,871 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:44:14,871 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 12:44:14,951 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 12:44:14,960 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-11-28 12:44:15,690 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-11-28 12:44:15,697 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-11-28 12:44:16,333 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-11-28 12:44:16,342 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-11-28 12:44:16,943 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-11-28 12:44:16,953 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Analysis 2019-11-28 12:44:41,300 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:44:41,360 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:44:41,360 :: INFO :: Dose drop after filters
+Analysis 2019-11-28 12:45:10,830 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:45:10,879 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:45:10,879 :: INFO :: Dose drop after filters
+Analysis 2019-11-28 12:46:56,226 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:46:56,286 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:46:56,286 :: INFO :: Dose drop after filters
+Analysis 2019-11-28 12:47:43,456 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:47:43,506 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:47:43,507 :: INFO :: Dose drop after filters
+Analysis 2019-11-28 12:47:55,487 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:47:55,536 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:47:55,536 :: INFO :: Dose drop after filters
+Analysis 2019-11-28 12:49:30,664 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:49:30,714 :: INFO :: Plotting initialized
+Analysis 2019-11-28 12:49:52,225 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:49:52,281 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:49:52,281 :: INFO ::  Effect of tube Voltage on the Dose
+Analysis 2019-11-28 12:51:09,220 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:51:09,274 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:51:09,275 :: INFO ::  Effect of tube Voltage on the Dose without_Al_Filter
+Analysis 2019-11-28 12:51:28,640 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:51:28,693 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:51:28,694 :: INFO ::  Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Analysis 2019-11-28 12:51:35,397 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:51:35,447 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:51:35,447 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Analysis 2019-11-28 12:53:19,289 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:53:19,338 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:53:19,338 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Analysis 2019-11-28 12:53:45,199 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:53:45,261 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:53:45,261 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Analysis 2019-11-28 12:53:58,699 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:53:58,754 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:53:58,754 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Analysis 2019-11-28 12:54:10,611 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:54:10,660 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:54:10,660 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Analysis 2019-11-28 12:55:08,523 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:55:08,575 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:55:08,575 :: INFO :: Calculate the power in each point of I and V
+Analysis 2019-11-28 12:55:54,536 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:55:54,587 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:55:54,587 :: INFO :: Calculate the power in each point of I and V
+Analysis 2019-11-28 12:56:37,439 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:56:37,487 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:56:37,487 :: INFO :: Calculate the power in each point of I and V
+Plotting 2019-11-28 12:56:37,889 :: INFO :: Make a 3d scan at specific depth
+Analysis 2019-11-28 12:57:32,569 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:57:32,620 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:57:32,621 :: INFO :: Make a 3d scan at specific depth
+Analysis 2019-11-28 12:57:44,134 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:57:44,183 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:57:44,183 :: INFO :: Make a 2d scan at specific depth
+Analysis 2019-11-28 12:59:00,296 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:59:00,347 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:59:00,347 :: INFO :: Make a 2d scan at specific depth
+Analysis 2019-11-28 12:59:35,070 :: INFO :: Analysis initialized
+Plotting 2019-11-28 12:59:35,120 :: INFO :: Plotting initialized
+Plotting 2019-11-28 12:59:35,120 :: INFO :: Make a 2d scan at specific depth
+Analysis 2019-11-28 13:00:06,081 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:00:06,131 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:00:06,132 :: INFO :: Make a 2d scan at specific depth
+Analysis 2019-11-28 13:02:55,102 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:02:55,151 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:02:55,151 :: INFO :: Make a 2d scan at specific depth
+Analysis 2019-11-28 13:04:11,971 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:04:12,022 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:04:12,022 :: INFO :: Make a 2d scan at specific depth
+Analysis 2019-11-28 13:08:15,404 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:08:15,455 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:08:15,455 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2019-11-28 13:08:44,591 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:08:44,641 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:08:44,641 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2019-11-28 13:08:57,386 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:08:57,442 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:08:57,442 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2019-11-28 13:09:08,847 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:09:08,897 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:09:08,897 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2019-11-28 13:09:34,768 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:09:34,818 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:09:34,818 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2019-11-28 13:11:02,161 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:11:02,210 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:11:02,211 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2019-11-28 13:11:28,137 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:11:28,187 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:11:28,187 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2019-11-28 13:11:36,875 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:11:36,926 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:11:36,926 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2019-11-28 13:11:48,059 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:11:48,108 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:11:48,108 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2019-11-28 13:11:52,248 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:11:52,297 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:11:52,297 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2019-11-28 13:13:19,921 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:13:19,970 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:13:19,970 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Plotting 2019-11-28 13:13:20,604 :: INFO :: Make a 2d scan at specific depth
+Analysis 2019-11-28 13:13:36,260 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:13:36,309 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:13:36,309 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2019-11-28 13:13:56,116 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:13:56,165 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:13:56,165 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Plotting 2019-11-28 13:13:56,782 :: INFO :: Make a 2d scan at specific depth
+Analysis 2019-11-28 13:14:15,366 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:14:15,417 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:14:15,417 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 13:14:16,193 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-28 13:14:16,519 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-11-28 13:14:18,073 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 13:14:19,436 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 13:14:19,452 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 13:14:19,460 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-11-28 13:14:20,079 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-11-28 13:14:20,086 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-11-28 13:14:20,667 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-11-28 13:14:20,674 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-11-28 13:14:21,333 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-11-28 13:14:21,341 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Plotting 2019-11-28 13:14:21,899 :: INFO :: Dose drop after filters
+Plotting 2019-11-28 13:14:23,016 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Plotting 2019-11-28 13:14:23,403 :: INFO :: Calculate the power in each point of I and V
+Plotting 2019-11-28 13:14:23,812 :: INFO :: Make a 3d scan at specific depth
+Analysis 2019-11-28 13:14:48,194 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:14:48,241 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:14:48,241 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 13:14:48,968 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-28 13:14:49,260 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-11-28 13:14:50,813 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 13:14:52,110 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 13:14:52,126 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 13:14:52,134 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-11-28 13:14:52,722 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-11-28 13:14:52,730 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-11-28 13:14:53,307 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-11-28 13:14:53,315 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-11-28 13:14:53,956 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-11-28 13:14:53,963 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Plotting 2019-11-28 13:14:54,513 :: INFO :: Dose drop after filters
+Plotting 2019-11-28 13:14:55,612 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Plotting 2019-11-28 13:14:55,982 :: INFO :: Calculate the power in each point of I and V
+Plotting 2019-11-28 13:14:56,312 :: INFO :: Make a 2d scan at specific depth
+Plotting 2019-11-28 13:15:00,142 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2019-11-28 13:15:13,625 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:15:13,685 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:15:13,685 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 13:15:14,572 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-28 13:15:14,882 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-11-28 13:15:16,473 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 13:15:17,965 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 13:15:17,989 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 13:15:18,000 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-11-28 13:15:18,726 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-11-28 13:15:18,733 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-11-28 13:15:19,370 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-11-28 13:15:19,378 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-11-28 13:15:20,109 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-11-28 13:15:20,118 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Plotting 2019-11-28 13:15:20,723 :: INFO :: Dose drop after filters
+Plotting 2019-11-28 13:15:21,946 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Plotting 2019-11-28 13:15:22,347 :: INFO :: Calculate the power in each point of I and V
+Plotting 2019-11-28 13:15:22,756 :: INFO :: Make a 3d scan at specific depth
+Analysis 2019-11-28 13:15:37,692 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:15:37,744 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:15:37,744 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 13:15:38,509 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-28 13:15:38,804 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-11-28 13:15:40,457 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 13:15:41,818 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 13:15:41,836 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 13:15:41,844 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-11-28 13:15:42,439 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-11-28 13:15:42,446 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-11-28 13:15:43,027 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-11-28 13:15:43,040 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-11-28 13:15:43,694 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-11-28 13:15:43,702 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Plotting 2019-11-28 13:15:44,391 :: INFO :: Dose drop after filters
+Plotting 2019-11-28 13:15:45,671 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Plotting 2019-11-28 13:15:46,065 :: INFO :: Calculate the power in each point of I and V
+Plotting 2019-11-28 13:15:46,481 :: INFO :: Make a 3d scan at specific depth
+Plotting 2019-11-28 13:15:55,088 :: INFO :: Make a 2d scan at specific depth
+Plotting 2019-11-28 13:15:59,653 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2019-11-28 13:18:43,978 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:18:44,030 :: INFO :: Plotting initialized
+Plotting 2019-11-28 13:18:44,031 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-28 13:18:44,863 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-28 13:18:45,191 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-11-28 13:18:46,788 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-28 13:18:48,114 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-28 13:18:48,130 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-28 13:18:48,138 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-11-28 13:18:48,732 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-11-28 13:18:48,740 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-11-28 13:18:49,318 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-11-28 13:18:49,326 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-11-28 13:18:50,027 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-11-28 13:18:50,035 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Plotting 2019-11-28 13:18:50,628 :: INFO :: Dose drop after filters
+Plotting 2019-11-28 13:18:51,764 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Plotting 2019-11-28 13:18:52,151 :: INFO :: Calculate the power in each point of I and V
+Plotting 2019-11-28 13:18:52,525 :: INFO :: Make a 3d scan at specific depth
+Plotting 2019-11-28 13:19:00,405 :: INFO :: Make a 2d scan at specific depth
+Plotting 2019-11-28 13:19:04,451 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2019-11-28 13:22:12,021 :: INFO :: Analysis initialized
+Analysis 2019-11-28 13:22:12,081 :: INFO :: Analysis initialized
+Plotting 2019-11-28 13:22:12,082 :: INFO :: Plotting initialized
+Analysis 2019-11-28 13:22:30,799 :: INFO :: Analysis initialized
+Analysis 2019-11-28 13:22:30,857 :: INFO :: Analysis initialized
+Plotting Attenuation results 2019-11-28 13:22:30,857 :: INFO :: Plotting initialized
+Analysis 2019-11-28 13:27:06,336 :: INFO :: Analysis initialized
+Analysis 2019-11-28 13:27:06,387 :: INFO :: Analysis initialized
+Attenuation results 2019-11-28 13:27:06,388 :: INFO :: Plotting initialized
+Attenuation results 2019-11-28 13:27:06,388 :: INFO :: Mass Attenuation coefficient Vs Energy for several elements (['Al', 'W', 'Fe'])
+Attenuation results 2019-11-28 13:27:07,481 :: INFO :: Attenuation coefficient Vs Thickness
+Attenuation results 2019-11-28 13:27:08,665 :: INFO :: Mass Attenuation coefficient Vs Energy
+Analysis 2019-11-28 13:27:53,899 :: INFO :: Analysis initialized
+Analysis 2019-11-28 13:27:53,951 :: INFO :: Analysis initialized
+Attenuation results 2019-11-28 13:27:53,952 :: INFO :: Plotting initialized
+Attenuation results 2019-11-28 13:27:53,952 :: INFO :: Mass Attenuation coefficient Vs Energy for several elements (['Al', 'W', 'Fe'])
+Attenuation results 2019-11-28 13:27:55,224 :: INFO :: Attenuation coefficient Vs Thickness
+Analysis 2019-11-28 13:28:02,077 :: INFO :: Analysis initialized
+Analysis 2019-11-28 13:28:02,142 :: INFO :: Analysis initialized
+Attenuation results 2019-11-28 13:28:02,143 :: INFO :: Plotting initialized
+Attenuation results 2019-11-28 13:28:02,143 :: INFO :: Mass Attenuation coefficient Vs Energy for several elements (['Al', 'W', 'Fe'])
+Attenuation results 2019-11-28 13:28:03,410 :: INFO :: Attenuation coefficient Vs Thickness
+Analysis 2019-11-28 13:28:06,906 :: INFO :: Analysis initialized
+Analysis 2019-11-28 13:28:06,960 :: INFO :: Analysis initialized
+Attenuation results 2019-11-28 13:28:06,960 :: INFO :: Plotting initialized
+Attenuation results 2019-11-28 13:28:06,961 :: INFO :: Mass Attenuation coefficient Vs Energy for several elements (['Al', 'W', 'Fe'])
+Attenuation results 2019-11-28 13:28:08,225 :: INFO :: Attenuation coefficient Vs Thickness
+Attenuation results 2019-11-28 13:28:08,263 :: INFO :: to get 10e-9 of the initial intensity in Al  27.629 cm shielding is needed
+Attenuation results 2019-11-28 13:28:09,544 :: INFO :: Mass Attenuation coefficient Vs Energy
+Analysis 2019-11-28 13:28:41,656 :: INFO :: Analysis initialized
+Attenuation results 2019-11-28 13:28:41,714 :: INFO :: Plotting initialized
+Attenuation results 2019-11-28 13:28:41,714 :: INFO :: Mass Attenuation coefficient Vs Energy for several elements (['Al', 'W', 'Fe'])
+Attenuation results 2019-11-28 13:28:42,988 :: INFO :: Attenuation coefficient Vs Thickness
+Attenuation results 2019-11-28 13:28:43,028 :: INFO :: to get 10e-9 of the initial intensity in Al  27.629 cm shielding is needed
+Attenuation results 2019-11-28 13:28:44,265 :: INFO :: Mass Attenuation coefficient Vs Energy
+Analysis 2019-11-28 13:28:57,291 :: INFO :: Analysis initialized
+Attenuation results 2019-11-28 13:28:57,355 :: INFO :: Plotting initialized
+Attenuation results 2019-11-28 13:28:57,355 :: INFO :: Mass Attenuation coefficient Vs Energy for several elements (['Al', 'W', 'Fe'])
+Attenuation results 2019-11-28 13:28:58,470 :: INFO :: Attenuation coefficient Vs Thickness
+Attenuation results 2019-11-28 13:28:58,511 :: INFO :: to get 10e-9 of the initial intensity in Al  27.629 cm shielding is needed
+Attenuation results 2019-11-28 13:28:59,725 :: INFO :: Mass Attenuation coefficient Vs Energy
+Attenuation results 2019-11-28 13:29:15,133 :: INFO :: Plotting initialized
+Attenuation results 2019-11-28 13:29:15,133 :: INFO :: Mass Attenuation coefficient Vs Energy for several elements (['Al', 'W', 'Fe'])
+Attenuation results 2019-11-28 13:29:16,416 :: INFO :: Attenuation coefficient Vs Thickness
+Attenuation results 2019-11-28 13:29:16,454 :: INFO :: to get 10e-9 of the initial intensity in Al  27.629 cm shielding is needed
+Attenuation results 2019-11-28 13:29:17,837 :: INFO :: Mass Attenuation coefficient Vs Energy
