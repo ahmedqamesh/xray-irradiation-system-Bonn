@@ -1114,3 +1114,38 @@ Attenuation results 2019-11-28 13:29:15,133 :: INFO :: Mass Attenuation coeffici
 Attenuation results 2019-11-28 13:29:16,416 :: INFO :: Attenuation coefficient Vs Thickness
 Attenuation results 2019-11-28 13:29:16,454 :: INFO :: to get 10e-9 of the initial intensity in Al  27.629 cm shielding is needed
 Attenuation results 2019-11-28 13:29:17,837 :: INFO :: Mass Attenuation coefficient Vs Energy
+Analysis 2019-11-29 10:37:18,862 :: INFO :: Analysis initialized
+Plotting 2019-11-29 10:37:18,869 :: INFO :: Plotting initialized
+tornado.application 2019-11-29 10:37:19,873 :: ERROR :: Exception in callback functools.partial(<function Kernel.enter_eventloop.<locals>.advance_eventloop at 0x7f1d48ba39e0>)
+Traceback (most recent call last):
+  File "/home/dcs/miniconda3/lib/python3.7/site-packages/tornado/ioloop.py", line 743, in _run_callback
+    ret = callback()
+  File "/home/dcs/miniconda3/lib/python3.7/site-packages/ipykernel/kernelbase.py", line 310, in advance_eventloop
+    eventloop(self)
+TypeError: 'NoneType' object is not callable
+Plotting 2019-11-29 10:37:22,477 :: INFO :: Plotting initialized
+Plotting 2019-11-29 10:37:31,775 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-29 10:37:41,767 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-11-29 10:37:49,942 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-11-29 10:38:01,375 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-11-29 10:38:10,864 :: INFO :: Get the calibration curves for each current
+Plotting 2019-11-29 10:38:10,883 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-11-29 10:38:10,894 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-11-29 10:38:11,594 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-11-29 10:38:11,603 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-11-29 10:38:12,241 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-11-29 10:38:12,249 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-11-29 10:38:12,861 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-11-29 10:38:12,870 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Plotting 2019-11-29 10:38:30,959 :: INFO :: Dose drop after filters
+Plotting 2019-11-29 10:38:42,070 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Plotting 2019-11-29 10:38:49,871 :: INFO :: Calculate the power in each point of I and V
+Plotting 2019-11-29 10:38:57,415 :: INFO :: Make a 3d scan at specific depth
+Plotting 2019-11-29 10:39:15,767 :: INFO :: Make a 2d scan at specific depth
+Plotting 2019-11-29 10:39:39,776 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Plotting 2019-11-29 10:44:16,883 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-29 10:44:22,057 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-29 10:44:30,620 :: INFO :: Plotting initialized
+Plotting 2019-11-29 10:44:34,353 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-29 10:45:46,433 :: INFO :: Calibration results for the diodes
+Plotting 2019-11-29 10:48:43,476 :: INFO :: Calibration results for the diodes
