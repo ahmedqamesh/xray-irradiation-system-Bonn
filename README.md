@@ -11,7 +11,6 @@ filtration on the beam intensity.
 
 ## System Characterization
 The essential information required for the characterization of an X-ray system is the X-ray dose rate as a function of tube current, tube voltage, and distance from the source. The effects of various source filters are also of interest. The measure of radiation due to X-rays is commonly expressed in Roentgen unit. A Roentgen (R) is defined as the quantity of X- or gamma radiation that produces a charge of **2.58 x 10^-4** coulombs in one kilogram of dry air at 0^o C. In most applications, radiation effects in other materials (e.g., silicon) are of primary interest, and the energy deposited per unit mass is a more meaningful measure of dose. For example, a dose of 1 rad is defined as an energy deposition of **100 erg/g** of material. The official SI dose unit is the Gray, however the rad is still widely used where **1 Gy = 1 J/kg = 100 rad**.
-### [Size and Shape of the X-ray Beam](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/Size-and-Shape-of-the-X-ray-Beam)
-### [Determination of the Opening Angle](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/Determination-of-the-Opening-Angle)
-### [Determination of the Opening Angle](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/edit/master/README.md)
-### [Photodiodes Dosimetry Calibration](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/edit/master/README.md)
+### [1.Size and Shape of the X-ray Beam](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/Size-and-Shape-of-the-X-ray-Beam)
+### [2.Determination of the Opening Angle](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/Determination-of-the-Opening-Angle)
+### [3.Photodiodes Dosimetry Calibration](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/3.Photodiodes-Dosimetry-Calibration)
