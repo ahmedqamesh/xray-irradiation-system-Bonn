@@ -14,3 +14,4 @@ The essential information required for the characterization of an X-ray system i
 ### [1.Size and Shape of the X-ray Beam](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/1.Size-and-Shape-of-the-X-ray-Beam)
 ### [2.Determination of the Opening Angle](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/2.Determination-of-the-Opening-Angle)
 ### [3.Photodiodes Dosimetry Calibration](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/3.Photodiodes-Dosimetry-Calibration)
+### [4.Measurement of the Absorbed Dose vs. Tube Current](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/4.Measurement-of-the-Absorbed-Dose-vs.-Tube-Current)
