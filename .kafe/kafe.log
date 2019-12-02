@@ -1149,3 +1149,24 @@ Plotting 2019-11-29 10:44:30,620 :: INFO :: Plotting initialized
 Plotting 2019-11-29 10:44:34,353 :: INFO :: Calibration results for the diodes
 Plotting 2019-11-29 10:45:46,433 :: INFO :: Calibration results for the diodes
 Plotting 2019-11-29 10:48:43,476 :: INFO :: Calibration results for the diodes
+Analysis 2019-12-02 18:24:10,416 :: INFO :: Analysis initialized
+Plotting 2019-12-02 18:24:10,462 :: INFO :: Plotting initialized
+Plotting 2019-12-02 18:24:10,462 :: INFO :: Calibration results for the diodes
+Plotting 2019-12-02 18:24:11,239 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2019-12-02 18:24:11,576 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2019-12-02 18:24:13,152 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2019-12-02 18:24:14,481 :: INFO :: Get the calibration curves for each current
+Plotting 2019-12-02 18:24:14,499 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2019-12-02 18:24:14,507 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2019-12-02 18:24:15,144 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2019-12-02 18:24:15,152 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2019-12-02 18:24:15,733 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2019-12-02 18:24:15,741 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2019-12-02 18:24:16,391 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2019-12-02 18:24:16,399 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Plotting 2019-12-02 18:24:16,957 :: INFO :: Dose drop after filters
+Plotting 2019-12-02 18:24:18,060 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Plotting 2019-12-02 18:24:18,433 :: INFO :: Calculate the power in each point of I and V
+Plotting 2019-12-02 18:24:18,765 :: INFO :: Make a 3d scan at specific depth
+Plotting 2019-12-02 18:24:27,112 :: INFO :: Make a 2d scan at specific depth
+Plotting 2019-12-02 18:24:30,871 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d

@@ -1,0 +1,11 @@
+CHANGES.txt
+MANIFEST.in
+README.md
+setup.py
+XrayIrradiationBonn.egg-info/PKG-INFO
+XrayIrradiationBonn.egg-info/SOURCES.txt
+XrayIrradiationBonn.egg-info/dependency_links.txt
+XrayIrradiationBonn.egg-info/entry_points.txt
+XrayIrradiationBonn.egg-info/requires.txt
+XrayIrradiationBonn.egg-info/top_level.txt
+docs/README.txt

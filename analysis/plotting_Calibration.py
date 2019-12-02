@@ -14,7 +14,7 @@ from scipy.linalg import norm
 import os
 import seaborn as sns
 sns.set(style="white", color_codes=True)
-
+from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
 from matplotlib.pyplot import *
 import pylab as P
 import matplotlib as mpl
@@ -39,12 +39,26 @@ from analysis import logger
 colors = ['black', 'red', '#006381', "blue", '#33D1FF', '#F5A9BC', 'grey', '#7e0044', 'orange', "maroon", 'green', "magenta", '#33D1FF', '#7e0044', "yellow"]
 an =analysis.Analysis()
 
-class Plotting(object):     
+class PlottingCalibration(object):     
 
-    def __init__(self):
+    def __init__(self, interface='data'):
         self.log = logger.setup_derived_logger('Plotting')
         self.log.info('Plotting initialized')
-
+        
+        # Initialize default arguments
+        if interface is None:
+            interface = 'data'
+        elif interface not in ['data', 'sim']:
+            raise ValueError(f'Possible interfaces are "data" or '
+                             f'"sim" and not "{interface}".')
+        self.__interface = interface
+            
+    @property
+    def interface(self):
+        """:obj:`str` : Type of the final plots. Possible values are
+        ``'data'`` and ``'sim'``."""
+        return self.__interface
+               
     def diode_calibration(self, diodes=["A"], Directory=False, PdfPages=False):
         '''
         The function plots the calibration results for the PN diodes
@@ -727,3 +741,28 @@ class Plotting(object):
        
     def close(self, PdfPages=False):
             PdfPages.close()
+
+def main():
+    """Wrapper function for using the server as a command line tool
+
+    The command line tool accepts arguments for configuring the server which
+    are tranferred to the :class:`DCSControllerServer` class.
+    """
+    # Parse arguments
+    parser = ArgumentParser(description='Calibration results for Xray radiation system'
+                            'Controller',
+                            epilog='For more information contact '
+                            'ahmed.qamesh@cern.ch',
+                            formatter_class=ArgumentDefaultsHelpFormatter)
+    parser.set_defaults(interface='data')
+    
+    # CAN interface
+    CGroup = parser.add_argument_group('interface')
+    iGroup = CGroup.add_mutually_exclusive_group()
+    iGroup.add_argument('-d', '--data', action='store_const', const='data',
+                        dest='interface',
+                        help='Use data interface (default). When no '
+                        'data file interface is found or connected a data files will be used')
+    iGroup.add_argument('-s', '--sim', action='store_const',
+                        const='sim', dest='interface',
+                        help='Use simulated data')

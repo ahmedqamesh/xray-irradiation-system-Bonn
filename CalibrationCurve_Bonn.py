@@ -1,6 +1,7 @@
 from analysis import plotting_Calibration
 from analysis import analysis
 from matplotlib.backends.backend_pdf import PdfPages
+
 if __name__ == '__main__':
     global PdfPages
     Directory = "Calibration_Curves/"
@@ -9,7 +10,7 @@ if __name__ == '__main__':
     depth = ["3cm", "5cm", "8cm", "51cm"]
     PdfPages = PdfPages(pdf_file)
     filename = "/home/silab62/git/XrayMachine_Bonn/Calibration_Curves/without_Al_Filter/beamspot/60cm/beamspot_60cm.h5"
-    p =plotting_Calibration.Plotting()
+    p =plotting_Calibration.PlottingCalibration()
     p.diode_calibration(PdfPages=PdfPages, Directory=Directory, diodes=["A","B","C"])
     p.calibration_temperature(data="temperature_dose.h5", Directory=Directory, PdfPages=PdfPages)
     p.opening_angle(Directory=Directory, tests=tests,PdfPages=PdfPages)
