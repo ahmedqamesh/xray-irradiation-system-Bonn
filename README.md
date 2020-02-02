@@ -23,13 +23,10 @@ The essential information required for the characterization of an X-ray system i
 ### [7.Homogeneity of the X ray Beam Spot](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/7.-Homogeneity-of-the-X-ray-Beam-Spot)
 
 ## Photo Gallery
-
+a full view of the instrumentation installed in the room and related to the X-ray system can be found [here](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/Photo-Gallery). 
 ## Tools
-### Tube Cooling: The temperature needed for the tube itself is supposed to be around 20C. 
+### Tube Cooling: 
+The temperature needed for the tube itself is supposed to be around 20C. 
 ### Cooling chiller:
-The facility is equiped with a JulaboFP50/HP chiller for samples cooling in a temprature range up to -30^o. 
-
-
-
-The water flow is constant and the temperature at the target is regulated by the coolant temperature. the lowest we could sustain is -20C at the cooling plate. This lead to a coolant temperature around -24C. Setting the target temperature any lower, the chiller would run at 100% cooling power nonstop and never reach the target.. this will lead to error eventually...
+The facility is equiped with a [JulaboFP50/HP](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/blob/master/docs/Manual_Julabo_FP50_HP.pdf) chiller for samples cooling in a temprature range up to -30^o.
 
