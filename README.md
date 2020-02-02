@@ -21,7 +21,6 @@ The essential information required for the characterization of an X-ray system i
 ### [6.Measurement of the Absorbed Dose vs.Depth](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/6.-Measurement-of-the-Absorbed-Dose-vs.-Depth)
 
 ### [7.Homogeneity of the X ray Beam Spot](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/7.-Homogeneity-of-the-X-ray-Beam-Spot)
-
 ## Photo Gallery
 A full view of the instrumentation installed in the room and related to the X-ray system can be found [here](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/Photo-Gallery). 
 ## Tools
@@ -32,12 +31,4 @@ The facility is equiped with a [JulaboFP50/HP](https://github.com/ahmedqamesh/Xr
 ## About the manufacurer
 The manufacturer is [XRD Eigenmann GmbH](https://www.xrd-eigenmann.de/de/startseite).
 Product : is a highly stabilized X-ray source (HV generator [ISO Debyeflex ID3003](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/blob/master/docs/Manual_ISO-DEBYEFLEX%203003_English.pdf), connecting cables, tube covers and tubes, control electronics and cooling units).
-
-
-
-
-
-
-ISO-DEBYEFLEX 3003	
-X-ray generator ID 3003 with high stability, also for analytical applications
 
