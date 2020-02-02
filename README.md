@@ -23,10 +23,21 @@ The essential information required for the characterization of an X-ray system i
 ### [7.Homogeneity of the X ray Beam Spot](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/7.-Homogeneity-of-the-X-ray-Beam-Spot)
 
 ## Photo Gallery
-a full view of the instrumentation installed in the room and related to the X-ray system can be found [here](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/Photo-Gallery). 
+A full view of the instrumentation installed in the room and related to the X-ray system can be found [here](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/Photo-Gallery). 
 ## Tools
 ### Tube Cooling: 
 The temperature needed for the tube itself is supposed to be around 20C. 
 ### Cooling chiller:
 The facility is equiped with a [JulaboFP50/HP](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/blob/master/docs/Manual_Julabo_FP50_HP.pdf) chiller for samples cooling in a temprature range up to -30^o.
+## About the manufacurer
+The manufacturer is [XRD Eigenmann GmbH](https://www.xrd-eigenmann.de/de/startseite).
+Product : is a highly stabilized X-ray source (HV generator [ISO Debyeflex ID3003](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/blob/master/docs/Manual_ISO-DEBYEFLEX%203003_English.pdf), connecting cables, tube covers and tubes, control electronics and cooling units).
+
+
+
+
+
+
+ISO-DEBYEFLEX 3003	
+X-ray generator ID 3003 with high stability, also for analytical applications
 
