@@ -16,3 +16,7 @@ The essential information required for the characterization of an X-ray system i
 ### [3.Photodiodes Dosimetry Calibration](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/3.Photodiodes-Dosimetry-Calibration)
 ### [4.Measurement of the Absorbed Dose vs. Tube Current](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/4.Measurement-of-the-Absorbed-Dose-vs.-Tube-Current)
 ### [5.The Effect of the Tube Voltage](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/5.The-Effect-of-the-Tube-Voltage)
+
+### [6.Measurement of the Absorbed Dose vs.Depth](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/6.-Measurement-of-the-Absorbed-Dose-vs.-Depth)
+
+
