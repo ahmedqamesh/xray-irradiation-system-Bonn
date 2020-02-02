@@ -2,6 +2,7 @@
 This page contains information and timetable of the X-ray irradiation system in Bonn Uni Physics department, SILAB group. This facility is located at Bonn university. It is accessible, upon request, to all users from the HEP community.
 ## Main Characteristics and Setup
 The available x-ray tube uses a high voltage to accelerate electrons released by thermoionic effect in the electric field set by the operational voltage of the machine. The tube can be operated in a voltage range of **2 kV** to **60 kV** and continuously powered at **3 kW**. The characteristics of the tube are summarized in Tab 4.1.<p align="center"><img src="https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/blob/master/images/tablexray.png" width = 600 title=""></p>The tube parameters are adjustable using a graphical user interface. The tube itself is installed at the top of a **110 cm× 70 cm × 103 cm** cabinet with lead-glass front window so that all measurements are performed inside this radiation safe housing (see Fig. 4.1(a)).<p align="center"><img src="https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/blob/master/images/tablexraycabinet.png" width = 700 title=""></p>.
+The system has been assembled to radiation test silicon integrated circuits for Total Ionizing Dose (TID) effects at different temperatures. Temperatures approaching 0 degrees or below require a controlled dry atmoshpere using liquid nitrogen inside the irradiation cabinet.
 ## GEANT4 Simulation
 A measurement of the X-ray spectrum is very crucial, since the X-ray distributions influence the penetration of the X-rays through the target and so the absorbed radiation dose received. An accurate measurement of the X-ray spectrum is complex and time consuming because of the high count rates of the beam. A simulation in this case is a more convenient way to get the spectrum. For that purpose **GEANT4** simulation (Version 4.10.p01 compiled with CLHEP 2.1.3.1 libraries) toolkit has been
 used to simulate the X-ray spectrum produced by the tube and study the effect of tube potential and
@@ -20,3 +21,15 @@ The essential information required for the characterization of an X-ray system i
 ### [6.Measurement of the Absorbed Dose vs.Depth](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/6.-Measurement-of-the-Absorbed-Dose-vs.-Depth)
 
 ### [7.Homogeneity of the X ray Beam Spot](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/wiki/7.-Homogeneity-of-the-X-ray-Beam-Spot)
+
+## Photo Gallery
+
+## Tools
+### Tube Cooling: The temperature needed for the tube itself is supposed to be around 20C. 
+### Cooling chiller:
+The facility is equiped with a JulaboFP50/HP chiller for samples cooling in a temprature range up to -30^o. 
+
+
+
+The water flow is constant and the temperature at the target is regulated by the coolant temperature. the lowest we could sustain is -20C at the cooling plate. This lead to a coolant temperature around -24C. Setting the target temperature any lower, the chiller would run at 100% cooling power nonstop and never reach the target.. this will lead to error eventually...
+
