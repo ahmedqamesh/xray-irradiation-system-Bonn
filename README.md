@@ -7,8 +7,8 @@ The system has been assembled to radiation test silicon integrated circuits for 
 A measurement of the X-ray spectrum is very crucial, since the X-ray distributions influence the penetration of the X-rays through the target and so the absorbed radiation dose received. An accurate measurement of the X-ray spectrum is complex and time consuming because of the high count rates of the beam. A simulation in this case is a more convenient way to get the spectrum. For that purpose **GEANT4** simulation (Version 4.10.p01 compiled with CLHEP 2.1.3.1 libraries) toolkit has been
 used to simulate the X-ray spectrum produced by the tube and study the effect of tube potential and
 filtration on the beam intensity.
-### [Generation of X-ray Spectra](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/edit/master/README.md)
-### [Spectrum Filtration](https://github.com/ahmedqamesh/Xray_Irradiation_System_Bonn/edit/master/README.md)
+### [Generation of X-ray Spectra]()
+### [Spectrum Filtration]()
 
 ## System Characterization
 The essential information required for the characterization of an X-ray system is the X-ray dose rate as a function of tube current, tube voltage, and distance from the source. The effects of various source filters are also of interest. The measure of radiation due to X-rays is commonly expressed in Roentgen unit. A Roentgen (R) is defined as the quantity of X- or gamma radiation that produces a charge of **2.58 x 10^-4** coulombs in one kilogram of dry air at 0^o C. In most applications, radiation effects in other materials (e.g., silicon) are of primary interest, and the energy deposited per unit mass is a more meaningful measure of dose. For example, a dose of 1 rad is defined as an energy deposition of **100 erg/g** of material. The official SI dose unit is the Gray, however the rad is still widely used where **1 Gy = 1 J/kg = 100 rad**.
