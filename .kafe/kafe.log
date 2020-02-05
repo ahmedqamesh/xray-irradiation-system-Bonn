@@ -1170,3 +1170,363 @@ Plotting 2019-12-02 18:24:18,433 :: INFO :: Calculate the power in each point of
 Plotting 2019-12-02 18:24:18,765 :: INFO :: Make a 3d scan at specific depth
 Plotting 2019-12-02 18:24:27,112 :: INFO :: Make a 2d scan at specific depth
 Plotting 2019-12-02 18:24:30,871 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+matplotlib.font_manager 2020-02-04 09:17:06,376 :: WARNING :: Matplotlib is building the font cache using fc-list. This may take a moment.
+Analysis 2020-02-04 09:18:09,155 :: INFO :: Analysis initialized
+tornado.application 2020-02-04 09:18:10,718 :: ERROR :: Exception in callback functools.partial(<function Kernel.enter_eventloop.<locals>.advance_eventloop at 0x1114439e0>)
+Traceback (most recent call last):
+  File "/Users/ahmedqamesh/Installations/miniconda3/lib/python3.7/site-packages/tornado/ioloop.py", line 743, in _run_callback
+    ret = callback()
+  File "/Users/ahmedqamesh/Installations/miniconda3/lib/python3.7/site-packages/ipykernel/kernelbase.py", line 310, in advance_eventloop
+    eventloop(self)
+TypeError: 'NoneType' object is not callable
+Analysis 2020-02-04 09:21:35,387 :: INFO :: Analysis initialized
+Plotting 2020-02-04 09:21:35,394 :: INFO :: Plotting initialized
+Plotting 2020-02-04 09:21:35,394 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-04 09:21:41,917 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-04 09:21:42,470 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-04 09:21:44,738 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-04 09:21:46,812 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-04 09:21:46,846 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2020-02-04 09:21:46,861 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2020-02-04 09:21:47,708 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2020-02-04 09:21:47,722 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2020-02-04 09:21:48,637 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2020-02-04 09:21:48,653 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2020-02-04 09:21:49,470 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2020-02-04 09:21:49,482 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Plotting 2020-02-04 09:21:50,367 :: INFO :: Dose drop after filters
+Plotting 2020-02-04 09:21:52,022 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Plotting 2020-02-04 09:21:52,647 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-04 09:21:53,287 :: INFO :: Make a 3d scan at specific depth
+Plotting 2020-02-04 09:22:06,061 :: INFO :: Make a 2d scan at specific depth
+Plotting 2020-02-04 09:22:11,831 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-04 09:23:16,804 :: INFO :: Analysis initialized
+tornado.application 2020-02-04 09:23:18,140 :: ERROR :: Exception in callback functools.partial(<function Kernel.enter_eventloop.<locals>.advance_eventloop at 0x10cf40b90>)
+Traceback (most recent call last):
+  File "/Users/ahmedqamesh/Installations/miniconda3/lib/python3.7/site-packages/tornado/ioloop.py", line 743, in _run_callback
+    ret = callback()
+  File "/Users/ahmedqamesh/Installations/miniconda3/lib/python3.7/site-packages/ipykernel/kernelbase.py", line 310, in advance_eventloop
+    eventloop(self)
+TypeError: 'NoneType' object is not callable
+Analysis 2020-02-04 09:40:41,985 :: INFO :: Analysis initialized
+Analysis 2020-02-04 09:41:02,661 :: INFO :: Analysis initialized
+Analysis 2020-02-04 09:41:13,309 :: INFO :: Analysis initialized
+Analysis 2020-02-04 09:44:38,678 :: INFO :: Analysis initialized
+Analysis 2020-02-04 09:45:44,224 :: INFO :: Analysis initialized
+Plotting 2020-02-04 09:45:44,371 :: INFO :: Plotting initialized
+Analysis 2020-02-04 10:40:37,187 :: INFO :: Analysis initialized
+Plotting 2020-02-04 10:40:37,238 :: INFO :: Plotting initialized
+Plotting 2020-02-04 10:40:37,238 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-04 10:41:26,572 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-04 10:41:27,386 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-04 10:41:30,541 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-04 10:41:34,497 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-04 10:41:34,656 :: INFO :: Start Plotting calibration curves at 3cm , 40kV
+Plotting 2020-02-04 10:41:34,672 :: INFO :: Start Plotting calibration curves at 3cm , 30kV
+Plotting 2020-02-04 10:41:35,794 :: INFO :: Start Plotting calibration curves at 5cm , 40kV
+Plotting 2020-02-04 10:41:35,922 :: INFO :: Start Plotting calibration curves at 5cm , 30kV
+Plotting 2020-02-04 10:41:37,006 :: INFO :: Start Plotting calibration curves at 8cm , 40kV
+Plotting 2020-02-04 10:41:37,035 :: INFO :: Start Plotting calibration curves at 8cm , 30kV
+Plotting 2020-02-04 10:41:38,393 :: INFO :: Start Plotting calibration curves at 51cm , 40kV
+Plotting 2020-02-04 10:41:38,414 :: INFO :: Start Plotting calibration curves at 51cm , 30kV
+Plotting 2020-02-04 10:41:39,531 :: INFO :: Dose drop after filters
+Plotting 2020-02-04 10:41:41,351 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Plotting 2020-02-04 10:41:42,231 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-04 10:41:42,761 :: INFO :: Make a 3d scan at specific depth
+Plotting 2020-02-04 10:41:57,464 :: INFO :: Make a 2d scan at specific depth
+Plotting 2020-02-04 10:42:09,487 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-04 11:56:07,693 :: INFO :: Analysis initialized
+Analysis 2020-02-04 11:56:44,492 :: INFO :: Analysis initialized
+Analysis 2020-02-04 11:56:57,721 :: INFO :: Analysis initialized
+Analysis 2020-02-04 11:58:08,733 :: INFO :: Analysis initialized
+Analysis 2020-02-04 12:03:13,913 :: INFO :: Analysis initialized
+Analysis 2020-02-04 12:03:41,099 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:09:50,993 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:27:57,172 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:28:42,471 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:28:57,219 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:29:12,140 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:29:34,916 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:30:13,129 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:31:08,988 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:31:21,543 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:32:23,069 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:32:41,424 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:35:17,655 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:37:08,405 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:38:08,838 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:40:49,922 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:44:35,308 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:45:40,125 :: INFO :: Analysis initialized
+Analysis 2020-02-04 15:46:41,904 :: INFO :: Analysis initialized
+Analysis 2020-02-04 16:06:59,724 :: INFO :: Analysis initialized
+Analysis 2020-02-04 16:07:43,912 :: INFO :: Analysis initialized
+Analysis 2020-02-04 16:08:46,342 :: INFO :: Analysis initialized
+Analysis 2020-02-04 16:10:07,167 :: INFO :: Analysis initialized
+Analysis 2020-02-04 16:10:26,788 :: INFO :: Analysis initialized
+Analysis 2020-02-04 16:10:47,217 :: INFO :: Analysis initialized
+Analysis 2020-02-04 16:12:39,316 :: INFO :: Analysis initialized
+Analysis 2020-02-04 16:17:19,578 :: INFO :: Analysis initialized
+Analysis 2020-02-04 16:18:05,028 :: INFO :: Analysis initialized
+Analysis 2020-02-04 16:26:59,639 :: INFO :: Analysis initialized
+Analysis 2020-02-04 16:30:33,391 :: INFO :: Analysis initialized
+Analysis 2020-02-04 16:30:45,256 :: INFO :: Analysis initialized
+Analysis 2020-02-04 16:34:36,662 :: INFO :: Analysis initialized
+Analysis 2020-02-04 16:35:06,359 :: INFO :: Analysis initialized
+Analysis 2020-02-04 16:37:34,099 :: INFO :: Analysis initialized
+Analysis 2020-02-04 18:47:05,145 :: INFO :: Analysis initialized
+Analysis 2020-02-04 18:50:15,365 :: INFO :: Analysis initialized
+Analysis 2020-02-04 18:54:19,887 :: INFO :: Analysis initialized
+Analysis 2020-02-04 18:55:28,010 :: INFO :: Analysis initialized
+Analysis 2020-02-04 18:59:17,293 :: INFO :: Analysis initialized
+Analysis 2020-02-04 18:59:33,727 :: INFO :: Analysis initialized
+Analysis 2020-02-04 19:02:49,558 :: INFO :: Analysis initialized
+Analysis 2020-02-04 19:04:45,376 :: INFO :: Analysis initialized
+Analysis 2020-02-04 19:05:49,356 :: INFO :: Analysis initialized
+Analysis 2020-02-04 19:07:24,606 :: INFO :: Analysis initialized
+Analysis 2020-02-04 19:09:32,138 :: INFO :: Analysis initialized
+Analysis 2020-02-04 19:11:34,999 :: INFO :: Analysis initialized
+Analysis 2020-02-04 19:12:58,018 :: INFO :: Analysis initialized
+Analysis 2020-02-04 19:14:24,593 :: INFO :: Analysis initialized
+Analysis 2020-02-04 19:24:36,719 :: INFO :: Analysis initialized
+Analysis 2020-02-04 19:25:24,014 :: INFO :: Analysis initialized
+Analysis 2020-02-04 19:28:04,030 :: INFO :: Analysis initialized
+Analysis 2020-02-04 19:31:12,332 :: INFO :: Analysis initialized
+Analysis 2020-02-04 19:32:07,185 :: INFO :: Analysis initialized
+Analysis 2020-02-04 22:55:39,968 :: INFO :: Analysis initialized
+Analysis 2020-02-04 22:58:35,112 :: INFO :: Analysis initialized
+Analysis 2020-02-04 23:00:39,395 :: INFO :: Analysis initialized
+Analysis 2020-02-04 23:01:47,979 :: INFO :: Analysis initialized
+Analysis 2020-02-04 23:04:38,447 :: INFO :: Analysis initialized
+Analysis 2020-02-04 23:06:00,792 :: INFO :: Analysis initialized
+Analysis 2020-02-04 23:07:51,930 :: INFO :: Analysis initialized
+Analysis 2020-02-04 23:12:52,979 :: INFO :: Analysis initialized
+Analysis 2020-02-04 23:14:38,120 :: INFO :: Analysis initialized
+Analysis 2020-02-04 23:19:20,184 :: INFO :: Analysis initialized
+Analysis 2020-02-04 23:26:38,904 :: INFO :: Analysis initialized
+Analysis 2020-02-04 23:28:21,226 :: INFO :: Analysis initialized
+Analysis 2020-02-04 23:29:46,029 :: INFO :: Analysis initialized
+Analysis 2020-02-04 23:31:45,856 :: INFO :: Analysis initialized
+Analysis 2020-02-05 09:31:29,419 :: INFO :: Analysis initialized
+Analysis 2020-02-05 09:33:25,869 :: INFO :: Analysis initialized
+Analysis 2020-02-05 09:33:34,579 :: INFO :: Analysis initialized
+Analysis 2020-02-05 09:34:09,869 :: INFO :: Analysis initialized
+Analysis 2020-02-05 09:34:53,346 :: INFO :: Analysis initialized
+Analysis 2020-02-05 09:43:07,937 :: INFO :: Analysis initialized
+Analysis 2020-02-05 09:43:52,674 :: INFO :: Analysis initialized
+Analysis 2020-02-05 09:44:33,055 :: INFO :: Analysis initialized
+Analysis 2020-02-05 09:44:43,227 :: INFO :: Analysis initialized
+Analysis 2020-02-05 09:45:33,515 :: INFO :: Analysis initialized
+Analysis 2020-02-05 09:48:01,712 :: INFO :: Analysis initialized
+Analysis 2020-02-05 09:49:56,499 :: INFO :: Analysis initialized
+Analysis 2020-02-05 09:50:31,459 :: INFO :: Analysis initialized
+Analysis 2020-02-05 09:50:45,155 :: INFO :: Analysis initialized
+Analysis 2020-02-05 09:51:57,944 :: INFO :: Analysis initialized
+Analysis 2020-02-05 11:37:16,245 :: INFO :: Analysis initialized
+Analysis 2020-02-05 11:38:08,918 :: INFO :: Analysis initialized
+Analysis 2020-02-05 11:38:37,579 :: INFO :: Analysis initialized
+Analysis 2020-02-05 11:38:52,033 :: INFO :: Analysis initialized
+Analysis 2020-02-05 11:39:40,252 :: INFO :: Analysis initialized
+Analysis 2020-02-05 11:39:59,249 :: INFO :: Analysis initialized
+Analysis 2020-02-05 11:40:29,259 :: INFO :: Analysis initialized
+Analysis 2020-02-05 11:40:49,877 :: INFO :: Analysis initialized
+Analysis 2020-02-05 11:41:04,183 :: INFO :: Analysis initialized
+Analysis 2020-02-05 11:41:15,181 :: INFO :: Analysis initialized
+Analysis 2020-02-05 11:42:27,080 :: INFO :: Analysis initialized
+Analysis 2020-02-05 11:43:32,972 :: INFO :: Analysis initialized
+Analysis 2020-02-05 11:44:00,238 :: INFO :: Analysis initialized
+Analysis 2020-02-05 11:44:39,482 :: INFO :: Analysis initialized
+Analysis 2020-02-05 11:45:42,106 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:27:09,462 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:27:46,760 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:28:23,681 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:28:46,833 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:29:38,343 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:30:12,700 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:30:19,197 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:30:36,137 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:30:45,408 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:30:52,546 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:30:58,342 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:39:37,334 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:39:37,334 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:40:28,439 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:41:48,066 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:43:00,060 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:43:22,586 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:47:44,128 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:48:03,357 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:49:27,745 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:50:26,359 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:51:29,009 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:52:03,174 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:52:47,401 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:53:45,284 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:54:28,019 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:58:08,335 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:58:39,201 :: INFO :: Analysis initialized
+Analysis 2020-02-05 13:58:52,747 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:00:23,537 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:02:15,921 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:04:25,157 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:07:26,973 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:13:04,636 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:16:41,196 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:18:14,130 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:19:17,057 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:20:17,115 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:24:47,495 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:26:37,557 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:28:42,724 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:31:03,627 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:32:44,322 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:33:55,992 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:35:21,363 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:36:16,513 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:41:18,863 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:45:07,142 :: INFO :: Analysis initialized
+Analysis 2020-02-05 14:57:33,029 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:00:04,685 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:01:42,352 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:03:10,024 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:05:47,997 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:06:53,004 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:08:02,606 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:10:04,434 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:11:15,006 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:13:57,925 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:24:20,516 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:30:26,881 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:32:15,898 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:33:03,110 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:33:47,873 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:35:01,817 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:35:54,136 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:36:33,311 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:40:06,678 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:40:06,678 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:42:04,991 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:42:27,264 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:43:20,850 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:43:59,358 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:47:03,757 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:49:45,845 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:50:46,792 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:52:17,736 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:53:18,611 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:54:13,946 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:54:28,002 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:55:35,869 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:56:08,181 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:56:31,388 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:56:54,746 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:57:35,908 :: INFO :: Analysis initialized
+Analysis 2020-02-05 15:59:40,598 :: INFO :: Analysis initialized
+Analysis 2020-02-05 16:00:13,995 :: INFO :: Analysis initialized
+Analysis 2020-02-05 16:01:08,458 :: INFO :: Analysis initialized
+Analysis 2020-02-05 16:59:19,495 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:02:51,300 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:05:03,769 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:07:11,048 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:08:20,285 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:11:01,070 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:12:51,699 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:21:52,042 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:23:34,933 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:25:03,082 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:26:22,095 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:29:09,673 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:31:15,838 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:32:46,340 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:39:41,486 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:42:49,041 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:55:26,233 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:55:35,042 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:55:53,541 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:56:09,035 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:58:14,491 :: INFO :: Analysis initialized
+Analysis 2020-02-05 17:59:57,555 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:01:11,570 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:02:21,318 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:03:40,969 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:05:28,661 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:07:14,251 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:08:40,651 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:10:48,485 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:17:33,928 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:20:10,814 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:21:15,285 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:22:19,500 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:24:51,576 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:25:51,156 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:28:47,533 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:40:55,294 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:44:33,153 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:46:06,464 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:53:04,136 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:56:24,271 :: INFO :: Analysis initialized
+Analysis 2020-02-05 18:57:22,449 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:01:03,328 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:01:58,951 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:04:08,691 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:04:39,063 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:05:15,673 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:05:36,361 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:06:57,857 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:07:09,456 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:07:30,706 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:08:07,140 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:09:14,229 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:10:17,118 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:12:55,589 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:13:54,076 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:14:30,138 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:15:12,038 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:15:53,832 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:19:15,362 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:20:43,142 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:22:10,293 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:31:45,742 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:32:19,324 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:34:04,019 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:34:46,747 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:35:39,640 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:36:30,596 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:38:03,980 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:40:29,943 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:41:49,716 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:43:19,021 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:45:33,597 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:48:30,006 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:49:38,108 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:50:56,192 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:52:36,153 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:54:38,570 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:56:15,136 :: INFO :: Analysis initialized
+Analysis 2020-02-05 19:58:43,096 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:00:10,545 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:01:56,118 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:03:25,389 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:05:14,064 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:06:13,856 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:07:43,591 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:14:41,982 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:18:40,742 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:20:27,347 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:21:14,176 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:21:47,571 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:27:04,747 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:28:38,828 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:29:14,868 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:29:31,987 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:29:59,947 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:30:12,578 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:30:22,740 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:30:32,115 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:30:43,588 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:50:06,733 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:50:44,816 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:51:21,597 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:51:32,878 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:52:06,215 :: INFO :: Analysis initialized
+Analysis 2020-02-05 20:52:16,110 :: INFO :: Analysis initialized

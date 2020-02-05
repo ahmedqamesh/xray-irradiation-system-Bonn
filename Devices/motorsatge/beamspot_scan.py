@@ -91,6 +91,7 @@ def beamspot(size_x=1, z=20, x_Delay=5, x=20,size_z=1,
     print "The beamspot file is saved as%s" %(file)
     t1 = time.time()
     print "The time Estimated", t1 - t0
+
 '''
 Step1: Restore the intial position with Auto-Referencing Option: With standard PI stages
 step2: show GUI to control the motor stage 

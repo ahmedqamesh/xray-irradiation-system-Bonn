@@ -1,6 +1,12 @@
 from __future__ import division
 from scipy.optimize import curve_fit
 import logging
+import os
+import logging
+import argparse
+import yaml
+import json
+import ast
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from matplotlib.backends.backend_pdf import PdfPages
 import matplotlib.ticker as ticker
@@ -11,7 +17,6 @@ from scipy import interpolate
 import tables as tb
 import numpy as np
 import matplotlib.pyplot as plt
-from bdaq53.analysis import analysis_utils as au
 import kafe
 from kafe.function_library import gauss, linear_2par
 from kafe import *
@@ -19,7 +24,20 @@ from matplotlib import gridspec
 
 class Analysis_Utils(object):
     def __init__(self):
-        print("analysis utils class initialized")
+        print("analysis utils initialized")
+
+# create config dict from yaml text file
+def parse_config_file(config_file, expect_receiver=False):
+    with open(config_file, 'r') as in_config_file:
+        configuration = yaml.safe_load(in_config_file)
+        if expect_receiver:
+            try:
+                configuration['receiver']
+            except KeyError:
+                logging.warning('No receiver specified, thus no data '
+                                'can be plotted. Change %s!', config_file)
+        return configuration
+
         
     def plot_spline_masking(self,calibrated_file=False, PdfPages=PdfPages):
         with tb.open_file(calibrated_file, 'r') as in_file:

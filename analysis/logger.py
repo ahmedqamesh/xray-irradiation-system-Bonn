@@ -17,7 +17,12 @@ def setup_main_logger(name='MYWorkSpace', level=logging.INFO):
 
     return logger
 
-
+def setup_logging(loglevel):  # set logging level of this module
+    numeric_level = getattr(logging, loglevel.upper(), None)
+    if not isinstance(numeric_level, int):
+        raise ValueError('Invalid log level: %s' % loglevel)
+    logging.basicConfig(level=numeric_level)
+    
 def setup_derived_logger(name, level=logging.INFO):
     logger = logging.getLogger(name)
     logger.setLevel(level)

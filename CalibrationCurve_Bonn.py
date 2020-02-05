@@ -9,7 +9,7 @@ if __name__ == '__main__':
     tests = ["without_Al_Filter", "with_Al_Filter"]
     depth = ["3cm", "5cm", "8cm", "51cm"]
     PdfPages = PdfPages(pdf_file)
-    filename = "/home/silab62/git/XrayMachine_Bonn/Calibration_Curves/without_Al_Filter/beamspot/60cm/beamspot_60cm.h5"
+    filename = "/Calibration_Curves/without_Al_Filter/beamspot/60cm/beamspot_60cm.h5"
     p =plotting_Calibration.PlottingCalibration()
     p.diode_calibration(PdfPages=PdfPages, Directory=Directory, diodes=["A","B","C"])
     p.calibration_temperature(data="temperature_dose.h5", Directory=Directory, PdfPages=PdfPages)
@@ -23,5 +23,5 @@ if __name__ == '__main__':
     p.Plot_Beam_profile_2d(Directory=Directory, PdfPages=PdfPages, depth=["3cm", "3cm_Vfilter", "3cm_Zrfilter", "3cm_collimator", "8cm", "60cm"])
     p.plot_beamspot(Directory= Directory, depth =["60cm"], PdfPages=PdfPages)
     p.close(PdfPages=PdfPages)
-    print("All the results are save in the directory %s" %(Directory))
+    print("All the results are saved in the directory %s" %(Directory))
     print ("The whole plots are saved into the  file %s"%(pdf_file))
