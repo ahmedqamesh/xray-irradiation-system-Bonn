@@ -1,21 +1,4 @@
-#
-# ------------------------------------------------------------
-# Copyright (c) All rights reserved
-# SiLab, Institute of Physics, University of Bonn
-# ------------------------------------------------------------
-#
-from basil.dut import Dut
-import time
-import numpy as np
-import tables as tb
-import csv
-import logging
-from tables import *
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-import random
-from matplotlib.backends.backend_pdf import PdfPages
-from Tkinter import *
+
 def Restore_intial_positions(Limit=6e6):
     dut = Dut('motorstage_Pyserial.yaml')
     dut.init()
@@ -55,13 +38,14 @@ def beamspot(size_x=1, z=20, x_Delay=5, x=20,size_z=1,
         dut.init()
         
     def Move(step_z=False,size_x=size_x,size_z=size_z):
+        
         if step_z % 2 == 0:
             a,b,c = 0,x,1
-            print "Even" , size_x,range(a,b,c)
+            print ("Even" , size_x,range(a,b,c))
         else:
            size_x = size_x*-1
            a,b,c = x-1,-1,-1
-           print "odd", size_x,range(a,b,c) 
+           print ("odd", size_x,range(a,b,c)) 
         
         first_point = True
         for step_x in xrange(a,b,c):
@@ -75,22 +59,27 @@ def beamspot(size_x=1, z=20, x_Delay=5, x=20,size_z=1,
             else:
                 current = random.randint(1, 101)
             beamspot[step_z,step_x] = float(current)
+            
             plt.imshow(beamspot, aspect='auto', origin='upper',  cmap=plt.get_cmap('tab20c'))
             plt.pause(0.05)
-            print beamspot[step_z,step_x],step_x,step_z
+            
+            print (beamspot[step_z,step_x],step_x,step_z)
+        
         dut["ms"].read_write("MR%d" % (-size_z), address=2)  # x# x 50000,100,50 = 4.5 cm in/out
         time.sleep(2*x_Delay)
+
     t0 = time.time()
     beamspot = np.zeros(shape=(z, x), dtype=np.float64)
     for step_z in range(z):
         Move(step_z=step_z)
+    
     plt.show()
     file = Directory + "beamspot_3cm_collimator.h5"
     with tb.open_file(file, "w") as out_file_h5:
         out_file_h5.create_array(out_file_h5.root, 'beamspot', beamspot, "beamspot")  
-    print "The beamspot file is saved as%s" %(file)
+    print ("The beamspot file is saved as%s" %(file))
     t1 = time.time()
-    print "The time Estimated", t1 - t0
+    print ("The time Estimated", t1 - t0)
 
 '''
 Step1: Restore the intial position with Auto-Referencing Option: With standard PI stages

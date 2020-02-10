@@ -2,7 +2,7 @@ from __future__ import division
 import numpy as np
 from scipy.optimize import curve_fit
 import logging
-loglevel = logging.getLogger('Analysis').getEffectiveLevel()
+loglevel = logging.getLogger('root').getEffectiveLevel()
 from analysis import logger
 np.warnings.filterwarnings('ignore')
 from analysis import analysis

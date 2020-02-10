@@ -1530,3 +1530,68 @@ Analysis 2020-02-05 20:51:21,597 :: INFO :: Analysis initialized
 Analysis 2020-02-05 20:51:32,878 :: INFO :: Analysis initialized
 Analysis 2020-02-05 20:52:06,215 :: INFO :: Analysis initialized
 Analysis 2020-02-05 20:52:16,110 :: INFO :: Analysis initialized
+analysis utils 2020-02-07 14:52:56,138 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 15:20:05,274 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 15:23:32,326 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 15:24:52,342 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 15:26:27,190 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 15:27:11,960 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 15:29:09,101 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 15:29:10,491 :: INFO :: The beamspot file is saved as/Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 15:30:26,805 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 15:30:27,713 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 15:30:48,519 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 15:30:49,810 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 15:31:44,658 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 15:32:19,126 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 15:32:20,412 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 15:32:42,915 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 15:32:43,877 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 15:32:43,877 :: INFO :: The time Estimated is 0.9616689682006836
+analysis utils 2020-02-07 15:36:34,564 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 15:40:26,902 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 15:40:27,072 :: INFO :: The time Estimated is 232.50823187828064 s
+analysis utils 2020-02-07 15:54:00,470 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 15:54:17,605 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 15:54:17,630 :: INFO :: The time Estimated is 17.15990710258484 s
+analysis utils 2020-02-07 15:58:41,475 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 16:02:24,518 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 16:04:27,161 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 16:04:30,375 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:04:30,375 :: INFO :: The time Estimated is 3.2139289379119873 s
+analysis utils 2020-02-07 16:06:22,982 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 16:06:24,221 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:06:24,222 :: INFO :: The time Estimated is 1.2393879890441895 s
+analysis utils 2020-02-07 16:07:28,186 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 16:07:29,563 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:07:29,563 :: INFO :: The time Estimated is 1.3766648769378662 s
+analysis utils 2020-02-07 16:09:40,592 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 16:30:16,959 :: INFO :: Creating a confiiguration array for the snake pattern
+analysis utils 2020-02-07 16:30:25,565 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:30:25,566 :: INFO :: The time Estimated is 8.606472969055176 s
+analysis utils 2020-02-07 16:49:59,470 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:49:59,500 :: INFO :: The time Estimated is 1.6573431491851807 s
+analysis utils 2020-02-07 16:50:13,135 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:50:13,135 :: INFO :: The time Estimated is 0.7353479862213135 s
+analysis utils 2020-02-07 16:51:47,190 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:51:47,190 :: INFO :: The time Estimated is 1.1993889808654785 s
+analysis utils 2020-02-07 16:52:32,732 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:52:32,732 :: INFO :: The time Estimated is 3.347308874130249 s
+analysis utils 2020-02-07 16:52:36,637 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:52:36,638 :: INFO :: The time Estimated is 0.7647199630737305 s
+analysis utils 2020-02-07 16:54:28,036 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:54:28,037 :: INFO :: The time Estimated is 0.9511561393737793 s
+analysis utils 2020-02-07 16:54:34,304 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:54:34,304 :: INFO :: The time Estimated is 1.6534788608551025 s
+analysis utils 2020-02-07 16:56:22,647 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:56:22,648 :: INFO :: The time Estimated is 0.996290922164917 s
+analysis utils 2020-02-07 16:57:58,714 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:57:58,732 :: INFO :: The time Estimated is 0.7887959480285645 s
+analysis utils 2020-02-07 16:58:02,755 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:58:02,755 :: INFO :: The time Estimated is 0.7970149517059326 s
+analysis utils 2020-02-07 16:58:51,626 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:58:51,626 :: INFO :: The time Estimated is 2.443488836288452 s
+analysis utils 2020-02-07 16:59:06,405 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 16:59:06,405 :: INFO :: The time Estimated is 0.773953914642334 s
+analysis utils 2020-02-07 17:25:02,554 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-07 17:25:02,631 :: INFO :: The time Estimated is 844.2938861846924 s
