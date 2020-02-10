@@ -27,14 +27,11 @@ import pandas as pd
 import time
 import random
 from numba import njit
-from graphics_Utils import DataMonitoring , MapMonitoring
+from graphics_Utils import DataMonitoring
 from analysis import logger
-
-directory="/Users/ahmedqamesh/git/Xray_Irradiation_System_Bonn/graphics_Utils/test_files"
+from pathlib import Path
 log = logger.setup_derived_logger('analysis utils')
-
-
-def compute_move(size_x=1, z=20,z_Delay=None, x_Delay=0, x=20, size_z=1, sourcemeter=False, directory=directory):
+def compute_move(size_x=1, z=20,z_Delay=None, x_Delay=0, x=20, size_z=1, sourcemeter=False, directory=None):
     # Initial plot will be generated
     '''
     Assuming that the cabinet door is the -z
@@ -59,7 +56,7 @@ def compute_move(size_x=1, z=20,z_Delay=None, x_Delay=0, x=20, size_z=1, sourcem
 #     else:
 #         dut = Dut('motorstage_Pyserial.yaml')
 #         dut.init()
-    def fill_snake_pattern(step_z=False,sourcemeter = False, size_z=None, a=None, b=None , c=None, size_x=None, x_Delay=None, z_Delay=z_Delay, directory=directory):            
+    def fill_snake_pattern(step_z=False,sourcemeter = False, size_z=None, a=None, b=None , c=None, size_x=None, x_Delay=None, z_Delay=z_Delay, directory=None):            
          first_point = True
          for step_x in tqdm(np.arange(a, b, c) , unit='xstep'):
              #if not first_point:
@@ -73,7 +70,10 @@ def compute_move(size_x=1, z=20,z_Delay=None, x_Delay=0, x=20, size_z=1, sourcem
              # else:
              current = random.randint(1, 101)
              beamspot[step_z, step_x] = float(current)
-             save_to_h5(data=beamspot, outname='beamspot_Live.h5', directory= directory)
+             try: 
+                save_to_h5(data=beamspot, outname='beamspot_Live.h5', directory= directory)
+             except IndexError:  #open file failure
+                pass
              #beamshow  = plt.imshow(beamspot, aspect='auto', origin='upper',  cmap=plt.get_cmap('tab20c'))
              #plt.pause(0.05)
          # dut["ms"].read_write("MR%d" % (-size_z), address=2)  # x# x 50000,100,50 = 4.5 cm in/out
@@ -86,12 +86,11 @@ def compute_move(size_x=1, z=20,z_Delay=None, x_Delay=0, x=20, size_z=1, sourcem
     for step_z in tqdm(np.arange(z), unit='zstep'):
         a, b = config_beamspot[step_z].item(0) , config_beamspot[step_z].item(1)
         c , new_size_x = config_beamspot[step_z].item(2), config_beamspot[step_z].item(3)
-        fill_snake_pattern(step_z=step_z , a=int(a), b=int(b) , c=int(c), size_x=int(new_size_x), x_Delay=x_Delay, z_Delay=z_Delay)
+        fill_snake_pattern(step_z=step_z , a=int(a), b=int(b) , c=int(c), size_x=int(new_size_x), x_Delay=x_Delay, z_Delay=z_Delay, directory = directory)
     #plt.show()
     outname='beamspot.h5'
     save_to_h5(data=beamspot, outname=outname, directory=directory) 
-    finalfile = os.path.join(directory, outname)
-    log.info("The beamspot file is saved as " + finalfile)
+    log.info("The beamspot file is saved as " + os.path.join(directory, outname))
     t1 = time.time()
     log.info("The time Estimated is "+ np.str(t1 - t0)+" s")
 
@@ -326,3 +325,8 @@ def dose_current(directory=False, PdfPages=False):
     plt.tight_layout()
     plt.savefig(directory + "Capacitance.png", bbox_inches='tight')
     PdfPages.savefig()
+
+def get_project_root() -> Path:
+    """Returns project root folder."""
+    return Path(__file__).parent.parent
+    

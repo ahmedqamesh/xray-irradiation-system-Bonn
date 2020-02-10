@@ -17,7 +17,8 @@ from matplotlib.backends.backend_pdf import PdfPages
 from analysis import analysis_utils
 
 if __name__ == '__main__':
-    directory="/Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files"
+    root = analysis_utils.get_project_root()
+    directory= str(root)+"/graphics_Utils/test_files"
     size_x=1
     z=20
     x_Delay=2

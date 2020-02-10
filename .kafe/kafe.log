@@ -1595,3 +1595,5 @@ analysis utils 2020-02-07 16:59:06,405 :: INFO :: The beamspot file is saved as 
 analysis utils 2020-02-07 16:59:06,405 :: INFO :: The time Estimated is 0.773953914642334 s
 analysis utils 2020-02-07 17:25:02,554 :: INFO :: The beamspot file is saved as /Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
 analysis utils 2020-02-07 17:25:02,631 :: INFO :: The time Estimated is 844.2938861846924 s
+analysis utils 2020-02-10 17:15:38,193 :: INFO :: The beamspot file is saved as /home/dcs/git/Xray_Irradiation_System_Bonn/graphics_Utils/test_files/beamspot.h5
+analysis utils 2020-02-10 17:15:38,193 :: INFO :: The time Estimated is 841.3926618099213 s
