@@ -3,7 +3,7 @@ from matplotlib.backends.backend_qt5agg import FigureCanvas
 from PyQt5.QtCore import QDateTime, Qt, QTimer
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import *
-from graphics_Utils import DataMonitoring , utils
+from graphics_Utils import DataMonitoring
 
 class Ui_ChildWindow(QWidget):  
     def __init__(self):

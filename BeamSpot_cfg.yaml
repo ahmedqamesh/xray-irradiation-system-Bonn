@@ -1,0 +1,18 @@
+Application: 
+        name : 'Beam Spot scanning'
+
+Settings:
+       size_x    :   1
+       z         :   20
+       x_Delay   :   5
+       z_Delay   :   5
+       period    :   1000
+       x         :   20
+       size_z    :   1
+       depth     :   3 
+
+devices:
+       sourcemeter : "False"
+    
+Other:
+    user    :   "Ahmed Qamesh"

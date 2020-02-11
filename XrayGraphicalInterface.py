@@ -9,49 +9,53 @@ from PyQt5.QtCore    import *
 from PyQt5.QtGui     import *
 from PyQt5.QtWidgets import *
 from pathlib import Path
-
-# from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 import matplotlib as mpl
 import numpy as np
 from matplotlib.figure import Figure
-from graphics_Utils import DataMonitoring , utils , ChildWindow
-
-from analysis import analysis_utils
-
+from graphics_Utils import DataMonitoring , MenuWindow , ChildWindow ,LogWindow
+from analysis import analysis_utils , logger
+# Third party modules
+from logging.handlers import RotatingFileHandler
+import coloredlogs as cl
+import verboselogs
+import logging
+rootdir = os.path.dirname(os.path.abspath(__file__))
 class ApplicationWindow(QtWidgets.QMainWindow):
-    app_name = 'Online Monitor'
-    size_x=1
-    z=20
-    x_Delay=5
-    z_Delay = 5
-    period = 1000
-    x=20
-    size_z=1
-    sourcemeter =False
-    depth = 3
-    def __init__(self, parent=None,depth=depth,  size_x=size_x,period=period, z=z, z_Delay=z_Delay, x_Delay=x_Delay, x=x, size_z=size_z, sourcemeter=sourcemeter):
-        #ROOT_DIR = os.path.dirname(os.path.abspath(__file__)) # This is your Project Root
+    def __init__(self, parent=None, sourcemeter=False, config =None):
         super(ApplicationWindow, self).__init__(parent)
-        root = analysis_utils.get_project_root()
-        directory= str(root)+"/graphics_Utils/test_files"
-        self.size_x=size_x
-        self.z=z
-        self.x_Delay=x_Delay
-        self.z_Delay = z_Delay
-        self.period = period
-        self.x=x
-        self.size_z=size_z
-        self.sourcemeter=sourcemeter
+        # Initialize logger
+        logger.extend_logging()
+        verboselogs.install()
+        self.logger = logging.getLogger(__name__)
+        """:obj:`~logging.Logger`: Main logger for this class"""
+        self.logger.setLevel(logging.DEBUG)
+
+        # Read configurations from a file
+        self.logger.notice('Read configuration file ...')
+        if config is None:
+            conf = analysis_utils.open_yaml_file(file ="BeamSpot_cfg.yaml",directory =rootdir)
+            
+        directory= rootdir+"/graphics_Utils/test_files"
         self.directory=directory
-        self.depth= depth
-        self.originalPalette = QApplication.palette()
-        utils._createMenu(self)
-        # utils._createToolBar(self)
-        utils._createStatusBar(self)
+        # Initialize default arguments
+        self.app_name = conf['Application']['name']
         
-        # 1. Window settings
-        utils._setup_style(self) 
+        self.size_x=conf['Settings']['size_x']
+        self.z=conf['Settings']['z']
+        self.x_Delay=conf['Settings']['x_Delay']
+        self.z_Delay = conf['Settings']['z_Delay']
+        self.period = conf['Settings']['period']
+        self.x=conf['Settings']['x']
+        self.size_z=conf['Settings']['size_z']
+        self.sourcemeter= sourcemeter
+        self.depth= conf['Settings']['depth'] 
         
+    def Ui_ApplicationWindow(self):
+        self.menu= MenuWindow.MenuBar()
+        self.menu._createMenu(self)
+        self.menu._createtoolbar(self)
+        self.menu._createStatusBar(self)
+
         # call widgets
         self.createTopLeftTabGroupBox()
         self.createTopRightGroupBox()
@@ -106,7 +110,6 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         # Define a layout
         plotLayout = QVBoxLayout()
         # add the figure to the layout
-        # myFig = DataMonitoring.DataMonitoringCanvas(x_len=200, y_range=[0, 100], interval=1)
         Fig = DataMonitoring.LiveMonitoringData()
         plotLayout.addStretch(1)
         plotLayout.addWidget(Fig)
@@ -191,9 +194,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         gridLayout.addWidget(field_joystick_out_button,2,3)
         gridLayout.addLayout(upDownLayout,0,6, 3,1)
         
-        
         #up-down buttons
-
         gridLayout.addWidget(MontoSettings_button, 3, 0)
         gridLayout.addWidget(btn2, 4, 0)
         
@@ -246,7 +247,6 @@ class ApplicationWindow(QtWidgets.QMainWindow):
 
     def advanceProgressBar(self):
         curVal = self.progressBar.value()
-        
         maxVal = self.progressBar.maximum()
         self.progressBar.setValue(curVal + (maxVal - curVal) / 100)
         
@@ -272,8 +272,8 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         #MainWindow.hide()
         self.window.show()
 
-
 if __name__ == "__main__":
     qapp = QtWidgets.QApplication(sys.argv)
     app = ApplicationWindow()
+    app.Ui_ApplicationWindow()
     qapp.exec_()
