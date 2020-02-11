@@ -27,7 +27,7 @@ import pandas as pd
 import time
 import random
 from numba import njit
-from graphics_Utils import DataMonitoring
+from graphics_Utils import DataMonitoring , ChildWindow 
 from analysis import logger
 from pathlib import Path
 log = logger.setup_derived_logger('analysis utils')
@@ -69,6 +69,7 @@ def compute_move(size_x=1, z=20,z_Delay=None, x_Delay=0, x=20, size_z=1, sourcem
                  # current = val[15:-43]
              # else:
              current = random.randint(1, 101)
+             #ChildWindow.DataMonitoring.LiveMonitoringData.set_data(x = current)
              beamspot[step_z, step_x] = float(current)
              try: 
                 save_to_h5(data=beamspot, outname='beamspot_Live.h5', directory= directory)
@@ -94,6 +95,7 @@ def compute_move(size_x=1, z=20,z_Delay=None, x_Delay=0, x=20, size_z=1, sourcem
     t1 = time.time()
     log.info("The time Estimated is "+ np.str(t1 - t0)+" s")
 
+        
 def define_configured_array(size_x=1, z=20, x=20, size_z=1):
     #log.info('Creating a confiiguration array for the snake pattern')
     config_beamspot = np.zeros(shape=(z, 5), dtype=np.float64)

@@ -3,7 +3,7 @@ from matplotlib.backends.backend_qt5agg import FigureCanvas
 from PyQt5.QtCore import QDateTime, Qt, QTimer
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import *
-from graphics_Utils import DataMonitoring , MapMonitoring , utils
+from graphics_Utils import DataMonitoring , utils
 
 class Ui_ChildWindow(QWidget):  
     def __init__(self):
@@ -99,14 +99,14 @@ class Ui_ChildWindow(QWidget):
         ChildWindow.setWindowTitle("Motor stage settings")
         QtCore.QMetaObject.connectSlotsByName(ChildWindow)
 
-    def set_label(self, text):
-        self.outLabel.setText(text)
-
     def set_click(self):
         dim = self.get_dimention()
         ch = self.get_channel()
         text = "%s will be set to  %s direction"%(ch,dim)
+        self.outLabel.setText(text)
+        self.outLabel.adjustSize()
         print(text)
+        
         
     # setter method 
     def set_channel(self, x): 
@@ -119,7 +119,7 @@ class Ui_ChildWindow(QWidget):
         text = "%s will be set to  %s direction"%(ch,dim)
         self.outLabel.setText(text)
         self.outLabel.adjustSize()
-        
+       
     # getter methods
     def get_channel(self): 
         return self._channel 

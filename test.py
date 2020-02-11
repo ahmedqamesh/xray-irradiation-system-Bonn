@@ -98,7 +98,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
 
     def createTopLeftTabGroupBox(self):
         # Define a group for the whole wedgit
-        self.topLeftTabGroupBox = QGroupBox("Data Monitoring (2)")
+        self.topLeftTabGroupBox = QGroupBox("Sourcemeter settings")
         # Define a frame for the figure
         plotframe = QFrame(self)
         plotframe.setStyleSheet("QWidget { background-color: #eeeeec; }")
@@ -124,39 +124,39 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         plotframe.setStyleSheet("QWidget { background-color: #eeeeec; }")
         plotframe.setLineWidth(0.6)
         #list Joystick bottons
+        h , w = 50 , 25
         field_joystick_in_button = QPushButton("")
         field_joystick_in_button.clicked.connect(self.joystick_in)
-        field_joystick_in_button.setFixedWidth(24)
+        field_joystick_in_button.setFixedWidth(w)
         field_joystick_in_button.setIcon(QIcon('graphics_Utils/icons/icon_in.jpg'))
         #field_joystick_in_button.setIconSize(QtCore.QSize(26,24))
         
         field_joystick_out_button = QPushButton("")
         field_joystick_out_button.clicked.connect(self.joystick_out)  
-        field_joystick_out_button.setFixedWidth(24)
+        field_joystick_out_button.setFixedWidth(w)
         field_joystick_out_button.setIcon(QIcon('graphics_Utils/icons/icon_out.jpg'))
         #field_joystick_out_button.setIconSize(QtCore.QSize(24,24))
 
         field_joystick_middle_button = QPushButton("")  
         field_joystick_middle_button.clicked.connect(self.joystick_middle)
-        field_joystick_middle_button.setFixedWidth(24)
+        field_joystick_middle_button.setFixedWidth(w)
         field_joystick_middle_button.setIcon(QIcon('graphics_Utils/icons/icon_run.png'))
         #field_joystick_middle_button.setIconSize(QtCore.QSize(24,24))
 
         field_joystick_right_button = QPushButton("")  
         field_joystick_right_button.clicked.connect(self.joystick_right)
-        field_joystick_right_button.setFixedWidth(24)
+        field_joystick_right_button.setFixedWidth(w)
         field_joystick_right_button.setIcon(QIcon('graphics_Utils/icons/icon_right.jpg'))
         #field_joystick_right_button.setIconSize(QtCore.QSize(24,24))
         
         
         field_joystick_left_button = QPushButton("")  
         field_joystick_left_button.clicked.connect(self.joystick_left)
-        field_joystick_left_button.setFixedWidth(24)
+        field_joystick_left_button.setFixedWidth(w)
         field_joystick_left_button.setIcon(QIcon('graphics_Utils/icons/icon_left.jpg'))
         #field_joystick_left_button.setIconSize(QtCore.QSize(24,24))
         
         # Up- down plots
-        h , w = 30 , 25
         upDownLayout = QVBoxLayout()
         field_joystick_up_button = QPushButton("")  
         field_joystick_up_button.clicked.connect(self.joystick_up)
@@ -176,11 +176,11 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         upDownLayout.addWidget(field_joystick_down_button)
         
         
-        MontoSettings_button = QPushButton("MontoSettings")
+        MontoSettings_button = QPushButton("Montor Settings")
         MontoSettings_button.clicked.connect(self.openWindow)
         #MontoSettings_button.setFixedWidth(30)
 
-        btn2 = QPushButton("btn2")
+        btn2 = QPushButton("Restore intial positions")
         btn2.clicked.connect(self.openWindow)
         
         gridLayout = QGridLayout()
