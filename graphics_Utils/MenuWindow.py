@@ -20,6 +20,7 @@ class MenuBar(QWidget):
         self._fileMenu(menuBar,mainwindow)
         self._viewMenu(menuBar, mainwindow)
         self._settingsMenu(menuBar, mainwindow)
+        self._historyMenu(menuBar, mainwindow)
         self._helpMenu(menuBar, mainwindow)
     
     def _createtoolbar(self,mainwindow):
@@ -67,12 +68,44 @@ class MenuBar(QWidget):
     # 2. View menu
     def _viewMenu(self,menuBar,mainwindow):
         viewMenu = menuBar.addMenu("&View")
-        trend_action = QAction('&Open trending plot', mainwindow, checkable=True)
-        trend_action.setStatusTip('Open trending plot')
-        trend_action.setChecked(True)
-        trend_action.triggered.connect(self.toggleMenu)
+
+        canSettings_action = QAction('&CAN Settings', mainwindow, checkable=True)
+        canSettings_action.setStatusTip('CAN Settings')
+        canSettings_action.setChecked(False)
+        canSettings_action.triggered.connect(self.canSettingsChildWindow)
+
+        
+        canMessage_action = QAction('&CAN Message', mainwindow, checkable=True)
+        canMessage_action.setStatusTip('CAN Message')
+        canMessage_action.setChecked(False)
+        canMessage_action.triggered.connect(self.toggleMenu)
+
+        outWindow_action = QAction('&Output Window', mainwindow, checkable=True)
+        outWindow_action.setStatusTip('Output Window')
+        outWindow_action.setChecked(False)
+        outWindow_action.triggered.connect(self.outputChildWindow)
+                
+        trend_action = QAction('&Data Trending', mainwindow, checkable=True)
+        trend_action.setStatusTip('Data Trending')
+        trend_action.setChecked(False)
+        trend_action.triggered.connect(self.trendChildWindow)
+        
+        viewMenu.addAction(canSettings_action)
+        viewMenu.addAction(canMessage_action)
+        viewMenu.addAction(outWindow_action)
         viewMenu.addAction(trend_action)
-    
+
+     # 3. Test menu
+    def _historyMenu(self,menuBar,mainwindow): 
+        history_menu = menuBar.addMenu("&History")
+        test_menu = history_menu.addMenu("&Tests")
+        
+        angle_action = QAction(QIcon('graphics_Utils/icons/icon_angle.png'), '&Opening Angle', mainwindow)        
+        angle_action.setStatusTip('Opening Angle')
+        angle_action.setChecked(True)
+        angle_action.triggered.connect(self.openingAngleChildMenu)
+        test_menu.addAction(angle_action) 
+        
      # 3. Settings menu
     def _settingsMenu(self,menuBar,mainwindow): 
         settings_menu = menuBar.addMenu("&Settings")
@@ -127,8 +160,7 @@ class MenuBar(QWidget):
         stop_action = QAction(QIcon('graphics_Utils/icons/icon_stop.png'), '&Stop', mainwindow)
         stop_action.setStatusTip('Stop program') # show when move mouse to the icon
         stop_action.triggered.connect(self.clicked)
-        
-                
+   
         toolbar.addAction(new_action)
         toolbar.addAction(open_action)
         toolbar.addAction(save_action)
@@ -143,14 +175,50 @@ class MenuBar(QWidget):
         mainwindow.setStatusBar(status)
 
 
-    
     # Functions to run
     def toggleMenu(self, state):
         if state:
             self.openWindow()
         else:
             pass
+    
+    def openingAngleChildMenu(self):
+        self.mainwindow = QMainWindow()
+        self.ui = ChildWindow.Ui_ChildWindow()
+        self.ui.openingAngle(self.mainwindow)
+        self.mainwindow.show()     
         
+        
+        
+    def outputChildWindow(self,state):
+        if state:
+            self.outputmainwindow = QMainWindow()
+            self.ui = ChildWindow.Ui_ChildWindow()
+            self.ui.outputChildWindow(self.outputmainwindow)
+            self.outputmainwindow.show()
+        else:
+            pass
+    
+    def trendChildWindow(self,state):
+        if state:
+            self.trendmainwindow = QMainWindow()
+            self.ui = ChildWindow.Ui_ChildWindow()
+            self.ui.trendChildWindow(self.trendmainwindow)
+            self.trendmainwindow.show()
+        else:
+            pass
+            
+    
+    
+    def canSettingsChildWindow(self,state):
+        if state:
+            self.canSettingsmainwindow = QMainWindow()
+            self.ui = ChildWindow.Ui_ChildWindow()
+            self.ui.canSettingsChildWindow(self.canSettingsmainwindow)
+            self.canSettingsmainwindow.show()
+        else:
+            pass
+    
     def about(self):
         QMessageBox.about(self,"About",
         """embedding_in_qt5.py example
