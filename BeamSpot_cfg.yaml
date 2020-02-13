@@ -13,6 +13,14 @@ Settings:
 
 devices:
        sourcemeter : "False"
-    
+
+
+
+
+Tests:
+   name: "Opening Angle Test"
+   -Filter:
+      directory: "/tests/without_Al_Filter/opening_angle"    
+
 Other:
     user    :   "Ahmed Qamesh"

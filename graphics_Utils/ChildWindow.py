@@ -1,71 +1,23 @@
 from matplotlib.backends.qt_compat import QtCore, QtWidgets
 from matplotlib.backends.backend_qt5agg import FigureCanvas
-from PyQt5.QtCore import QDateTime, Qt, QTimer
-from PyQt5.QtGui import QIcon
+from PyQt5.QtCore    import *
+from PyQt5.QtGui     import *
 from PyQt5.QtWidgets import *
 from graphics_Utils import DataMonitoring , MenuWindow , LogWindow
 import numpy as np
+ipAddress = '192.168.1.254'
 class Ui_ChildWindow(QWidget):  
     def __init__(self):
        super().__init__() 
        self.menu= MenuWindow.MenuBar()
+       self._openingAngleCalculation = "The beam profile at a specific height"
+       self_ipAddress =ipAddress
+       #print("the directory: %s"%  os.path.dirname("/Users/ahmedqamesh/git/MOPS_daq_cfg.yml"))
+       #print("last modified: %s" % time.ctime(os.path.getmtime("MOPS_daq_cfg.yml")))
+       #print("created: %s" % time.ctime(os.path.getctime("MOPS_daq_cfg.yml")))
+    
        #self.menu._createStatusBar(self)
-    def openingAngle(self, ChildWindow):
-        ChildWindow.setWindowTitle("Opening Angle")
-        ChildWindow.resize(400, 400)        
-        plotframe = QFrame(ChildWindow)
-        plotframe.setLineWidth(0.6)
-        ChildWindow.setCentralWidget(plotframe)
-        
-        self.mainGroupBox = QGroupBox("Set channel")
-        mainLayout = QGridLayout()
-                
-        #comboBox and label for channel
-        chLabel = QLabel("Channel", ChildWindow)
-        chLabel.setText("Select Channel Number")
-
-        items = ["---","ch01","ch02","ch03"]
-        chComboBox = QComboBox(ChildWindow)
-        for item in items: chComboBox.addItem(item)
-        chComboBox.activated[str].connect(self.set_channel)
-
-        dimLabel = QLabel("Coordinate", ChildWindow)
-        dimLabel.setText("Choose coordinate")
-        
-        items = ["---","x","y","z"]
-        dimComboBox = QComboBox(ChildWindow)
-        for item in items: dimComboBox.addItem(item)
-        dimComboBox.activated[str].connect(self.set_dimention)
-
-          
-        self.outLabel = QLabel("channel settings",ChildWindow)
-        self.outLabel.setStyleSheet("background-color: white; border: 2px inset black;")# min-height: 200px;")
-        
-        set_button = QPushButton("Set")
-        set_button.clicked.connect(self.set_click)
-        
-        close_button = QPushButton("close")
-        close_button.clicked.connect(ChildWindow.close)
-
-        gridLayout = QGridLayout()
-        gridLayout.addWidget(chLabel,0,0)
-        gridLayout.addWidget(chComboBox,1,0)
-        
-        gridLayout.addWidget(dimLabel,2,0)
-        gridLayout.addWidget(dimComboBox,3,0)
-        
-        
-        gridLayout.addWidget(self.outLabel,4,0)
-        gridLayout.addWidget(set_button,4,1)    
-        self.mainGroupBox.setLayout(gridLayout) 
-
-        mainLayout.addWidget(self.mainGroupBox, 0, 0)
-
-        plotframe.setLayout(mainLayout) 
-
-        self.menu._createStatusBar(ChildWindow)
-        QtCore.QMetaObject.connectSlotsByName(ChildWindow)          
-        
+ 
     def settingChannel(self, ChildWindow):
         ChildWindow.setObjectName("ChildWindow")
         ChildWindow.setWindowTitle("Motor stage settings")
@@ -175,28 +127,136 @@ class Ui_ChildWindow(QWidget):
         self.WindowGroupBox.setLayout(plotLayout)
         logframe.setLayout(plotLayout) 
         
-                
-                
-    def canSettingsChildWindow(self, ChildWindow):
-        ChildWindow.setObjectName("CANSettings")
-        ChildWindow.setWindowTitle("CAN Settings")
+    def openingAngleChildMenu(self, ChildWindow):
+        
+        test_name = "Opening Angle Test"
+        test_dir = "/../../"
+        test_date ="1/1/2001"
+        ChildWindow.setObjectName(test_name)
+        ChildWindow.setWindowTitle(test_name)
         ChildWindow.resize(310, 600) #w*h
         MainLayout = QGridLayout()
-        
         #Define a frame for that group
         plotframe = QFrame(ChildWindow)
-        #plotframe.setStyleSheet("QWidget { background-color: #eeeeec; }")
         plotframe.setLineWidth(0.6)
         ChildWindow.setCentralWidget(plotframe)
         
         #Define First Group
-        self.FirstGroupBox= QGroupBox("Bus Statistics")
+        self.FirstGroupBox= QGroupBox("Test Info:")
         FirstGridLayout =  QGridLayout()
+        #comboBox and label for channel
+        firstHBoxLayout = QHBoxLayout(ChildWindow)
+        firstLabel = QLabel("Test Name: ", ChildWindow)
+        firstLabel.setText("Test Name: ")
+        firstTextbox = QLineEdit(test_name, ChildWindow)
+        firstTextboxValue = firstTextbox.text()
+        firstHBoxLayout.addWidget(firstLabel)
+        firstHBoxLayout.addWidget(firstTextbox)        
         
-        clear_button = QPushButton("Clear")
-        clear_button.clicked.connect(ChildWindow.close)
+        #comboBox and label for channel
+        secondHBoxLayout = QHBoxLayout(ChildWindow)
+        secondLabel = QLabel("Data Directory: ", ChildWindow)
+        firstLabel.setText("Data Directory: ")
+        secondTextbox = QLineEdit(test_dir, ChildWindow)
+        secondTextboxValue = secondTextbox.text()
+        secondHBoxLayout.addWidget(secondLabel)
+        secondHBoxLayout.addWidget(secondTextbox)   
         
-        FirstGridLayout.addWidget(clear_button,0,0)
+        #comboBox and label for channel
+        thirdHBoxLayout = QHBoxLayout(ChildWindow)
+        thirdLabel = QLabel("Test Date   :", ChildWindow)
+        thirdLabel.setText("Test Date   :")
+        thirdTextbox = QLineEdit(test_date, ChildWindow)
+        thirdTextboxValue = thirdTextbox.text()
+        thirdHBoxLayout.addWidget(thirdLabel)
+        thirdHBoxLayout.addWidget(thirdTextbox)  
+        
+        Fig = DataMonitoring.LiveMonitoringData()
+                         
+        FirstGridLayout.addLayout(firstHBoxLayout,0,0)
+        FirstGridLayout.addLayout(secondHBoxLayout,1,0)
+        FirstGridLayout.addLayout(thirdHBoxLayout,2,0)
+        FirstGridLayout.addWidget(Fig,3,0)
+        self.FirstGroupBox.setLayout(FirstGridLayout)
+        #Define the second group
+        self.SecondGroupBox= QGroupBox("Beam profile size vs height")
+        SecondGridLayout =  QGridLayout()        
+        #comboBox and label for channel
+        calculationsLayout = QHBoxLayout()
+        caLabel = QLabel("Calculations :", ChildWindow)
+        caLabel.setText("Calculations  :")
+        
+        calculationitems = ["-----------------------------------------------",
+                          "The beam profile at a specific height",
+                          "The height for a specific beam profile"]
+        calculationsComboBox = QComboBox(ChildWindow)
+        for item in calculationitems: calculationsComboBox.addItem(item)
+        calculationsComboBox.activated[str].connect(self.set_openingAngleCalculation)
+        
+        calculationsLayout.addWidget(caLabel)
+        calculationsLayout.addWidget(calculationsComboBox)
+        SecondGridLayout.addLayout(calculationsLayout,0,0)
+        #Another group will be here for Bus parameters
+        #self.BusParametersGroupBox(interface =self._openingAngleCalculation)
+        self.SecondGroupBox.setLayout(SecondGridLayout)
+        
+        MainLayout.addWidget(self.FirstGroupBox, 0, 0)
+        MainLayout.addWidget(self.SecondGroupBox, 1, 0)
+        plotframe.setLayout(MainLayout) 
+
+        self.menu._createStatusBar(ChildWindow)
+        QtCore.QMetaObject.connectSlotsByName(ChildWindow)        
+        
+                        
+    def ChildMenu(self, ChildWindow):
+        test_name = "Opening Angle Test"
+        test_dir = "/../../"
+        test_date ="1/1/2001"
+        ChildWindow.setObjectName(test_name)
+        ChildWindow.setWindowTitle(test_name)
+        ChildWindow.resize(310, 600) #w*h
+        MainLayout = QGridLayout()
+        #Define a frame for that group
+        plotframe = QFrame(ChildWindow)
+        plotframe.setLineWidth(0.6)
+        ChildWindow.setCentralWidget(plotframe)
+        
+        #Define First Group
+        self.FirstGroupBox= QGroupBox("Test Info:")
+        FirstGridLayout =  QGridLayout()
+        #comboBox and label for channel
+        firstHBoxLayout = QHBoxLayout(ChildWindow)
+        firstLabel = QLabel("Test Name: ", ChildWindow)
+        firstLabel.setText("Test Name: ")
+        firstTextbox = QLineEdit(test_name, ChildWindow)
+        firstTextboxValue = firstTextbox.text()
+        firstHBoxLayout.addWidget(firstLabel)
+        firstHBoxLayout.addWidget(firstTextbox)        
+        
+        #comboBox and label for channel
+        secondHBoxLayout = QHBoxLayout(ChildWindow)
+        secondLabel = QLabel("Data Directory: ", ChildWindow)
+        firstLabel.setText("Data Directory: ")
+        secondTextbox = QLineEdit(test_dir, ChildWindow)
+        secondTextboxValue = secondTextbox.text()
+        secondHBoxLayout.addWidget(secondLabel)
+        secondHBoxLayout.addWidget(secondTextbox)   
+        
+        #comboBox and label for channel
+        thirdHBoxLayout = QHBoxLayout(ChildWindow)
+        thirdLabel = QLabel("Test Date   :", ChildWindow)
+        thirdLabel.setText("Test Date   :")
+        thirdTextbox = QLineEdit(test_date, ChildWindow)
+        thirdTextboxValue = thirdTextbox.text()
+        thirdHBoxLayout.addWidget(thirdLabel)
+        thirdHBoxLayout.addWidget(thirdTextbox)  
+        
+        Fig = DataMonitoring.LiveMonitoringData()
+                         
+        FirstGridLayout.addLayout(firstHBoxLayout,0,0)
+        FirstGridLayout.addLayout(secondHBoxLayout,1,0)
+        FirstGridLayout.addLayout(thirdHBoxLayout,2,0)
+        FirstGridLayout.addWidget(Fig,3,0)
         self.FirstGroupBox.setLayout(FirstGridLayout)
         
         #Define the second group
@@ -205,47 +265,24 @@ class Ui_ChildWindow(QWidget):
         #comboBox and label for channel
         chLabel = QLabel("CAN Channel:", ChildWindow)
         chLabel.setText("CAN Channel:")
-        chitems = ["Kvaser","Anagate","Others"]
-        chComboBox = QComboBox(ChildWindow)
-        for item in chitems: chComboBox.addItem(item)
-        chComboBox.activated[str].connect(self.set_channel)
+        controllerLayout = QHBoxLayout()
+        interfaceitems = ["----","Kvaser","AnaGate","Others"]
+        interfaceComboBox = QComboBox(ChildWindow)
+        for item in interfaceitems: interfaceComboBox.addItem(item)
+        interfaceComboBox.activated[str].connect(self.set_openingAngleCalculation)
+        
+        controllerLayout.addWidget(interfaceComboBox)
+        
+        #Another group will be here for Bus parameters
+        #self.BusParametersGroupBox(interface =self._openingAngleCalculation)
         
         modeLabel = QLabel("CAN Mode:", ChildWindow)
         modeLabel.setText("CAN Mode:")
         modeitems = ["CAN"]
         modeComboBox = QComboBox(ChildWindow)
         for item in modeitems: modeComboBox.addItem(item)
-        modeComboBox.activated[str].connect(self.set_channel)
+        modeComboBox.activated[str].connect(self.clicked)
 
-        #Another group will be here for Bus parameters
-        #Define subGroup
-        self.SubSecondGroupBox= QGroupBox("Bus Parameters")
-        SubSecondGridLayout =  QGridLayout()
-        
-        speedLabel = QLabel("Bus Speed:", ChildWindow)
-        speedLabel.setText("Bus Speed:")
-        speeditems = ["1000 kbit/s, 75.0%","500 kbit/s, 75.0%","250 kbit/s, 75.0%"," 125 kbit/s, 75.0%","100 kbit/s, 75.0%","83.333 kbit/s, 75.0%","62.500 kbit/s, 75.0%","50 kbit/s, 75.0%","33.333 kbit/s, 75.0%" ]
-        speedComboBox = QComboBox(ChildWindow)
-        for item in speeditems: speedComboBox.addItem(item)
-        speedComboBox.activated[str].connect(self.set_channel)
-        
-        SJWLabel = QLabel("SJW:", ChildWindow)
-        SJWLabel.setText("SJW:")
-        SJWitems = ["1","2","3","4"]
-        SJWComboBox = QComboBox(ChildWindow)
-        for item in SJWitems: SJWComboBox.addItem(item)
-        SJWComboBox.activated[str].connect(self.set_channel)
-        
-        bitLabel = QLabel("Bit Timing:", ChildWindow)
-        bitLabel.setText("Bit Timing:")
-        
-        SubSecondGridLayout.addWidget(speedLabel,0,0)
-        SubSecondGridLayout.addWidget(speedComboBox,0,1)
-        SubSecondGridLayout.addWidget(SJWLabel,1,0)
-        SubSecondGridLayout.addWidget(SJWComboBox,1,1)
-        SubSecondGridLayout.addWidget(bitLabel,2,0)               
-        self.SubSecondGroupBox.setLayout(SubSecondGridLayout)
-        
         #FirstButton
         clear_button = QPushButton("Clear")
         clear_button.clicked.connect(ChildWindow.close)
@@ -253,42 +290,115 @@ class Ui_ChildWindow(QWidget):
         HGridLayout =  QGridLayout()  
         set_button = QPushButton("Set in all")
         set_button.setIcon(QIcon('graphics_Utils/icons/icon_true.png'))
-        set_button.clicked.connect(self.set_click)
+        set_button.clicked.connect(self.clicked)
+        
+        h , w = 50 , 25
+        connectButton = QPushButton("")
+        connectButton.clicked.connect(self.get_openingAngleCalculation)  
+        connectButton.setFixedWidth(w)
+        connectButton.setIcon(QIcon('graphics_Utils/icons/icon_disconnect.jpg'))
+        icon = QIcon()
+        icon.addPixmap(QPixmap('graphics_Utils/icons/icon_disconnect.jpg'),  QIcon.Normal, QIcon.Off)
+        icon.addPixmap(QPixmap('graphics_Utils/icons/icon_connect.jpg'), QIcon.Normal,  QIcon.On)
+        connectButton.setIcon(icon)
+        connectButton.setCheckable(True)
+        
         
         setLabel = QLabel("Set same bit rate in all CAN controllers", ChildWindow)
         setLabel.setText("Set same bit rate in all CAN controllers")
-        HGridLayout.addWidget(set_button,0,0)
-        HGridLayout.addWidget(setLabel,0,1)
         
+        HGridLayout.addWidget(set_button,0,0)
+        HGridLayout.addWidget(connectButton,0,1) 
+        HGridLayout.addWidget(setLabel,0,2)
+        
+        self.SecondGroupBox.setLayout(SecondGridLayout)
         SecondGridLayout.addWidget(chLabel,0,0)
-        SecondGridLayout.addWidget(chComboBox,1,0)
+        SecondGridLayout.addLayout(controllerLayout,1,0)
         SecondGridLayout.addWidget(modeLabel,2,0)
         SecondGridLayout.addWidget(modeComboBox,3,0)
-        SecondGridLayout.addLayout(HGridLayout,4,0)
-        SecondGridLayout.addWidget(self.SubSecondGroupBox,5,0)
-        self.SecondGroupBox.setLayout(SecondGridLayout)
         
-        #Define Third Group
-        self.ThirdGridBox= QGroupBox("Bus Status")
-        ThirdGridLayout =  QGridLayout()
+        def _interfaceParameters():
+            interface = self._openingAngleCalculation
+            
+            SecondGridLayout.removeWidget(self.SubSecondGroupBox)
+            self.SubSecondGroupBox.deleteLater()
+            self.SubSecondGroupBox = None              
+            self.BusParametersGroupBox(interface = interface)
+            SecondGridLayout.addWidget(self.SubSecondGroupBox,4,0)        
         
-        go_button = QPushButton("Go On Bus")
-        go_button.setIcon(QIcon('graphics_Utils/icons/icon_reset.png'))
-        go_button.clicked.connect(ChildWindow.close)
-        
-        ThirdGridLayout.addWidget(go_button,0,0)
-        self.ThirdGridBox.setLayout(ThirdGridLayout)
+        SecondGridLayout.addLayout(HGridLayout,5,0)
+        interfaceComboBox.activated[str].connect(_interfaceParameters)
 
-        
         MainLayout.addWidget(self.FirstGroupBox, 0, 0)
         MainLayout.addWidget(self.SecondGroupBox, 1, 0)
-        MainLayout.addWidget(self.ThirdGridBox, 2, 0)
         plotframe.setLayout(MainLayout) 
 
         self.menu._createStatusBar(ChildWindow)
         QtCore.QMetaObject.connectSlotsByName(ChildWindow)        
         
 
+    def BusParametersGroupBox(self, interface ="AnaGate"):
+        #Define subGroup
+        self.SubSecondGroupBox= QGroupBox("Bus Parameters")
+        SubSecondGridLayout =  QGridLayout()
+        firstLabel= QLabel("firstLabel", self)
+        secondLabel = QLabel("secondLabel", self)
+        thirdLabel = QLabel("thirdLabel", self)
+        firstComboBox = QComboBox(self)
+        if (interface == "Kvaser"):
+            firstLabel.setText("Bus Speed:")
+            firstItems = ["1000 kbit/s, 75.0%","500 kbit/s, 75.0%","250 kbit/s, 75.0%"," 125 kbit/s, 75.0%","100 kbit/s, 75.0%","83.333 kbit/s, 75.0%","62.500 kbit/s, 75.0%","50 kbit/s, 75.0%","33.333 kbit/s, 75.0%" ]
+            for item in firstItems: firstComboBox.addItem(item)
+            firstComboBox.activated[str].connect(self.clicked)
+            secondLabel.setText("SJW:")
+            secondItems = ["1","2","3","4"]
+            secondComboBox = QComboBox(self)
+            for item in secondItems: secondComboBox.addItem(item)
+            secondComboBox.activated[str].connect(self.clicked)
+            thirdLabel.setText("Bit Timing:")
+            SubSecondGridLayout.addWidget(firstComboBox,0,1)
+        if (interface == "AnaGate"):
+            firstLabel.setText("IP address")
+            self.firsttextbox = QLineEdit(ipAddress,self)
+            textboxValue = self.firsttextbox.text()
+            secondLabel.setText("SJW:")
+            secondItems = ["1","2","3","4"]
+            secondComboBox = QComboBox(self)
+            for item in secondItems: secondComboBox.addItem(item)
+            secondComboBox.activated[str].connect(self.clicked)
+            thirdLabel.setText("Bit Timing:")
+            SubSecondGridLayout.addWidget(firsttextbox,0,1)
+            
+        if (interface == "Others"):        
+            firstLabel.setText("Speed:")
+            firstItems = [""]
+            firstComboBox = QComboBox(self)
+            for item in firstItems: firstComboBox.addItem(item)
+            firstComboBox.activated[str].connect(self.clicked)
+            secondLabel.setText("SJW:")
+            seconditems = [""]
+            secondComboBox = QComboBox(self)
+            for item in seconditems: secondComboBox.addItem(item)
+            secondComboBox.activated[str].connect(self.clicked)
+            thirdLabel.setText("Bit Timing:")
+            SubSecondGridLayout.addWidget(firstComboBox,0,1)
+            
+        SubSecondGridLayout.addWidget(firstLabel,0,0)
+        SubSecondGridLayout.addWidget(secondLabel,1,0)
+        SubSecondGridLayout.addWidget(secondComboBox,1,1)
+        SubSecondGridLayout.addWidget(thirdLabel,2,0)
+        self.SubSecondGroupBox.setLayout(SubSecondGridLayout)
+
+
+
+    def set_openingAngleCalculation(self, x): 
+        self._openingAngleCalculation = x 
+    
+    def set_self_ipAddress(self,x):
+        # x = self.firsttextbox.text()
+        self.self_ipAddress =x
+        
+        
     def set_label(self, text):
         self.outLabel.setText(text)
 
@@ -311,12 +421,22 @@ class Ui_ChildWindow(QWidget):
         self.outLabel.adjustSize()
         
     # getter methods
+    def get_openingAngleCalculation(self): 
+        self.mainWindow.set_interface(self._openingAngleCalculation)
+        return self._openingAngleCalculation 
+    
+    def get_self_ipAddress(self):
+        return self_ipAddress
+    
     def get_channel(self): 
         return self._channel 
     
     def get_dimention(self): 
         return self._dim
-        
+
+    def clicked(self,q):
+        print("is clicked")
+                
 
         
 

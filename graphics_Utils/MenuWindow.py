@@ -185,7 +185,7 @@ class MenuBar(QWidget):
     def openingAngleChildMenu(self):
         self.mainwindow = QMainWindow()
         self.ui = ChildWindow.Ui_ChildWindow()
-        self.ui.openingAngle(self.mainwindow)
+        self.ui.openingAngleChildMenu(self.mainwindow)
         self.mainwindow.show()     
         
         
