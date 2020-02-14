@@ -13,7 +13,7 @@ from graphics_Utils import DataMonitoring , MenuWindow , ChildWindow ,LogWindow
 class MenuBar(QWidget):  
     def __init__(self,parent = None):
         super(MenuBar,self).__init__(parent)
-
+        self.mainwindow = QMainWindow()
     def _createMenu(self,mainwindow):
         menuBar = mainwindow.menuBar()
         menuBar.setNativeMenuBar(False) #only for MacOS
@@ -22,7 +22,8 @@ class MenuBar(QWidget):
         self._settingsMenu(menuBar, mainwindow)
         self._historyMenu(menuBar, mainwindow)
         self._helpMenu(menuBar, mainwindow)
-    
+        self.ui = ChildWindow.Ui_ChildWindow()
+        
     def _createtoolbar(self,mainwindow):
         toolbar = mainwindow.addToolBar("tools")
         self._toolBar(toolbar,mainwindow)
@@ -183,17 +184,11 @@ class MenuBar(QWidget):
             pass
     
     def openingAngleChildMenu(self):
-        self.mainwindow = QMainWindow()
-        self.ui = ChildWindow.Ui_ChildWindow()
         self.ui.openingAngleChildMenu(self.mainwindow)
         self.mainwindow.show()     
-        
-        
-        
+ 
     def outputChildWindow(self,state):
         if state:
-            self.outputmainwindow = QMainWindow()
-            self.ui = ChildWindow.Ui_ChildWindow()
             self.ui.outputChildWindow(self.outputmainwindow)
             self.outputmainwindow.show()
         else:
@@ -201,8 +196,6 @@ class MenuBar(QWidget):
     
     def trendChildWindow(self,state):
         if state:
-            self.trendmainwindow = QMainWindow()
-            self.ui = ChildWindow.Ui_ChildWindow()
             self.ui.trendChildWindow(self.trendmainwindow)
             self.trendmainwindow.show()
         else:
@@ -212,8 +205,6 @@ class MenuBar(QWidget):
     
     def canSettingsChildWindow(self,state):
         if state:
-            self.canSettingsmainwindow = QMainWindow()
-            self.ui = ChildWindow.Ui_ChildWindow()
             self.ui.canSettingsChildWindow(self.canSettingsmainwindow)
             self.canSettingsmainwindow.show()
         else:
@@ -231,8 +222,6 @@ class MenuBar(QWidget):
         modified versions may be distributed without limitation.""")
 
     def openWindow(self):
-        self.mainwindow = QMainWindow()
-        self.ui = ChildWindow.Ui_ChildWindow()
         self.ui.settingChannel(self.mainwindow)
         self.mainwindow.show()
         

@@ -13,11 +13,10 @@ class Ui_ChildWindow(QWidget):
     def __init__(self):
        super().__init__() 
        self.menu= MenuWindow.MenuBar()
-       self._openingAngleCalculation = "The beam profile at a specific height"
+       self.__openingAngleFilter = "With Filter"
        self_ipAddress =ipAddress
        conf = analysis_utils.open_yaml_file(file ="BeamSpot_cfg.yaml",directory ="/Users/ahmedqamesh/git /Xray_Irradiation_System_Bonn/")
        self.filterList = conf['Tests']['Filters']
-       print(self.filterList)
        #print("the directory: %s"%  os.path.dirname("/Users/ahmedqamesh/git/MOPS_daq_cfg.yml"))
        #print("last modified: %s" % time.ctime(os.path.getmtime("MOPS_daq_cfg.yml")))
        #print("created: %s" % time.ctime(os.path.getctime("MOPS_daq_cfg.yml")))
@@ -134,6 +133,73 @@ class Ui_ChildWindow(QWidget):
         logframe.setLayout(plotLayout) 
         
     def openingAngleChildMenu(self, ChildWindow):
+        test_name = "Opening Angle Test"
+        ChildWindow.setObjectName(test_name)
+        ChildWindow.setWindowTitle(test_name)
+        ChildWindow.resize(310, 600) #w*h
+        MainLayout = QGridLayout()
+        #Define a frame for that group
+        plotframe = QFrame(ChildWindow)
+        plotframe.setLineWidth(0.6)
+        ChildWindow.setCentralWidget(plotframe)
+        #Define First Group
+        self.FirstGroupBox= QGroupBox("Test Info:")
+        FirstGridLayout =  QGridLayout()
+        #comboBox and label for channel
+        firstHBoxLayout = QHBoxLayout()
+        firstLabel = QLabel("Test Type: ", ChildWindow)
+        firstLabel.setText("Test Type: ")
+        firstitems = ["With filter","Without Filter"]
+        
+        firstComboBox = QComboBox(ChildWindow)
+        for item in firstitems: firstComboBox.addItem(item)
+        firstComboBox.activated[str].connect(self.set_openingAngleFilter)
+        firstHBoxLayout.addWidget(firstLabel)
+        firstHBoxLayout.addWidget(firstComboBox)         
+        self.openSubFilterGroupMenu()
+        FirstGridLayout.addLayout(firstHBoxLayout,0,0)
+        #FirstGridLayout.addWidget(self.SubFilterGroupBox,1,0)
+        self.FirstGroupBox.setLayout(FirstGridLayout)
+        MainLayout.addWidget(self.FirstGroupBox, 0, 0)
+        plotframe.setLayout(MainLayout) 
+        self.menu._createStatusBar(ChildWindow)
+        QtCore.QMetaObject.connectSlotsByName(ChildWindow)  
+        
+    def openSubFilterGroupMenu(self, x= "Without Filter"):
+        self.set_openingAngleFilter(x) 
+        self.SubFilterGroupBox= QGroupBox("another one")
+        SubSecondGridLayout =  QGridLayout()
+        firstLabel= QLabel("firstLabel", self)
+        secondLabel = QLabel("secondLabel", self)
+        thirdLabel = QLabel("thirdLabel", self)
+        if (x == "Without Filter"):
+            firstLabel.setText("IP address")
+            self.firsttextbox = QLineEdit(ipAddress,self)
+            textboxValue = self.firsttextbox.text()
+            secondLabel.setText("SJW:")
+            secondItems = ["1","2","3","4"]
+            secondComboBox = QComboBox(self)
+            for item in secondItems: secondComboBox.addItem(item)
+            secondComboBox.activated[str].connect(self.clicked)
+            thirdLabel.setText("Bit Timing:")
+            SubSecondGridLayout.addWidget(self.firsttextbox,0,0)
+        if (x == "With Filter"):
+            firstLabel.setText("IP address")
+            self.firsttextbox = QLineEdit(ipAddress,self)
+            textboxValue = self.firsttextbox.text()
+            secondLabel.setText("SJW:")
+            secondItems = ["1","2","3","4"]
+            secondComboBox = QComboBox(self)
+            for item in secondItems: secondComboBox.addItem(item)
+            secondComboBox.activated[str].connect(self.clicked)
+            thirdLabel.setText("Bit Timing:")
+            SubSecondGridLayout.addWidget(self.firsttextbox,0,0)
+        SubSecondGridLayout.addWidget(secondLabel,1,0)
+        SubSecondGridLayout.addWidget(secondComboBox,2,0)
+        self.SubFilterGroupBox.setLayout(SubSecondGridLayout)
+
+                     
+    def openingAngleChildMenu2(self, ChildWindow):
         
         test_name = "Opening Angle Test"
         test_dir = "/../../"
@@ -151,23 +217,19 @@ class Ui_ChildWindow(QWidget):
         self.FirstGroupBox= QGroupBox("Test Info:")
         FirstGridLayout =  QGridLayout()
         #comboBox and label for channel
-        firstHBoxLayout = QHBoxLayout(ChildWindow)
+        firstHBoxLayout = QHBoxLayout()
         firstLabel = QLabel("Test Type: ", ChildWindow)
         firstLabel.setText("Test Type: ")
-        firstitems = ["With filter",
-                  "Without Filter"]
+        firstitems = ["With filter","Without Filter"]
+        self.openSubFilterMenu()
         firstComboBox = QComboBox(ChildWindow)
         for item in firstitems: firstComboBox.addItem(item)
-        firstComboBox.activated[str].connect(self.set_openingAngleCalculation)
-        
-        
-    #    firstTextbox = QLineEdit(test_name, ChildWindow)
-    #    firstTextboxValue = firstTextbox.text()
+        firstComboBox.activated[str].connect(self.set_openingAngleFilter)
         firstHBoxLayout.addWidget(firstLabel)
         firstHBoxLayout.addWidget(firstComboBox)        
         
         #comboBox and label for channel
-        secondHBoxLayout = QHBoxLayout(ChildWindow)
+        secondHBoxLayout = QHBoxLayout()
         secondLabel = QLabel("Data Directory: ", ChildWindow)
         firstLabel.setText("Data Directory: ")
         secondTextbox = QLineEdit(test_dir, ChildWindow)
@@ -176,7 +238,7 @@ class Ui_ChildWindow(QWidget):
         secondHBoxLayout.addWidget(secondTextbox)   
         
         #comboBox and label for channel
-        thirdHBoxLayout = QHBoxLayout(ChildWindow)
+        thirdHBoxLayout = QHBoxLayout()
         thirdLabel = QLabel("Test Date   :", ChildWindow)
         thirdLabel.setText("Test Date   :")
         thirdTextbox = QLineEdit(test_date, ChildWindow)
@@ -187,8 +249,8 @@ class Ui_ChildWindow(QWidget):
         Fig = DataMonitoring.LiveMonitoringData()
                          
         FirstGridLayout.addLayout(firstHBoxLayout,0,0)
-        FirstGridLayout.addLayout(secondHBoxLayout,1,0)
-        FirstGridLayout.addLayout(thirdHBoxLayout,2,0)
+        FirstGridLayout.addWidget(self.SubFilterGroupBox,1,0)
+        #FirstGridLayout.addLayout(thirdHBoxLayout,2,0)
         FirstGridLayout.addWidget(Fig,3,0)
         self.FirstGroupBox.setLayout(FirstGridLayout)
         #Define the second group
@@ -214,13 +276,14 @@ class Ui_ChildWindow(QWidget):
         self.SecondGroupBox.setLayout(SecondGridLayout)
         
         MainLayout.addWidget(self.FirstGroupBox, 0, 0)
-        MainLayout.addWidget(self.SecondGroupBox, 1, 0)
+        #MainLayout.addWidget(self.SecondGroupBox, 1, 0)
         plotframe.setLayout(MainLayout) 
 
         self.menu._createStatusBar(ChildWindow)
         QtCore.QMetaObject.connectSlotsByName(ChildWindow)        
         
-                        
+
+                                
     def ChildMenu(self, ChildWindow):
         test_name = "Opening Angle Test"
         test_dir = "/../../"
@@ -283,7 +346,6 @@ class Ui_ChildWindow(QWidget):
         interfaceComboBox = QComboBox(ChildWindow)
         for item in interfaceitems: interfaceComboBox.addItem(item)
         interfaceComboBox.activated[str].connect(self.openSubFilterMenu)
-        
         controllerLayout.addWidget(interfaceComboBox)
         
         #Another group will be here for Bus parameters
@@ -323,12 +385,12 @@ class Ui_ChildWindow(QWidget):
         HGridLayout.addWidget(set_button,0,0)
         HGridLayout.addWidget(connectButton,0,1) 
         HGridLayout.addWidget(setLabel,0,2)
-        
         self.SecondGroupBox.setLayout(SecondGridLayout)
+        
         SecondGridLayout.addWidget(chLabel,0,0)
         SecondGridLayout.addLayout(controllerLayout,1,0)
-        SecondGridLayout.addWidget(modeLabel,2,0)
-        SecondGridLayout.addWidget(modeComboBox,3,0)
+       # SecondGridLayout.addWidget(modeLabel,2,0)
+       # SecondGridLayout.addWidget(modeComboBox,3,0)
         
         def _interfaceParameters():
             interface = self._openingAngleCalculation
@@ -350,64 +412,14 @@ class Ui_ChildWindow(QWidget):
         QtCore.QMetaObject.connectSlotsByName(ChildWindow)        
         
 
-    def openSubFilterMenu(self, interface ="AnaGate"):
-        #Define subGroup
-        self.SubFilterBox= QGroupBox("Bus Parameters")
-        SubSecondGridLayout =  QGridLayout()
-        firstLabel= QLabel("firstLabel", self)
-        secondLabel = QLabel("secondLabel", self)
-        thirdLabel = QLabel("thirdLabel", self)
-        firstComboBox = QComboBox(self)
-        if (interface == "Cu"):
-            firstLabel.setText("Bus Speed:")
-            firstItems = ["1000 kbit/s, 75.0%","500 kbit/s, 75.0%","250 kbit/s, 75.0%"," 125 kbit/s, 75.0%","100 kbit/s, 75.0%","83.333 kbit/s, 75.0%","62.500 kbit/s, 75.0%","50 kbit/s, 75.0%","33.333 kbit/s, 75.0%" ]
-            for item in firstItems: firstComboBox.addItem(item)
-            firstComboBox.activated[str].connect(self.clicked)
-            secondLabel.setText("SJW:")
-            secondItems = ["1","2","3","4"]
-            secondComboBox = QComboBox(self)
-            for item in secondItems: secondComboBox.addItem(item)
-            secondComboBox.activated[str].connect(self.clicked)
-            thirdLabel.setText("Bit Timing:")
-            SubSecondGridLayout.addWidget(firstComboBox,0,1)
-        if (interface == "AnaGate"):
-            firstLabel.setText("IP address")
-            self.firsttextbox = QLineEdit(ipAddress,self)
-            textboxValue = self.firsttextbox.text()
-            secondLabel.setText("SJW:")
-            secondItems = ["1","2","3","4"]
-            secondComboBox = QComboBox(self)
-            for item in secondItems: secondComboBox.addItem(item)
-            secondComboBox.activated[str].connect(self.clicked)
-            thirdLabel.setText("Bit Timing:")
-            SubSecondGridLayout.addWidget(firsttextbox,0,1)
-            
-        if (interface == "Al"):        
-            firstLabel.setText("Speed:")
-            firstItems = [""]
-            firstComboBox = QComboBox(self)
-            for item in firstItems: firstComboBox.addItem(item)
-            firstComboBox.activated[str].connect(self.clicked)
-            secondLabel.setText("SJW:")
-            seconditems = [""]
-            secondComboBox = QComboBox(self)
-            for item in seconditems: secondComboBox.addItem(item)
-            secondComboBox.activated[str].connect(self.clicked)
-            thirdLabel.setText("Bit Timing:")
-            SubSecondGridLayout.addWidget(firstComboBox,0,1)
-            
-        SubSecondGridLayout.addWidget(firstLabel,0,0)
-        SubSecondGridLayout.addWidget(secondLabel,1,0)
-        SubSecondGridLayout.addWidget(secondComboBox,1,1)
-        SubSecondGridLayout.addWidget(thirdLabel,2,0)
-        self.SubFilterBox.setLayout(SubSecondGridLayout)
+
 
 
     def set_filter(self, x): 
         self._filter = x 
         
-    def set_openingAngleCalculation(self, x): 
-        self._openingAngleCalculation = x 
+    def set_openingAngleFilter(self, x): 
+        self.__openingAngleFilter = x 
     
     def set_self_ipAddress(self,x):
         # x = self.firsttextbox.text()
@@ -439,7 +451,7 @@ class Ui_ChildWindow(QWidget):
     def get_filter(self): 
         return self._filter
         
-    def get_openingAngleCalculation(self): 
+    def set_openingAngleCalculation(self): 
         self.mainWindow.set_interface(self._openingAngleCalculation)
         return self._openingAngleCalculation 
     
