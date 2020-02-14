@@ -15,12 +15,10 @@ devices:
        sourcemeter : "False"
 
 
-
-
 Tests:
-   name: "Opening Angle Test"
-   -Filter:
-      directory: "/tests/without_Al_Filter/opening_angle"    
+   directory: "/tests/without_Al_Filter/opening_angle"
+   Filters:   "[Al,Zn,Be]"
+        
 
 Other:
     user    :   "Ahmed Qamesh"
