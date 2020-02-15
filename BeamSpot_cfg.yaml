@@ -16,8 +16,8 @@ devices:
 
 
 Tests:
-   directory: "/tests/without_Al_Filter/opening_angle"
-   Filters:   "[Al,Zn,Be]"
+   test_directory : "tests/"
+   Filters        :   ["Al","Zn","Be"]
         
 
 Other:

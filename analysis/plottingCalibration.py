@@ -152,7 +152,7 @@ class PlottingCalibration(object):
         '''
         self.log.info('Estimating the beam diameter relative to the depth')
         for j in range(len(tests)):
-            subdirectory = tests[j] + "/opening_angle/"
+            subdirectory = "opening_angle/"+ tests[j]+"/"
             r = []
             h = []
             std = []
@@ -163,41 +163,40 @@ class PlottingCalibration(object):
                     h = np.append(h, float(row[0]))  # Distance from the source
                     r = np.append(r, float(row[1]))  # Diameter of the beam
                     std = np.append(std, float(row[2]))  # std on the reading of the beam diameter
-            fig2 = plt.figure()
-            fig2.add_subplot(111)
-            ax2 = plt.gca()
-            ax2.errorbar(h, r, xerr=0.0, yerr=std, fmt='o', color='black', markersize=3, ecolor='black')  # plot points
-            
+            fig1 = plt.figure()
+            fig1.add_subplot(111)
+            ax1 = plt.gca()
+            ax1.errorbar(h, r, xerr=0.0, yerr=std, fmt='o', color='black', markersize=3, ecolor='black')  # plot points
             popt, pcov = curve_fit(an.linear, h, r, sigma=std, absolute_sigma=True, maxfev=5000, p0=(1, 1))
             chisq2 = an.red_chisquare(np.array(r), an.linear(h, *popt), np.array(std), popt)
             line_fit_legend_entry = 'line fit: mh + c\n m=$%.3f\pm%.3f$\nc=$%.3f\pm%.3f$' % (popt[0], np.absolute(pcov[0][0]) ** 0.5, popt[1], np.absolute(pcov[1][1]) ** 0.5)
-            ax2.plot(h, an.linear(h, *popt), '-', lw=1, label=line_fit_legend_entry, markersize=9)  # plot fitted function
-            ax2.set_title('Radius covered by beam spot %s (40 kV and 50 mA)' % (tests[j]), fontsize=12)
-            ax2.grid(True)
-            ax2.legend()
-            ax2.set_ylabel('Radius (r) [cm]')
-            ax2.set_xlabel('Distance from the  collimator holder(h) [cm]')
-            fig2.savefig(Directory + subdirectory + "depth_radius_linear_" + tests[j] + '.png', bbox_inches='tight')
+            ax1.plot(h, an.linear(h, *popt), '-', lw=1, label=line_fit_legend_entry, markersize=9)  # plot fitted function
+            ax1.set_title('Radius covered by beam spot %s (40 kV and 50 mA)' % (tests[j]), fontsize=12)
+            ax1.grid(True)
+            ax1.legend()
+            ax1.set_ylabel('Radius (r) [cm]')
+            ax1.set_xlabel('Distance from the  collimator holder(h) [cm]')
+            fig1.savefig(Directory + subdirectory + "depth_radius_linear_" + tests[j] + '.png', bbox_inches='tight')
             PdfPages.savefig()
             
             # Plot a cone represents the beam spot radius
             h_space = np.linspace(h[0], h[-1], 50)
             r_space = an.linear(h_space, m=popt[0], c=popt[1])
-            fig = plt.figure()
-            fig.add_subplot(111)
-            ax = plt.gca()
+            fig2 = plt.figure()
+            fig2.add_subplot(111)
+            ax2 = plt.gca()
             for i in range(len(r_space)):
                 x, y = np.linspace(-r_space[i], r_space[i], 2), [h_space[i] for _ in np.arange(2)]
                 plt.plot(x, y, linestyle="solid")
-            ax.text(0.95, 0.90, "$\Theta^{rad}$ = %.3f$\pm$ %.3f\n $h_{0}$=%.3f$\pm$ %.3f" % (2 * popt[0], 2 * np.absolute(pcov[0][0]) ** 0.5, popt[1] / (popt[0]), np.absolute(pcov[1][1]) ** 0.5 / popt[0]),
-                    horizontalalignment='right', verticalalignment='top', transform=ax.transAxes,
+            ax2.text(0.95, 0.90, "$\Theta^{rad}$ = %.3f$\pm$ %.3f\n $h_{0}$=%.3f$\pm$ %.3f" % (2 * popt[0], 2 * np.absolute(pcov[0][0]) ** 0.5, popt[1] / (popt[0]), np.absolute(pcov[1][1]) ** 0.5 / popt[0]),
+                    horizontalalignment='right', verticalalignment='top', transform=ax2.transAxes,
                     bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.7))
-            ax.set_title('Diameter covered by beam spot %s' % (tests[j]), fontsize=12)
-            ax.invert_yaxis()
-            ax.set_xlabel('Diameter (d) [cm]')
-            ax.set_ylabel('Height from the the collimator holder(h) [cm]')
-            ax.grid(True)
-            fig.savefig(Directory + subdirectory + 'opening_angle_' + tests[j] + '.png', bbox_inches='tight')
+            ax2.set_title('Diameter covered by beam spot %s' % (tests[j]), fontsize=12)
+            ax2.invert_yaxis()
+            ax2.set_xlabel('Diameter (d) [cm]')
+            ax2.set_ylabel('Height from the the collimator holder(h) [cm]')
+            ax2.grid(True)
+            fig2.savefig(Directory + subdirectory + "opening_angle_" + tests[j] + ".png", bbox_inches='tight')
             PdfPages.savefig()        
 
     def dose_depth(self, Directory=False, PdfPages=False, Voltage="40 kV", current="50 mA", stdev=0.2, tests=[0], theta=0.16):

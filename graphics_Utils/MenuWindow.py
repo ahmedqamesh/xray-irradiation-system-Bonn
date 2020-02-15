@@ -189,15 +189,15 @@ class MenuBar(QWidget):
  
     def outputChildWindow(self,state):
         if state:
-            self.ui.outputChildWindow(self.outputmainwindow)
-            self.outputmainwindow.show()
+            self.ui.outputChildWindow(self.mainwindow)
+            self.mainwindow.show()
         else:
             pass
     
     def trendChildWindow(self,state):
         if state:
-            self.ui.trendChildWindow(self.trendmainwindow)
-            self.trendmainwindow.show()
+            self.ui.trendChildWindow(self.mainwindow)
+            self.mainwindow.show()
         else:
             pass
             
@@ -205,8 +205,8 @@ class MenuBar(QWidget):
     
     def canSettingsChildWindow(self,state):
         if state:
-            self.ui.canSettingsChildWindow(self.canSettingsmainwindow)
-            self.canSettingsmainwindow.show()
+            self.ui.canSettingsChildWindow(self.mainwindow)
+            self.mainwindow.show()
         else:
             pass
     

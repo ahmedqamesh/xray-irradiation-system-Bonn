@@ -4,7 +4,7 @@ import matplotlib.animation as animation
 from typing import *
 from PyQt5 import *
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import QDateTime, Qt, QTimer, pyqtSlot
+from PyQt5.QtCore import *
 from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
 import random
@@ -16,7 +16,6 @@ from pyqtgraph import PlotWidget, plot
 import time
 from IPython import display
 import matplotlib as mpl
-from matplotlib.figure import Figure
 from analysis import analysis_utils
 
 class LiveMonitoringData(QtWidgets.QMainWindow):
@@ -65,7 +64,6 @@ class LiveMonitoringData(QtWidgets.QMainWindow):
         self.y = self.y[1:]  # Remove the first 
         self.y.append(randint(0,100))  # Add a new random value.
         self.data_line.setData(self.x, self.y)  # Update the data.
-
     
 class MapMonitoringDynamicCanvas(FigureCanvas):
     """A canvas that updates itself every second with a new plot."""
@@ -88,7 +86,6 @@ class MapMonitoringDynamicCanvas(FigureCanvas):
         self.axes = fig.add_subplot(111)
         FigureCanvas.__init__(self, fig)
         FigureCanvas.setSizePolicy(self,QSizePolicy.Expanding,QSizePolicy.Expanding),FigureCanvas.updateGeometry(self)
-        
         cmap = plt.cm.get_cmap('tab20c')
         beamspot = np.zeros(shape=(z, x), dtype=np.float64)
         analysis_utils.save_to_h5(data=beamspot, outname='beamspot_Live.h5', directory=self.directory)
@@ -122,9 +119,23 @@ class MapMonitoringDynamicCanvas(FigureCanvas):
         except IndexError:  #open file failure
                 pass
     
-
+class PlottingWindowCanvas(FigureCanvas):
+    def __init__(self, parent=None):
+        ax = self.compute_initial_figure()
+        self.plot(ax)
+        self.draw()
         
+    def compute_initial_figure(self):
+        fig = Figure()
+        FigureCanvas.__init__(self, fig)
+        #self.figure.clear()
+        fig.add_subplot(111)
+        ax = self.figure.add_subplot(111)
+        return ax
 
-
+    def plot(self,ax=None):
+        data = [random.random() for i in range(10)]
+        ax.plot(data, '*-')
+        
 if __name__ == '__main__':
     pass
