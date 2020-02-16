@@ -101,12 +101,18 @@ class MenuBar(QWidget):
         history_menu = menuBar.addMenu("&History")
         test_menu = history_menu.addMenu("&Tests")
         
-        angle_action = QAction(QIcon('graphics_Utils/icons/icon_angle.png'), '&Opening Angle', mainwindow)        
-        angle_action.setStatusTip('Opening Angle')
+        angle__cone_action = QAction(QIcon('graphics_Utils/icons/icon_angle.png'), '&Opening Angle', mainwindow)        
+        angle__cone_action.setStatusTip('Draw the cone shape of the opening angle')
+        angle__cone_action.setChecked(True)
+        angle__cone_action.triggered.connect(self.openingAngleConeChildMenu)
+        test_menu.addAction(angle__cone_action) 
+
+        angle_action = QAction(QIcon('graphics_Utils/icons/icon_angle.png'), '&BeamSpot radius vs height', mainwindow)        
+        angle_action.setStatusTip('Get the estimated beam radius relative to the depth')
         angle_action.setChecked(True)
         angle_action.triggered.connect(self.openingAngleChildMenu)
         test_menu.addAction(angle_action) 
-        
+                
      # 3. Settings menu
     def _settingsMenu(self,menuBar,mainwindow): 
         settings_menu = menuBar.addMenu("&Settings")
@@ -182,11 +188,23 @@ class MenuBar(QWidget):
             self.openWindow()
         else:
             pass
-    
+
+    def openingAngleConeChildMenu(self):
+        
+        self.ui.ChildMenu(ChildWindow = self.mainwindow , 
+                                      test_name = "Opening Angle Test",
+                                      dir="opening_angle/",
+                                      plotting = "opening_angle_cone")
+        self.mainwindow.show()  
+         
+                 
     def openingAngleChildMenu(self):
-        self.ui.openingAngleChildMenu(self.mainwindow)
-        self.mainwindow.show()     
- 
+        self.ui.ChildMenu(ChildWindow = self.mainwindow , 
+                                      test_name = "BeamSpot radius vs height",
+                                      dir="opening_angle/",
+                                      plotting = "opening_angle")
+        self.mainwindow.show()  
+         
     def outputChildWindow(self,state):
         if state:
             self.ui.outputChildWindow(self.mainwindow)

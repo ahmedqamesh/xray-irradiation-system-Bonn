@@ -17,7 +17,7 @@ devices:
 
 Tests:
    test_directory : "tests/"
-   Filters        :   ["Al","Zn","Be"]
+   Filters        :   ["---------","without_filter","Al","Zn","Be"]
         
 
 Other:

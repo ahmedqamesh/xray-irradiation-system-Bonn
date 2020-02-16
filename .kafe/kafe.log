@@ -2262,3 +2262,440 @@ Analysis 2020-02-15 23:28:51,882 :: INFO :: Analysis initialized
 __main__ 2020-02-15 23:28:52,635 :: SUCCESS :: Read configuration file ...
 Plotting 2020-02-15 23:28:52,890 :: INFO :: Plotting initialized
 analysis.analysis_utils 2020-02-15 23:28:52,967 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-16 08:21:01,768 :: INFO :: Analysis initialized
+Analysis 2020-02-16 08:21:45,159 :: INFO :: Analysis initialized
+Analysis 2020-02-16 08:21:45,433 :: INFO :: Analysis initialized
+__main__ 2020-02-16 08:21:47,863 :: SUCCESS :: Read configuration file ...
+Analysis 2020-02-16 08:22:38,429 :: INFO :: Analysis initialized
+Analysis 2020-02-16 08:22:38,497 :: INFO :: Analysis initialized
+__main__ 2020-02-16 08:22:40,477 :: SUCCESS :: Read configuration file ...
+Plotting 2020-02-16 08:22:41,130 :: INFO :: Plotting initialized
+analysis.analysis_utils 2020-02-16 08:22:41,256 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 08:22:49,340 :: INFO :: Estimating the beam diameter relative to the depth
+analysis.analysis_utils 2020-02-16 08:23:45,041 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 08:23:47,186 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 08:24:05,992 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 08:24:56,837 :: INFO :: Analysis initialized
+Analysis 2020-02-16 08:24:56,861 :: INFO :: Analysis initialized
+__main__ 2020-02-16 08:24:59,707 :: SUCCESS :: Read configuration file ...
+Plotting 2020-02-16 08:25:00,448 :: INFO :: Plotting initialized
+analysis.analysis_utils 2020-02-16 08:25:00,564 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 08:25:07,545 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 08:26:10,584 :: INFO :: Analysis initialized
+Analysis 2020-02-16 08:26:10,586 :: INFO :: Analysis initialized
+__main__ 2020-02-16 08:26:10,737 :: SUCCESS :: Read configuration file ...
+Plotting 2020-02-16 08:26:10,806 :: INFO :: Plotting initialized
+Analysis 2020-02-16 08:27:11,811 :: INFO :: Analysis initialized
+Analysis 2020-02-16 08:27:11,813 :: INFO :: Analysis initialized
+__main__ 2020-02-16 08:27:11,938 :: SUCCESS :: Read configuration file ...
+Plotting 2020-02-16 08:27:12,003 :: INFO :: Plotting initialized
+analysis.analysis_utils 2020-02-16 08:27:12,103 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 08:27:18,135 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 08:28:20,485 :: INFO :: Analysis initialized
+Analysis 2020-02-16 08:28:20,487 :: INFO :: Analysis initialized
+__main__ 2020-02-16 08:28:20,614 :: SUCCESS :: Read configuration file ...
+Plotting 2020-02-16 08:28:20,680 :: INFO :: Plotting initialized
+analysis.analysis_utils 2020-02-16 08:28:20,779 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 08:28:27,636 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 08:29:33,827 :: INFO :: Analysis initialized
+Analysis 2020-02-16 08:29:33,859 :: INFO :: Analysis initialized
+__main__ 2020-02-16 08:29:35,423 :: SUCCESS :: Read configuration file ...
+Plotting 2020-02-16 08:29:35,823 :: INFO :: Plotting initialized
+analysis.analysis_utils 2020-02-16 08:29:35,957 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 08:29:41,593 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 08:30:13,588 :: INFO :: Analysis initialized
+Analysis 2020-02-16 08:30:13,590 :: INFO :: Analysis initialized
+__main__ 2020-02-16 08:30:14,009 :: SUCCESS :: Read configuration file ...
+Plotting 2020-02-16 08:30:14,213 :: INFO :: Plotting initialized
+analysis.analysis_utils 2020-02-16 08:30:14,303 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 08:30:18,938 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 08:37:32,692 :: INFO :: Analysis initialized
+Analysis 2020-02-16 08:37:32,730 :: INFO :: Analysis initialized
+__main__ 2020-02-16 08:37:33,905 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 08:37:34,516 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 08:37:39,877 :: INFO :: Plotting initialized
+Plotting 2020-02-16 08:37:39,889 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 08:38:39,521 :: INFO :: Analysis initialized
+Analysis 2020-02-16 08:38:39,523 :: INFO :: Analysis initialized
+__main__ 2020-02-16 08:38:39,921 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 08:38:40,131 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 08:38:44,967 :: INFO :: Plotting initialized
+Plotting 2020-02-16 08:38:44,981 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 08:39:13,631 :: INFO :: Analysis initialized
+Analysis 2020-02-16 08:39:13,658 :: INFO :: Analysis initialized
+__main__ 2020-02-16 08:39:15,099 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 08:39:15,844 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 08:39:24,374 :: INFO :: Plotting initialized
+Plotting 2020-02-16 08:39:24,388 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 08:40:35,982 :: INFO :: Analysis initialized
+Analysis 2020-02-16 08:40:35,985 :: INFO :: Analysis initialized
+__main__ 2020-02-16 08:40:36,482 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 08:40:36,723 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 08:40:41,489 :: INFO :: Plotting initialized
+Plotting 2020-02-16 08:40:41,503 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 08:56:05,693 :: INFO :: Analysis initialized
+Analysis 2020-02-16 08:56:05,753 :: INFO :: Analysis initialized
+__main__ 2020-02-16 08:56:07,883 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 08:56:08,674 :: SUCCESS :: Beam Spot Scanning ...
+analysis.analysis_utils 2020-02-16 08:56:17,816 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 08:58:06,829 :: INFO :: Plotting initialized
+Plotting 2020-02-16 08:58:06,842 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 09:01:26,204 :: INFO :: Analysis initialized
+Analysis 2020-02-16 09:01:26,309 :: INFO :: Analysis initialized
+__main__ 2020-02-16 09:01:29,146 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 09:01:29,902 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 09:01:38,246 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:01:38,262 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 09:01:46,701 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:01:46,714 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 09:02:05,780 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:02:05,793 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 09:02:09,712 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:02:09,728 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 09:02:13,752 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:02:13,765 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 09:04:04,226 :: INFO :: Analysis initialized
+Analysis 2020-02-16 09:04:04,284 :: INFO :: Analysis initialized
+__main__ 2020-02-16 09:04:06,244 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 09:04:06,989 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 09:04:13,905 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:04:13,918 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 09:05:39,200 :: INFO :: Analysis initialized
+Analysis 2020-02-16 09:05:39,280 :: INFO :: Analysis initialized
+__main__ 2020-02-16 09:05:40,548 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 09:05:41,105 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 09:05:52,899 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:05:52,914 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 09:07:08,661 :: INFO :: Analysis initialized
+Analysis 2020-02-16 09:07:08,796 :: INFO :: Analysis initialized
+__main__ 2020-02-16 09:07:11,343 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 09:07:12,121 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 09:07:20,007 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:07:20,020 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 09:09:43,570 :: INFO :: Analysis initialized
+Analysis 2020-02-16 09:09:43,650 :: INFO :: Analysis initialized
+__main__ 2020-02-16 09:09:46,017 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 09:09:47,374 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 09:10:01,245 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:10:01,258 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 09:13:23,670 :: INFO :: Analysis initialized
+Analysis 2020-02-16 09:13:23,794 :: INFO :: Analysis initialized
+__main__ 2020-02-16 09:13:26,142 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 09:13:26,964 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-16 09:14:39,508 :: INFO :: Analysis initialized
+Analysis 2020-02-16 09:14:39,665 :: INFO :: Analysis initialized
+__main__ 2020-02-16 09:14:42,968 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 09:14:45,725 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 09:14:52,138 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:14:52,151 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 09:17:42,114 :: INFO :: Analysis initialized
+Analysis 2020-02-16 09:17:42,116 :: INFO :: Analysis initialized
+__main__ 2020-02-16 09:17:42,251 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 09:17:42,395 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 09:17:53,638 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:17:53,652 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 09:17:57,449 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:17:57,462 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 09:23:38,714 :: INFO :: Analysis initialized
+Analysis 2020-02-16 09:23:38,717 :: INFO :: Analysis initialized
+__main__ 2020-02-16 09:23:39,210 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 09:23:39,499 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 09:23:44,366 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:23:44,380 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 09:24:37,698 :: INFO :: Analysis initialized
+Analysis 2020-02-16 09:24:37,799 :: INFO :: Analysis initialized
+__main__ 2020-02-16 09:24:40,513 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 09:24:41,336 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 09:24:45,603 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:24:45,617 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 09:24:49,742 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:24:49,756 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 09:24:53,289 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:24:53,302 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 09:24:56,228 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:24:56,244 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 09:24:59,625 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:24:59,638 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 09:25:09,729 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:25:09,820 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 09:26:07,110 :: INFO :: Analysis initialized
+Analysis 2020-02-16 09:26:07,112 :: INFO :: Analysis initialized
+__main__ 2020-02-16 09:26:07,295 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 09:26:07,437 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-16 09:27:07,829 :: INFO :: Analysis initialized
+Analysis 2020-02-16 09:27:07,849 :: INFO :: Analysis initialized
+__main__ 2020-02-16 09:27:08,221 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 09:27:08,533 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 09:27:12,387 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:27:12,399 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 09:27:18,531 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:27:18,545 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 09:27:26,041 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:27:26,053 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 09:28:11,367 :: INFO :: Analysis initialized
+Analysis 2020-02-16 09:28:11,370 :: INFO :: Analysis initialized
+__main__ 2020-02-16 09:28:11,521 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 09:28:11,694 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-16 09:28:11,718 :: INFO :: Analysis initialized
+Analysis 2020-02-16 09:28:11,720 :: INFO :: Analysis initialized
+__main__ 2020-02-16 09:28:11,962 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 09:28:12,137 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 09:28:15,454 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:28:15,465 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 09:28:19,551 :: INFO :: Plotting initialized
+Plotting 2020-02-16 09:28:19,567 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 18:20:55,645 :: INFO :: Plotting initialized
+Plotting 2020-02-16 18:20:55,741 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 18:20:59,441 :: INFO :: Plotting initialized
+Plotting 2020-02-16 18:20:59,455 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 18:23:17,087 :: INFO :: Analysis initialized
+Analysis 2020-02-16 18:23:18,656 :: INFO :: Analysis initialized
+Plotting 2020-02-16 18:23:18,691 :: INFO :: Plotting initialized
+Plotting 2020-02-16 18:23:18,691 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 18:24:06,658 :: INFO :: Analysis initialized
+Analysis 2020-02-16 18:24:08,464 :: INFO :: Analysis initialized
+Plotting 2020-02-16 18:24:08,520 :: INFO :: Plotting initialized
+Plotting 2020-02-16 18:24:08,520 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 18:25:47,676 :: INFO :: Analysis initialized
+Analysis 2020-02-16 18:25:48,570 :: INFO :: Analysis initialized
+Analysis 2020-02-16 18:26:22,309 :: INFO :: Analysis initialized
+Analysis 2020-02-16 18:26:23,189 :: INFO :: Analysis initialized
+Analysis 2020-02-16 18:27:31,482 :: INFO :: Analysis initialized
+Analysis 2020-02-16 18:27:32,331 :: INFO :: Analysis initialized
+Plotting 2020-02-16 18:27:32,362 :: INFO :: Plotting initialized
+Analysis 2020-02-16 18:28:35,996 :: INFO :: Analysis initialized
+Analysis 2020-02-16 18:28:36,890 :: INFO :: Analysis initialized
+Plotting 2020-02-16 18:28:36,926 :: INFO :: Plotting initialized
+Plotting 2020-02-16 18:28:36,926 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 18:29:35,010 :: INFO :: Analysis initialized
+Analysis 2020-02-16 18:29:36,616 :: INFO :: Analysis initialized
+Plotting 2020-02-16 18:29:36,650 :: INFO :: Plotting initialized
+Plotting 2020-02-16 18:29:36,651 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 20:23:46,964 :: INFO :: Analysis initialized
+Analysis 2020-02-16 20:23:49,927 :: INFO :: Analysis initialized
+Plotting 2020-02-16 20:23:50,036 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:23:50,036 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 20:27:12,560 :: INFO :: Analysis initialized
+Analysis 2020-02-16 20:27:12,842 :: INFO :: Analysis initialized
+Plotting 2020-02-16 20:27:12,850 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:27:12,850 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 20:27:35,644 :: INFO :: Analysis initialized
+Analysis 2020-02-16 20:27:35,871 :: INFO :: Analysis initialized
+Plotting 2020-02-16 20:27:35,876 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:27:35,876 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 20:28:17,848 :: INFO :: Analysis initialized
+Analysis 2020-02-16 20:28:18,074 :: INFO :: Analysis initialized
+Plotting 2020-02-16 20:28:18,080 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:28:18,080 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 20:32:37,205 :: INFO :: Analysis initialized
+Analysis 2020-02-16 20:32:37,820 :: INFO :: Analysis initialized
+Plotting 2020-02-16 20:32:37,826 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:32:37,826 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 20:32:40,270 :: INFO :: Draw the cone shape of the opening angle
+Analysis 2020-02-16 20:33:58,667 :: INFO :: Analysis initialized
+Analysis 2020-02-16 20:33:58,680 :: INFO :: Analysis initialized
+__main__ 2020-02-16 20:33:59,361 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 20:33:59,810 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 20:34:02,999 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:34:03,014 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 20:34:05,976 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:34:05,990 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 20:34:28,175 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:34:28,191 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 20:36:14,734 :: INFO :: Analysis initialized
+Analysis 2020-02-16 20:36:14,736 :: INFO :: Analysis initialized
+__main__ 2020-02-16 20:36:15,150 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 20:36:15,492 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 20:36:18,871 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:36:18,884 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 20:36:47,412 :: INFO :: Analysis initialized
+Analysis 2020-02-16 20:36:47,415 :: INFO :: Analysis initialized
+__main__ 2020-02-16 20:36:47,770 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 20:36:48,053 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 20:36:50,714 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:36:50,726 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 20:37:41,873 :: INFO :: Analysis initialized
+Analysis 2020-02-16 20:37:41,876 :: INFO :: Analysis initialized
+__main__ 2020-02-16 20:37:42,051 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 20:37:42,234 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 20:37:44,920 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:37:44,935 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 20:38:10,048 :: INFO :: Analysis initialized
+Analysis 2020-02-16 20:38:10,080 :: INFO :: Analysis initialized
+__main__ 2020-02-16 20:38:10,808 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 20:38:11,642 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 20:38:14,822 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:38:14,835 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 20:38:17,513 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:38:17,528 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 20:38:22,617 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:38:22,636 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 20:39:40,399 :: INFO :: Analysis initialized
+Analysis 2020-02-16 20:39:40,453 :: INFO :: Analysis initialized
+__main__ 2020-02-16 20:39:41,068 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 20:39:41,424 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 20:39:44,883 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:39:44,900 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 20:39:48,015 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:39:48,081 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 20:45:23,170 :: INFO :: Analysis initialized
+Analysis 2020-02-16 20:45:23,666 :: INFO :: Analysis initialized
+__main__ 2020-02-16 20:45:28,055 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 20:45:30,968 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 20:45:40,850 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:45:40,946 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 20:45:46,395 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:45:46,410 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 20:49:35,241 :: INFO :: Analysis initialized
+Analysis 2020-02-16 20:49:35,369 :: INFO :: Analysis initialized
+__main__ 2020-02-16 20:49:37,834 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 20:49:38,544 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 20:51:23,552 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:51:23,618 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 20:51:29,712 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:51:29,726 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 20:51:33,080 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:51:33,094 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 20:59:45,240 :: INFO :: Analysis initialized
+Analysis 2020-02-16 20:59:45,361 :: INFO :: Analysis initialized
+__main__ 2020-02-16 20:59:48,991 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 20:59:50,356 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 20:59:56,348 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:59:58,798 :: INFO :: Plotting initialized
+Plotting 2020-02-16 20:59:58,812 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 21:09:35,151 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:09:35,568 :: INFO :: Analysis initialized
+__main__ 2020-02-16 21:09:41,612 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 21:09:43,170 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 21:09:51,133 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:09:53,074 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:09:53,101 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 21:10:40,565 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:10:42,892 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:10:42,908 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 21:10:45,653 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:10:45,666 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 21:10:47,300 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:10:47,317 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 21:11:48,992 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:11:49,019 :: INFO :: Analysis initialized
+__main__ 2020-02-16 21:11:49,499 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 21:11:49,824 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 21:11:55,956 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:11:57,673 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:11:57,688 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 21:19:14,574 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:19:14,577 :: INFO :: Analysis initialized
+__main__ 2020-02-16 21:19:14,765 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 21:19:14,977 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-16 21:20:18,966 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:20:18,969 :: INFO :: Analysis initialized
+__main__ 2020-02-16 21:20:19,698 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 21:20:20,114 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-16 21:21:08,636 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:21:08,638 :: INFO :: Analysis initialized
+__main__ 2020-02-16 21:21:08,774 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 21:21:08,931 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-16 21:21:35,599 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:21:35,601 :: INFO :: Analysis initialized
+__main__ 2020-02-16 21:21:35,741 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 21:21:35,900 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 21:21:38,967 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:21:41,103 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:21:41,117 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 21:23:25,108 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:23:25,110 :: INFO :: Analysis initialized
+__main__ 2020-02-16 21:23:25,268 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 21:23:25,420 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 21:23:27,782 :: INFO :: Plotting initialized
+Analysis 2020-02-16 21:24:07,674 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:24:07,677 :: INFO :: Analysis initialized
+__main__ 2020-02-16 21:24:07,825 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 21:24:07,978 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 21:24:11,004 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:24:12,548 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:24:12,560 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 21:24:34,838 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:24:34,840 :: INFO :: Analysis initialized
+__main__ 2020-02-16 21:24:34,969 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 21:24:35,125 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 21:24:48,623 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:24:50,440 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:24:50,452 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 21:25:11,108 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:25:11,120 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 21:25:33,133 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:25:33,135 :: INFO :: Analysis initialized
+__main__ 2020-02-16 21:25:33,267 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 21:25:33,419 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 21:25:36,201 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:25:38,036 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:25:38,049 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 21:26:03,896 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:26:03,898 :: INFO :: Analysis initialized
+__main__ 2020-02-16 21:26:04,028 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 21:26:04,189 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 21:26:06,998 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:26:08,447 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:26:08,461 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 21:27:52,714 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:27:52,717 :: INFO :: Analysis initialized
+__main__ 2020-02-16 21:27:52,863 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 21:27:53,020 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 21:27:56,052 :: INFO :: Plotting initialized
+Analysis 2020-02-16 21:28:20,768 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:28:20,771 :: INFO :: Analysis initialized
+__main__ 2020-02-16 21:28:20,952 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 21:28:21,119 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 21:28:23,470 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:28:25,356 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:28:25,370 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 21:30:37,628 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:30:37,630 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:32:44,555 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:32:44,581 :: INFO :: Analysis initialized
+__main__ 2020-02-16 21:32:44,756 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 21:32:44,918 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-16 21:37:28,384 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:37:28,387 :: INFO :: Analysis initialized
+__main__ 2020-02-16 21:37:28,585 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-16 21:37:28,749 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-16 21:37:32,236 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:37:33,902 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:37:33,919 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 21:38:45,685 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:38:48,484 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:38:48,498 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-16 21:40:28,145 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:40:35,856 :: INFO :: Plotting initialized
+Plotting 2020-02-16 21:40:35,872 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-16 21:58:03,477 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:58:04,484 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:58:18,919 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:58:19,180 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:58:55,949 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:58:56,267 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:59:33,873 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:59:34,141 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:59:47,290 :: INFO :: Analysis initialized
+Analysis 2020-02-16 21:59:47,555 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:00:03,767 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:00:04,023 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:00:18,166 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:00:18,432 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:00:42,349 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:00:42,613 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:01:32,927 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:01:33,196 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:02:06,009 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:02:06,278 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:02:42,543 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:02:42,839 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:03:35,799 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:03:36,082 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:03:42,676 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:03:43,094 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:03:52,395 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:03:52,689 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:04:04,287 :: INFO :: Analysis initialized
+Analysis 2020-02-16 22:04:04,562 :: INFO :: Analysis initialized

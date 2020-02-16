@@ -123,7 +123,7 @@ class PlottingWindowCanvas(FigureCanvas):
     def __init__(self, parent=None):
         ax = self.compute_initial_figure()
         self.plot(ax)
-        self.draw()
+        
         
     def compute_initial_figure(self):
         fig = Figure()
@@ -136,6 +136,6 @@ class PlottingWindowCanvas(FigureCanvas):
     def plot(self,ax=None):
         data = [random.random() for i in range(10)]
         ax.plot(data, '*-')
-        
+        self.draw()
 if __name__ == '__main__':
     pass

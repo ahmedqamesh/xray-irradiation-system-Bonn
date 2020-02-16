@@ -7,7 +7,7 @@ from PyQt5.QtCore    import *
 from PyQt5.QtGui     import *
 from PyQt5.QtWidgets import *
 import os
-from graphics_Utils import DataMonitoring , MenuWindow , LogWindow
+from graphics_Utils import DataMonitoring , MenuWindow , LogWindow , plottingCanvas
 from analysis import analysis_utils,  plottingCalibration, analysis
 import numpy as np
 from matplotlib.figure import Figure
@@ -24,7 +24,6 @@ class Ui_ChildWindow(QWidget):
        conf = analysis_utils.open_yaml_file(file ="BeamSpot_cfg.yaml",directory ="/Users/ahmedqamesh/git/Xray_Irradiation_System_Bonn/")
        self.__filterList = conf['Tests']['Filters']
        self.test_directory = rootdir[:-14]+conf['Tests']['test_directory']
-       self.plotting =plottingCalibration.PlottingCalibration()
        #self.menu._createStatusBar(self)
      
     
@@ -57,12 +56,11 @@ class Ui_ChildWindow(QWidget):
         self.WindowGroupBox.setLayout(plotLayout)
         logframe.setLayout(plotLayout) 
         
-    def openingAngleChildMenu(self, ChildWindow):
-        test_name = "Opening Angle Test"
-        self.opening_angle_directory = self.test_directory+"opening_angle/"
+    def ChildMenu(self, ChildWindow = None, test_name = "Opening Angle Test",dir="opening_angle/", Fig =None, plotting = None):
+        self._directory = self.test_directory+dir
         ChildWindow.setObjectName(test_name)
         ChildWindow.setWindowTitle(test_name)
-        ChildWindow.resize(310, 600) #w*h
+        
         MainLayout = QGridLayout()
         #Define a frame for that group
         plotframe = QFrame(ChildWindow)
@@ -75,16 +73,17 @@ class Ui_ChildWindow(QWidget):
         firstHBoxLayout = QHBoxLayout()
         firstLabel = QLabel("Test Type: ", ChildWindow)
         firstLabel.setText("Test Type: ")
-        firstitems = ["-----------","With_Filter","Without_Filter"]
+        firstitems = self.__filterList
         firstComboBox = QComboBox(ChildWindow)
         for item in firstitems: firstComboBox.addItem(item)
         firstComboBox.activated[str].connect(self.set_openingAngleFilter)
-        self.openSubFilterGroupMenu()
+        self.openSubGroupMenu()
         def _SubFilterGroupMenu():
+            ChildWindow.resize(700, 700) #w*h
             FirstGridLayout.removeWidget(self.SubFilterGroupBox)
             self.SubFilterGroupBox.deleteLater()
             self.SubFilterGroupBox = None
-            self.openSubFilterGroupMenu(ChildWindow = ChildWindow, x = self.__openingAngleFilter)
+            self.openSubGroupMenu(ChildWindow = ChildWindow, filter = self.__openingAngleFilter,test_name = test_name, plotting = plotting)
             FirstGridLayout.addWidget(self.SubFilterGroupBox,1,0)   
             
         firstComboBox.activated[str].connect(_SubFilterGroupMenu)
@@ -98,11 +97,8 @@ class Ui_ChildWindow(QWidget):
         self.menu._createStatusBar(ChildWindow)
         QtCore.QMetaObject.connectSlotsByName(ChildWindow)  
         
-    def openSubFilterGroupMenu(self, ChildWindow = None, x= "-----------"):
+    def openSubGroupMenu(self, ChildWindow = None, filter= "Al" , test_name = "test_name" , plotting = None):
         self.SubFilterGroupBox= QGroupBox("")
-       
-        #self.canvas = FigureCanvas(self.figure)
-        test_name = "Opening Angle Test"
         SubSecondGridLayout =  QGridLayout()
         firstLabel= QLabel("firstLabel", ChildWindow)
         secondLabel = QLabel("secondLabel", ChildWindow)
@@ -110,96 +106,41 @@ class Ui_ChildWindow(QWidget):
         forthLabel = QLabel("secondLabel", ChildWindow)
         fifthLabel = QLabel("thirdLabel", ChildWindow)
         firstGroupBox= QGroupBox("Test Info:")
+        secondLabel.setText("Test Directory:")
+        thirdLabel.setText("Test Date:")
+        forthLabel.setText("Last Modified:")
+        fifthLabel.setText("Results:")
+        test_dir = self._directory+filter+"/"
+        test_file = test_dir+"opening_angle_"+filter+".csv" 
+        test_date =time.ctime(os.path.getmtime(test_file))
+        test_modify = time.ctime(os.path.getctime(test_file))
+        secondtextbox = QLineEdit(test_dir)
+        secondTextBoxValue = secondtextbox.text()
+        thirdtextbox = QLineEdit(test_date)
+        thirdTextBoxValue = thirdtextbox.text()
+        forthtextbox = QLineEdit(test_modify)
+        forthTextBoxValue = forthtextbox.text()
+        close_button = QPushButton("Close")
+        close_button.setIcon(QIcon('graphics_Utils/icons/icon_true.png'))
+        close_button.setStatusTip('close session') # show when move mouse to the icon
+        if ChildWindow is not None:
+            close_button.clicked.connect(ChildWindow.close)        
         
-        if (x == "Without_Filter"): 
-            test = "Without_filter"
-            test_dir = self.opening_angle_directory+"without_filter/"
-            test_file = test_dir+"opening_angle_without_filter.csv" 
-            test_date =time.ctime(os.path.getmtime(test_file))
-            test_modify = time.ctime(os.path.getctime(test_file))
-            secondLabel.setText("Test Directory:")
-            secondtextbox = QLineEdit(test_dir)
-            secondTextBoxValue = secondtextbox.text()
-            
-            thirdLabel.setText("Test Date:")
-            thirdtextbox = QLineEdit(test_date)
-            thirdTextBoxValue = thirdtextbox.text()
-        
-            forthLabel.setText("Last Modified:")
-            forthtextbox = QLineEdit(test_modify)
-            forthTextBoxValue = forthtextbox.text()
-            #self.plotting_menu()
-            fifthLabel.setText("Results:")
-            Fig = DataMonitoring.PlottingWindowCanvas()#self.plotting_menu()
-            #Fig = self.plotting.opening_angle(Directory=Directory, tests=[test])
-            SubSecondGridLayout.addWidget(secondLabel,0,0)
-            SubSecondGridLayout.addWidget(secondtextbox,0,1)  
+        Fig =  plottingCanvas.PlottingCanvas(test_file=test_file, tests=[filter], plotting = plotting)
+        SubSecondGridLayout.addWidget(secondLabel,0,0)
+        SubSecondGridLayout.addWidget(secondtextbox,0,1)  
 
-            SubSecondGridLayout.addWidget(thirdLabel,1,0)
-            SubSecondGridLayout.addWidget(thirdtextbox,1,1)
-            
-            SubSecondGridLayout.addWidget(forthLabel,2,0)
-            SubSecondGridLayout.addWidget(forthtextbox,2,1)
-            
-            SubSecondGridLayout.addWidget(fifthLabel,3,0)
-            SubSecondGridLayout.addWidget(Fig,3,0, 10,3)
-            
-        if (x == "With_Filter"):
-            test_dir = self.opening_angle_directory
-            test_file = test_dir+"Al/"+"opening_angle_Al.csv" 
-            test_date =time.ctime(os.path.getmtime(test_file))
-            test_modify = time.ctime(os.path.getctime(test_file))
-            firstLabel.setText("Filter Material:")
-            filterListItems = self.__filterList
-            firstComboBox = QComboBox(ChildWindow)
-            for item in filterListItems: firstComboBox.addItem(item)
-            firstComboBox.activated[str].connect(self.set_openingAngleFilter)
-            secondLabel.setText("Test Directory:")
-            secondtextbox = QLineEdit(test_dir)
-            secondTextBoxValue = secondtextbox.text()
-            
-            thirdLabel.setText("Test Date:")
-            thirdtextbox = QLineEdit(test_date)
-            thirdTextBoxValue = thirdtextbox.text()
+        SubSecondGridLayout.addWidget(thirdLabel,1,0)
+        SubSecondGridLayout.addWidget(thirdtextbox,1,1)
         
-            forthLabel.setText("Last Modified:")
-            forthtextbox = QLineEdit(test_modify)
-            forthTextBoxValue = forthtextbox.text()
-            
-            fifthLabel.setText("Results:")
-            Fig = DataMonitoring.LiveMonitoringData()
-            SubSecondGridLayout.addWidget(firstLabel,0,0)
-            SubSecondGridLayout.addWidget(firstComboBox,0,1)
-            
-            SubSecondGridLayout.addWidget(secondLabel,1,0)
-            SubSecondGridLayout.addWidget(secondtextbox,1,1)  
+        SubSecondGridLayout.addWidget(forthLabel,2,0)
+        SubSecondGridLayout.addWidget(forthtextbox,2,1)
+        
+        SubSecondGridLayout.addWidget(fifthLabel,3,0)
+        SubSecondGridLayout.addWidget(Fig,4,0, 4,0)
+        SubSecondGridLayout.addWidget(close_button,25,5)
 
-            SubSecondGridLayout.addWidget(thirdLabel,2,0)
-            SubSecondGridLayout.addWidget(thirdtextbox,2,1)
-            
-            SubSecondGridLayout.addWidget(forthLabel,3,0)
-            SubSecondGridLayout.addWidget(forthtextbox,3,1)
-            
-            SubSecondGridLayout.addWidget(fifthLabel,4,0)
-            #SubSecondGridLayout.addWidget(self.canvas,5,0, 10,5)
-                                  
-        else: 
-            firstLabel.setText("")
-            firsttextbox = QLineEdit(ipAddress,ChildWindow)
-            textboxValue = firsttextbox.text()
-            secondLabel.setText("")
-            thirdLabel.setText("") 
         self.SubFilterGroupBox.setLayout(SubSecondGridLayout)
-
-    def plotting_menu(self):
-        fig = Figure()
-        self.canvas = FigureCanvas(fig)
-        #FigureCanvas.__init__(self, fig)
-        self.figure.clear()
-        ax = self.figure.add_subplot(111)
-        data = [random.random() for i in range(10)]
-        ax.plot(data, '*-')
-        self.canvas.draw()
          
     def set_filter(self, x): 
         self._filter = x 
@@ -252,7 +193,6 @@ class Ui_ChildWindow(QWidget):
     
     def get_dimention(self): 
         return self._dim
-
     def clicked(self,q):
         print("is clicked")
                 

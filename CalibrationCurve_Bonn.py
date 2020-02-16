@@ -1,9 +1,10 @@
-from analysis import plottingCalibration, analysis
+from analysis import plottingCalibration, analysis , analysis_utils
 from matplotlib.backends.backend_pdf import PdfPages
 
 if __name__ == '__main__':
-    global PdfPages
-    Directory = "tests/"
+    global PdfPages  
+    conf = analysis_utils.open_yaml_file(file ="BeamSpot_cfg.yaml",directory ="/Users/ahmedqamesh/git/Xray_Irradiation_System_Bonn/")
+    test_directory = conf['Tests']['test_directory']  
     pdf_file = 'output_data/CalibrationCurve_Bonn.pdf'
     tests = ["without_filter", "Al"]
     depth = ["3cm", "5cm", "8cm", "51cm"]
@@ -12,7 +13,8 @@ if __name__ == '__main__':
     p =plottingCalibration.PlottingCalibration()
 #     p.diode_calibration(PdfPages=PdfPages, Directory=Directory, diodes=["A","B","C"])
 #     p.calibration_temperature(data="temperature_dose.h5", Directory=Directory, PdfPages=PdfPages)
-    p.opening_angle(Directory=Directory, tests=tests,PdfPages=PdfPages)
+    p.opening_angle(directory = test_directory, tests=tests,PdfPages=PdfPages)
+    p.opening_angle_cone(directory = test_directory, tests=tests,PdfPages=PdfPages)
 #     p.dose_depth(tests=tests, Directory=Directory, PdfPages=PdfPages)
 #     p.dose_current(stdev=0.04, PdfPages=PdfPages, Directory=Directory, depth= ["3cm", "5cm", "8cm", "51cm"], table=True,Voltages=["40kV", "30kV"])
 #     p.dose_drop(stdev=0.04, PdfPages=PdfPages, Directory=Directory,depth= ["3cm", "5cm", "8cm", "51cm"],Voltages=["40kV", "30kV"])
@@ -22,5 +24,5 @@ if __name__ == '__main__':
 #     p.Plot_Beam_profile_2d(Directory=Directory, PdfPages=PdfPages, depth=["3cm", "3cm_Vfilter", "3cm_Zrfilter", "3cm_collimator", "8cm", "60cm"])
 #     p.plot_beamspot(Directory= Directory, depth =["60cm"], PdfPages=PdfPages)
     p.close(PdfPages=PdfPages)
-    print("All the results are saved in the directory %s" %(Directory))
+    print("All the results are saved in the directory %s" %(test_directory))
     print ("The whole plots are saved into the  file %s"%(pdf_file))

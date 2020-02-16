@@ -36,32 +36,38 @@ from matplotlib.patches import Rectangle
 from matplotlib.collections import PatchCollection
 from analysis import analysis
 from analysis import logger
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
+import matplotlib.animation as animation
+from typing import *
+from PyQt5 import *
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
+from matplotlib.figure import Figure
+
 colors = ['black', 'red', '#006381', "blue", '#33D1FF', '#F5A9BC', 'grey', '#7e0044', 'orange', "maroon", 'green', "magenta", '#33D1FF', '#7e0044', "yellow"]
 an = analysis.Analysis()
-class PlottingCalibration(object):     
+class PlottingCanvas(FigureCanvas):     
 
-    def __init__(self, interface='data'):
+    def __init__(self,tests = None , test_file=None,plotting = None):
         self.log = logger.setup_derived_logger('Plotting')
         self.log.info('Plotting initialized')
-        
-        # Initialize default arguments
-        if interface is None:
-            interface = 'data'
-        elif interface not in ['data', 'sim']:
-            raise ValueError(f'Possible interfaces are "data" or '
-                             f'"sim" and not "{interface}".')
-
-        
-    @property
-    def interface(self):
-        """:obj:`str` : Type of the final plots. Possible values are
-        ``'data'`` and ``'sim'``."""
-        return self.__interface
+        fig = Figure()
+        FigureCanvas.__init__(self, fig)
+        #self.figure.clear()
+        fig.add_subplot(111)
+        self.ax = self.figure.add_subplot(111)
+        if plotting == "opening_angle":
+            self.opening_angle(tests = tests , test_file=test_file)
+        if plotting =="opening_angle_cone":
+            self.opening_angle_cone(tests = tests , test_file=test_file)
+        self.draw()
+    
                
-    def diode_calibration(self, diodes=["A"], directory=False, PdfPages=False):
+    def diode_calibration(self, diodes=["A"], Directory=False, PdfPages=False):
         '''
         The function plots the calibration results for the PN diodes
-        Input directory = directory + diode_calibration/cern_calibration/
+        Input Directory = Directory + diode_calibration/cern_calibration/
         diodes is an array of strings represents the diodes name A, B and C.
         '''
         self.log.info('Calibration results for the diodes')
@@ -77,7 +83,7 @@ class PlottingCalibration(object):
             bkg = []
             current = []
             factor = []
-            with open(directory + subdirectory + d + ".csv", 'r')as data:
+            with open(Directory + subdirectory + d + ".csv", 'r')as data:
                 reader = csv.reader(data)
                 next(reader)
                 for row in reader:
@@ -114,11 +120,11 @@ class PlottingCalibration(object):
         ax2.set_axis_off()
         ax.grid(True)
         ax.legend()
-        fig.savefig(directory + subdirectory + "diode_calibration.png", bbox_inches='tight')
+        fig.savefig(Directory + subdirectory + "diode_calibration.png", bbox_inches='tight')
         plt.tight_layout()
         PdfPages.savefig()
 
-    def calibration_temperature(self, data=None, PdfPages=False, directory=False):
+    def calibration_temperature(self, data=None, PdfPages=False, Directory=False):
         '''
         The function will plot the temperature effect on the diode calibration within 250 seconds of radiation, the data collected without any filter in the tube
         '''
@@ -128,7 +134,7 @@ class PlottingCalibration(object):
         ax = fig.add_subplot(111)
         ax2 = ax.twinx()
         plot_lines = []
-        with tb.open_file(directory + subdirectory + data) as in_file:
+        with tb.open_file(Directory + subdirectory + data) as in_file:
             temprature_dose = in_file.root.temprature_dose[:]
             time = temprature_dose["time"]
             current = temprature_dose["current"] * 10 ** 6
@@ -143,54 +149,45 @@ class PlottingCalibration(object):
         plot_lines.append([temp, curr])
         plt.legend(plot_lines[0], ["temperature", "mean current=%0.2f $\mu$ A" % np.mean(current)])
         plt.tight_layout()
-        plt.savefig(directory + subdirectory + 'temprature_dose_WithoutFilter.png')
+        plt.savefig(Directory + subdirectory + 'temprature_dose_WithoutFilter.png')
         PdfPages.savefig()
                 
-    def opening_angle(self, directory=False, Unknown_diameter=np.linspace(3, 10, 20), PdfPages=PdfPages, tests=[0]):
+    def opening_angle(self, test_file=None, tests=[0]):
         '''
-        To get the estimated beam radius relative to the depth
+        To get the estimated beam diameter relative to the depth
         '''
-        self.log.info('Estimating the beam radius relative to the depth')
-        for j in range(len(tests)):
-            subdirectory = "opening_angle/"+ tests[j]+"/"
-            r = []
-            h = []
-            std = []
-            with open(directory + subdirectory + "opening_angle_" + tests[j] + ".csv", 'r')as data:
-                reader = csv.reader(data)
-                next(reader)
-                for row in reader:
-                    h = np.append(h, float(row[0]))  # Distance from the source
-                    r = np.append(r, float(row[1]))  # Diameter of the beam
-                    std = np.append(std, float(row[2]))  # std on the reading of the beam diameter
-            fig1 = plt.figure()
-            fig1.add_subplot(111)
-            ax1 = plt.gca()
-            ax1.errorbar(h, r, xerr=0.0, yerr=std, fmt='o', color='black', markersize=3, ecolor='black')  # plot points
-            popt, pcov = curve_fit(an.linear, h, r, sigma=std, absolute_sigma=True, maxfev=5000, p0=(1, 1))
-            chisq2 = an.red_chisquare(np.array(r), an.linear(h, *popt), np.array(std), popt)
-            line_fit_legend_entry = 'line fit: mh + c\n m=$%.3f\pm%.3f$\nc=$%.3f\pm%.3f$' % (popt[0], np.absolute(pcov[0][0]) ** 0.5, popt[1], np.absolute(pcov[1][1]) ** 0.5)
-            ax1.plot(h, an.linear(h, *popt), '-', lw=1, label=line_fit_legend_entry, markersize=9)  # plot fitted function
-            ax1.set_title('Radius covered by beam spot %s (40 kV and 50 mA)' % (tests[j]), fontsize=12)
-            ax1.grid(True)
-            ax1.legend()
-            ax1.set_ylabel('Radius (r) [cm]')
-            ax1.set_xlabel('Distance from the  collimator holder(h) [cm]')
-            fig1.savefig(directory + subdirectory + "depth_radius_linear_" + tests[j] + '.png', bbox_inches='tight')
-            PdfPages.savefig()
-
-
-    def opening_angle_cone(self, directory=None, tests=[0],PdfPages=PdfPages):
+        self.log.info('Estimating the beam diameter relative to the depth')
+        r = []
+        h = []
+        std = []
+        with open(test_file, 'r')as data:
+            reader = csv.reader(data)
+            next(reader)
+            for row in reader:
+                h = np.append(h, float(row[0]))  # Distance from the source
+                r = np.append(r, float(row[1]))  # Diameter of the beam
+                std = np.append(std, float(row[2]))  # std on the reading of the beam diameter
+        self.ax.errorbar(h, r, xerr=0.0, yerr=std, fmt='o', color='black', markersize=3, ecolor='black')  # plot points
+        
+        popt, pcov = curve_fit(an.linear, h, r, sigma=std, absolute_sigma=True, maxfev=5000, p0=(1, 1))
+        chisq2 = an.red_chisquare(np.array(r), an.linear(h, *popt), np.array(std), popt)
+        line_fit_legend_entry = 'line fit: mh + c\n m=$%.3f\pm%.3f$\nc=$%.3f\pm%.3f$' % (popt[0], np.absolute(pcov[0][0]) ** 0.5, popt[1], np.absolute(pcov[1][1]) ** 0.5)
+        self.ax.plot(h, an.linear(h, *popt), '-', lw=1, label=line_fit_legend_entry, markersize=9)  # plot fitted function
+        self.ax.set_title('Radius covered by beam spot %s (40 kV and 50 mA)' % (test), fontsize=12)
+        self.ax.grid(True)
+        self.ax.legend()
+        self.ax.set_ylabel('Radius (r) [cm]')
+        self.ax.set_xlabel('Distance from the  collimator holder(h) [cm]')
+    def opening_angle_cone(self, test_file=None, tests=[0]):
         '''
         Draw the cone shape of the opening angle
         '''
-        self.log.info('Draw the cone shape of the opening angle')
+        self.log.info('Estimating the beam diameter relative to the depth')
         for j in range(len(tests)):
-            subdirectory = "opening_angle/"+ tests[j]+"/"
             r = []
             h = []
             std = []
-            with open(directory + subdirectory + "opening_angle_" + tests[j] + ".csv", 'r')as data:
+            with open(test_file, 'r')as data:
                 reader = csv.reader(data)
                 next(reader)
                 for row in reader:
@@ -202,26 +199,20 @@ class PlottingCalibration(object):
             popt, pcov = curve_fit(an.linear, h, r, sigma=std, absolute_sigma=True, maxfev=5000, p0=(1, 1))
             h_space = np.linspace(h[0], h[-1], 50)
             r_space = an.linear(h_space, m=popt[0], c=popt[1])
-            fig2 = plt.figure()
-            fig2.add_subplot(111)
-            ax2 = plt.gca()
             for i in range(len(r_space)):
                 x, y = np.linspace(-r_space[i], r_space[i], 2), [h_space[i] for _ in np.arange(2)]
-                ax2.plot(x, y, linestyle="solid")
-            ax2.text(0.95, 0.90, "$\Theta^{rad}$ = %.3f$\pm$ %.3f\n $h_{0}$=%.3f$\pm$ %.3f" % (2 * popt[0], 2 * np.absolute(pcov[0][0]) ** 0.5, popt[1] / (popt[0]), np.absolute(pcov[1][1]) ** 0.5 / popt[0]),
-                    horizontalalignment='right', verticalalignment='top', transform=ax2.transAxes,
+                self.ax.plot(x, y, linestyle="solid")
+            self.ax.text(0.95, 0.90, "$\Theta^{rad}$ = %.3f$\pm$ %.3f\n $h_{0}$=%.3f$\pm$ %.3f" % (2 * popt[0], 2 * np.absolute(pcov[0][0]) ** 0.5, popt[1] / (popt[0]), np.absolute(pcov[1][1]) ** 0.5 / popt[0]),
+                    horizontalalignment='right', verticalalignment='top', transform=self.ax.transAxes,
                     bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.7))
-            ax2.set_title('Diameter covered by beam spot %s' % (tests[j]), fontsize=12)
-            ax2.invert_yaxis()
-            ax2.set_xlabel('Diameter (d) [cm]')
-            ax2.set_ylabel('Height from the the collimator holder(h) [cm]')
-            ax2.grid(True)
-            fig2.savefig(directory + subdirectory + "opening_angle_" + tests[j] + ".png", bbox_inches='tight')
-            PdfPages.savefig()      
+            self.ax.set_title('Diameter covered by beam spot %s' % (tests[j]), fontsize=12)
+            self.ax.invert_yaxis()
+            self.ax.set_xlabel('Diameter (d) [cm]')
+            self.ax.set_ylabel('Height from the the collimator holder(h) [cm]')
+            self.ax.grid(True)
+            
 
-
-
-    def dose_depth(self, directory=False, PdfPages=False, Voltage="40 kV", current="50 mA", stdev=0.2, tests=[0], theta=0.16):
+    def dose_depth(self, Directory=False, PdfPages=False, Voltage="40 kV", current="50 mA", stdev=0.2, tests=[0], theta=0.16):
         '''
         Relation between the depth and  the Dose rate
         '''
@@ -234,7 +225,7 @@ class PlottingCalibration(object):
             height = []
             y1 = []
             b1 = []
-            with open(directory + subdirectory + "dose_depth_" + tests[i] + ".csv", 'r')as data:
+            with open(Directory + subdirectory + "dose_depth_" + tests[i] + ".csv", 'r')as data:
                 reader = csv.reader(data)
                 next(reader)
                 for row in reader:
@@ -263,7 +254,7 @@ class PlottingCalibration(object):
             ax.grid(True)
             ax.legend(loc="upper right")
             ax.ticklabel_format(useOffset=False)
-            fig.savefig(directory + subdirectory + "dose_depth_" + tests[i] + ".png", bbox_inches='tight')  # 1.542
+            fig.savefig(Directory + subdirectory + "dose_depth_" + tests[i] + ".png", bbox_inches='tight')  # 1.542
             plt.tight_layout()
             PdfPages.savefig()
             cmap = plt.cm.get_cmap('viridis', 15)
@@ -272,10 +263,10 @@ class PlottingCalibration(object):
             # cbar.ax.invert_xaxis()
             # cbar.set_label("Dose rate", labelpad=1, fontsize=10)
             
-            fig.savefig(directory + subdirectory + "dose_depth_color_" + tests[i] + ".png", bbox_inches='tight')
+            fig.savefig(Directory + subdirectory + "dose_depth_color_" + tests[i] + ".png", bbox_inches='tight')
         return a, b, c
     
-    def dose_current(self, directory=False, PdfPages=False, stdev=0.06, depth=[0], table=True, Voltages=[0]):
+    def dose_current(self, Directory=False, PdfPages=False, stdev=0.06, depth=[0], table=True, Voltages=[0]):
         '''
         To get the calibration curves for each current
         For each Measurement you make you need to replace the numbers 0 in Background, Factor, .....by your measurement
@@ -301,7 +292,7 @@ class PlottingCalibration(object):
                 bkg_y2 = []
                 Factor = []
                 difference = []
-                with open(directory + subdirectory + volt + ".csv", 'r')as data:  # Get Data for the first Voltage
+                with open(Directory + subdirectory + volt + ".csv", 'r')as data:  # Get Data for the first Voltage
                     reader = csv.reader(data)
                     next(reader)
                     for row in reader:
@@ -355,10 +346,10 @@ class PlottingCalibration(object):
             ax.legend()  # prop={'size': 8}
             ax.set_xlabel('Tube current [mA]')
             plt.tight_layout()
-            plt.savefig(directory + subdirectory + 'dose_current_' + depth[i] + ".png", bbox_inches='tight')
+            plt.savefig(Directory + subdirectory + 'dose_current_' + depth[i] + ".png", bbox_inches='tight')
             PdfPages.savefig()
 
-    def dose_drop(self, directory=False, PdfPages=False, stdev=0.06, depth=[0], Voltages=[0]):
+    def dose_drop(self, Directory=False, PdfPages=False, stdev=0.06, depth=[0], Voltages=[0]):
         '''
         Dose drop after Al filter at two Voltages.
         '''
@@ -378,7 +369,7 @@ class PlottingCalibration(object):
                 bkg_y2 = []
                 Factor = []
                 difference = []
-                with open(directory + subdirectory + volt + ".csv", 'r')as data:  # Get Data for the first Voltage
+                with open(Directory + subdirectory + volt + ".csv", 'r')as data:  # Get Data for the first Voltage
                     reader = csv.reader(data)
                     next(reader)
                     for row in reader:
@@ -394,10 +385,10 @@ class PlottingCalibration(object):
             ax.set_xlabel('Tube current [mA]')
             ax.legend(prop={'size': 10})
             ax.grid(True)
-            plt.savefig(directory + subdirectory + 'dose_current_drop' + depth[i] + ".png", bbox_inches='tight')
+            plt.savefig(Directory + subdirectory + 'dose_current_drop' + depth[i] + ".png", bbox_inches='tight')
             PdfPages.savefig()
 
-    def dose_voltage(self, directory=False, PdfPages=False, Depth="8cm", test="without_Al_Filter", kafe_Fit=False, table=True):
+    def dose_voltage(self, Directory=False, PdfPages=False, Depth="8cm", test="without_Al_Filter", kafe_Fit=False, table=True):
         '''
         Effect of tube Voltage on the Dose, the available data is only without Al Filter
         '''
@@ -423,7 +414,7 @@ class PlottingCalibration(object):
             y = []
             Background = [0.00801e-06]
             Factor = [9.76]
-            with open(directory + subdirectory + Current[i] + ".csv", 'r')as data1:
+            with open(Directory + subdirectory + Current[i] + ".csv", 'r')as data1:
                 reader = csv.reader(data1)
                 next(reader)
                 for row in reader:
@@ -465,7 +456,7 @@ class PlottingCalibration(object):
                       colLabels=columns, cellLoc='center', rowLoc='center', loc='center', fontsize=12)
             plt.subplots_adjust(bottom=0.1)
             ax2.set_axis_off()
-        plt.savefig(directory + subdirectory + "dose_voltage_" + Depth + ".png", bbox_inches='tight')
+        plt.savefig(Directory + subdirectory + "dose_voltage_" + Depth + ".png", bbox_inches='tight')
         PdfPages.savefig()
 
         if kafe_Fit:
@@ -476,10 +467,10 @@ class PlottingCalibration(object):
                 fit.do_fit()
             kafe_plot = Plot(kafe_Fit[2], kafe_Fit[3])
             kafe_plot.plot_all(show_data_for='all', show_band_for=0)
-            kafe_plot.save(directory + subdirectory + "dose_voltage_" + Depth + "_kafe_Fit.png")
+            kafe_plot.save(Directory + subdirectory + "dose_voltage_" + Depth + "_kafe_Fit.png")
             PdfPages.savefig()
                           
-    def power_2d(self, directory=False, PdfPages=False, size_I=50, size_V=60, V_limit=50, I_limit=50):
+    def power_2d(self, Directory=False, PdfPages=False, size_I=50, size_V=60, V_limit=50, I_limit=50):
         '''
         Calculate the power in each point of I and V
         '''
@@ -510,10 +501,10 @@ class PlottingCalibration(object):
         plt.axhline(y=I_limit, linewidth=2, color='#d62728', linestyle='solid')
         plt.axvline(x=V_limit, linewidth=2, color='#d62728', linestyle='solid')
         plt.tight_layout()
-        plt.savefig(directory + 'Power.png')
+        plt.savefig(Directory + 'Power.png')
         PdfPages.savefig()
 
-    def Plot_Beam_profile_2d(self, directory=False, PdfPages=False, depth=None):
+    def Plot_Beam_profile_2d(self, Directory=False, PdfPages=False, depth=None):
         '''
         Make a 2d scan at specific depth
         '''
@@ -524,7 +515,7 @@ class PlottingCalibration(object):
         binwidth = 1
         subdirectory = "beamspot/"
         for d in range(len(depth)):
-            with tb.open_file(directory + subdirectory + depth[d] + "/beamspot_" + depth[d] + ".h5", 'r') as in_file:
+            with tb.open_file(Directory + subdirectory + depth[d] + "/beamspot_" + depth[d] + ".h5", 'r') as in_file:
                 beamspot = in_file.root.beamspot[:]
                 beamspot = (beamspot - Background) * 1000000 * Factor
                 mid_z, mid_x = np.int(beamspot.shape[0] / 2), np.int(beamspot.shape[1] / 2)
@@ -568,7 +559,7 @@ class PlottingCalibration(object):
             plt.title("Beam profile at " + depth[d] + " from the collimator holder (%s and %s)" % ("40 kV", "50mA"), fontsize=12, y=1.7, x=-0.6)
             ax.set_xlabel('x [mm]')
             ax.set_ylabel('y[mm]')
-            plt.savefig(directory + subdirectory + depth[d] + "/beamspot_" + depth[d] + "_2d.png")
+            plt.savefig(Directory + subdirectory + depth[d] + "/beamspot_" + depth[d] + "_2d.png")
             PdfPages.savefig()
 
             fig, ax2 = plt.subplots()
@@ -608,10 +599,10 @@ class PlottingCalibration(object):
             ax2.set_xlabel('x [mm]')
             ax2.set_ylabel('y[mm]')
             cb2.set_label("Relative intensity to central position [$\%$]")
-            plt.savefig(directory + subdirectory + depth[d] + "/beamspot_percentile" + depth[d] + "_2d.png")
+            plt.savefig(Directory + subdirectory + depth[d] + "/beamspot_percentile" + depth[d] + "_2d.png")
             PdfPages.savefig()
 
-    def Plot_Beam_profile_3d(self, directory=False, PdfPages=False, depth=[0]):
+    def Plot_Beam_profile_3d(self, Directory=False, PdfPages=False, depth=[0]):
         '''
         Make a 3d scan at specific depth (The function is under updates)
         '''
@@ -622,7 +613,7 @@ class PlottingCalibration(object):
             return (beamspot[y, x] * 1000000 - Background) * Factor
 
         for d in range(len(depth)):
-            with tb.open_file(directory + subdirectory + depth[d] + "/beamspot_" + depth[d] + ".h5", 'r') as in_file:
+            with tb.open_file(Directory + subdirectory + depth[d] + "/beamspot_" + depth[d] + ".h5", 'r') as in_file:
                 beamspot = in_file.root.beamspot[:]
             y = np.linspace(0, beamspot.shape[0] - 1, 100, dtype=int)
             x = np.linspace(0, beamspot.shape[1] - 1, 100, dtype=int)
@@ -640,14 +631,14 @@ class PlottingCalibration(object):
             ax.set_ylabel('y[mm]')
             plt.axis('off')
             ax.set_title("Beam profile at " + depth[d] + "without collimator support", fontsize=12)
-            plt.savefig(directory + subdirectory + depth[d] + "/beamspot_" + depth[d] + "_3d.png")
+            plt.savefig(Directory + subdirectory + depth[d] + "/beamspot_" + depth[d] + "_3d.png")
             PdfPages.savefig()
 
-    def plot_beamspot(self, directory=None, depth=["60cm"], PdfPages=False):
+    def plot_beamspot(self, Directory=None, depth=["60cm"], PdfPages=False):
         self.log.info('plot the beamspot The function is alternative to the function Plot_Beam_profile_2d')
         subdirectory = "beamspot/"
         for d in depth:
-            filename = directory + subdirectory + d + "/beamspot_" + d + ".h5"
+            filename = Directory + subdirectory + d + "/beamspot_" + d + ".h5"
             with tb.open_file(filename, 'r') as in_file:
                 data = in_file.root.beamspot[:]
                             
