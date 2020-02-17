@@ -11,7 +11,7 @@ if __name__ == '__main__':
     PdfPages = PdfPages(pdf_file)
     filename = "/tests/without_Al_Filter/beamspot/60cm/beamspot_60cm.h5"
     p =plottingCalibration.PlottingCalibration()
-#     p.diode_calibration(PdfPages=PdfPages, Directory=Directory, diodes=["A","B","C"])
+    p.diode_calibration(PdfPages=PdfPages, Directory=Directory, diodes=["A","B","C"])
 #     p.calibration_temperature(data="temperature_dose.h5", Directory=Directory, PdfPages=PdfPages)
     p.opening_angle(directory = test_directory, tests=tests,PdfPages=PdfPages)
     p.opening_angle_cone(directory = test_directory, tests=tests,PdfPages=PdfPages)

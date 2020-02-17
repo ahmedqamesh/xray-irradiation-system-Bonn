@@ -2699,3 +2699,10 @@ Analysis 2020-02-16 22:03:52,395 :: INFO :: Analysis initialized
 Analysis 2020-02-16 22:03:52,689 :: INFO :: Analysis initialized
 Analysis 2020-02-16 22:04:04,287 :: INFO :: Analysis initialized
 Analysis 2020-02-16 22:04:04,562 :: INFO :: Analysis initialized
+Analysis 2020-02-17 22:47:16,863 :: INFO :: Analysis initialized
+Analysis 2020-02-17 22:47:20,174 :: INFO :: Analysis initialized
+Analysis 2020-02-17 22:48:44,952 :: INFO :: Analysis initialized
+Analysis 2020-02-17 22:48:45,057 :: INFO :: Analysis initialized
+__main__ 2020-02-17 22:48:48,115 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-17 22:49:02,098 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-17 22:49:10,596 :: INFO :: Plotting initialized

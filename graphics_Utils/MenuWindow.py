@@ -112,7 +112,13 @@ class MenuBar(QWidget):
         angle_action.setChecked(True)
         angle_action.triggered.connect(self.openingAngleChildMenu)
         test_menu.addAction(angle_action) 
-                
+
+        diode_action = QAction(QIcon('graphics_Utils/icons/icon_linear.svg'), '&Photodiodes Dosimetry Calibration', mainwindow)        
+        diode_action.setStatusTip('Photodiodes Dosimetry Calibration')
+        diode_action.setChecked(True)
+        diode_action.triggered.connect(self.openingAngleChildMenu)
+        test_menu.addAction(diode_action) 
+                        
      # 3. Settings menu
     def _settingsMenu(self,menuBar,mainwindow): 
         settings_menu = menuBar.addMenu("&Settings")
@@ -219,8 +225,6 @@ class MenuBar(QWidget):
         else:
             pass
             
-    
-    
     def canSettingsChildWindow(self,state):
         if state:
             self.ui.canSettingsChildWindow(self.mainwindow)
