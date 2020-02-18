@@ -64,7 +64,7 @@ class PlottingCanvas(FigureCanvas):
         self.draw()
     
                
-    def diode_calibration(self, diodes=["A"], Directory=False, PdfPages=False):
+    def diode_calibration(self, diodes=["A"], Directory=False):
         '''
         The function plots the calibration results for the PN diodes
         Input Directory = Directory + diode_calibration/cern_calibration/
@@ -72,18 +72,14 @@ class PlottingCanvas(FigureCanvas):
         '''
         self.log.info('Calibration results for the diodes')
         subdirectory = "diode_calibration/cern_calibration/"
-        fig = plt.figure()
-        gs = gridspec.GridSpec(2, 1, height_ratios=[3.9, 2])
-        ax = plt.subplot(gs[0])
-        ax2 = plt.subplot(gs[1])
         factor_row = []
-        for d in diodes:
+        for diode in diodes:
             dep = []
             dose = []
             bkg = []
             current = []
             factor = []
-            with open(Directory + subdirectory + d + ".csv", 'r')as data:
+            with open(Directory + subdirectory + diode + ".csv", 'r')as data:
                 reader = csv.reader(data)
                 next(reader)
                 for row in reader:
@@ -95,34 +91,20 @@ class PlottingCanvas(FigureCanvas):
                 mean = np.mean(factor)
             factor_row = np.append(factor_row, factor)
             factor_row = np.append(factor_row, mean)
-            ax.errorbar(dose, current, xerr=0.0, yerr=0.0, fmt='o', color=colors[diodes.index(d)], markersize=3)  # plot points
-            sig2 = [0.4 * current[k] for k in range(len(current))]
             
-            popt2, pcov = curve_fit(an.linear, dose, current, sigma=sig2, absolute_sigma=True, maxfev=5000, p0=(1, 1))
-            chisq2 = an.red_chisquare(np.array(current), an.linear(dose, *popt2), np.array(sig2), popt2)
-            line_fit_legend_entry = "Diode " + d + ':%.4fx+%.4f' % (popt2[0], popt2[1])
-            ax.plot(dose, an.linear(dose, *popt2), linestyle="--",
-                    color=colors[diodes.index(d)], label=line_fit_legend_entry)
-        ax.set_ylabel('Dose rate [$Mrad(sio_2)/hr$]')
-        ax.set_xlabel(r'Current [$\mu$ A]')
-        ax.set_title('(Diode calibration at %s and %s)' % ("40kV", "50mA"), fontsize=11)
-        # Draw a table of parameters under the plot
-        rows = ["Diode A", "Diode B", "Diode C"]
-        columns = ["3 cm", "5 cm", "8 cm", "Mean factor"]
-        ax2.table(cellText=[np.round(factor_row[0:4], 3), np.round(factor_row[4:8], 3),
-                            np.round(factor_row[8:12], 3)],
-                  rowLabels=rows,
-                  rowColours=colors[1:4],
-                  colColours=["lightgray", "lightgray", "lightgray", "lightgray"],
-                  colLabels=columns, cellLoc='center', rowLoc='center', loc='center', fontsize=7)
-        plt.subplots_adjust(bottom=0.1)
-        ax2.set_xlabel(r'Calibration factors')
-        ax2.set_axis_off()
-        ax.grid(True)
-        ax.legend()
-        fig.savefig(Directory + subdirectory + "diode_calibration.png", bbox_inches='tight')
-        plt.tight_layout()
-        PdfPages.savefig()
+            self.ax.errorbar(dose, current, xerr=0.0, yerr=0.0, fmt='o', color=colors[diodes.index(diode)], markersize=3)  # plot points
+            sig = [0.4 * current[k] for k in range(len(current))]
+            pop, pcov = curve_fit(an.linear, dose, current, sigma=sig, absolute_sigma=True, maxfev=5000, p0=(1, 1))
+            chisq = an.red_chisquare(np.array(current), an.linear(dose, *popt2), np.array(sig), popt)
+            line_fit_legend_entry = "Diode " + diode + ':%.4fx+%.4f' % (popt[0], popt[1])
+            
+            self.ax.plot(dose, an.linear(dose, *popt), linestyle="--",
+                    color=colors[diodes.index(diode)], label=line_fit_legend_entry)
+        self.ax.set_ylabel('Dose rate [$Mrad(sio_2)/hr$]')
+        self.ax.set_xlabel(r'Current [$\mu$ A]')
+        self.ax.set_title('(Diode calibration at %s and %s)' % ("40kV", "50mA"), fontsize=11)
+        self.ax.grid(True)
+        self.ax.legend()
 
     def calibration_temperature(self, data=None, PdfPages=False, Directory=False):
         '''

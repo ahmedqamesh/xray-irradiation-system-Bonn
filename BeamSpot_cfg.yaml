@@ -9,8 +9,17 @@ Settings:
        period    :   1000
        x         :   20
        size_z    :   1
-       depth     :   3 
+       depth     :   3
 
+Photodiodes:
+      A:   
+         name: "diode A"
+
+      B:   
+         name: "diode B"
+         
+      C:   
+         name: "diode C"
 devices:
        sourcemeter : "False"
 
