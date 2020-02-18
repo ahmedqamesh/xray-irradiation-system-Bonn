@@ -15,14 +15,14 @@ import time
 ipAddress = '192.168.1.254'
 rootdir = os.path.dirname(os.path.abspath(__file__)) 
 
-class Ui_ChildWindow(QWidget):  
+class ChildWindow(QWidget):  
     def __init__(self):
        super().__init__() 
-       self.menu= MenuWindow.MenuBar()
        self.__openingAngleFilter = "With_Filter"
        self_ipAddress =ipAddress
        conf = analysis_utils.open_yaml_file(file ="BeamSpot_cfg.yaml",directory ="/Users/ahmedqamesh/git/Xray_Irradiation_System_Bonn/")
        self.__filterList = conf['Tests']['Filters']
+       
        self.test_directory = rootdir[:-14]+conf['Tests']['test_directory']
        #self.menu._createStatusBar(self)
      
@@ -56,7 +56,7 @@ class Ui_ChildWindow(QWidget):
         self.WindowGroupBox.setLayout(plotLayout)
         logframe.setLayout(plotLayout) 
         
-    def ChildMenu(self, ChildWindow = None, test_name = "Opening Angle Test",dir="opening_angle/", Fig =None, plotting = None):
+    def ChildMenu(self, ChildWindow = None,firstitems=None, test_name = "Opening Angle Test",dir="opening_angle/", Fig =None, plotting = None):
         self._directory = self.test_directory+dir
         ChildWindow.setObjectName(test_name)
         ChildWindow.setWindowTitle(test_name)
@@ -73,7 +73,7 @@ class Ui_ChildWindow(QWidget):
         firstHBoxLayout = QHBoxLayout()
         firstLabel = QLabel("Test Type: ", ChildWindow)
         firstLabel.setText("Test Type: ")
-        firstitems = self.__filterList
+        #firstitems = self.__filterList
         firstComboBox = QComboBox(ChildWindow)
         for item in firstitems: firstComboBox.addItem(item)
         firstComboBox.activated[str].connect(self.set_openingAngleFilter)
@@ -94,7 +94,6 @@ class Ui_ChildWindow(QWidget):
         self.FirstGroupBox.setLayout(FirstGridLayout)
         MainLayout.addWidget(self.FirstGroupBox, 0, 0)
         plotframe.setLayout(MainLayout) 
-        self.menu._createStatusBar(ChildWindow)
         QtCore.QMetaObject.connectSlotsByName(ChildWindow)  
         
     def openSubGroupMenu(self, ChildWindow = None, filter= "Al" , test_name = "test_name" , plotting = None):
@@ -193,6 +192,8 @@ class Ui_ChildWindow(QWidget):
     
     def get_dimention(self): 
         return self._dim
+    
+    
     def clicked(self,q):
         print("is clicked")
                 

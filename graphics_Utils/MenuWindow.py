@@ -8,12 +8,15 @@ from matplotlib.backends.backend_qt5agg import FigureCanvas
 from PyQt5.QtCore    import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from graphics_Utils import DataMonitoring , MenuWindow , ChildWindow ,LogWindow
+from graphics_Utils import DataMonitoring , MenuWindow , childWindow ,LogWindow
 
 class MenuBar(QWidget):  
     def __init__(self,parent = None):
         super(MenuBar,self).__init__(parent)
         self.mainwindow = QMainWindow()
+        child = MenuWindow.ApplicationWindow()
+        filterList = child.__filterList
+        
     def _createMenu(self,mainwindow):
         menuBar = mainwindow.menuBar()
         menuBar.setNativeMenuBar(False) #only for MacOS
@@ -22,7 +25,7 @@ class MenuBar(QWidget):
         self._settingsMenu(menuBar, mainwindow)
         self._historyMenu(menuBar, mainwindow)
         self._helpMenu(menuBar, mainwindow)
-        self.ui = ChildWindow.Ui_ChildWindow()
+        self.ui = childWindow.Ui_ChildWindow()
         
     def _createtoolbar(self,mainwindow):
         toolbar = mainwindow.addToolBar("tools")
@@ -116,7 +119,7 @@ class MenuBar(QWidget):
         diode_action = QAction(QIcon('graphics_Utils/icons/icon_linear.svg'), '&Photodiodes Dosimetry Calibration', mainwindow)        
         diode_action.setStatusTip('Photodiodes Dosimetry Calibration')
         diode_action.setChecked(True)
-        diode_action.triggered.connect(self.openingAngleChildMenu)
+        diode_action.triggered.connect(self.photodiodesChildMenu)
         test_menu.addAction(diode_action) 
                         
      # 3. Settings menu
@@ -197,7 +200,8 @@ class MenuBar(QWidget):
 
     def openingAngleConeChildMenu(self):
         
-        self.ui.ChildMenu(ChildWindow = self.mainwindow , 
+        self.ui.ChildMenu(ChildWindow = self.mainwindow ,
+                                      firstitems = self.__filterList,
                                       test_name = "Opening Angle Test",
                                       dir="opening_angle/",
                                       plotting = "opening_angle_cone")
@@ -206,11 +210,19 @@ class MenuBar(QWidget):
                  
     def openingAngleChildMenu(self):
         self.ui.ChildMenu(ChildWindow = self.mainwindow , 
+                                      firstitems = self.__filterList,
                                       test_name = "BeamSpot radius vs height",
                                       dir="opening_angle/",
                                       plotting = "opening_angle")
         self.mainwindow.show()  
-         
+    
+    def photodiodesChildMenu(self):
+        self.ui.ChildMenu(ChildWindow = self.mainwindow , 
+                                      firstitems = self.__filterList,
+                                      test_name = "Photodiodes Dosimetry Calibration",
+                                      dir="diode_calibration/",
+                                      plotting = "diode_calibration")
+        self.mainwindow.show()        
     def outputChildWindow(self,state):
         if state:
             self.ui.outputChildWindow(self.mainwindow)

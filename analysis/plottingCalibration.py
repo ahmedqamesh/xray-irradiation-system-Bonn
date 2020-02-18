@@ -71,13 +71,13 @@ class PlottingCalibration(object):
         ax = plt.subplot(gs[0])
         ax2 = plt.subplot(gs[1])
         factor_row = []
-        for d in diodes:
+        for diode in diodes:
             dep = []
             dose = []
             bkg = []
             current = []
             factor = []
-            with open(directory + subdirectory + d + ".csv", 'r')as data:
+            with open(directory + subdirectory + diode + ".csv", 'r')as data:
                 reader = csv.reader(data)
                 next(reader)
                 for row in reader:
@@ -89,14 +89,14 @@ class PlottingCalibration(object):
                 mean = np.mean(factor)
             factor_row = np.append(factor_row, factor)
             factor_row = np.append(factor_row, mean)
-            ax.errorbar(dose, current, xerr=0.0, yerr=0.0, fmt='o', color=colors[diodes.index(d)], markersize=3)  # plot points
+            ax.errorbar(dose, current, xerr=0.0, yerr=0.0, fmt='o', color=colors[diodes.index(diode)], markersize=3)  # plot points
             sig2 = [0.4 * current[k] for k in range(len(current))]
             
             popt2, pcov = curve_fit(an.linear, dose, current, sigma=sig2, absolute_sigma=True, maxfev=5000, p0=(1, 1))
             chisq2 = an.red_chisquare(np.array(current), an.linear(dose, *popt2), np.array(sig2), popt2)
-            line_fit_legend_entry = "Diode " + d + ':%.4fx+%.4f' % (popt2[0], popt2[1])
+            line_fit_legend_entry = "Diode " + diode + ':%.4fx+%.4f' % (popt2[0], popt2[1])
             ax.plot(dose, an.linear(dose, *popt2), linestyle="--",
-                    color=colors[diodes.index(d)], label=line_fit_legend_entry)
+                    color=colors[diodes.index(diode)], label=line_fit_legend_entry)
         ax.set_ylabel('Dose rate [$Mrad(sio_2)/hr$]')
         ax.set_xlabel(r'Current [$\mu$ A]')
         ax.set_title('(Diode calibration at %s and %s)' % ("40kV", "50mA"), fontsize=11)

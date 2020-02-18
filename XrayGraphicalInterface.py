@@ -12,7 +12,7 @@ from pathlib import Path
 import matplotlib as mpl
 import numpy as np
 from matplotlib.figure import Figure
-from graphics_Utils import DataMonitoring , MenuWindow , ChildWindow ,LogWindow
+from graphics_Utils import DataMonitoring , MenuWindow , childWindow ,LogWindow
 from analysis import analysis_utils , logger
 # Third party modules
 from logging.handlers import RotatingFileHandler
@@ -50,8 +50,13 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.sourcemeter= sourcemeter
         self.depth= conf['Settings']['depth'] 
         
+        #Diodes list
+        self.__diodesList = conf['Photodiodes']
+        
+        
+        
     def Ui_ApplicationWindow(self):
-        self.menu= MenuWindow.MenuBar()
+        self.menu= MenuWindow.MenuBar(self)
         self.menu._createMenu(self)
         self.menu._createtoolbar(self)
         self.menu._createStatusBar(self)
