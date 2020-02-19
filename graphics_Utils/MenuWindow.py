@@ -14,8 +14,8 @@ class MenuBar(QWidget):
     def __init__(self,parent = None):
         super(MenuBar,self).__init__(parent)
         self.mainwindow = QMainWindow()
-        child = MenuWindow.ApplicationWindow()
-        filterList = child.__filterList
+        
+        #filterList = child.__filterList
         
     def _createMenu(self,mainwindow):
         menuBar = mainwindow.menuBar()

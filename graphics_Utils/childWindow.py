@@ -7,23 +7,24 @@ from PyQt5.QtCore    import *
 from PyQt5.QtGui     import *
 from PyQt5.QtWidgets import *
 import os
-from graphics_Utils import DataMonitoring , MenuWindow , LogWindow , plottingCanvas
+from graphics_Utils import mainWindow , DataMonitoring , MenuWindow , LogWindow , plottingCanvas
 from analysis import analysis_utils,  plottingCalibration, analysis
 import numpy as np
 from matplotlib.figure import Figure
 import time
 ipAddress = '192.168.1.254'
 rootdir = os.path.dirname(os.path.abspath(__file__)) 
-
-class ChildWindow(QWidget):  
-    def __init__(self):
-       super().__init__() 
+class ChildWindow(mainWindow.MainWindow):  
+    def __init__(self,parent=mainWindow):
+       super(ChildWindow,self).__init__(parent)
+       
+       self.__filterList = mainWindow.MainWindow().__filterList
        self.__openingAngleFilter = "With_Filter"
        self_ipAddress =ipAddress
        conf = analysis_utils.open_yaml_file(file ="BeamSpot_cfg.yaml",directory ="/Users/ahmedqamesh/git/Xray_Irradiation_System_Bonn/")
-       self.__filterList = conf['Tests']['Filters']
+       #self.__filterList = conf['Tests']['Filters']
        
-       self.test_directory = rootdir[:-14]+conf['Tests']['test_directory']
+       #self.test_directory = rootdir[:-14]+conf['Tests']['test_directory']
        #self.menu._createStatusBar(self)
      
     
