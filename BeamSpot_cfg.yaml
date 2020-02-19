@@ -11,23 +11,14 @@ Settings:
        size_z    :   1
        depth     :   3
 
-Photodiodes:
-      A:   
-         name: "diode A"
-
-      B:   
-         name: "diode B"
-         
-      C:   
-         name: "diode C"
-devices:
-       sourcemeter : "False"
-
+Devices:
+       sourcemeter : False
 
 Tests:
    test_directory : "tests/"
-   Filters        :   ["---------","without_filter","Al","Zn","Be"]
-        
+   filters        : ["---------","without_filter","Al","Zn","Be"]
+   photodiodes    : ["---------", "A","B","C"]
+   Factor : ["","",""]
 
 Other:
     user    :   "Ahmed Qamesh"

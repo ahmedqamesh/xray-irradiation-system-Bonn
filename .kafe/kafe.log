@@ -2792,3 +2792,893 @@ Analysis 2020-02-19 09:42:46,036 :: INFO :: Analysis initialized
 Analysis 2020-02-19 09:42:46,038 :: INFO :: Analysis initialized
 Analysis 2020-02-19 09:43:00,788 :: INFO :: Analysis initialized
 Analysis 2020-02-19 09:43:00,789 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:44:29,739 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:44:29,741 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:44:54,153 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:44:54,155 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:45:20,475 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:45:20,477 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:46:22,798 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:46:22,800 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:47:08,346 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:47:08,348 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:47:41,218 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:47:41,220 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:48:18,527 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:48:18,529 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:49:02,086 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:49:02,088 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:49:20,979 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:49:20,980 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:51:24,465 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:51:24,466 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:55:24,613 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:55:24,615 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 09:55:24,637 :: SUCCESS :: Read configuration file ...
+Analysis 2020-02-19 09:55:43,513 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:55:43,516 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 09:55:43,536 :: SUCCESS :: Read configuration file ...
+Analysis 2020-02-19 09:55:55,410 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:55:55,412 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 09:55:55,427 :: SUCCESS :: Read configuration file ...
+Analysis 2020-02-19 09:58:45,328 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:58:45,332 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 09:58:45,353 :: SUCCESS :: Read configuration file ...
+Analysis 2020-02-19 09:59:02,731 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:59:02,733 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 09:59:02,746 :: SUCCESS :: Read configuration file ...
+Analysis 2020-02-19 09:59:19,987 :: INFO :: Analysis initialized
+Analysis 2020-02-19 09:59:19,989 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 09:59:20,006 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 09:59:20,068 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:02:03,906 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:02:03,908 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:02:03,924 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:02:03,988 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:03:14,958 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:03:14,960 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:03:14,976 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:03:15,039 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:03:37,040 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:03:37,042 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:03:37,057 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:03:37,114 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:04:01,606 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:04:01,608 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:04:01,624 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:04:01,699 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:04:35,696 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:04:35,698 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:04:35,713 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:04:35,748 :: SUCCESS :: Read configuration file ...
+Analysis 2020-02-19 10:05:49,861 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:05:49,862 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:05:49,881 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:05:49,911 :: SUCCESS :: Read configuration file ...
+Analysis 2020-02-19 10:06:09,786 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:06:09,788 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:06:09,805 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:06:09,835 :: SUCCESS :: Read configuration file ...
+Analysis 2020-02-19 10:06:25,039 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:06:25,041 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:06:25,053 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:06:25,078 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:06:25,109 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:06:56,874 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:06:56,876 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:06:56,893 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:06:56,923 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:06:56,957 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:08:53,017 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:08:53,019 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:08:53,036 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:08:53,066 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:08:53,068 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:08:53,101 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:09:16,748 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:09:16,750 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:09:16,764 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:09:16,793 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:09:16,795 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:09:16,827 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:10:40,346 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:10:40,348 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:10:40,377 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:10:40,407 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:10:40,410 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:10:40,442 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:11:31,178 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:11:31,180 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:11:31,197 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:11:31,260 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:11:56,686 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:11:56,688 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:11:56,702 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:11:56,707 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:11:56,710 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:11:56,769 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:19:29,429 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:19:29,431 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:19:29,449 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:19:29,452 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:19:29,455 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:19:29,485 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:19:29,520 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:19:51,691 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:19:51,694 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:19:51,714 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:19:51,717 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:19:51,719 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:19:51,750 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:19:51,784 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:21:27,584 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:21:27,586 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:21:27,603 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:21:27,606 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:21:27,609 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:21:27,641 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:21:27,677 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 10:21:31,810 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:21:34,752 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:21:34,766 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-19 10:21:38,753 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:21:38,762 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-19 10:22:56,521 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:22:56,525 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:22:56,548 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:22:56,551 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:22:56,553 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:22:56,585 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:22:56,619 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 10:22:59,319 :: INFO :: Plotting initialized
+Analysis 2020-02-19 10:23:14,490 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:23:14,492 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:23:14,511 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:23:14,514 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:23:14,516 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:23:14,544 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:23:14,579 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 10:23:18,082 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:23:19,402 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:23:19,412 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-19 10:23:22,282 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:23:22,290 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-19 10:23:28,952 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:23:32,876 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:23:32,885 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-19 10:25:16,082 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:25:16,091 :: INFO :: Analysis initialized
+graphics_Utils.mainWindow 2020-02-19 10:25:16,138 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:25:16,142 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:25:16,144 :: SUCCESS :: Read configuration file ...
+graphics_Utils.mainWindow 2020-02-19 10:25:16,173 :: SUCCESS :: Read configuration file ...
+analysis.analysis_utils 2020-02-19 10:25:16,207 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 10:25:18,870 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:25:21,023 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:25:21,032 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-19 10:38:25,299 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:38:25,301 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 10:38:25,422 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:44:32,155 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:44:32,157 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 10:44:32,240 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:47:02,716 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:47:02,718 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 10:47:02,832 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:47:35,567 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:47:35,569 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 10:47:35,646 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:47:58,717 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:47:58,718 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 10:47:58,805 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:49:31,222 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:49:31,223 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 10:49:31,311 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:50:06,575 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:50:06,577 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 10:50:06,662 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:53:50,280 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:53:50,288 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 10:53:50,370 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:55:00,992 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:55:00,993 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 10:55:01,089 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:55:22,419 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:55:22,421 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 10:55:22,500 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:55:43,518 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:55:43,520 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 10:55:43,605 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:56:09,213 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:56:09,214 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 10:56:09,305 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:56:26,866 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:56:26,868 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 10:56:26,956 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 10:56:58,872 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:56:58,874 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 10:56:58,952 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 10:57:02,735 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:57:04,827 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:57:13,153 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:57:14,843 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:57:15,978 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:57:17,906 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:57:20,308 :: INFO :: Plotting initialized
+Analysis 2020-02-19 10:59:27,441 :: INFO :: Analysis initialized
+Analysis 2020-02-19 10:59:27,455 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 10:59:27,555 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 10:59:35,876 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:59:41,155 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:59:45,299 :: INFO :: Plotting initialized
+Plotting 2020-02-19 10:59:48,837 :: INFO :: Plotting initialized
+Analysis 2020-02-19 11:00:00,564 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:00:00,566 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:00:00,655 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 11:01:46,763 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:01:46,772 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:01:46,875 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:01:50,574 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:01:52,489 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:02:09,222 :: INFO :: Plotting initialized
+Analysis 2020-02-19 11:03:00,937 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:03:00,939 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:03:01,017 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:03:03,533 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:03:07,739 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:03:13,189 :: INFO :: Plotting initialized
+Analysis 2020-02-19 11:03:29,480 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:03:29,490 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:03:29,580 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:03:32,461 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:03:36,740 :: INFO :: Plotting initialized
+Analysis 2020-02-19 11:03:50,310 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:03:50,317 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:03:50,389 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:03:53,301 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:03:55,789 :: INFO :: Plotting initialized
+Analysis 2020-02-19 11:04:38,692 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:04:38,694 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:04:38,774 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:04:45,323 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:04:46,661 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:04:46,671 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-19 11:06:51,238 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:06:51,248 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:06:51,340 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 11:12:18,794 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:12:18,796 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:12:18,883 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 11:13:48,352 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:13:48,354 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:13:48,442 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:13:50,696 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:13:53,044 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:13:53,053 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-19 11:13:57,975 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:14:00,760 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:14:00,775 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:14:25,242 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:14:25,252 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:14:25,370 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:14:28,211 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:14:29,855 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:14:29,864 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:15:30,904 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:15:30,913 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:15:31,009 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:15:33,952 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:15:35,421 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:15:35,430 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:16:03,772 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:16:03,781 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:16:03,865 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:16:06,662 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:16:08,724 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:16:08,736 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:16:27,744 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:16:27,754 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:16:33,864 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:16:33,873 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:16:35,849 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:16:35,862 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:16:37,688 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:16:37,703 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:16:39,296 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:16:39,310 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:16:42,820 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:16:42,829 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:17:08,139 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:17:08,149 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:17:08,233 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:17:10,996 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:17:12,946 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:17:12,954 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:17:16,994 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:17:17,002 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:23:10,262 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:23:10,265 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:23:10,344 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 11:24:03,463 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:24:03,465 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:24:03,555 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 11:25:00,735 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:25:00,738 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:25:00,830 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 11:25:24,601 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:25:24,603 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:25:24,689 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:25:27,451 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:25:29,162 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:25:29,174 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:25:31,125 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:25:31,138 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:25:33,690 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:25:33,699 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:26:25,625 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:26:25,627 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:26:25,720 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 11:27:30,897 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:27:30,899 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:27:30,996 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:27:35,899 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:27:38,923 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:27:38,933 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:27:41,691 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:27:41,699 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:27:43,673 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:27:43,682 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:29:36,704 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:29:36,707 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:29:36,836 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:29:49,891 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:29:55,203 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:29:55,221 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:30:15,342 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:30:15,345 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:30:15,433 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:30:19,172 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:30:21,484 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:30:21,492 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:30:26,179 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:30:26,188 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:30:28,603 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:30:28,612 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:31:06,581 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:31:06,583 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:31:06,667 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:31:09,570 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:31:11,053 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:31:11,062 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:31:15,484 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:31:15,493 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:31:18,120 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:31:18,129 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:32:39,971 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:32:39,972 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:32:40,059 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:32:42,804 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:32:44,387 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:32:44,396 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:32:46,774 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:32:46,783 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:32:48,653 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:32:48,663 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:33:23,724 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:33:23,726 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:33:23,810 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:33:26,487 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:33:28,085 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:33:28,099 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:33:35,333 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:33:35,343 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:33:37,835 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:33:37,844 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:37:05,022 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:37:05,024 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:37:05,109 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 11:37:34,326 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:37:34,329 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:37:34,431 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:37:36,774 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:37:38,607 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:37:38,621 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:37:44,341 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:37:44,350 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:37:49,109 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:37:49,118 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:40:05,873 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:40:05,874 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:40:05,968 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 11:41:07,575 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:41:07,577 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:41:07,679 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 11:42:16,673 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:42:16,675 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:42:16,762 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 11:43:19,090 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:43:19,092 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:43:19,176 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:43:23,199 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:43:23,209 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:43:24,615 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:43:24,623 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:43:26,735 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:43:26,744 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:44:30,386 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:44:30,388 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 11:44:30,479 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 11:44:34,663 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:44:34,673 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:44:37,249 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:44:37,264 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 11:44:38,855 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:44:38,866 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:46:08,068 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:46:48,720 :: INFO :: Analysis initialized
+Analysis 2020-02-19 11:47:01,700 :: INFO :: Analysis initialized
+Plotting 2020-02-19 11:47:01,879 :: INFO :: Plotting initialized
+Analysis 2020-02-19 11:47:21,427 :: INFO :: Analysis initialized
+Plotting 2020-02-19 11:47:21,570 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:47:21,570 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:47:41,015 :: INFO :: Analysis initialized
+Plotting 2020-02-19 11:47:41,155 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:47:41,155 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:48:23,067 :: INFO :: Analysis initialized
+Plotting 2020-02-19 11:48:23,217 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:48:23,218 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:48:50,110 :: INFO :: Analysis initialized
+Plotting 2020-02-19 11:48:50,258 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:48:50,259 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:49:05,291 :: INFO :: Analysis initialized
+Plotting 2020-02-19 11:49:05,466 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:49:05,467 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:50:06,789 :: INFO :: Analysis initialized
+Plotting 2020-02-19 11:50:06,923 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:50:06,923 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:51:42,148 :: INFO :: Analysis initialized
+Plotting 2020-02-19 11:51:42,295 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:51:42,295 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:52:15,559 :: INFO :: Analysis initialized
+Plotting 2020-02-19 11:52:15,706 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:52:15,706 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:52:27,663 :: INFO :: Analysis initialized
+Plotting 2020-02-19 11:52:27,808 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:52:27,808 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 11:55:58,988 :: INFO :: Analysis initialized
+Plotting 2020-02-19 11:55:59,144 :: INFO :: Plotting initialized
+Plotting 2020-02-19 11:55:59,144 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 12:02:33,112 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:02:33,261 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:02:33,261 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 12:02:54,119 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:02:54,266 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:02:54,266 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 12:03:52,355 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:03:52,498 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:03:52,499 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 12:04:30,838 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:04:30,985 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:04:30,986 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 12:04:40,581 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:04:40,733 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:04:40,733 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 12:04:49,387 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:04:49,565 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:04:49,566 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 12:05:36,867 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:05:37,021 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:05:37,021 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 12:07:09,480 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:07:09,632 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:07:09,632 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 12:07:21,289 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:07:21,472 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:07:21,472 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 12:07:36,871 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:07:37,012 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:07:37,012 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 12:08:47,480 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:08:47,632 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:08:47,632 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:08:48,358 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:13:32,559 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:13:32,724 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:13:32,724 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:13:33,468 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:14:51,530 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:14:51,672 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:14:51,672 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:14:52,524 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:15:02,097 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:15:02,258 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:15:02,258 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:15:03,133 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:15:33,219 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:15:33,358 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:15:33,358 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:15:34,072 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:16:18,904 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:16:19,048 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:16:19,048 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:16:19,786 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:16:41,969 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:16:42,127 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:16:42,127 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:16:42,903 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:17:18,477 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:17:18,655 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:17:18,656 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:17:19,376 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:17:59,491 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:17:59,641 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:17:59,642 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:18:00,435 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:18:15,316 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:18:15,480 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:18:15,480 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:18:16,297 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:19:23,951 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:19:24,101 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:19:24,102 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:19:24,864 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:19:38,163 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:19:38,313 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:19:38,313 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:19:39,059 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:19:52,341 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:19:52,485 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:19:52,485 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:19:53,204 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:20:01,564 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:20:01,710 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:20:01,710 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:20:02,501 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:20:10,688 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:20:10,838 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:20:10,838 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:20:11,598 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:20:23,868 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:20:24,040 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:20:24,040 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:20:24,819 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:20:48,376 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:20:48,530 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:20:48,530 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:20:49,296 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:20:51,952 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:20:52,085 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:20:52,085 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:20:52,824 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:21:03,384 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:21:03,540 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:21:03,540 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:21:04,264 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:50:20,600 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:50:20,753 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:50:20,753 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:50:21,468 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:51:48,046 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:51:48,193 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:51:48,194 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:51:48,944 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:52:08,903 :: INFO :: Analysis initialized
+Analysis 2020-02-19 12:52:17,385 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:52:17,527 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:52:17,527 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:52:18,302 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:52:58,431 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:52:58,580 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:52:58,580 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:52:59,374 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:53:24,023 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:53:24,164 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:53:24,164 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:53:24,906 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:53:34,271 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:53:34,415 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:53:34,415 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:53:35,183 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:54:00,962 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:54:01,112 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:54:01,113 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:54:01,856 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:54:25,889 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:54:26,038 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:54:26,038 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:54:26,814 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:54:38,425 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:54:38,591 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:54:38,591 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:54:39,304 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:55:03,187 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:55:03,334 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:55:03,334 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:55:04,093 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:55:15,116 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:55:15,285 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:55:15,286 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:55:16,066 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:55:33,783 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:55:33,928 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:55:33,928 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:55:34,666 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:56:02,894 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:56:03,054 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:56:03,054 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:56:03,814 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:56:08,179 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:56:08,334 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:56:08,334 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:56:09,072 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:56:19,376 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:56:19,544 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:56:19,544 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:56:20,300 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:56:23,693 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:56:23,830 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:56:23,830 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:56:24,548 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:56:29,668 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:56:29,824 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:56:29,824 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:56:30,549 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:56:38,285 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:56:38,434 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:56:38,434 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:56:39,162 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:56:45,680 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:56:45,830 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:56:45,830 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:56:46,587 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:56:50,537 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:56:50,705 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:56:50,705 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:56:51,569 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:56:56,488 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:56:56,633 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:56:56,634 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:56:57,376 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:57:01,764 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:57:01,912 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:57:01,912 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:57:02,646 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:57:09,940 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:57:10,087 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:57:10,087 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:57:10,823 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:57:19,290 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:57:19,434 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:57:19,434 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:57:20,181 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:57:31,012 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:57:31,156 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:57:31,156 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:57:31,896 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:58:04,628 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:58:04,788 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:58:04,788 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:58:05,532 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:58:12,916 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:58:13,070 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:58:13,070 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:58:13,788 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:58:27,349 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:58:27,499 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:58:27,499 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:58:28,253 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:59:08,037 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:59:08,181 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:59:08,181 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:59:08,952 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 12:59:45,980 :: INFO :: Analysis initialized
+Plotting 2020-02-19 12:59:46,120 :: INFO :: Plotting initialized
+Plotting 2020-02-19 12:59:46,120 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 12:59:46,866 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:00:29,475 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:00:29,620 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:00:29,621 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:00:30,375 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:00:40,892 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:00:41,031 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:00:41,031 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:00:41,753 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:00:48,582 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:00:48,725 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:00:48,725 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:00:49,516 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:01:04,914 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:01:05,075 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:01:05,075 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:01:05,796 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:01:12,673 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:01:12,812 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:01:12,812 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:01:13,554 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:01:23,587 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:01:23,760 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:01:23,761 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:01:24,501 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:01:32,339 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:01:32,482 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:01:32,483 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:01:33,213 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:01:48,999 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:01:49,140 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:01:49,140 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:01:49,937 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:02:02,146 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:02:02,287 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:02:02,287 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:02:03,031 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:02:18,015 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:02:18,160 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:02:18,161 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:02:18,885 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:02:26,231 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:02:26,366 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:02:26,366 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:02:27,122 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:02:37,506 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:02:37,643 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:02:37,643 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:02:38,347 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:02:44,393 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:02:44,525 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:02:44,525 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:02:45,300 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:02:52,335 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:02:52,487 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:02:52,487 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:02:53,197 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:02:56,561 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:02:56,707 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:02:56,707 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:02:57,599 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:03:29,911 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:03:30,068 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:03:30,068 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:03:30,831 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:03:49,363 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:03:49,522 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:03:49,522 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:03:50,234 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:03:58,379 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:03:58,530 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:03:58,531 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:03:59,254 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:04:11,441 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:04:11,584 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:04:11,584 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:04:12,312 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:05:28,619 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:05:28,762 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:05:28,762 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:05:29,496 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:05:46,699 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:05:46,842 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:05:46,842 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:05:47,576 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:05:54,810 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:05:54,976 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:05:54,976 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:05:55,713 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:06:21,820 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:06:21,957 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:06:21,957 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:06:22,845 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:06:37,909 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:06:38,043 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:06:38,043 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:06:38,777 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:07:17,602 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:07:17,778 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:07:17,779 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:07:18,574 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:07:42,932 :: INFO :: Analysis initialized
+Plotting 2020-02-19 13:07:43,088 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:07:43,088 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:07:43,819 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-19 13:11:50,399 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:11:50,408 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 13:11:50,488 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 13:11:54,564 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:11:54,575 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:11:56,129 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:11:56,138 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:11:58,006 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:11:58,016 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 13:16:48,478 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:16:48,480 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 13:16:48,584 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 13:23:45,867 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:23:45,875 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 13:23:45,954 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 13:25:20,896 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:25:20,906 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:27:02,344 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:27:02,353 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 13:27:02,440 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 13:27:07,659 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:27:07,674 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:27:09,314 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:27:09,323 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 13:27:10,450 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:27:10,463 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 13:28:12,664 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:28:12,673 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 13:28:12,756 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 13:28:19,211 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:28:19,224 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 13:34:36,468 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:34:36,478 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 13:34:36,562 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 13:34:42,023 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:34:42,034 :: INFO :: Plotting IV curves for diodes ['A']
+Analysis 2020-02-19 13:34:53,060 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:34:53,068 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 13:34:53,142 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 13:34:57,852 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:34:57,862 :: INFO :: Plotting IV curves for diodes ['A']
+Analysis 2020-02-19 13:36:30,414 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:36:30,423 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 13:36:30,513 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 13:36:35,277 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:36:35,286 :: INFO :: Plotting IV curves for diodes ['A']
+Plotting 2020-02-19 13:36:37,829 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:36:37,844 :: INFO :: Plotting IV curves for diodes ['B']
+Plotting 2020-02-19 13:36:39,958 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:36:39,976 :: INFO :: Plotting IV curves for diodes ['C']
+Plotting 2020-02-19 13:36:42,109 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:36:42,117 :: INFO :: Plotting IV curves for diodes ['B']
+Plotting 2020-02-19 13:36:43,364 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:36:43,373 :: INFO :: Plotting IV curves for diodes ['A']
+Analysis 2020-02-19 13:36:59,541 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:36:59,551 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 13:36:59,643 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 13:37:04,874 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:37:04,883 :: INFO :: Plotting IV curves for diodes ['A']
+Plotting 2020-02-19 13:37:07,741 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:37:07,755 :: INFO :: Plotting IV curves for diodes ['B']
+Plotting 2020-02-19 13:37:09,509 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:37:09,517 :: INFO :: Plotting IV curves for diodes ['C']
+Plotting 2020-02-19 13:37:16,444 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:37:16,453 :: INFO :: Plotting IV curves for diodes ['B']
+Plotting 2020-02-19 13:37:17,692 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:37:17,701 :: INFO :: Plotting IV curves for diodes ['A']
+Analysis 2020-02-19 13:37:42,836 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:37:42,845 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 13:37:42,936 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 13:37:48,157 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:37:48,171 :: INFO :: Plotting IV curves for diodes ['A']
+Plotting 2020-02-19 13:37:50,405 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:37:50,414 :: INFO :: Plotting IV curves for diodes ['B']
+Plotting 2020-02-19 13:37:52,228 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:37:52,237 :: INFO :: Plotting IV curves for diodes ['C']
+Analysis 2020-02-19 13:38:34,020 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:38:37,824 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:38:37,834 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 13:38:37,921 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 13:38:42,398 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:38:42,407 :: INFO :: Plotting IV curves for diodes ['A']
+Plotting 2020-02-19 13:38:44,589 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:38:44,598 :: INFO :: Plotting IV curves for diodes ['B']
+Plotting 2020-02-19 13:38:46,213 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:38:46,223 :: INFO :: Plotting IV curves for diodes ['C']
+Analysis 2020-02-19 13:42:16,913 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:42:16,923 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 13:42:17,009 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 13:43:14,454 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:43:14,456 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:45:15,497 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:45:15,499 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 13:45:15,581 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 13:45:33,507 :: INFO :: Analysis initialized
+Analysis 2020-02-19 13:45:33,509 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 13:45:33,594 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 13:45:39,597 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:45:39,611 :: INFO :: Plotting IV curves for diodes ['A']
+Plotting 2020-02-19 13:45:41,722 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:45:41,736 :: INFO :: Plotting IV curves for diodes ['B']
+Plotting 2020-02-19 13:45:43,047 :: INFO :: Plotting initialized
+Plotting 2020-02-19 13:45:43,055 :: INFO :: Plotting IV curves for diodes ['C']

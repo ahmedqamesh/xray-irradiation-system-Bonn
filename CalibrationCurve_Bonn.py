@@ -1,9 +1,10 @@
 from analysis import plottingCalibration, analysis , analysis_utils
 from matplotlib.backends.backend_pdf import PdfPages
-
+import os
+rootdir = os.path.dirname(os.path.abspath(__file__))
 if __name__ == '__main__':
     global PdfPages  
-    conf = analysis_utils.open_yaml_file(file ="BeamSpot_cfg.yaml",directory ="/Users/ahmedqamesh/git/Xray_Irradiation_System_Bonn/")
+    conf = analysis_utils.open_yaml_file(file ="BeamSpot_cfg.yaml",directory =rootdir)
     test_directory = conf['Tests']['test_directory']  
     pdf_file = 'output_data/CalibrationCurve_Bonn.pdf'
     tests = ["without_filter", "Al"]
@@ -11,10 +12,11 @@ if __name__ == '__main__':
     PdfPages = PdfPages(pdf_file)
     filename = "/tests/without_Al_Filter/beamspot/60cm/beamspot_60cm.h5"
     p =plottingCalibration.PlottingCalibration()
-    p.diode_calibration(PdfPages=PdfPages, Directory=Directory, diodes=["A","B","C"])
-#     p.calibration_temperature(data="temperature_dose.h5", Directory=Directory, PdfPages=PdfPages)
-    p.opening_angle(directory = test_directory, tests=tests,PdfPages=PdfPages)
-    p.opening_angle_cone(directory = test_directory, tests=tests,PdfPages=PdfPages)
+    p.diode_calibration(PdfPages=PdfPages, directory=test_directory, tests=["A","B","C"])
+    p.IV_test(PdfPages=PdfPages, directory=test_directory, tests=["A","B","C"])
+#   p.calibration_temperature(data="temperature_dose.h5", Directory=Directory, PdfPages=PdfPages)
+    #p.opening_angle(directory = test_directory, tests=tests,PdfPages=PdfPages)
+    #p.opening_angle_cone(directory = test_directory, tests=tests,PdfPages=PdfPages)
 #     p.dose_depth(tests=tests, Directory=Directory, PdfPages=PdfPages)
 #     p.dose_current(stdev=0.04, PdfPages=PdfPages, Directory=Directory, depth= ["3cm", "5cm", "8cm", "51cm"], table=True,Voltages=["40kV", "30kV"])
 #     p.dose_drop(stdev=0.04, PdfPages=PdfPages, Directory=Directory,depth= ["3cm", "5cm", "8cm", "51cm"],Voltages=["40kV", "30kV"])

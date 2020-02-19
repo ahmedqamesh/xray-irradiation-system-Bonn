@@ -58,26 +58,29 @@ class PlottingCalibration(object):
         ``'data'`` and ``'sim'``."""
         return self.__interface
                
-    def diode_calibration(self, diodes=["A"], directory=False, PdfPages=False):
+    def diode_calibration(self, tests=["A"], directory=False, PdfPages=False):
         '''
         The function plots the calibration results for the PN diodes
         Input directory = directory + diode_calibration/cern_calibration/
         diodes is an array of strings represents the diodes name A, B and C.
         '''
         self.log.info('Calibration results for the diodes')
-        subdirectory = "diode_calibration/cern_calibration/"
+        subdirectory = "diode_calibration/"
+        name_prefix = "diode_calibration_"
+        
         fig = plt.figure()
         gs = gridspec.GridSpec(2, 1, height_ratios=[3.9, 2])
         ax = plt.subplot(gs[0])
         ax2 = plt.subplot(gs[1])
         factor_row = []
-        for diode in diodes:
+        for test in tests:
+            file = directory + subdirectory + test+"/" + name_prefix+test+".csv"
             dep = []
             dose = []
             bkg = []
             current = []
             factor = []
-            with open(directory + subdirectory + diode + ".csv", 'r')as data:
+            with open(file, 'r')as data:
                 reader = csv.reader(data)
                 next(reader)
                 for row in reader:
@@ -89,14 +92,14 @@ class PlottingCalibration(object):
                 mean = np.mean(factor)
             factor_row = np.append(factor_row, factor)
             factor_row = np.append(factor_row, mean)
-            ax.errorbar(dose, current, xerr=0.0, yerr=0.0, fmt='o', color=colors[diodes.index(diode)], markersize=3)  # plot points
-            sig2 = [0.4 * current[k] for k in range(len(current))]
+            ax.errorbar(dose, current, xerr=0.0, yerr=0.0, fmt='o', color=colors[tests.index(test)], markersize=3)  # plot points
+            sig = [0.4 * current[k] for k in range(len(current))]
             
-            popt2, pcov = curve_fit(an.linear, dose, current, sigma=sig2, absolute_sigma=True, maxfev=5000, p0=(1, 1))
-            chisq2 = an.red_chisquare(np.array(current), an.linear(dose, *popt2), np.array(sig2), popt2)
-            line_fit_legend_entry = "Diode " + diode + ':%.4fx+%.4f' % (popt2[0], popt2[1])
-            ax.plot(dose, an.linear(dose, *popt2), linestyle="--",
-                    color=colors[diodes.index(diode)], label=line_fit_legend_entry)
+            popt, pcov = curve_fit(an.linear, dose, current, sigma=sig, absolute_sigma=True, maxfev=5000, p0=(1, 1))
+            chisq = an.red_chisquare(np.array(current), an.linear(dose, *popt), np.array(sig), popt)
+            line_fit_legend_entry = "Diode " + test + ':%.4fx+%.4f' % (popt[0], popt[1])
+            ax.plot(dose, an.linear(dose, *popt), linestyle="--",
+                    color=colors[tests.index(test)], label=line_fit_legend_entry)
         ax.set_ylabel('Dose rate [$Mrad(sio_2)/hr$]')
         ax.set_xlabel(r'Current [$\mu$ A]')
         ax.set_title('(Diode calibration at %s and %s)' % ("40kV", "50mA"), fontsize=11)
@@ -114,7 +117,7 @@ class PlottingCalibration(object):
         ax2.set_axis_off()
         ax.grid(True)
         ax.legend()
-        fig.savefig(directory + subdirectory + "diode_calibration.png", bbox_inches='tight')
+        fig.savefig(directory + subdirectory + name_prefix+"All.png", bbox_inches='tight')
         plt.tight_layout()
         PdfPages.savefig()
 
@@ -145,7 +148,52 @@ class PlottingCalibration(object):
         plt.tight_layout()
         plt.savefig(directory + subdirectory + 'temprature_dose_WithoutFilter.png')
         PdfPages.savefig()
-                
+    
+    def IV_test(self, tests=["A"], directory=False, PdfPages=False, h5 =True):
+        self.log.info('Plotting IV curves for diodes %s'%tests)
+        subdirectory = "diode_calibration/"
+        name_prefix = "IV_test_"
+        fig = plt.figure()
+        fig.add_subplot(111)
+        ax = plt.gca()
+        conversion = 10**9
+        for test in tests:
+            if h5 is not None:
+                test_file = directory + subdirectory + test+"/" + name_prefix+test+".h5"
+                with tb.open_file(test_file, 'r') as in_file:
+                    IV_results = in_file.root.IV_results[:]
+                    v=IV_results['voltage']
+                    mean = IV_results['mean_current']*conversion
+                    std =IV_results['std_current']*conversion
+                    ax.set_ylim(-3.,15)
+                    ax.set_xlim(0,52)
+                    ax.set_xscale('log')
+            else:
+                v = []
+                mean = []
+                std = []
+                test_file = directory + subdirectory + test+"/" + name_prefix + test +".csv"
+                with open(test_file,'r')as data:
+                    reader = csv.reader(data)
+                    next(reader)
+                    for row in reader:
+                        v = np.append(v, float(row[2]))
+                        mean = np.append(mean, float(row[1])*conversion)
+                        std = np.append(std, float(row[3])*conversion)*1.04
+                        ax.set_ylim(-1.5,0)
+                        ax.set_xlim(-52,0)
+    
+            ax.errorbar(v,mean,yerr=std, 
+                        fmt='o', color=colors[tests.index(test)], markersize=5, 
+                        ecolor="black",label=("Diode %s " % test))
+            ax.plot(v,mean,color='black')
+        ax.set_xlabel("Reverse Voltage [V]")
+        ax.set_ylabel("Current [nA]")
+        ax.set_title('IV Curve')
+        ax.grid(True)
+        ax.legend(loc = "upper right")
+        plt.savefig(test_file[:-14]+"_" +name_prefix+"All.png", bbox_inches='tight')
+          
     def opening_angle(self, directory=False, Unknown_diameter=np.linspace(3, 10, 20), PdfPages=PdfPages, tests=[0]):
         '''
         To get the estimated beam radius relative to the depth
@@ -153,10 +201,11 @@ class PlottingCalibration(object):
         self.log.info('Estimating the beam radius relative to the depth')
         for j in range(len(tests)):
             subdirectory = "opening_angle/"+ tests[j]+"/"
+            test_file = directory + subdirectory + "opening_angle_" + tests[j] + ".csv"
             r = []
             h = []
             std = []
-            with open(directory + subdirectory + "opening_angle_" + tests[j] + ".csv", 'r')as data:
+            with open(test_file, 'r')as data:
                 reader = csv.reader(data)
                 next(reader)
                 for row in reader:
@@ -187,10 +236,11 @@ class PlottingCalibration(object):
         self.log.info('Draw the cone shape of the opening angle')
         for j in range(len(tests)):
             subdirectory = "opening_angle/"+ tests[j]+"/"
+            test_file = directory + subdirectory + "opening_angle_" + tests[j] + ".csv"
             r = []
             h = []
             std = []
-            with open(directory + subdirectory + "opening_angle_" + tests[j] + ".csv", 'r')as data:
+            with open(test_file, 'r')as data:
                 reader = csv.reader(data)
                 next(reader)
                 for row in reader:
@@ -216,7 +266,7 @@ class PlottingCalibration(object):
             ax2.set_xlabel('Diameter (d) [cm]')
             ax2.set_ylabel('Height from the the collimator holder(h) [cm]')
             ax2.grid(True)
-            fig2.savefig(directory + subdirectory + "opening_angle_" + tests[j] + ".png", bbox_inches='tight')
+            fig2.savefig(test_file[:-4]+".png", bbox_inches='tight')
             PdfPages.savefig()      
 
 

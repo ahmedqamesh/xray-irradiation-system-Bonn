@@ -49,7 +49,7 @@ colors = ['black', 'red', '#006381', "blue", '#33D1FF', '#F5A9BC', 'grey', '#7e0
 an = analysis.Analysis()
 class PlottingCanvas(FigureCanvas):     
 
-    def __init__(self,tests = None , test_file=None,plotting = None):
+    def __init__(self,tests = None , test_file=None,name_prefix = None, plot_prefix =None):
         self.log = logger.setup_derived_logger('Plotting')
         self.log.info('Plotting initialized')
         fig = Figure()
@@ -57,14 +57,22 @@ class PlottingCanvas(FigureCanvas):
         #self.figure.clear()
         fig.add_subplot(111)
         self.ax = self.figure.add_subplot(111)
-        if plotting == "opening_angle":
+        if name_prefix == "opening_angle":
             self.opening_angle(tests = tests , test_file=test_file)
-        if plotting =="opening_angle_cone":
+        if name_prefix =="opening_angle_cone":
             self.opening_angle_cone(tests = tests , test_file=test_file)
+        
+        if plot_prefix =="diode_calibration":
+            self.diode_calibration(tests = tests , test_file=test_file)
+
+        if plot_prefix =="IV_test":
+            self.IV_test(tests = tests , test_file=test_file)
+        
+                
         self.draw()
     
                
-    def diode_calibration(self, diodes=["A"], Directory=False):
+    def diode_calibration(self, test_file=None, tests=[0]):
         '''
         The function plots the calibration results for the PN diodes
         Input Directory = Directory + diode_calibration/cern_calibration/
@@ -73,13 +81,13 @@ class PlottingCanvas(FigureCanvas):
         self.log.info('Calibration results for the diodes')
         subdirectory = "diode_calibration/cern_calibration/"
         factor_row = []
-        for diode in diodes:
+        for test in tests:
             dep = []
             dose = []
             bkg = []
             current = []
             factor = []
-            with open(Directory + subdirectory + diode + ".csv", 'r')as data:
+            with open(test_file, 'r')as data:
                 reader = csv.reader(data)
                 next(reader)
                 for row in reader:
@@ -92,20 +100,61 @@ class PlottingCanvas(FigureCanvas):
             factor_row = np.append(factor_row, factor)
             factor_row = np.append(factor_row, mean)
             
-            self.ax.errorbar(dose, current, xerr=0.0, yerr=0.0, fmt='o', color=colors[diodes.index(diode)], markersize=3)  # plot points
+            self.ax.errorbar(dose, current, xerr=0.0, yerr=0.0, fmt='o', color=colors[tests.index(test)], markersize=3)  # plot points
             sig = [0.4 * current[k] for k in range(len(current))]
-            pop, pcov = curve_fit(an.linear, dose, current, sigma=sig, absolute_sigma=True, maxfev=5000, p0=(1, 1))
-            chisq = an.red_chisquare(np.array(current), an.linear(dose, *popt2), np.array(sig), popt)
-            line_fit_legend_entry = "Diode " + diode + ':%.4fx+%.4f' % (popt[0], popt[1])
+            popt, pcov = curve_fit(an.linear, dose, current, sigma=sig, absolute_sigma=True, maxfev=5000, p0=(1, 1))
+            chisq = an.red_chisquare(np.array(current), an.linear(dose, *popt), np.array(sig), popt)
+            line_fit_legend_entry = "Diode " + test + ':%.4fx+%.4f' % (popt[0], popt[1])
             
             self.ax.plot(dose, an.linear(dose, *popt), linestyle="--",
-                    color=colors[diodes.index(diode)], label=line_fit_legend_entry)
+                    color=colors[tests.index(test)], label=line_fit_legend_entry)
         self.ax.set_ylabel('Dose rate [$Mrad(sio_2)/hr$]')
         self.ax.set_xlabel(r'Current [$\mu$ A]')
         self.ax.set_title('(Diode calibration at %s and %s)' % ("40kV", "50mA"), fontsize=11)
         self.ax.grid(True)
         self.ax.legend()
 
+
+
+    def IV_test(self, tests=["A"], test_file=False, h5=None):
+        self.log.info('Plotting IV curves for diodes %s'%tests)
+        subdirectory = "diode_calibration/"
+        name_prefix = "IV_test_"
+        conversion = 10**9
+        for test in tests:
+            if h5 is not None:
+                with tb.open_file(test_file[:-4]+".h5", 'r') as in_file:
+                    IV_results = in_file.root.IV_results[:]
+                    v=IV_results['voltage']
+                    mean = IV_results['mean_current']*conversion
+                    std =IV_results['std_current']*conversion
+                    self.ax.set_ylim(-3.,15)
+                    self.ax.set_xlim(0,52)
+                    self.ax.set_xscale('log')
+                    print(hi)
+            else:
+                v = []
+                mean = []
+                std = []
+                with open(test_file,'r')as data:
+                    reader = csv.reader(data)
+                    next(reader)
+                    for row in reader:
+                        v = np.append(v, float(row[2]))
+                        mean = np.append(mean, float(row[1])*conversion)
+                        std = np.append(std, float(row[3])*conversion)*1.04
+                        self.ax.set_ylim(-1.5,0)
+                        self.ax.set_xlim(-52,0)
+            self.ax.errorbar(v,mean,yerr=std, fmt='o', color=colors[tests.index(test)], markersize=5, 
+                        ecolor="black",label=("Diode %s " % test))
+            self.ax.plot(v,mean,color='black')
+        self.ax.set_xlabel("Reverse Voltage [V]")
+        self.ax.set_ylabel("Current [nA]")
+        self.ax.set_title('IV Curve')
+        self.ax.grid(True)
+        self.ax.legend(loc = "upper right")
+        
+                        
     def calibration_temperature(self, data=None, PdfPages=False, Directory=False):
         '''
         The function will plot the temperature effect on the diode calibration within 250 seconds of radiation, the data collected without any filter in the tube
@@ -133,7 +182,7 @@ class PlottingCanvas(FigureCanvas):
         plt.tight_layout()
         plt.savefig(Directory + subdirectory + 'temprature_dose_WithoutFilter.png')
         PdfPages.savefig()
-                
+        
     def opening_angle(self, test_file=None, tests=[0]):
         '''
         To get the estimated beam diameter relative to the depth
@@ -155,11 +204,12 @@ class PlottingCanvas(FigureCanvas):
         chisq2 = an.red_chisquare(np.array(r), an.linear(h, *popt), np.array(std), popt)
         line_fit_legend_entry = 'line fit: mh + c\n m=$%.3f\pm%.3f$\nc=$%.3f\pm%.3f$' % (popt[0], np.absolute(pcov[0][0]) ** 0.5, popt[1], np.absolute(pcov[1][1]) ** 0.5)
         self.ax.plot(h, an.linear(h, *popt), '-', lw=1, label=line_fit_legend_entry, markersize=9)  # plot fitted function
-        self.ax.set_title('Radius covered by beam spot %s (40 kV and 50 mA)' % (test), fontsize=12)
+        self.ax.set_title('Radius covered by beam spot %s (40 kV and 50 mA)' % (tests[0]), fontsize=12)
         self.ax.grid(True)
         self.ax.legend()
         self.ax.set_ylabel('Radius (r) [cm]')
         self.ax.set_xlabel('Distance from the  collimator holder(h) [cm]')
+
     def opening_angle_cone(self, test_file=None, tests=[0]):
         '''
         Draw the cone shape of the opening angle

@@ -1,33 +1,22 @@
 from matplotlib.backends.qt_compat import QtCore, QtWidgets
 from matplotlib.backends.backend_qt5agg import FigureCanvas as FigureCanvas
-
 import matplotlib.pyplot as plt
 import random
 from PyQt5.QtCore    import *
 from PyQt5.QtGui     import *
 from PyQt5.QtWidgets import *
 import os
-from graphics_Utils import mainWindow , DataMonitoring , MenuWindow , LogWindow , plottingCanvas
 from analysis import analysis_utils,  plottingCalibration, analysis
+from graphics_Utils import mainWindow , DataMonitoring , MenuWindow , LogWindow , plottingCanvas
 import numpy as np
 from matplotlib.figure import Figure
 import time
-ipAddress = '192.168.1.254'
 rootdir = os.path.dirname(os.path.abspath(__file__)) 
-class ChildWindow(mainWindow.MainWindow):  
-    def __init__(self,parent=mainWindow):
+class ChildWindow(QWidget):  
+    def __init__(self, parent = None):
        super(ChildWindow,self).__init__(parent)
-       
-       self.__filterList = mainWindow.MainWindow().__filterList
-       self.__openingAngleFilter = "With_Filter"
-       self_ipAddress =ipAddress
-       conf = analysis_utils.open_yaml_file(file ="BeamSpot_cfg.yaml",directory ="/Users/ahmedqamesh/git/Xray_Irradiation_System_Bonn/")
-       #self.__filterList = conf['Tests']['Filters']
-       
-       #self.test_directory = rootdir[:-14]+conf['Tests']['test_directory']
+       self.test_directory = mainWindow.MainWindow().get_testDirectory()
        #self.menu._createStatusBar(self)
-     
-    
     def outputChildWindow(self, ChildWindow):
         ChildWindow.setObjectName("OutputWindow")
         ChildWindow.setWindowTitle("Output Window")
@@ -57,11 +46,10 @@ class ChildWindow(mainWindow.MainWindow):
         self.WindowGroupBox.setLayout(plotLayout)
         logframe.setLayout(plotLayout) 
         
-    def ChildMenu(self, ChildWindow = None,firstitems=None, test_name = "Opening Angle Test",dir="opening_angle/", Fig =None, plotting = None):
+    def ChildMenu(self, ChildWindow = None,firstitems=None, test_name = "Opening Angle Test",dir="opening_angle/", Fig =None, plot_prefix = None, name_prefix = "None"):
         self._directory = self.test_directory+dir
         ChildWindow.setObjectName(test_name)
         ChildWindow.setWindowTitle(test_name)
-        
         MainLayout = QGridLayout()
         #Define a frame for that group
         plotframe = QFrame(ChildWindow)
@@ -74,19 +62,24 @@ class ChildWindow(mainWindow.MainWindow):
         firstHBoxLayout = QHBoxLayout()
         firstLabel = QLabel("Test Type: ", ChildWindow)
         firstLabel.setText("Test Type: ")
-        #firstitems = self.__filterList
+        self.set_firstItem(firstitems[1])
         firstComboBox = QComboBox(ChildWindow)
         for item in firstitems: firstComboBox.addItem(item)
-        firstComboBox.activated[str].connect(self.set_openingAngleFilter)
-        self.openSubGroupMenu()
+        firstItem = self.get_firstItem()
         def _SubFilterGroupMenu():
             ChildWindow.resize(700, 700) #w*h
             FirstGridLayout.removeWidget(self.SubFilterGroupBox)
             self.SubFilterGroupBox.deleteLater()
             self.SubFilterGroupBox = None
-            self.openSubGroupMenu(ChildWindow = ChildWindow, filter = self.__openingAngleFilter,test_name = test_name, plotting = plotting)
-            FirstGridLayout.addWidget(self.SubFilterGroupBox,1,0)   
-            
+            firstItem = self.get_firstItem()
+            test_dir = self._directory+firstItem+"/" 
+            test_file = test_dir +name_prefix + firstItem +".csv" 
+            self.openSubGroupMenu(ChildWindow = ChildWindow, filter = firstItem, test_file =test_file, test_dir = test_dir, plot_prefix= plot_prefix, name_prefix=name_prefix)
+            FirstGridLayout.addWidget(self.SubFilterGroupBox,1,0)  
+
+        firstComboBox.activated[str].connect(self.set_firstItem)
+        self.openSubGroupMenu(filter = firstItem) 
+        
         firstComboBox.activated[str].connect(_SubFilterGroupMenu)
         firstHBoxLayout.addWidget(firstLabel)
         firstHBoxLayout.addWidget(firstComboBox)
@@ -97,7 +90,7 @@ class ChildWindow(mainWindow.MainWindow):
         plotframe.setLayout(MainLayout) 
         QtCore.QMetaObject.connectSlotsByName(ChildWindow)  
         
-    def openSubGroupMenu(self, ChildWindow = None, filter= "Al" , test_name = "test_name" , plotting = None):
+    def openSubGroupMenu(self, ChildWindow = None, filter= None ,plot_prefix =None,  test_file = None, test_dir = None, name_prefix = "None"):
         self.SubFilterGroupBox= QGroupBox("")
         SubSecondGridLayout =  QGridLayout()
         firstLabel= QLabel("firstLabel", ChildWindow)
@@ -110,43 +103,38 @@ class ChildWindow(mainWindow.MainWindow):
         thirdLabel.setText("Test Date:")
         forthLabel.setText("Last Modified:")
         fifthLabel.setText("Results:")
-        test_dir = self._directory+filter+"/"
-        test_file = test_dir+"opening_angle_"+filter+".csv" 
-        test_date =time.ctime(os.path.getmtime(test_file))
-        test_modify = time.ctime(os.path.getctime(test_file))
-        secondtextbox = QLineEdit(test_dir)
-        secondTextBoxValue = secondtextbox.text()
-        thirdtextbox = QLineEdit(test_date)
-        thirdTextBoxValue = thirdtextbox.text()
-        forthtextbox = QLineEdit(test_modify)
-        forthTextBoxValue = forthtextbox.text()
         close_button = QPushButton("Close")
         close_button.setIcon(QIcon('graphics_Utils/icons/icon_true.png'))
         close_button.setStatusTip('close session') # show when move mouse to the icon
+        
         if ChildWindow is not None:
+            test_date =time.ctime(os.path.getmtime(test_file))
+            test_modify = time.ctime(os.path.getctime(test_file))
+            secondtextbox = QLineEdit(test_dir)
+            secondTextBoxValue = secondtextbox.text()
+            thirdtextbox = QLineEdit(test_date)
+            thirdTextBoxValue = thirdtextbox.text()
+            forthtextbox = QLineEdit(test_modify)
+            forthTextBoxValue = forthtextbox.text()
+            Fig =  plottingCanvas.PlottingCanvas(test_file=test_file, tests=[filter], plot_prefix = plot_prefix)
             close_button.clicked.connect(ChildWindow.close)        
-        
-        Fig =  plottingCanvas.PlottingCanvas(test_file=test_file, tests=[filter], plotting = plotting)
-        SubSecondGridLayout.addWidget(secondLabel,0,0)
-        SubSecondGridLayout.addWidget(secondtextbox,0,1)  
-
-        SubSecondGridLayout.addWidget(thirdLabel,1,0)
-        SubSecondGridLayout.addWidget(thirdtextbox,1,1)
-        
-        SubSecondGridLayout.addWidget(forthLabel,2,0)
-        SubSecondGridLayout.addWidget(forthtextbox,2,1)
-        
-        SubSecondGridLayout.addWidget(fifthLabel,3,0)
-        SubSecondGridLayout.addWidget(Fig,4,0, 4,0)
-        SubSecondGridLayout.addWidget(close_button,25,5)
-
+            SubSecondGridLayout.addWidget(secondLabel,0,0)
+            SubSecondGridLayout.addWidget(secondtextbox,0,1)  
+            SubSecondGridLayout.addWidget(thirdLabel,1,0)
+            SubSecondGridLayout.addWidget(thirdtextbox,1,1)
+            
+            SubSecondGridLayout.addWidget(forthLabel,2,0)
+            SubSecondGridLayout.addWidget(forthtextbox,2,1)        
+            SubSecondGridLayout.addWidget(fifthLabel,3,0)
+            SubSecondGridLayout.addWidget(Fig,4,0, 4,0)
+            SubSecondGridLayout.addWidget(close_button,25,5)
         self.SubFilterGroupBox.setLayout(SubSecondGridLayout)
          
     def set_filter(self, x): 
         self._filter = x 
         
-    def set_openingAngleFilter(self, x): 
-        self.__openingAngleFilter = x 
+    def set_firstItem(self, x): 
+        self.__firstItem = x 
     
     def set_self_ipAddress(self,x):
         # x = self.firsttextbox.text()
@@ -175,8 +163,8 @@ class ChildWindow(mainWindow.MainWindow):
         self.outLabel.adjustSize()
         
     # getter methods
-    def get_openingAngleFilter(self):
-        return self.__openingAngleFilter
+    def get_firstItem(self):
+        return self.__firstItem
     
     def get_filter(self): 
         return self._filter

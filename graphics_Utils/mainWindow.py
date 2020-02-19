@@ -11,7 +11,7 @@ from pathlib import Path
 import matplotlib as mpl
 import numpy as np
 from matplotlib.figure import Figure
-from graphics_Utils import DataMonitoring , MenuWindow , childWindow ,LogWindow
+from graphics_Utils import DataMonitoring , MenuWindow ,LogWindow
 from analysis import analysis_utils , logger
 # Third party modules
 from logging.handlers import RotatingFileHandler
@@ -20,7 +20,7 @@ import verboselogs
 import logging
 rootdir = os.path.dirname(os.path.abspath(__file__))
 class MainWindow(QMainWindow):
-    def __init__(self, parent=None, sourcemeter=False, config =None):
+    def __init__(self,parent=None , config =None , sourcemeter =None):
         super(MainWindow, self).__init__(parent)
         # Initialize logger
         logger.extend_logging()
@@ -30,15 +30,18 @@ class MainWindow(QMainWindow):
         self.logger.setLevel(logging.DEBUG)
 
         # Read configurations from a file
-        self.logger.notice('Read configuration file ...')
         if config is None:
             conf = analysis_utils.open_yaml_file(file ="BeamSpot_cfg.yaml",directory =rootdir[:-14])
-            
-        directory= rootdir+"/graphics_Utils/test_files"
-        self.directory=directory
+        
+        
+        self.directory=rootdir[:-14]+"/graphics_Utils/test_files"
+        self.test_directory = rootdir[:-14]+conf["Tests"]["test_directory"]
         # Initialize default arguments
         self.app_name = conf['Application']['name']
         
+        #Devices
+        self.sourcemeter= sourcemeter
+        #Beamspot scan settings
         self.size_x=conf['Settings']['size_x']
         self.z=conf['Settings']['z']
         self.x_Delay=conf['Settings']['x_Delay']
@@ -46,12 +49,13 @@ class MainWindow(QMainWindow):
         self.period = conf['Settings']['period']
         self.x=conf['Settings']['x']
         self.size_z=conf['Settings']['size_z']
-        self.sourcemeter= sourcemeter
         self.depth= conf['Settings']['depth'] 
         
+        #Filters list
+        self.__filtersList = conf['Tests']["filters"]
+        
         #Diodes list
-        self.__diodesList = conf['Photodiodes']
-        self.__filterList = conf['Filters']
+        self.__diodesList = conf['Tests']['photodiodes']
         
         
     def Ui_ApplicationWindow(self):
@@ -275,3 +279,11 @@ class MainWindow(QMainWindow):
         self.ui.settingChannel(self.window)
         #MainWindow.hide()
         self.window.show()
+    
+    def get_testDirectory(self):
+        return self.test_directory
+    def get_diodesList(self):
+        return self.__diodesList
+    def get_filtersList(self):
+        return self.__filtersList
+    
