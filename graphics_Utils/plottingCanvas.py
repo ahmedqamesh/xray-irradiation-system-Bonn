@@ -67,6 +67,11 @@ class PlottingCanvas(FigureCanvas):
 
         if plot_prefix =="IV_test":
             self.IV_test(tests = tests , test_file=test_file)
+        
+        if plot_prefix =="dose_current":
+            print(tests , test_file)
+            self.IV_test(tests = tests , test_file=test_file)
+                    
         self.draw()
     
                

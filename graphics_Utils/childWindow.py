@@ -16,6 +16,7 @@ class ChildWindow(QWidget):
     def __init__(self, parent = None):
        super(ChildWindow,self).__init__(parent)
        self.test_directory = mainWindow.MainWindow().get_testDirectory()
+       
        #self.menu._createStatusBar(self)
     def outputChildWindow(self, ChildWindow):
         ChildWindow.setObjectName("OutputWindow")

@@ -53,8 +53,8 @@ class MainWindow(QMainWindow):
         
         #Filters list
         self.__filtersList = conf['Tests']["filters"]
-        
-        
+        self.__depthList = conf['Tests']["depth"]
+        self.__currentList = conf['Tests']["current"]
         #Diodes list
         dictionary = dict(conf['Tests']['photodiodes'])
         self.__diodesList = list(dictionary.keys())
@@ -291,10 +291,18 @@ class MainWindow(QMainWindow):
     
     def get_testDirectory(self):
         return self.test_directory
+    
     def get_diodesList(self):
         return self.__diodesList
+    
     def get_filtersList(self):
         return self.__filtersList
+    
+    def get_depthList(self):
+        return self.__depthList
+    
+    def get_currentList(self):
+        return self.__currentList
     
     def get_calibration_factor(self, diode = None):
         if diode =="A": factor = self.__A_factor

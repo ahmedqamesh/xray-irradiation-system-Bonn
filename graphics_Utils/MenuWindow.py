@@ -9,13 +9,16 @@ from PyQt5.QtCore    import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from graphics_Utils import mainWindow , DataMonitoring , MenuWindow , childWindow ,LogWindow
-
+import numpy as np
 class MenuBar(QWidget):  
     def __init__(self,parent = None):
         super(MenuBar,self).__init__(parent)
         self.mainwindow = QMainWindow()
         self.__diodesList   = mainWindow.MainWindow().get_diodesList()
         self.__filtersList  = mainWindow.MainWindow().get_filtersList()
+        self.__depthList    = mainWindow.MainWindow().get_depthList()
+        self.__currentList  = mainWindow.MainWindow().get_currentList()
+
     def _createMenu(self,mainwindow):
         menuBar = mainwindow.menuBar()
         menuBar.setNativeMenuBar(False) #only for MacOS
@@ -130,7 +133,16 @@ class MenuBar(QWidget):
         
         diode_menu.addAction(diode_dosimetry_action) 
         diode_menu.addAction(diode_IV_action) 
-                        
+        
+        current_menu = test_menu.addMenu("&Absorbed Dose vs. Tube Current")
+        dose_action = []
+        for f in np.arange(1,len(self.__filtersList)):
+            dose_action= QAction(QIcon('graphics_Utils/icons/icon_dose.png'), self.__filtersList[f], mainwindow)        
+            dose_action.setStatusTip('Get the calibration curves for each current'+self.__filtersList[f])
+            dose_action.setChecked(True)
+            dose_action.triggered.connect(self.doseChildMenu)
+            current_menu.addAction(dose_action)   
+     
      # 3. Settings menu
     def _settingsMenu(self,menuBar,mainwindow): 
         settings_menu = menuBar.addMenu("&Settings")
@@ -244,6 +256,19 @@ class MenuBar(QWidget):
                                       plot_prefix = "IV_test")
         self.mainwindow.show()       
            
+    def doseChildMenu(self, state):
+        action = self.sender()
+        text = action.text()
+        self.ui.ChildMenu(ChildWindow = self.mainwindow , 
+                                      firstitems = self.__depthList,
+                                      test_name = "Absorbed Dose vs. Tube Current",
+                                      dir="dose_current/"+text+"/",
+                                      name_prefix = "dose_current_",
+                                      plot_prefix = "dose_current")
+        self.mainwindow.show()     
+            
+    
+    
     def outputChildWindow(self,state):
         if state:
             self.ui.outputChildWindow(self.mainwindow)
