@@ -237,81 +237,20 @@ class PlottingCanvas(FigureCanvas):
             self.ax.set_xlabel('Diameter (d) [cm]')
             self.ax.set_ylabel('Height from the the collimator holder(h) [cm]')
             self.ax.grid(True)
-            
-
-    def dose_depth(self, Directory=False, PdfPages=False, Voltage="40 kV", current="50 mA", stdev=0.2, tests=[0], theta=0.16):
-        '''
-        Relation between the depth and  the Dose rate
-        '''
-        self.log.info('Relation between the depth and  the Dose rate')
-        for i in range(len(tests)):
-            subdirectory = tests[i] + "/dose_depth/"
-            fig = plt.figure()
-            ax = fig.add_subplot(111)
-            Factor = 9.81  # Calibration Factor
-            height = []
-            y1 = []
-            b1 = []
-            with open(Directory + subdirectory + "dose_depth_" + tests[i] + ".csv", 'r')as data:
-                reader = csv.reader(data)
-                next(reader)
-                for row in reader:
-                    height = np.append(height, float(row[0]))  # Distance from the source
-                    y1 = np.append(y1, (float(row[1])))  # Dose rate
-                    b1 = np.append(b1, (float(row[2])))  # Background
-            y1 = [y1[k] - b1[k] for k in range(len(y1))]  # Subtract Background
-            y1 = [y1[k] * Factor for k in range(len(y1))]  # Multiply by the factor to get the dose rate
-            sig = [stdev * y1[k] for k in range(len(y1))]
-            popt1, pcov = curve_fit(an.Inverse_square, height, y1, sigma=sig, absolute_sigma=True, maxfev=500, p0=(300, 6, 0))
-            # chisq1 = an.red_chisquare(np.array(y1), an.Inverse_square(np.array(height), *popt1), sig, popt1)
-            ax.errorbar(height, y1, yerr=sig, color=colors[i + 1], fmt='o', label=tests[i], markersize='4')
-            xfine = np.linspace(height[0], height[-1], 100)  # define values to plot the function
-            a, b, c = popt1[0], popt1[1], popt1[2]
-            a_err, b_err, c_err = np.absolute(pcov[0][0]) ** 0.5, np.absolute(pcov[1][1]) ** 0.5, np.absolute(pcov[2][2]) ** 0.5
-            ax.plot(xfine, an.Inverse_square(xfine, *popt1), colors[i + 1], label='Fit parameters:\n a=%.2f$\pm$ %.2f\n b=%.2f$\pm$ %.2f\n c=%.2f$\pm$ %.2f\n' % (a, a_err, b, b_err, c, c_err))
-            
-            ax.text(0.9, 0.56, r'$R= \frac{a}{(h+b)^2}-c$',
-                    horizontalalignment='right', verticalalignment='top', transform=ax.transAxes,
-                    bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.6))
-            # print "The dose rate at %.2f cm depth is " %(45) + str(popt1[0]/(45+popt1[1])**2)+" Mrad/hr "+tests[i]
-            ax.set_xlabel('Distance from the collimator holder(h) [cm]')
-            ax.set_title('Dose rate vs distance %s at  (%s and %s)' % (tests[i], Voltage, current), fontsize=11)
-            ax.set_ylabel('Dose rate (R) [$Mrad(sio_2)/hr$]')
-            ax.set_xlim([0, max(height) + 8])
-            ax.grid(True)
-            ax.legend(loc="upper right")
-            ax.ticklabel_format(useOffset=False)
-            fig.savefig(Directory + subdirectory + "dose_depth_" + tests[i] + ".png", bbox_inches='tight')  # 1.542
-            plt.tight_layout()
-            PdfPages.savefig()
-            cmap = plt.cm.get_cmap('viridis', 15)
-            sc = ax.scatter(xfine, an.Inverse_square(xfine, *popt1), c=an.Inverse_square(xfine, a=a, b=b, c=c), cmap=cmap, s=50,)
-            # cbar = fig.colorbar(sc, ax=ax, orientation='horizontal')
-            # cbar.ax.invert_xaxis()
-            # cbar.set_label("Dose rate", labelpad=1, fontsize=10)
-            
-            fig.savefig(Directory + subdirectory + "dose_depth_color_" + tests[i] + ".png", bbox_inches='tight')
-        return a, b, c
     
-    def dose_current(self, Directory=False, PdfPages=False, stdev=0.06, depth=[0], table=True, Voltages=[0]):
+    def dose_current(self, test_file=False, PdfPages=False, stdev=0.06, tests=[0], table=True, Voltages=[0]):
         '''
         To get the calibration curves for each current
         For each Measurement you make you need to replace the numbers 0 in Background, Factor, .....by your measurement
         Background =  array of background estimated for each depth
          '''
         self.log.info('Get the calibration curves for each current')
-        for i in range(len(depth)):
-            subdirectory = "dose_current/" + depth[i] + "/"
-            if table:
-                gs = gridspec.GridSpec(2, 1, height_ratios=[3.9, 2])
-                ax = plt.subplot(gs[0])
-                ax2 = plt.subplot(gs[1])
-            else: 
-                fig = plt.figure()
-                ax = fig.add_subplot(111)
+        for test in range(len(tests)):
+            fig = plt.figure()
+            ax = fig.add_subplot(111)
             volt_row = []
             fit_para = []
-            for  volt in Voltages:
+            for volt in Voltages:
                 x1 = []
                 y1 = []
                 y2 = []
@@ -319,7 +258,7 @@ class PlottingCanvas(FigureCanvas):
                 bkg_y2 = []
                 Factor = []
                 difference = []
-                with open(Directory + subdirectory + volt + ".csv", 'r')as data:  # Get Data for the first Voltage
+                with open(test_file, 'r')as data:  # Get Data for the first Voltage
                     reader = csv.reader(data)
                     next(reader)
                     for row in reader:
@@ -375,6 +314,63 @@ class PlottingCanvas(FigureCanvas):
             plt.tight_layout()
             plt.savefig(Directory + subdirectory + 'dose_current_' + depth[i] + ".png", bbox_inches='tight')
             PdfPages.savefig()
+                        
+
+    def dose_depth(self, Directory=False, PdfPages=False, Voltage="40 kV", current="50 mA", stdev=0.2, tests=[0], theta=0.16):
+        '''
+        Relation between the depth and  the Dose rate
+        '''
+        self.log.info('Relation between the depth and  the Dose rate')
+        for i in range(len(tests)):
+            subdirectory = tests[i] + "/dose_depth/"
+            fig = plt.figure()
+            ax = fig.add_subplot(111)
+            Factor = 9.81  # Calibration Factor
+            height = []
+            y1 = []
+            b1 = []
+            with open(Directory + subdirectory + "dose_depth_" + tests[i] + ".csv", 'r')as data:
+                reader = csv.reader(data)
+                next(reader)
+                for row in reader:
+                    height = np.append(height, float(row[0]))  # Distance from the source
+                    y1 = np.append(y1, (float(row[1])))  # Dose rate
+                    b1 = np.append(b1, (float(row[2])))  # Background
+            y1 = [y1[k] - b1[k] for k in range(len(y1))]  # Subtract Background
+            y1 = [y1[k] * Factor for k in range(len(y1))]  # Multiply by the factor to get the dose rate
+            sig = [stdev * y1[k] for k in range(len(y1))]
+            popt1, pcov = curve_fit(an.Inverse_square, height, y1, sigma=sig, absolute_sigma=True, maxfev=500, p0=(300, 6, 0))
+            # chisq1 = an.red_chisquare(np.array(y1), an.Inverse_square(np.array(height), *popt1), sig, popt1)
+            ax.errorbar(height, y1, yerr=sig, color=colors[i + 1], fmt='o', label=tests[i], markersize='4')
+            xfine = np.linspace(height[0], height[-1], 100)  # define values to plot the function
+            a, b, c = popt1[0], popt1[1], popt1[2]
+            a_err, b_err, c_err = np.absolute(pcov[0][0]) ** 0.5, np.absolute(pcov[1][1]) ** 0.5, np.absolute(pcov[2][2]) ** 0.5
+            ax.plot(xfine, an.Inverse_square(xfine, *popt1), colors[i + 1], label='Fit parameters:\n a=%.2f$\pm$ %.2f\n b=%.2f$\pm$ %.2f\n c=%.2f$\pm$ %.2f\n' % (a, a_err, b, b_err, c, c_err))
+            
+            ax.text(0.9, 0.56, r'$R= \frac{a}{(h+b)^2}-c$',
+                    horizontalalignment='right', verticalalignment='top', transform=ax.transAxes,
+                    bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.6))
+            # print "The dose rate at %.2f cm depth is " %(45) + str(popt1[0]/(45+popt1[1])**2)+" Mrad/hr "+tests[i]
+            ax.set_xlabel('Distance from the collimator holder(h) [cm]')
+            ax.set_title('Dose rate vs distance %s at  (%s and %s)' % (tests[i], Voltage, current), fontsize=11)
+            ax.set_ylabel('Dose rate (R) [$Mrad(sio_2)/hr$]')
+            ax.set_xlim([0, max(height) + 8])
+            ax.grid(True)
+            ax.legend(loc="upper right")
+            ax.ticklabel_format(useOffset=False)
+            fig.savefig(Directory + subdirectory + "dose_depth_" + tests[i] + ".png", bbox_inches='tight')  # 1.542
+            plt.tight_layout()
+            PdfPages.savefig()
+            cmap = plt.cm.get_cmap('viridis', 15)
+            sc = ax.scatter(xfine, an.Inverse_square(xfine, *popt1), c=an.Inverse_square(xfine, a=a, b=b, c=c), cmap=cmap, s=50,)
+            # cbar = fig.colorbar(sc, ax=ax, orientation='horizontal')
+            # cbar.ax.invert_xaxis()
+            # cbar.set_label("Dose rate", labelpad=1, fontsize=10)
+            
+            fig.savefig(Directory + subdirectory + "dose_depth_color_" + tests[i] + ".png", bbox_inches='tight')
+        return a, b, c
+    
+
 
     def dose_drop(self, Directory=False, PdfPages=False, stdev=0.06, depth=[0], Voltages=[0]):
         '''

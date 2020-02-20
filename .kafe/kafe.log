@@ -3884,3 +3884,8 @@ Analysis 2020-02-20 01:11:25,608 :: INFO :: Analysis initialized
 analysis.analysis_utils 2020-02-20 01:11:25,921 :: SUCCESS :: Beam Spot Scanning ...
 Plotting 2020-02-20 01:11:31,501 :: INFO :: Plotting initialized
 Plotting 2020-02-20 01:11:31,515 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-20 09:24:06,244 :: INFO :: Analysis initialized
+Analysis 2020-02-20 09:24:06,343 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 09:24:08,756 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-20 09:24:19,500 :: INFO :: Plotting initialized
+Plotting 2020-02-20 09:24:19,515 :: INFO :: Calibration results for the diodes

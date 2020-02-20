@@ -18,10 +18,10 @@ Tests:
    test_directory : "tests/"
    filters        : ["---------","without_filter","Al","Zn","Be"]
    photodiodes    : 
-      A: {"factor": "10.5"}
-      B: {"factor": "10.5"}
-      C: {"factor": "10.5"}
-   Factor : ["","",""]
+      ---: {"factor": "---"}
+      A: {"factor": "9.85"}
+      B: {"factor": "9.81"}
+      C: {"factor": "9.78"}
 
 Other:
     user    :   "Ahmed Qamesh"
