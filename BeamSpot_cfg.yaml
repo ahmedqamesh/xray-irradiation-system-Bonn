@@ -17,7 +17,10 @@ Devices:
 Tests:
    test_directory : "tests/"
    filters        : ["---------","without_filter","Al","Zn","Be"]
-   photodiodes    : ["---------", "A","B","C"]
+   photodiodes    : 
+      A: {"factor": "10.5"}
+      B: {"factor": "10.5"}
+      C: {"factor": "10.5"}
    Factor : ["","",""]
 
 Other:

@@ -3682,3 +3682,205 @@ Plotting 2020-02-19 13:45:41,722 :: INFO :: Plotting initialized
 Plotting 2020-02-19 13:45:41,736 :: INFO :: Plotting IV curves for diodes ['B']
 Plotting 2020-02-19 13:45:43,047 :: INFO :: Plotting initialized
 Plotting 2020-02-19 13:45:43,055 :: INFO :: Plotting IV curves for diodes ['C']
+Analysis 2020-02-19 20:11:56,080 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:11:56,147 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 20:11:58,905 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-19 20:21:45,216 :: INFO :: Plotting initialized
+Plotting 2020-02-19 20:21:45,276 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 20:21:58,202 :: INFO :: Plotting initialized
+Plotting 2020-02-19 20:21:58,214 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 20:22:05,174 :: INFO :: Plotting initialized
+Plotting 2020-02-19 20:22:05,188 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-19 20:22:40,338 :: INFO :: Plotting initialized
+Plotting 2020-02-19 20:22:40,352 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-19 20:26:10,478 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:26:10,483 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 20:26:12,155 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 20:28:36,560 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:28:36,589 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:31:48,217 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:31:48,220 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:32:06,836 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:32:06,840 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:32:39,963 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:32:39,965 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:32:52,727 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:32:52,731 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:37:19,491 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:37:19,551 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:38:24,761 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:38:24,843 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:40:26,524 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:40:26,783 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:45:03,583 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:45:03,665 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:49:48,676 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:49:48,689 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:50:23,845 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:50:23,858 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:51:37,093 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:51:37,107 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:52:39,875 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:52:39,956 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:53:44,556 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:53:44,627 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:55:16,172 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:55:16,309 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:56:47,510 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:56:47,592 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:58:47,450 :: INFO :: Analysis initialized
+Analysis 2020-02-19 20:58:47,507 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:00:43,734 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:00:43,838 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:02:08,006 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:02:08,086 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:03:42,433 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:03:42,547 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:08:12,125 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:08:12,231 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:11:30,269 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:11:30,340 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:12:50,251 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:12:50,344 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:15:09,537 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:15:09,550 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:17:30,978 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:17:31,070 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 21:17:37,745 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 21:19:34,718 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:19:34,844 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:20:07,164 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:20:07,190 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 21:20:08,442 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 21:20:52,878 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:20:52,959 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 21:20:55,722 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 21:21:49,803 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:21:49,963 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 21:21:53,259 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 21:22:44,650 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:22:44,807 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 21:22:57,907 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 21:28:33,714 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:28:33,896 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:29:15,805 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:29:15,875 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 21:29:19,250 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 21:31:47,302 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:31:47,406 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 21:31:50,269 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 21:47:58,239 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:47:58,444 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 21:48:02,351 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 21:51:05,761 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:51:05,843 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:52:28,432 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:52:28,526 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:53:20,857 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:53:20,928 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:54:32,995 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:54:33,066 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 21:54:38,151 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 21:55:37,876 :: INFO :: Analysis initialized
+Analysis 2020-02-19 21:55:37,993 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 21:55:41,321 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 22:00:54,516 :: INFO :: Analysis initialized
+Analysis 2020-02-19 22:00:54,609 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-19 22:00:58,396 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-19 22:03:03,979 :: INFO :: Analysis initialized
+Analysis 2020-02-19 22:03:04,050 :: INFO :: Analysis initialized
+Analysis 2020-02-19 22:04:46,240 :: INFO :: Analysis initialized
+Analysis 2020-02-19 22:04:46,334 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:28:36,021 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:28:36,115 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:30:42,317 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:30:42,432 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 00:30:46,196 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-20 00:31:49,299 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:31:49,370 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:33:23,871 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:33:23,942 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:34:43,141 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:34:43,246 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 00:34:47,843 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-20 00:35:41,767 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:35:41,846 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 00:35:45,312 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-20 00:41:20,053 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:41:20,121 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 00:41:27,384 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-20 00:42:23,056 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:42:23,083 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 00:42:28,312 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-20 00:43:07,825 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:43:07,852 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 00:43:09,493 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-20 00:44:42,464 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:44:42,546 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 00:44:47,277 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-20 00:49:39,603 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:49:39,675 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:50:29,206 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:50:29,311 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:51:20,209 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:51:20,350 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:52:51,336 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:52:51,366 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:54:29,364 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:54:29,468 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 00:54:32,821 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-20 00:57:48,298 :: INFO :: Analysis initialized
+Analysis 2020-02-20 00:57:48,569 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 00:57:53,133 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-20 00:59:01,613 :: INFO :: Plotting initialized
+Plotting 2020-02-20 00:59:01,658 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-20 01:00:16,272 :: INFO :: Analysis initialized
+Analysis 2020-02-20 01:00:16,586 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 01:00:21,107 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-20 01:00:28,832 :: INFO :: Plotting initialized
+Plotting 2020-02-20 01:00:28,886 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-20 01:03:45,840 :: INFO :: Analysis initialized
+Analysis 2020-02-20 01:03:45,857 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 01:03:46,663 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-20 01:03:58,863 :: INFO :: Plotting initialized
+Plotting 2020-02-20 01:03:58,878 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-20 01:04:50,602 :: INFO :: Analysis initialized
+Analysis 2020-02-20 01:04:50,621 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 01:04:50,938 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-20 01:04:56,708 :: INFO :: Plotting initialized
+Plotting 2020-02-20 01:04:56,721 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-20 01:06:22,724 :: INFO :: Analysis initialized
+Analysis 2020-02-20 01:06:22,740 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 01:06:23,071 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-20 01:06:28,123 :: INFO :: Plotting initialized
+Plotting 2020-02-20 01:06:28,136 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-20 01:09:11,909 :: INFO :: Analysis initialized
+Analysis 2020-02-20 01:09:11,926 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 01:09:12,250 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-20 01:09:17,457 :: INFO :: Plotting initialized
+Plotting 2020-02-20 01:09:17,471 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-20 01:09:30,326 :: INFO :: Analysis initialized
+Analysis 2020-02-20 01:09:30,343 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 01:09:30,663 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-20 01:09:35,813 :: INFO :: Plotting initialized
+Plotting 2020-02-20 01:09:35,829 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-20 01:09:56,679 :: INFO :: Analysis initialized
+Analysis 2020-02-20 01:09:56,694 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 01:09:57,087 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-20 01:10:01,453 :: INFO :: Plotting initialized
+Plotting 2020-02-20 01:10:01,470 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-20 01:10:30,126 :: INFO :: Analysis initialized
+Analysis 2020-02-20 01:10:30,169 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 01:10:32,029 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-20 01:10:37,480 :: INFO :: Plotting initialized
+Plotting 2020-02-20 01:10:37,493 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-20 01:10:48,738 :: INFO :: Analysis initialized
+Analysis 2020-02-20 01:10:48,753 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 01:10:49,071 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-20 01:10:54,708 :: INFO :: Plotting initialized
+Plotting 2020-02-20 01:10:54,721 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-20 01:11:25,594 :: INFO :: Analysis initialized
+Analysis 2020-02-20 01:11:25,608 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 01:11:25,921 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-20 01:11:31,501 :: INFO :: Plotting initialized
+Plotting 2020-02-20 01:11:31,515 :: INFO :: Calibration results for the diodes

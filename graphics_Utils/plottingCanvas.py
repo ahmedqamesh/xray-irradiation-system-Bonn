@@ -34,11 +34,11 @@ from matplotlib.ticker import PercentFormatter
 from matplotlib.ticker import NullFormatter
 from matplotlib.patches import Rectangle
 from matplotlib.collections import PatchCollection
-from analysis import analysis
-from analysis import logger
+from analysis import analysis , logger
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 import matplotlib.animation as animation
+from graphics_Utils import mainWindow
 from typing import *
 from PyQt5 import *
 from PyQt5.QtWidgets import *
@@ -67,8 +67,6 @@ class PlottingCanvas(FigureCanvas):
 
         if plot_prefix =="IV_test":
             self.IV_test(tests = tests , test_file=test_file)
-        
-                
         self.draw()
     
                
@@ -86,7 +84,7 @@ class PlottingCanvas(FigureCanvas):
             dose = []
             bkg = []
             current = []
-            factor = []
+            factor_test = mainWindow.MainWindow().get_calibration_factor(diode = test)
             with open(test_file, 'r')as data:
                 reader = csv.reader(data)
                 next(reader)
@@ -94,20 +92,17 @@ class PlottingCanvas(FigureCanvas):
                     dep = np.append(dep, np.float(row[0]))  # Distance from the source
                     dose = np.append(dose, np.float(row[4]))  # Dose rate
                     current = np.append(current, np.float(row[2]))  # current
-                    factor = np.append(factor, np.float(row[4]) / (np.float(row[2]) - np.float(row[1])))
                     bkg = np.append(bkg, np.float(row[1]))
-                mean = np.mean(factor)
-            factor_row = np.append(factor_row, factor)
-            factor_row = np.append(factor_row, mean)
-            
             self.ax.errorbar(dose, current, xerr=0.0, yerr=0.0, fmt='o', color=colors[tests.index(test)], markersize=3)  # plot points
             sig = [0.4 * current[k] for k in range(len(current))]
             popt, pcov = curve_fit(an.linear, dose, current, sigma=sig, absolute_sigma=True, maxfev=5000, p0=(1, 1))
             chisq = an.red_chisquare(np.array(current), an.linear(dose, *popt), np.array(sig), popt)
             line_fit_legend_entry = "Diode " + test + ':%.4fx+%.4f' % (popt[0], popt[1])
-            
+            self.ax.text(0.9, 0.4, 'Calibration factor =%s'%str(factor_test),
+                    horizontalalignment='right', verticalalignment='top', transform=self.ax.transAxes,
+                    bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.6))
             self.ax.plot(dose, an.linear(dose, *popt), linestyle="--",
-                    color=colors[tests.index(test)], label=line_fit_legend_entry)
+                color=colors[tests.index(test)], label=line_fit_legend_entry)
         self.ax.set_ylabel('Dose rate [$Mrad(sio_2)/hr$]')
         self.ax.set_xlabel(r'Current [$\mu$ A]')
         self.ax.set_title('(Diode calibration at %s and %s)' % ("40kV", "50mA"), fontsize=11)

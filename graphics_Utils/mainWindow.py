@@ -54,10 +54,19 @@ class MainWindow(QMainWindow):
         #Filters list
         self.__filtersList = conf['Tests']["filters"]
         
+        
         #Diodes list
-        self.__diodesList = conf['Tests']['photodiodes']
-        
-        
+        dictionary = dict(conf['Tests']['photodiodes'])
+        self.__diodesList = list(dictionary.keys())
+       
+       #Get conversion factor 
+        A_array =[dictionary[i] for i in ["A"] if i in dictionary]
+        B_array =[dictionary[i] for i in ["B"] if i in dictionary]
+        C_array =[dictionary[i] for i in ["C"] if i in dictionary]
+        self.__A_factor  =   A_array[0]["factor"]
+        self.__B_factor  =   B_array[0]["factor"]
+        self.__C_factor  =   C_array[0]["factor"]
+
     def Ui_ApplicationWindow(self):
         self.menu= MenuWindow.MenuBar(self)
         self.menu._createMenu(self)
@@ -286,4 +295,10 @@ class MainWindow(QMainWindow):
         return self.__diodesList
     def get_filtersList(self):
         return self.__filtersList
+    
+    def get_calibration_factor(self, diode = None):
+        if diode =="A": factor = self.__A_factor
+        if diode =="B": factor = self.__B_factor
+        if diode =="C": factor = self.__C_factor
+        return factor
     

@@ -155,7 +155,21 @@ def open_h5_file(outname=None, directory=None):
     with tb.open_file(filename, 'r') as in_file:
         data = in_file.root.data[:]
     return data
-    
+
+def get_dictionary_list(dictionary): 
+    list = [] 
+    for key in dictionary.keys(): 
+        list.append(key) 
+    # return list
+    dictionary_array = [dictionary]
+    for sub_dictionary in dictionary_array:
+        if type(sub_dictionary) is dict:
+            for key, value in sub_dictionary.items():
+                print("key=", key)
+                print("value", value)
+                #if type(value) is dict:
+                #    dictionary_array.append(value)
+                      
 def plot_spline_masking(calibrated_file=False, PdfPages=PdfPages):
     with tb.open_file(calibrated_file, 'r') as in_file:
         spline_mask = in_file.root.configuration.spline_mask[:]
