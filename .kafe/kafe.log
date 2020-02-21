@@ -3989,3 +3989,6 @@ Plotting 2020-02-22 00:11:16,535 :: INFO :: Effect of tube Voltage at 8cm on the
 Analysis 2020-02-22 00:14:57,242 :: INFO :: Analysis initialized
 Analysis 2020-02-22 00:14:57,396 :: INFO :: Analysis initialized
 analysis.analysis_utils 2020-02-22 00:15:04,254 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 00:17:32,408 :: INFO :: Analysis initialized
+Analysis 2020-02-22 00:17:32,412 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 00:17:35,219 :: SUCCESS :: Beam Spot Scanning ...

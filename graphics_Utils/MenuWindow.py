@@ -147,7 +147,7 @@ class MenuBar(QWidget):
         voltage_menu = test_menu.addMenu("&Absorbed Dose vs. Tube Voltage")
         voltage_action = []
         voltage_filtersList = self.__filtersList[1:2]
-        for f in np.arange(1,len(voltage_filtersList)):
+        for f in np.arange(0,len(voltage_filtersList)):
             voltage_action= QAction(QIcon('graphics_Utils/icons/icon_dose.png'), voltage_filtersList[f], mainwindow)        
             voltage_action.setStatusTip('Get the calibration curves for each current'+voltage_filtersList[f])
             voltage_action.setChecked(True)
