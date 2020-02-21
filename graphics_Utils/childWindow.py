@@ -75,11 +75,11 @@ class ChildWindow(QWidget):
             firstItem = self.get_firstItem()
             test_dir = self._directory+firstItem+"/" 
             test_file = test_dir +name_prefix + firstItem +".csv" 
-            self.openSubGroupMenu(ChildWindow = ChildWindow, filter = firstItem, test_file =test_file, test_dir = test_dir, plot_prefix= plot_prefix, name_prefix=name_prefix)
+            self.openSubGroupMenu(ChildWindow = ChildWindow, firstItem = firstItem, test_file =test_file, test_dir = test_dir, plot_prefix= plot_prefix, name_prefix=name_prefix)
             FirstGridLayout.addWidget(self.SubFilterGroupBox,1,0)  
 
         firstComboBox.activated[str].connect(self.set_firstItem)
-        self.openSubGroupMenu(filter = firstItem) 
+        self.openSubGroupMenu(firstItem = firstItem) 
         
         firstComboBox.activated[str].connect(_SubFilterGroupMenu)
         firstHBoxLayout.addWidget(firstLabel)
@@ -91,7 +91,7 @@ class ChildWindow(QWidget):
         plotframe.setLayout(MainLayout) 
         QtCore.QMetaObject.connectSlotsByName(ChildWindow)  
         
-    def openSubGroupMenu(self, ChildWindow = None, filter= None ,plot_prefix =None,  test_file = None, test_dir = None, name_prefix = "None"):
+    def openSubGroupMenu(self, ChildWindow = None, firstItem= None ,plot_prefix =None,  test_file = None, test_dir = None, name_prefix = "None"):
         self.SubFilterGroupBox= QGroupBox("")
         SubSecondGridLayout =  QGridLayout()
         firstLabel= QLabel("firstLabel", ChildWindow)
@@ -117,7 +117,7 @@ class ChildWindow(QWidget):
             thirdTextBoxValue = thirdtextbox.text()
             forthtextbox = QLineEdit(test_modify)
             forthTextBoxValue = forthtextbox.text()
-            Fig =  plottingCanvas.PlottingCanvas(test_file=test_file, tests=[filter], plot_prefix = plot_prefix)
+            Fig =  plottingCanvas.PlottingCanvas(test_file=test_file, tests=[firstItem], plot_prefix = plot_prefix, name_prefix =name_prefix)
             close_button.clicked.connect(ChildWindow.close)        
             SubSecondGridLayout.addWidget(secondLabel,0,0)
             SubSecondGridLayout.addWidget(secondtextbox,0,1)  

@@ -57,9 +57,9 @@ class PlottingCanvas(FigureCanvas):
         #self.figure.clear()
         fig.add_subplot(111)
         self.ax = self.figure.add_subplot(111)
-        if name_prefix == "opening_angle":
+        if plot_prefix == "opening_angle":
             self.opening_angle(tests = tests , test_file=test_file)
-        if name_prefix =="opening_angle_cone":
+        if plot_prefix =="opening_angle_cone":
             self.opening_angle_cone(tests = tests , test_file=test_file)
         
         if plot_prefix =="diode_calibration":
@@ -70,8 +70,13 @@ class PlottingCanvas(FigureCanvas):
         
         if plot_prefix =="dose_current":
             print(tests , test_file)
-            self.IV_test(tests = tests , test_file=test_file)
-                    
+            #self.IV_test(tests = tests , test_file=test_file)
+
+        if plot_prefix =="dose_voltage":
+            self.dose_voltage(tests = tests , test_file=test_file)
+
+                  
+                                      
         self.draw()
     
                
@@ -416,33 +421,22 @@ class PlottingCanvas(FigureCanvas):
             plt.savefig(Directory + subdirectory + 'dose_current_drop' + depth[i] + ".png", bbox_inches='tight')
             PdfPages.savefig()
 
-    def dose_voltage(self, Directory=False, PdfPages=False, Depth="8cm", test="without_Al_Filter", kafe_Fit=False, table=True):
+    def dose_voltage(self, tests =None, test_file =None):
         '''
-        Effect of tube Voltage on the Dose, the available data is only without Al Filter
+        Effect of tube Voltage on the Dose, the available data is only without Filter
         '''
-        self.log.info('Effect of tube Voltage at %s on the Dose %s' % (Depth, test))
+        self.log.info('Effect of tube Voltage at %s on the Dose' % (tests[0]))
         y1 = []
         x1 = []
         Dataset = []
-        kafe_Fit = []
-
-        if table:
-            gs = gridspec.GridSpec(2, 1, height_ratios=[3.5, 2])
-            ax = plt.subplot(gs[0])
-            ax2 = plt.subplot(gs[1])
-        else:
-            fig = plt.figure()
-            ax = fig.add_subplot(111)
         Current = ["10mA", "20mA", "30mA", "40mA"]
         col_row = plt.cm.BuPu(np.linspace(0.3, 0.9, len(Current)))
-        fit_para = []
-        subdirectory = test + "/dose_voltage/" + Depth + "/" 
         for i in range(len(Current)):
             x = []
             y = []
             Background = [0.00801e-06]
             Factor = [9.76]
-            with open(Directory + subdirectory + Current[i] + ".csv", 'r')as data1:
+            with open(test_file[:-7]+Current[i] + ".csv", 'r')as data1:
                 reader = csv.reader(data1)
                 next(reader)
                 for row in reader:
@@ -455,48 +449,21 @@ class PlottingCanvas(FigureCanvas):
             Dataset = np.append(Dataset, build_dataset(x1[i], y1[i], yabserr=sig, title='I=%s' % Current[i], axis_labels=['Voltage (kV)', '$Dose rate [Mrad(sio_2)/hr]$']))
             popt, pcov = curve_fit(an.quadratic, x1[i], y1[i], sigma=sig, absolute_sigma=True, maxfev=5000, p0=(1, 1, 1))
             xfine = np.linspace(0., 60., 100)
-            ax.plot(xfine, an.quadratic(xfine, *popt), color=col_row[i])
+            self.ax.plot(xfine, an.quadratic(xfine, *popt), color=col_row[i])
             chisq = an.red_chisquare(np.array(y1[i]), an.quadratic(x1[i], *popt), np.array(sig), popt)
-            ax.errorbar(x1[i], y1[i], yerr=sig, color=col_row[i], fmt='o',
+            self.ax.errorbar(x1[i], y1[i], yerr=sig, color=col_row[i], fmt='o',
                         label='I=%s' % (Current[i]))
-            for par in popt:
-                fit_para = np.append(fit_para, par)
-            ax.text(0.95, 0.90, "y[$Mrad(sio_2)/hr$]= a$\mathrm{x}^2$ + bx+c",
-                    horizontalalignment='right', verticalalignment='top', transform=ax.transAxes,
+            self.ax.text(0.95, 0.90, "y[$Mrad(sio_2)/hr$]= a$\mathrm{x}^2$ + bx+c",
+                    horizontalalignment='right', verticalalignment='top', transform=self.ax.transAxes,
                     bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.7))
-        ax.set_title('Effect of the tube voltage at ' + Depth + " " + "for unfiltered beam", fontsize=12)
-        ax.set_ylabel('Dose rate [$Mrad(sio_2)/hr$]')
-        ax.set_xlabel('Voltage (kV)')
-        ax.grid(True)
-        ax.legend()
-        plt.ticklabel_format(useOffset=False)
-        ax.set_xlim(xmin=5)
-        ax.set_ylim(ymin=0)
-        rows = Current
-        columns = ['a', 'b', 'c']
-        col = plt.cm.BuPu(np.linspace(0.1, 0.5, len(columns)))
-        if table:
-            ax2.table(cellText=[np.round(fit_para[0:3], 3), np.round(fit_para[3:6], 3), np.round(fit_para[6:9], 3), np.round(fit_para[9:12], 3)],
-                      rowLabels=rows,
-                      rowColours=col_row,  # colors[0:4],
-                      colColours=["lightgray", "lightgray", "lightgray"],
-                      animated=True,
-                      colLabels=columns, cellLoc='center', rowLoc='center', loc='center', fontsize=12)
-            plt.subplots_adjust(bottom=0.1)
-            ax2.set_axis_off()
-        plt.savefig(Directory + subdirectory + "dose_voltage_" + Depth + ".png", bbox_inches='tight')
-        PdfPages.savefig()
-
-        if kafe_Fit:
-            # Another fitting using Kafe fit
-            for Data in Dataset:
-                kafe_Fit = np.append(kafe_Fit, Fit(Data, quadratic_3par))
-            for fit in kafe_Fit:
-                fit.do_fit()
-            kafe_plot = Plot(kafe_Fit[2], kafe_Fit[3])
-            kafe_plot.plot_all(show_data_for='all', show_band_for=0)
-            kafe_plot.save(Directory + subdirectory + "dose_voltage_" + Depth + "_kafe_Fit.png")
-            PdfPages.savefig()
+        self.ax.set_title('Effect of the tube voltage at ' + tests[0] + " " + "for unfiltered beam", fontsize=12)
+        self.ax.set_ylabel('Dose rate [$Mrad(sio_2)/hr$]')
+        self.ax.set_xlabel('Voltage (kV)')
+        self.ax.grid(True)
+        self.ax.legend()
+        self.ax.ticklabel_format(useOffset=False)
+        self.ax.set_xlim(xmin=5)
+        self.ax.set_ylim(ymin=0)
                           
     def power_2d(self, Directory=False, PdfPages=False, size_I=50, size_V=60, V_limit=50, I_limit=50):
         '''

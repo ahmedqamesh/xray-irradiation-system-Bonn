@@ -136,12 +136,23 @@ class MenuBar(QWidget):
         
         current_menu = test_menu.addMenu("&Absorbed Dose vs. Tube Current")
         dose_action = []
-        for f in np.arange(1,len(self.__filtersList)):
-            dose_action= QAction(QIcon('graphics_Utils/icons/icon_dose.png'), self.__filtersList[f], mainwindow)        
-            dose_action.setStatusTip('Get the calibration curves for each current'+self.__filtersList[f])
+        dose_filtersList = self.__filtersList[1:3]
+        for f in np.arange(0,len(dose_filtersList)):
+            dose_action= QAction(QIcon('graphics_Utils/icons/icon_dose.png'), dose_filtersList[f], mainwindow)        
+            dose_action.setStatusTip('Get the calibration curves for each current'+dose_filtersList[f])
             dose_action.setChecked(True)
             dose_action.triggered.connect(self.doseChildMenu)
-            current_menu.addAction(dose_action)   
+            current_menu.addAction(dose_action)
+        
+        voltage_menu = test_menu.addMenu("&Absorbed Dose vs. Tube Voltage")
+        voltage_action = []
+        voltage_filtersList = self.__filtersList[1:2]
+        for f in np.arange(1,len(voltage_filtersList)):
+            voltage_action= QAction(QIcon('graphics_Utils/icons/icon_dose.png'), voltage_filtersList[f], mainwindow)        
+            voltage_action.setStatusTip('Get the calibration curves for each current'+voltage_filtersList[f])
+            voltage_action.setChecked(True)
+            voltage_action.triggered.connect(self.voltageChildMenu)
+            voltage_menu.addAction(voltage_action)    
      
      # 3. Settings menu
     def _settingsMenu(self,menuBar,mainwindow): 
@@ -267,7 +278,17 @@ class MenuBar(QWidget):
                                       plot_prefix = "dose_current")
         self.mainwindow.show()     
             
-    
+    def voltageChildMenu(self, state):
+        action = self.sender()
+        text = action.text()
+        self.ui.ChildMenu(ChildWindow = self.mainwindow , 
+                                      firstitems = self.__depthList,
+                                      test_name = "Absorbed Dose vs. Tube Voltage",
+                                      dir="dose_voltage/"+text+"/",
+                                      name_prefix = "dose_voltage_",
+                                      plot_prefix = "dose_voltage")
+        self.mainwindow.show()     
+               
     
     def outputChildWindow(self,state):
         if state:

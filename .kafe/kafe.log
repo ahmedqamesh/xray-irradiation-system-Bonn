@@ -3927,3 +3927,65 @@ Analysis 2020-02-20 23:38:45,192 :: INFO :: Analysis initialized
 Analysis 2020-02-20 23:39:07,631 :: INFO :: Analysis initialized
 Analysis 2020-02-20 23:39:07,635 :: INFO :: Analysis initialized
 analysis.analysis_utils 2020-02-20 23:39:08,006 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-20 23:43:29,949 :: INFO :: Analysis initialized
+Analysis 2020-02-20 23:43:29,953 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-20 23:43:43,009 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-21 23:33:36,132 :: INFO :: Analysis initialized
+Analysis 2020-02-21 23:33:36,438 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-21 23:33:41,454 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-21 23:33:50,280 :: INFO :: Plotting initialized
+Analysis 2020-02-21 23:34:22,256 :: INFO :: Analysis initialized
+Analysis 2020-02-21 23:34:22,259 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-21 23:34:24,470 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-21 23:34:30,358 :: INFO :: Plotting initialized
+Plotting 2020-02-21 23:34:56,063 :: INFO :: Plotting initialized
+Plotting 2020-02-21 23:35:11,331 :: INFO :: Plotting initialized
+Plotting 2020-02-21 23:35:11,345 :: INFO :: Calibration results for the diodes
+Analysis 2020-02-21 23:37:34,002 :: INFO :: Analysis initialized
+Analysis 2020-02-21 23:37:34,256 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-21 23:37:42,236 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-21 23:38:09,513 :: INFO :: Plotting initialized
+Plotting 2020-02-21 23:38:09,556 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-21 23:38:19,041 :: INFO :: Plotting initialized
+Analysis 2020-02-21 23:42:20,206 :: INFO :: Analysis initialized
+Analysis 2020-02-21 23:42:20,602 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-21 23:42:27,574 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-21 23:42:56,900 :: INFO :: Plotting initialized
+Analysis 2020-02-21 23:45:33,128 :: INFO :: Analysis initialized
+Analysis 2020-02-21 23:45:33,146 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-21 23:45:33,908 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-21 23:45:50,232 :: INFO :: Plotting initialized
+Plotting 2020-02-21 23:45:50,249 :: INFO :: Estimating the beam diameter relative to the depth
+Analysis 2020-02-21 23:56:56,562 :: INFO :: Analysis initialized
+Analysis 2020-02-21 23:56:56,651 :: INFO :: Analysis initialized
+Analysis 2020-02-21 23:58:07,543 :: INFO :: Analysis initialized
+Analysis 2020-02-21 23:58:07,622 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-21 23:58:10,577 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-21 23:58:22,626 :: INFO :: Plotting initialized
+Analysis 2020-02-22 00:07:00,962 :: INFO :: Analysis initialized
+Analysis 2020-02-22 00:07:01,287 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 00:07:04,173 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 00:07:11,513 :: INFO :: Plotting initialized
+Analysis 2020-02-22 00:07:54,564 :: INFO :: Analysis initialized
+Analysis 2020-02-22 00:07:54,610 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 00:07:55,464 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 00:08:03,272 :: INFO :: Plotting initialized
+Plotting 2020-02-22 00:08:03,285 :: INFO :: Effect of tube Voltage at 8cm on the Dose
+Analysis 2020-02-22 00:09:16,857 :: INFO :: Analysis initialized
+Analysis 2020-02-22 00:09:16,893 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 00:09:18,602 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 00:09:24,901 :: INFO :: Plotting initialized
+Plotting 2020-02-22 00:09:24,914 :: INFO :: Effect of tube Voltage at 8cm on the Dose
+Analysis 2020-02-22 00:10:19,001 :: INFO :: Analysis initialized
+Analysis 2020-02-22 00:10:19,014 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 00:10:19,561 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 00:10:26,615 :: INFO :: Plotting initialized
+Plotting 2020-02-22 00:10:26,627 :: INFO :: Effect of tube Voltage at 8cm on the Dose
+Analysis 2020-02-22 00:11:06,093 :: INFO :: Analysis initialized
+Analysis 2020-02-22 00:11:06,107 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 00:11:07,574 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 00:11:16,497 :: INFO :: Plotting initialized
+Plotting 2020-02-22 00:11:16,535 :: INFO :: Effect of tube Voltage at 8cm on the Dose
+Analysis 2020-02-22 00:14:57,242 :: INFO :: Analysis initialized
+Analysis 2020-02-22 00:14:57,396 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 00:15:04,254 :: SUCCESS :: Beam Spot Scanning ...
