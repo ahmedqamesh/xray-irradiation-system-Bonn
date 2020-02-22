@@ -16,8 +16,8 @@ Devices:
 
 Tests:
    test_directory : "tests/"
-   filters        : ["------","without_filter","Al","Zn","Be"]
-   depth         : ["3cm","5cm","8cm","51cm"]
+   filters        : ["without_filter","Al","Zn","Be","V"]
+   depth         : ["------","3cm","5cm","8cm","51cm"]
    current         : ["30kV","40kV"]
    photodiodes    : 
       ---: {"factor": "---"}

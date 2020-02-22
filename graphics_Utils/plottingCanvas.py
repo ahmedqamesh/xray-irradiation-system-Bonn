@@ -52,10 +52,10 @@ class PlottingCanvas(FigureCanvas):
     def __init__(self,tests = None , test_file=None,name_prefix = None, plot_prefix =None):
         self.log = logger.setup_derived_logger('Plotting')
         self.log.info('Plotting initialized')
-        fig = Figure()
-        FigureCanvas.__init__(self, fig)
+        self.fig = Figure()
+        FigureCanvas.__init__(self, self.fig)
         #self.figure.clear()
-        fig.add_subplot(111)
+        self.fig.add_subplot(111)
         self.ax = self.figure.add_subplot(111)
         if plot_prefix == "opening_angle":
             self.opening_angle(tests = tests , test_file=test_file)
@@ -75,7 +75,10 @@ class PlottingCanvas(FigureCanvas):
         if plot_prefix =="dose_voltage":
             self.dose_voltage(tests = tests , test_file=test_file)
 
-                  
+        if plot_prefix =="dose_depth":
+            self.dose_depth(tests = tests , test_file=test_file)    
+        if plot_prefix =="beamspot":
+            self.Plot_Beam_profile_2d(tests = tests , test_file=test_file, depth = tests)
                                       
         self.draw()
     
@@ -326,58 +329,46 @@ class PlottingCanvas(FigureCanvas):
             PdfPages.savefig()
                         
 
-    def dose_depth(self, Directory=False, PdfPages=False, Voltage="40 kV", current="50 mA", stdev=0.2, tests=[0], theta=0.16):
+    def dose_depth(self,tests = False , test_file=False, voltage="40 kV", current="50 mA", stdev=0.2, theta=0.16):
         '''
         Relation between the depth and  the Dose rate
         '''
         self.log.info('Relation between the depth and  the Dose rate')
-        for i in range(len(tests)):
-            subdirectory = tests[i] + "/dose_depth/"
-            fig = plt.figure()
-            ax = fig.add_subplot(111)
-            Factor = 9.81  # Calibration Factor
-            height = []
-            y1 = []
-            b1 = []
-            with open(Directory + subdirectory + "dose_depth_" + tests[i] + ".csv", 'r')as data:
-                reader = csv.reader(data)
-                next(reader)
-                for row in reader:
-                    height = np.append(height, float(row[0]))  # Distance from the source
-                    y1 = np.append(y1, (float(row[1])))  # Dose rate
-                    b1 = np.append(b1, (float(row[2])))  # Background
-            y1 = [y1[k] - b1[k] for k in range(len(y1))]  # Subtract Background
-            y1 = [y1[k] * Factor for k in range(len(y1))]  # Multiply by the factor to get the dose rate
-            sig = [stdev * y1[k] for k in range(len(y1))]
-            popt1, pcov = curve_fit(an.Inverse_square, height, y1, sigma=sig, absolute_sigma=True, maxfev=500, p0=(300, 6, 0))
-            # chisq1 = an.red_chisquare(np.array(y1), an.Inverse_square(np.array(height), *popt1), sig, popt1)
-            ax.errorbar(height, y1, yerr=sig, color=colors[i + 1], fmt='o', label=tests[i], markersize='4')
-            xfine = np.linspace(height[0], height[-1], 100)  # define values to plot the function
-            a, b, c = popt1[0], popt1[1], popt1[2]
-            a_err, b_err, c_err = np.absolute(pcov[0][0]) ** 0.5, np.absolute(pcov[1][1]) ** 0.5, np.absolute(pcov[2][2]) ** 0.5
-            ax.plot(xfine, an.Inverse_square(xfine, *popt1), colors[i + 1], label='Fit parameters:\n a=%.2f$\pm$ %.2f\n b=%.2f$\pm$ %.2f\n c=%.2f$\pm$ %.2f\n' % (a, a_err, b, b_err, c, c_err))
-            
-            ax.text(0.9, 0.56, r'$R= \frac{a}{(h+b)^2}-c$',
-                    horizontalalignment='right', verticalalignment='top', transform=ax.transAxes,
-                    bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.6))
-            # print "The dose rate at %.2f cm depth is " %(45) + str(popt1[0]/(45+popt1[1])**2)+" Mrad/hr "+tests[i]
-            ax.set_xlabel('Distance from the collimator holder(h) [cm]')
-            ax.set_title('Dose rate vs distance %s at  (%s and %s)' % (tests[i], Voltage, current), fontsize=11)
-            ax.set_ylabel('Dose rate (R) [$Mrad(sio_2)/hr$]')
-            ax.set_xlim([0, max(height) + 8])
-            ax.grid(True)
-            ax.legend(loc="upper right")
-            ax.ticklabel_format(useOffset=False)
-            fig.savefig(Directory + subdirectory + "dose_depth_" + tests[i] + ".png", bbox_inches='tight')  # 1.542
-            plt.tight_layout()
-            PdfPages.savefig()
-            cmap = plt.cm.get_cmap('viridis', 15)
-            sc = ax.scatter(xfine, an.Inverse_square(xfine, *popt1), c=an.Inverse_square(xfine, a=a, b=b, c=c), cmap=cmap, s=50,)
-            # cbar = fig.colorbar(sc, ax=ax, orientation='horizontal')
-            # cbar.ax.invert_xaxis()
-            # cbar.set_label("Dose rate", labelpad=1, fontsize=10)
-            
-            fig.savefig(Directory + subdirectory + "dose_depth_color_" + tests[i] + ".png", bbox_inches='tight')
+        Factor = 9.81  # Calibration Factor
+        height = []
+        y1 = []
+        b1 = []
+        with open(test_file, 'r')as data:
+            reader = csv.reader(data)
+            next(reader)
+            for row in reader:
+                height = np.append(height, float(row[0]))  # Distance from the source
+                y1 = np.append(y1, (float(row[1])))  # Dose rate
+                b1 = np.append(b1, (float(row[2])))  # Background
+        y1 = [y1[k] - b1[k] for k in range(len(y1))]  # Subtract Background
+        y1 = [y1[k] * Factor for k in range(len(y1))]  # Multiply by the factor to get the dose rate
+        sig = [stdev * y1[k] for k in range(len(y1))]
+        popt1, pcov = curve_fit(an.Inverse_square, height, y1, sigma=sig, absolute_sigma=True, maxfev=500, p0=(300, 6, 0))
+        # chisq1 = an.red_chisquare(np.array(y1), an.Inverse_square(np.array(height), *popt1), sig, popt1)
+        self.ax.errorbar(height, y1, yerr=sig, color=colors[1], fmt='o', label=tests[0], markersize='4')
+        xfine = np.linspace(height[0], height[-1], 100)  # define values to plot the function
+        a, b, c = popt1[0], popt1[1], popt1[2]
+        a_err, b_err, c_err = np.absolute(pcov[0][0]) ** 0.5, np.absolute(pcov[1][1]) ** 0.5, np.absolute(pcov[2][2]) ** 0.5
+        self.ax.plot(xfine, an.Inverse_square(xfine, *popt1), colors[1], label='Fit parameters:\n a=%.2f$\pm$ %.2f\n b=%.2f$\pm$ %.2f\n c=%.2f$\pm$ %.2f\n' % (a, a_err, b, b_err, c, c_err))
+        
+        self.ax.text(0.9, 0.56, r'$R= \frac{a}{(h+b)^2}-c$',
+                horizontalalignment='right', verticalalignment='top', transform=self.ax.transAxes,
+                bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.6))
+        # print "The dose rate at %.2f cm depth is " %(45) + str(popt1[0]/(45+popt1[1])**2)+" Mrad/hr "+tests[i]
+        self.ax.set_xlabel('Distance from the collimator holder(h) [cm]')
+        self.ax.set_title('Dose rate vs distance %s at  (%s and %s)' % (tests[0], voltage, current), fontsize=11)
+        self.ax.set_ylabel('Dose rate (R) [$Mrad(sio_2)/hr$]')
+        self.ax.set_xlim([0, max(height) + 8])
+        self.ax.grid(True)
+        self.ax.legend(loc="upper right")
+        self.ax.ticklabel_format(useOffset=False)
+        cmap = plt.cm.get_cmap('viridis', 15)
+        sc = self.ax.scatter(xfine, an.Inverse_square(xfine, *popt1), c=an.Inverse_square(xfine, a=a, b=b, c=c), cmap=cmap, s=50,)
         return a, b, c
     
 
@@ -499,7 +490,7 @@ class PlottingCanvas(FigureCanvas):
         plt.savefig(Directory + 'Power.png')
         PdfPages.savefig()
 
-    def Plot_Beam_profile_2d(self, Directory=False, PdfPages=False, depth=None):
+    def Plot_Beam_profile_2d(self, tests=[0], test_file =  False, filters = [0], depth=None):
         '''
         Make a 2d scan at specific depth
         '''
@@ -509,13 +500,14 @@ class PlottingCanvas(FigureCanvas):
         Background = 5.7 * 10 ** (-9)  # convert from A to nA
         binwidth = 1
         subdirectory = "beamspot/"
+        filter = filters[0]
         for d in range(len(depth)):
-            with tb.open_file(Directory + subdirectory + depth[d] + "/beamspot_" + depth[d] + ".h5", 'r') as in_file:
+            with tb.open_file(test_file, 'r') as in_file:
                 beamspot = in_file.root.beamspot[:]
                 beamspot = (beamspot - Background) * 1000000 * Factor
                 mid_z, mid_x = np.int(beamspot.shape[0] / 2), np.int(beamspot.shape[1] / 2)
             # These are the exact radii as measured
-            if (depth[d] == "3cm") or (depth[d] == "3cm_Vfilter") or (depth[d] == "3cm_Zrfilter"):
+            if (depth[d] == "3cm") or (depth[d] == "3cm_V") or (depth[d] == "3cm_Zr"):
                 radius, r = r'$r=6.5 \pm 0.5$ mm', 1 * 6.5  # 1 mm step * radius
                 # l,w= 13, 6.5 # in mm
             if depth[d] == "3cm_collimator":
@@ -527,16 +519,17 @@ class PlottingCanvas(FigureCanvas):
                 radius, r = r'$r=40 \pm 0.5$ mm', 5 * 40  # 5 mm step * radius
             if depth[d] == "60cm":
                 radius, r = r'$r=48 \pm 4$ mm', 48.4 / 5  # 5 mm step * radius
-            fig = plt.figure()
-            ax = fig.add_subplot(1, 1, 1)
             cmap = plt.cm.get_cmap('viridis', 30)
-            im = ax.imshow(beamspot, aspect='auto', interpolation='gaussian', cmap=cmap)  # ,extent=extent)
-            cb = fig.colorbar(im, ax=ax, fraction=0.0594)
+            im = self.ax.imshow(beamspot, aspect='auto', interpolation='gaussian', cmap=cmap)  # ,extent=extent)
+            cb = self.fig.colorbar(im, ax=self.ax, fraction=0.0594)
             
+            self.ax.axhline(y=mid_z, linewidth=0.5, color='#d62728', linestyle='dashed')
+            self.ax.axvline(x=mid_x, linewidth=0.5, color='#d62728', linestyle='dashed')
+                        
             # create new axes on the right and on the top of the current axes
-            divider = make_axes_locatable(ax)
-            axHistx = divider.append_axes("top", 1.2, pad=0.2, sharex=ax)
-            axHisty = divider.append_axes("right", 1.2, pad=0.2, sharey=ax)
+            divider = make_axes_locatable(self.ax)
+            axHistx = divider.append_axes("top", 1.2, pad=0.2, sharex=self.ax)
+            axHisty = divider.append_axes("right", 1.2, pad=0.2, sharey=self.ax)
             axHistx.bar(x=range(beamspot.shape[0]), height=np.ma.sum(beamspot, axis=0), align='center',
                         linewidth=1, color=(0.2, 0.4, 0.6, 0.6), edgecolor='black')
             axHistx.plot(range(beamspot.shape[0]), np.ma.sum(beamspot, axis=0), "black")
@@ -547,55 +540,15 @@ class PlottingCanvas(FigureCanvas):
             axHisty.barh(y=range(beamspot.shape[1]), width=np.ma.sum(beamspot, axis=1), align='center',
                          linewidth=1, color=(0.2, 0.4, 0.6, 0.6), edgecolor='black')
             axHisty.plot(np.ma.sum(beamspot, axis=1), range(beamspot.shape[1]), "black")
+
+            
             cb.set_label("Dose rate [$Mrad/hr$]")
-            ax.text(1.5, 1.3, radius,
-                    horizontalalignment='right', verticalalignment='top', transform=ax.transAxes,
-                    bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8), fontsize=10)
-            plt.title("Beam profile at " + depth[d] + " from the collimator holder (%s and %s)" % ("40 kV", "50mA"), fontsize=12, y=1.7, x=-0.6)
-            ax.set_xlabel('x [mm]')
-            ax.set_ylabel('y[mm]')
-            plt.savefig(Directory + subdirectory + depth[d] + "/beamspot_" + depth[d] + "_2d.png")
-            PdfPages.savefig()
+            self.ax.text(1.5, 1.3, radius,
+                    horizontalalignment='right', verticalalignment='top', transform=self.ax.transAxes,
+                    bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.8), fontsize=10) 
+            self.ax.set_xlabel('x [mm]')
+            self.ax.set_ylabel('y[mm]')
 
-            fig, ax2 = plt.subplots()
-            central_value = beamspot[mid_z, mid_x]
-            for z in np.arange(beamspot.shape[0]):
-                for x in np.arange(beamspot.shape[1]):
-                    beamspot[z, x] = beamspot[z, x] / np.float(central_value) * 100
-            cmap2 = plt.cm.get_cmap('viridis', 5)
-            im2 = ax2.imshow(beamspot, aspect='auto', interpolation='gaussian', cmap=cmap2)
-            cb2 = fig.colorbar(im2, ax=ax2, fraction=0.0594)
-
-          #  for j, txt in enumerate(mean):
-          #      ax2.annotate(txt,xy=(x_offset[j],y_offset[j]),color='#d62728', size=8)
-            plt.axhline(y=mid_z, linewidth=0.5, color='#d62728', linestyle='dashed')
-            plt.axvline(x=mid_x, linewidth=0.5, color='#d62728', linestyle='dashed')
-
-            if (depth[d] == "8cm"):
-                # Draw module details
-                rec_position_x, rec_position_y = mid_z - w / 2, mid_x - l / 2
-                rect2 = patches.Rectangle((rec_position_x, rec_position_y), w, l, linewidth=2, edgecolor='black', facecolor='none')
-                ax2.add_patch(rect2)
-                plt.annotate(s='', xy=(rec_position_x - 0.5, mid_x + l / 2), xytext=(rec_position_x - 0.5, rec_position_y), arrowprops=dict(arrowstyle='<->'))
-                ax2.annotate(np.str(l) + "mm", xy=(rec_position_x - 5, rec_position_y + l / 2), color='white', size=10)
-
-                plt.annotate(s='', xy=(rec_position_x, rec_position_y - 0.5), xytext=(rec_position_x + w, rec_position_y - 0.5), arrowprops=dict(arrowstyle='<->'))
-                ax2.annotate(np.str(w) + "mm", xy=(rec_position_x + w / 2 - 1.5, rec_position_y - 1.0), color='white', size=10)
-
-            # draw a circle represents the central position
-            if depth[d] == "3cm_collimator":
-                circle2 = plt.Circle((mid_z, mid_x), r, color='red', fill=False)
-            else:
-                circle2 = plt.Circle((mid_z, mid_x - 1), r, color='red', fill=False)
-            ax2.add_artist(circle2)
-            ax2.add_artist(plt.Circle((mid_z, 2 * mid_x), 1., color='red'))
-            ax2.set_title("Beam profile at " + depth[d] + " from the collimator holder (%s and %s)" % ("40 kV", "50mA"),
-                          fontsize=11)
-            ax2.set_xlabel('x [mm]')
-            ax2.set_ylabel('y[mm]')
-            cb2.set_label("Relative intensity to central position [$\%$]")
-            plt.savefig(Directory + subdirectory + depth[d] + "/beamspot_percentile" + depth[d] + "_2d.png")
-            PdfPages.savefig()
 
     def Plot_Beam_profile_3d(self, Directory=False, PdfPages=False, depth=[0]):
         '''
@@ -616,8 +569,8 @@ class PlottingCanvas(FigureCanvas):
             Z = f(X, Y, beamspot=beamspot)
 
             fig = plt.figure()
-            ax = fig.gca(projection='3d')
-            plot = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap='viridis', edgecolor='none')
+            self.ax = fig.gca(projection='3d')
+            plot = self.ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap='viridis', edgecolor='none')
             plt.axhline(y=25, linewidth=2, color='#d62728', linestyle='dashed')
             plt.axvline(x=16, linewidth=2, color='#d62728', linestyle='dashed')
             cb = fig.colorbar(plot, ax=ax, fraction=0.046)

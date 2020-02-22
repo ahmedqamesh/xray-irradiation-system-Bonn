@@ -3992,3 +3992,310 @@ analysis.analysis_utils 2020-02-22 00:15:04,254 :: SUCCESS :: Beam Spot Scanning
 Analysis 2020-02-22 00:17:32,408 :: INFO :: Analysis initialized
 Analysis 2020-02-22 00:17:32,412 :: INFO :: Analysis initialized
 analysis.analysis_utils 2020-02-22 00:17:35,219 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 08:09:28,272 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:09:30,523 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:09:30,524 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-22 08:09:34,020 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-22 08:09:34,849 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Analysis 2020-02-22 08:10:03,373 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:10:03,578 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:10:03,578 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Analysis 2020-02-22 08:11:24,948 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:11:25,155 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:11:25,155 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_Al_Filter
+Analysis 2020-02-22 08:11:53,282 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:11:53,478 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:11:53,478 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-22 08:12:06,401 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:12:06,608 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:12:06,608 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-22 08:12:46,306 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:12:46,507 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:12:46,507 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-22 08:13:35,458 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:13:35,665 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:13:35,665 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-22 08:13:43,852 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:13:44,051 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:13:44,051 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-22 08:14:30,380 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:14:30,605 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:14:30,605 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-22 08:14:57,591 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:14:57,836 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:14:57,836 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-22 08:18:33,522 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:18:33,784 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:18:33,784 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-22 08:19:40,825 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:19:41,033 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:19:41,034 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-22 08:20:39,040 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:20:39,257 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:20:39,257 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-22 08:20:59,362 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:20:59,570 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:20:59,570 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-22 08:21:18,810 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:21:19,008 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:21:19,008 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-22 08:21:44,051 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:21:44,255 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:21:44,255 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-22 08:21:46,677 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-22 08:24:59,054 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:24:59,262 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:24:59,262 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-22 08:25:01,742 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-22 08:32:01,928 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:32:02,125 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:32:02,125 :: INFO :: Relation between the height and  the Dose rate
+Analysis 2020-02-22 08:32:20,607 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:32:20,813 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:32:20,813 :: INFO :: Relation between the height and  the Dose rate
+Analysis 2020-02-22 08:33:17,420 :: INFO :: Analysis initialized
+Plotting 2020-02-22 08:33:17,662 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:33:17,663 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-22 08:33:20,475 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-22 08:33:52,792 :: INFO :: Analysis initialized
+Analysis 2020-02-22 08:33:53,035 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 08:33:54,604 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 08:34:04,108 :: INFO :: Plotting initialized
+Analysis 2020-02-22 08:38:41,610 :: INFO :: Analysis initialized
+Analysis 2020-02-22 08:38:41,626 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 08:38:41,920 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 08:38:50,719 :: INFO :: Plotting initialized
+Analysis 2020-02-22 08:40:42,284 :: INFO :: Analysis initialized
+Analysis 2020-02-22 08:40:42,299 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 08:40:42,697 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 08:40:56,603 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:40:56,615 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-22 08:55:20,122 :: INFO :: Analysis initialized
+Analysis 2020-02-22 08:55:20,135 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 08:55:20,428 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 08:55:31,326 :: INFO :: Analysis initialized
+Analysis 2020-02-22 08:55:31,339 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 08:55:31,629 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 08:55:37,543 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:55:37,554 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-22 08:55:58,663 :: INFO :: Analysis initialized
+Analysis 2020-02-22 08:55:58,676 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 08:55:58,967 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 08:56:03,981 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:56:03,998 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-22 08:56:22,424 :: INFO :: Analysis initialized
+Analysis 2020-02-22 08:56:22,439 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 08:56:22,732 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 08:56:27,990 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:56:28,002 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-22 08:56:42,100 :: INFO :: Analysis initialized
+Analysis 2020-02-22 08:56:42,116 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 08:56:42,409 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 08:56:57,696 :: INFO :: Analysis initialized
+Analysis 2020-02-22 08:56:57,700 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 08:56:57,989 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 08:57:03,578 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:57:03,589 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-22 08:57:35,058 :: INFO :: Analysis initialized
+Analysis 2020-02-22 08:57:35,070 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 08:57:35,365 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 08:57:40,939 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:57:40,951 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-22 08:58:05,162 :: INFO :: Analysis initialized
+Analysis 2020-02-22 08:58:05,177 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 08:58:05,470 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 08:58:12,329 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:58:12,342 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-22 08:58:18,175 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:58:18,188 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-22 08:58:20,973 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:58:20,986 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-22 08:58:33,721 :: INFO :: Plotting initialized
+Plotting 2020-02-22 08:58:33,734 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-22 09:12:31,243 :: INFO :: Analysis initialized
+Plotting 2020-02-22 09:12:31,471 :: INFO :: Plotting initialized
+Plotting 2020-02-22 09:12:31,472 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 09:12:57,853 :: INFO :: Analysis initialized
+Plotting 2020-02-22 09:12:58,078 :: INFO :: Plotting initialized
+Plotting 2020-02-22 09:12:58,079 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 09:13:07,179 :: INFO :: Analysis initialized
+Plotting 2020-02-22 09:13:07,402 :: INFO :: Plotting initialized
+Plotting 2020-02-22 09:13:07,402 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 09:13:31,121 :: INFO :: Analysis initialized
+Plotting 2020-02-22 09:13:31,326 :: INFO :: Plotting initialized
+Plotting 2020-02-22 09:13:31,326 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 09:21:28,710 :: INFO :: Analysis initialized
+Plotting 2020-02-22 09:21:28,913 :: INFO :: Plotting initialized
+Plotting 2020-02-22 09:21:28,913 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 09:21:51,969 :: INFO :: Analysis initialized
+Plotting 2020-02-22 09:21:52,175 :: INFO :: Plotting initialized
+Plotting 2020-02-22 09:21:52,175 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 09:22:25,430 :: INFO :: Analysis initialized
+Plotting 2020-02-22 09:22:25,648 :: INFO :: Plotting initialized
+Plotting 2020-02-22 09:22:25,648 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 09:23:06,280 :: INFO :: Analysis initialized
+Plotting 2020-02-22 09:23:06,489 :: INFO :: Plotting initialized
+Plotting 2020-02-22 09:23:06,489 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 09:23:30,674 :: INFO :: Analysis initialized
+Plotting 2020-02-22 09:23:30,892 :: INFO :: Plotting initialized
+Plotting 2020-02-22 09:23:30,892 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 09:23:52,833 :: INFO :: Analysis initialized
+Plotting 2020-02-22 09:23:53,062 :: INFO :: Plotting initialized
+Plotting 2020-02-22 09:23:53,062 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 09:24:44,942 :: INFO :: Analysis initialized
+Plotting 2020-02-22 09:24:45,152 :: INFO :: Plotting initialized
+Plotting 2020-02-22 09:24:45,153 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 14:16:39,804 :: INFO :: Analysis initialized
+Plotting 2020-02-22 14:16:40,196 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:16:40,196 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 14:17:16,100 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:17:16,114 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:17:16,893 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 14:17:29,675 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:17:29,688 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-22 14:17:42,023 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:17:42,035 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-22 14:21:20,594 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:21:20,596 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:21:20,935 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 14:25:26,543 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:25:26,546 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:25:26,835 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 14:26:03,393 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:26:03,396 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:26:03,695 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 14:30:28,949 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:30:28,953 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:30:29,937 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 14:33:39,594 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:33:39,597 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:33:40,821 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 14:36:44,053 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:36:44,068 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:36:44,834 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 14:36:52,219 :: INFO :: Plotting initialized
+Analysis 2020-02-22 14:40:35,816 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:40:35,870 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:40:37,185 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 14:41:01,680 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:41:01,696 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 14:41:57,533 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:41:57,551 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:41:58,021 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 14:42:05,927 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:42:05,940 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 14:42:52,483 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:42:52,497 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:42:52,942 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 14:42:58,969 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:42:58,981 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 14:48:04,973 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:48:05,025 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:48:07,065 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 14:48:16,870 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:48:16,882 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 14:49:06,986 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:49:07,000 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:49:07,297 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 14:49:12,232 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:49:12,243 :: INFO :: Estimating the beam diameter relative to the depth
+Plotting 2020-02-22 14:49:27,515 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:49:27,530 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 14:50:34,744 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:50:34,760 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:50:35,414 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 14:50:44,823 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:50:44,837 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 14:51:12,474 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:51:12,546 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:51:12,875 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 14:51:19,873 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:51:19,887 :: INFO :: Make a 2d scan at specific depth
+Plotting 2020-02-22 14:51:27,415 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:51:27,426 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 14:51:57,613 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:51:57,627 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:51:57,930 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 14:52:04,103 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:52:04,115 :: INFO :: Make a 2d scan at specific depth
+Plotting 2020-02-22 14:52:07,374 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:52:07,386 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 14:52:34,591 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:52:34,602 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:52:34,898 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 14:52:39,884 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:52:39,896 :: INFO :: Make a 2d scan at specific depth
+Plotting 2020-02-22 14:52:43,137 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:52:43,151 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 14:54:04,690 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:54:04,702 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:54:04,996 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 14:54:10,819 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:54:10,832 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 14:55:26,854 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:55:26,866 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:55:27,167 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 14:55:33,613 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:55:33,625 :: INFO :: Make a 2d scan at specific depth
+Plotting 2020-02-22 14:55:41,028 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:55:41,041 :: INFO :: Make a 2d scan at specific depth
+Plotting 2020-02-22 14:55:45,128 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:55:45,141 :: INFO :: Make a 2d scan at specific depth
+Plotting 2020-02-22 14:55:49,863 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:55:49,875 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 14:57:58,343 :: INFO :: Analysis initialized
+Analysis 2020-02-22 14:57:58,358 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 14:57:58,678 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-22 14:58:05,816 :: INFO :: Plotting initialized
+Plotting 2020-02-22 14:58:05,830 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-22 15:00:56,266 :: INFO :: Analysis initialized
+Analysis 2020-02-22 15:00:56,280 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 15:00:56,583 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 18:19:15,178 :: INFO :: Analysis initialized
+Analysis 2020-02-22 18:19:15,232 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 18:19:17,434 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 18:30:13,426 :: INFO :: Analysis initialized
+Analysis 2020-02-22 18:30:13,430 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 18:30:14,361 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 19:03:12,052 :: INFO :: Analysis initialized
+Plotting 2020-02-22 19:03:12,643 :: INFO :: Plotting initialized
+Analysis 2020-02-22 19:03:53,098 :: INFO :: Analysis initialized
+Plotting 2020-02-22 19:03:53,382 :: INFO :: Plotting initialized
+Plotting 2020-02-22 19:03:53,382 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-22 19:04:48,205 :: INFO :: Analysis initialized
+Plotting 2020-02-22 19:04:48,432 :: INFO :: Plotting initialized
+Plotting 2020-02-22 19:04:48,432 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-22 19:05:59,335 :: INFO :: Analysis initialized
+Plotting 2020-02-22 19:05:59,563 :: INFO :: Plotting initialized
+Plotting 2020-02-22 19:05:59,563 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-22 19:07:08,914 :: INFO :: Analysis initialized
+Plotting 2020-02-22 19:07:09,148 :: INFO :: Plotting initialized
+Plotting 2020-02-22 19:07:09,148 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-22 19:07:30,403 :: INFO :: Analysis initialized
+Plotting 2020-02-22 19:07:30,640 :: INFO :: Plotting initialized
+Plotting 2020-02-22 19:07:30,640 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-22 19:09:04,439 :: INFO :: Analysis initialized
+Plotting 2020-02-22 19:09:04,663 :: INFO :: Plotting initialized
+Plotting 2020-02-22 19:09:04,663 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-22 19:09:24,575 :: INFO :: Analysis initialized
+Plotting 2020-02-22 19:09:24,803 :: INFO :: Plotting initialized
+Plotting 2020-02-22 19:09:24,803 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-22 19:09:43,286 :: INFO :: Analysis initialized
+Plotting 2020-02-22 19:09:43,508 :: INFO :: Plotting initialized
+Plotting 2020-02-22 19:09:43,509 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-22 19:10:44,339 :: INFO :: Analysis initialized
+Analysis 2020-02-22 19:10:44,342 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 19:10:45,396 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 19:12:18,345 :: INFO :: Analysis initialized
+Analysis 2020-02-22 19:12:18,349 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 19:12:18,709 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 19:12:45,500 :: INFO :: Analysis initialized
+Analysis 2020-02-22 19:12:45,503 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 19:12:45,853 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 19:13:25,131 :: INFO :: Analysis initialized
+Analysis 2020-02-22 19:13:25,135 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-22 19:13:25,462 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-22 19:41:34,656 :: INFO :: Analysis initialized
+Analysis 2020-02-22 19:43:02,757 :: INFO :: Analysis initialized
+Analysis 2020-02-22 19:44:49,655 :: INFO :: Analysis initialized
+Analysis 2020-02-22 19:46:25,269 :: INFO :: Analysis initialized

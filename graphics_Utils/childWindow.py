@@ -47,7 +47,7 @@ class ChildWindow(QWidget):
         self.WindowGroupBox.setLayout(plotLayout)
         logframe.setLayout(plotLayout) 
         
-    def ChildMenu(self, ChildWindow = None,firstitems=None, test_name = "Opening Angle Test",dir="opening_angle/", Fig =None, plot_prefix = None, name_prefix = "None"):
+    def ChildMenu(self, ChildWindow = None,csv = True, firstitems=None, test_name = "Opening Angle Test",dir="opening_angle/", Fig =None, plot_prefix = None, name_prefix = "None"):
         self._directory = self.test_directory+dir
         ChildWindow.setObjectName(test_name)
         ChildWindow.setWindowTitle(test_name)
@@ -74,7 +74,10 @@ class ChildWindow(QWidget):
             self.SubFilterGroupBox = None
             firstItem = self.get_firstItem()
             test_dir = self._directory+firstItem+"/" 
-            test_file = test_dir +name_prefix + firstItem +".csv" 
+            if csv is not None: 
+                test_file = test_dir +name_prefix + firstItem +".csv" 
+            else: 
+                test_file = test_dir +name_prefix + firstItem +".h5"
             self.openSubGroupMenu(ChildWindow = ChildWindow, firstItem = firstItem, test_file =test_file, test_dir = test_dir, plot_prefix= plot_prefix, name_prefix=name_prefix)
             FirstGridLayout.addWidget(self.SubFilterGroupBox,1,0)  
 
