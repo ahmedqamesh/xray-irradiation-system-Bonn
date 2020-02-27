@@ -6,7 +6,7 @@
 import time
 import threading
 import numpy as np
-from basil.HL.RegisterHardwareLayer import HardwareLayer
+from daq.HL.RegisterHardwareLayer import HardwareLayer
 from numpy import std
 import tables as tb
 import csv
@@ -14,15 +14,12 @@ import logging
 from tables import *
 import pandas as pd
 import matplotlib.pyplot as plt
-
-
-class Sourcemeter(HardwareLayer):
+class sourcemeter(HardwareLayer):
     '''Driver for  Sourcemeter 
     '''
-
     def __init__(self, intf, conf):
-        super(Sourcemeter, self).__init__(intf, conf)
-
+        super(sourcemeter, self).__init__(intf, conf)
+        
     def write(self, value):
         self._intf.write(str(value))
 
@@ -35,17 +32,17 @@ class Sourcemeter(HardwareLayer):
             cmd = 'SENS:CURR:PROT ' + str(LValue)
             self.write(cmd)
             self.write("SENS:CURR:PROT?")
-            print self.read()
+            print (self.read())
 
     def ask(self, value):
         self._intf.write(str(value))
         answer = self._intf._readline()
         return answer
 
-    def IV_Test(self, CurrentLimit=1.000000E-01, start_V=False, step_V=False, end_V=False,
+    def IV_test(self, CurrentLimit=1.000000E-01, start_V=False, step_V=False, end_V=False,
                 Itterations=False, Stat_Delay=False, Plot=False, chip_num=True):
         self.write('SENS:CURR:PROT ' + str(CurrentLimit))
-        print "The Protection Current limit is", self.ask("SENS:CURR:PROT?")
+        print ("The Protection Current limit is", self.ask("SENS:CURR:PROT?"))
         self.write(":SOUR:FUNC VOLT")
         # To save data as HDF5
         File = tb.open_file('/home/silab62/MasterWork/' + str(chip_num) + ".h5", 'w')
@@ -69,7 +66,7 @@ class Sourcemeter(HardwareLayer):
                 current_array.append(current)
                 mean = np.mean(current_array)
                 std = np.std(current_array)
-            print "Voltage = ", i, "", "Current = ", current_array, "", "Mean current = ", mean, "", "Error = ", std
+            print ("Voltage = ", i, "", "Current = ", current_array, "", "Mean current = ", mean, "", "Error = ", std)
             row["Voltage"] = i
             row["Mean_Current"] = mean
             row["Current"] = current
@@ -84,9 +81,9 @@ class Sourcemeter(HardwareLayer):
         df = pd.DataFrame({"Voltage": Voltage_array, "Mean_Current": mean_array, "std_Current": std_array})
         df.to_csv('/home/silab62/MasterWork/' + str(chip_num) + ".CSV", index=True)
         if Plot:
-            self.Plotting_IVcurve_Stat(Directory='/home/silab62/MasterWork/', h5=True)
+            self.Plotting_IVcurve_Stat(Directory='/home/silab62/MasterWork/', h5=True, Multiple=True)
 
-    def Plotting_IVcurve_Stat(self, Directory=False, h5=False):
+    def Plotting_IVcurve_Stat(self, Directory=False, h5=False, Multiple=True):
         meas_curr = []
         meas_stdcurr = []
         meas_volt = []
@@ -101,7 +98,7 @@ class Sourcemeter(HardwareLayer):
                     plot_min = np.append(plot_min, min(curr_min))
                     plt.errorbar(IV_Results['Voltage'], IV_Results['Mean_Current'] * 1e9, fmt='o', marker='o',
                                  label=("Diode %s " % str(chip_num)), yerr=IV_Results['std_Current'] * 5e10)
-                print "finished load for chip", chip_num
+                print ("finished load for chip", chip_num)
             plt.legend()
             plt.ylim(min(plot_min) * 1e10 / 5, 1)
             plt.xlabel("Negative Voltage (V)")
@@ -124,7 +121,7 @@ class Sourcemeter(HardwareLayer):
                         meas_stdcurr = np.append(meas_stdcurr, float(row[3]))
                         curr_min = np.append(curr_min, np.min(meas_curr))
                         curr_max = np.append(curr_max, np.max(meas_curr))
-                    print "finished load for chip", chip_num
+                    print ("finished load for chip", chip_num)
                     plot_min = np.append(plot_min, min(curr_min))
                     plt.errorbar(meas_volt, meas_curr * 1e9, fmt='o', marker='o', label=("Chip %s Average" % str(chip_num)), yerr=meas_stdcurr * 1e11)
             plt.legend()
@@ -140,6 +137,6 @@ class Sourcemeter(HardwareLayer):
         self.write("*RST")
         self.write(":SOUR:VOLT:RANG 60")
         self.write('SENS:CURR:PROT ' + str(CurrentLimit))
-        print "The Protection Current limit is", self.ask("SENS:CURR:PROT?")
+        print ("The Protection Current limit is", self.ask("SENS:CURR:PROT?"))
         self.write(":SOUR:FUNC VOLT")
         self.write(':SOUR:VOLT ' + str(BiasedVolt))

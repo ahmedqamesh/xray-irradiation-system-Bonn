@@ -28,7 +28,7 @@ if __name__ == '__main__':
     period = conf['Settings']['period']
     x=conf['Settings']['x']
     size_z=conf['Settings']['size_z']
-    sourcemeter= False
+    sourcemeter= True
     depth= conf['Settings']['depth'] 
     scan = analysis_utils.BeamSpotScan()
     s = scan.compute_move(size_x=size_x, z=z,z_Delay=z_Delay, x_Delay=x_Delay, x=x, size_z=size_z,
