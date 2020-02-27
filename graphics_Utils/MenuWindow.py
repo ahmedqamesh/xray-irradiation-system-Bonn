@@ -308,7 +308,7 @@ class MenuBar(QWidget):
                                       firstitems=self.__depthList,
                                       test_name="Absorbed Dose vs. Tube Current",
                                       dir="dose_current/" + text + "/",
-                                      name_prefix="dose_current_",
+                                      name_prefix="dose_current_"+text+"_",
                                       plot_prefix="dose_current")
         self.mainwindow.show()     
             
@@ -319,7 +319,7 @@ class MenuBar(QWidget):
                                       firstitems=self.__depthList,
                                       test_name="Absorbed Dose vs. Tube Voltage",
                                       dir="dose_voltage/" + text + "/",
-                                      name_prefix="dose_voltage_",
+                                      name_prefix="dose_voltage_"+text+"_",
                                       plot_prefix="dose_voltage")
         self.mainwindow.show()     
     

@@ -69,14 +69,14 @@ class PlottingCanvas(FigureCanvas):
             self.IV_test(tests = tests , test_file=test_file)
         
         if plot_prefix =="dose_current":
-            print(tests , test_file)
-            #self.IV_test(tests = tests , test_file=test_file)
+            self.dose_current(tests = tests , test_file=test_file, voltages = ["30kV", "40kV"])
 
         if plot_prefix =="dose_voltage":
-            self.dose_voltage(tests = tests , test_file=test_file)
+            self.dose_voltage(tests = tests , test_file=test_file, currents = ["10mA", "20mA", "30mA", "40mA"])
 
         if plot_prefix =="dose_depth":
-            self.dose_depth(tests = tests , test_file=test_file)    
+            self.dose_depth(tests = tests , test_file=test_file)
+            
         if plot_prefix =="beamspot":
             self.Plot_Beam_profile_2d(tests = tests , test_file=test_file, depth = tests)
                                       
@@ -250,85 +250,91 @@ class PlottingCanvas(FigureCanvas):
             self.ax.set_xlabel('Diameter (d) [cm]')
             self.ax.set_ylabel('Height from the the collimator holder(h) [cm]')
             self.ax.grid(True)
-    
-    def dose_current(self, test_file=False, PdfPages=False, stdev=0.06, tests=[0], table=True, Voltages=[0]):
+
+    def dose_voltage(self, tests =None, test_file =None, currents = [0]):
+        '''
+        Effect of tube Voltage on the Dose, the available data is only without Filter
+        '''
+        self.log.info('Effect of tube Voltage at %s on the Dose' % (tests[0]))
+        y1 = []
+        x1 = []
+        stdev = 0.06
+        Dataset = []
+        col_row = plt.cm.BuPu(np.linspace(0.3, 0.9, len(currents)))
+        for i in range(len(currents)):
+            x = []
+            y = []
+            Background = [0.00801e-06]
+            Factor = [9.76]
+            with open(test_file[:-7]+currents[i] + ".csv", 'r')as data1:
+                reader = csv.reader(data1)
+                next(reader)
+                for row in reader:
+                    x = np.append(x, float(row[0]))
+                    y = np.append(y, (float(row[1]) - Background[0]) * Factor[0])
+            x1.append(x)
+            y1.append(y)
+            sig = [stdev * y1[i][k] for k in range(len(y1[i]))]
+            #Dataset = np.append(Dataset, build_dataset(x1[i], y1[i], yabserr=sig, title='I=%s' % currents[i], axis_labels=['Voltage (kV)', '$Dose rate [Mrad(sio_2)/hr]$']))
+            popt, pcov = curve_fit(an.quadratic, x1[i], y1[i], sigma=sig, absolute_sigma=True, maxfev=5000, p0=(1, 1, 1))
+            xfine = np.linspace(0., max(x1[i]), 100)
+            self.ax.plot(xfine, an.quadratic(xfine, *popt), color=col_row[i])
+            chisq = an.red_chisquare(np.array(y1[i]), an.quadratic(x1[i], *popt), np.array(sig), popt)
+            self.ax.errorbar(x1[i], y1[i], yerr=sig, color=col_row[i], fmt='o',
+                        label='I=%s' % (currents[i]))
+            self.ax.text(0.95, 0.90, "y[$Mrad(sio_2)/hr$]= a$\mathrm{x}^2$ + bx+c",
+                    horizontalalignment='right', verticalalignment='top', transform=self.ax.transAxes,
+                    bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.7))
+        self.ax.set_title('Effect of the tube voltage at ' + tests[0], fontsize=12)
+        self.ax.set_ylabel('Dose rate [$Mrad(sio_2)/hr$]')
+        self.ax.set_xlabel('Voltage (kV)')
+        self.ax.grid(True)
+        self.ax.legend()
+        self.ax.ticklabel_format(useOffset=False)
+        self.ax.set_xlim(xmin=5)
+        self.ax.set_ylim(ymin=0)
+           
+    def dose_current(self, test_file=False, tests=[0], voltages=[0]):
         '''
         To get the calibration curves for each current
         For each Measurement you make you need to replace the numbers 0 in Background, Factor, .....by your measurement
         Background =  array of background estimated for each depth
          '''
         self.log.info('Get the calibration curves for each current')
-        for test in range(len(tests)):
-            fig = plt.figure()
-            ax = fig.add_subplot(111)
-            volt_row = []
-            fit_para = []
-            for volt in Voltages:
-                x1 = []
-                y1 = []
-                y2 = []
-                bkg_y1 = []
-                bkg_y2 = []
-                Factor = []
-                difference = []
-                with open(test_file, 'r')as data:  # Get Data for the first Voltage
-                    reader = csv.reader(data)
-                    next(reader)
-                    for row in reader:
-                        x1 = np.append(x1, float(row[0]))
-                        y1 = np.append(y1, (float(row[1]) - float(row[2])) * float(row[5]))
-                        bkg_y1 = np.append(bkg_y1, float(row[2]))
-
-                        y2 = np.append(y2, (float(row[3]) - float(row[4])) * float(row[5]))  # Data with Al filter
-                        bkg_y2 = np.append(bkg_y2, float(row[4]))
-                        Factor = np.append(Factor, float(row[5]))
-                        difference = np.append(difference, (float(row[3]) - float(row[1])) / float(row[3]) * 100)
-                    self.log.info("Start Plotting calibration curves at %s , %s" % (depth[i], volt))
-                    # Calibrating data with Filter
-                    sig1 = [stdev * y1[k] for k in range(len(y1))]
-                    popt1, pcov = curve_fit(an.linear, x1, y1, sigma=sig1, absolute_sigma=True, maxfev=5000, p0=(1, 1))
-                    chisq1 = an.red_chisquare(np.array(y1), an.linear(x1, *popt1), np.array(sig1), popt1)
-                    ax.errorbar(x1, y1, yerr=sig1, color=colors[Voltages.index(volt)], fmt='o')
-                    ax.plot(x1, an.linear(x1, *popt1), linestyle='--', color=colors[Voltages.index(volt)], label="%s, %s" % (volt, "Al Filter"))
-                    
-                    # Calibrating data without Filter
-                    sig2 = [stdev * y2[k] for k in range(len(y2))]
-                    popt2, pcov = curve_fit(an.linear, x1, y2, sigma=sig2, absolute_sigma=True, maxfev=5000, p0=(1, 1))
-                    chisq2 = an.red_chisquare(np.array(y2), an.linear(x1, *popt2), np.array(sig2), popt2)
-                    ax.errorbar(x1, y2, yerr=sig2, color=colors[Voltages.index(volt)], fmt='o')
-                    ax.plot(x1, an.linear(x1, *popt2), linestyle='-', color=colors[Voltages.index(volt)], label="%s, %s" % (volt, "No Filter"))
-                    
-                    # List the fit parameters into a table
-                    filter = [volt + ", Filter", volt + ", No Filter"]
-                    for f in arange(0, 2):
-                        volt_row = np.append(volt_row, filter[f])
-                    fit_para = np.append(fit_para, (popt1, popt2))
-                    
-            ax.text(0.95, 0.90, "y[$Mrad(sio_2)/hr$]= m$x$+c",
-                    horizontalalignment='right', verticalalignment='top', transform=ax.transAxes,
+        y1 = []
+        x1 = []
+        stdev = 0.06
+        col_row = plt.cm.BuPu(np.linspace(0.3, 0.9, len(voltages)))
+        for i in range(len(voltages)):
+            x = []
+            y = []
+            Factor = [9.76]
+            with open(test_file[:-7]+voltages[i] + ".csv", 'r')as data:  # Get Data for the first current
+                reader = csv.reader(data)
+                next(reader)
+                for row in reader:
+                    x = np.append(x, float(row[0]))
+                    y = np.append(y, (float(row[1]) - float(row[2])) * Factor[0])
+            x1.append(x)
+            y1.append(y)
+            sig = [stdev * y1[i][k] for k in range(len(y1[i]))]
+            popt, pcov = curve_fit(an.linear, x1[i], y1[i], sigma=sig, absolute_sigma=True, maxfev=5000, p0=(1, 1))
+            self.ax.errorbar(x1[i], y1[i], yerr=sig, color=col_row[i], fmt='o', label='V = %s' % (voltages[i]))
+            xfine = np.linspace(0., max(x1[i]), 100)
+            self.ax.plot(xfine, an.linear(xfine, *popt), color=col_row[i])           
+            self.ax.text(0.95, 0.90, "y[$Mrad(sio_2)/hr$]= m$x$+c",
+                    horizontalalignment='right', verticalalignment='top', transform=self.ax.transAxes,
                     bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.7))
-            plt.ticklabel_format(useOffset=False)
-            plt.xlim(0, 60)
-            ax.set_title('Calibration curve for ' + depth[i], fontsize=12)
-            ax.set_ylabel('Dose rate [$Mrad(sio_2)/hr$]')
-            ax.grid(True)
+            self.ax.ticklabel_format(useOffset=False)
+            self.ax.set_title('Effect of the tube current at ' + tests[0], fontsize=12)
+            self.ax.set_ylabel('Dose rate [$Mrad(sio_2)/hr$]')
+            self.ax.set_xlabel('Tube current [mA]')
+            self.ax.grid(True)
+            self.ax.legend()
+            self.ax.ticklabel_format(useOffset=False)
+            self.ax.set_xlim(xmin=0)
+            #self.ax.set_ylim(ymin=0)
             
-            if table:
-                rows = volt_row
-                columns = ['m', 'c']
-                ax2.table(cellText=[np.round(fit_para[0:2], 2), np.round(fit_para[2:4], 2), np.round(fit_para[4:6], 2), np.round(fit_para[6:8], 2)],
-                          rowLabels=rows,
-                          colColours=["lightgray", "lightgray", "lightgray"],
-                          colLabels=columns, cellLoc='center', rowLoc='center', loc='center', fontsize=8)
-                plt.subplots_adjust(bottom=0.1)
-                ax2.set_axis_off()
-            ax.legend()  # prop={'size': 8}
-            ax.set_xlabel('Tube current [mA]')
-            plt.tight_layout()
-            plt.savefig(Directory + subdirectory + 'dose_current_' + depth[i] + ".png", bbox_inches='tight')
-            PdfPages.savefig()
-                        
-
     def dose_depth(self,tests = False , test_file=False, voltage="40 kV", current="50 mA", stdev=0.2, theta=0.16):
         '''
         Relation between the depth and  the Dose rate
@@ -372,7 +378,6 @@ class PlottingCanvas(FigureCanvas):
         return a, b, c
     
 
-
     def dose_drop(self, Directory=False, PdfPages=False, stdev=0.06, depth=[0], Voltages=[0]):
         '''
         Dose drop after Al filter at two Voltages.
@@ -412,49 +417,7 @@ class PlottingCanvas(FigureCanvas):
             plt.savefig(Directory + subdirectory + 'dose_current_drop' + depth[i] + ".png", bbox_inches='tight')
             PdfPages.savefig()
 
-    def dose_voltage(self, tests =None, test_file =None):
-        '''
-        Effect of tube Voltage on the Dose, the available data is only without Filter
-        '''
-        self.log.info('Effect of tube Voltage at %s on the Dose' % (tests[0]))
-        y1 = []
-        x1 = []
-        Dataset = []
-        Current = ["10mA", "20mA", "30mA", "40mA"]
-        col_row = plt.cm.BuPu(np.linspace(0.3, 0.9, len(Current)))
-        for i in range(len(Current)):
-            x = []
-            y = []
-            Background = [0.00801e-06]
-            Factor = [9.76]
-            with open(test_file[:-7]+Current[i] + ".csv", 'r')as data1:
-                reader = csv.reader(data1)
-                next(reader)
-                for row in reader:
-                    x = np.append(x, float(row[0]))
-                    y = np.append(y, (float(row[1]) - Background[0]) * Factor[0])
-            x1.append(x)
-            y1.append(y)
-            stdev = 0.06
-            sig = [stdev * y1[i][k] for k in range(len(y1[i]))]
-            Dataset = np.append(Dataset, build_dataset(x1[i], y1[i], yabserr=sig, title='I=%s' % Current[i], axis_labels=['Voltage (kV)', '$Dose rate [Mrad(sio_2)/hr]$']))
-            popt, pcov = curve_fit(an.quadratic, x1[i], y1[i], sigma=sig, absolute_sigma=True, maxfev=5000, p0=(1, 1, 1))
-            xfine = np.linspace(0., 60., 100)
-            self.ax.plot(xfine, an.quadratic(xfine, *popt), color=col_row[i])
-            chisq = an.red_chisquare(np.array(y1[i]), an.quadratic(x1[i], *popt), np.array(sig), popt)
-            self.ax.errorbar(x1[i], y1[i], yerr=sig, color=col_row[i], fmt='o',
-                        label='I=%s' % (Current[i]))
-            self.ax.text(0.95, 0.90, "y[$Mrad(sio_2)/hr$]= a$\mathrm{x}^2$ + bx+c",
-                    horizontalalignment='right', verticalalignment='top', transform=self.ax.transAxes,
-                    bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.7))
-        self.ax.set_title('Effect of the tube voltage at ' + tests[0] + " " + "for unfiltered beam", fontsize=12)
-        self.ax.set_ylabel('Dose rate [$Mrad(sio_2)/hr$]')
-        self.ax.set_xlabel('Voltage (kV)')
-        self.ax.grid(True)
-        self.ax.legend()
-        self.ax.ticklabel_format(useOffset=False)
-        self.ax.set_xlim(xmin=5)
-        self.ax.set_ylim(ymin=0)
+
                           
     def power_2d(self, Directory=False, PdfPages=False, size_I=50, size_V=60, V_limit=50, I_limit=50):
         '''

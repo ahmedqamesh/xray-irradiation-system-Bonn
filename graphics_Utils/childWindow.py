@@ -77,7 +77,7 @@ class ChildWindow(QWidget):
             if csv is not None: 
                 test_file = test_dir +name_prefix + firstItem +".csv" 
             else: 
-                test_file = test_dir +name_prefix + firstItem +".h5"
+                test_file = test_dir +name_prefix + firstItem +".h5"    
             self.openSubGroupMenu(ChildWindow = ChildWindow, firstItem = firstItem, test_file =test_file, test_dir = test_dir, plot_prefix= plot_prefix, name_prefix=name_prefix)
             FirstGridLayout.addWidget(self.SubFilterGroupBox,1,0)  
 
@@ -112,8 +112,12 @@ class ChildWindow(QWidget):
         close_button.setStatusTip('close session') # show when move mouse to the icon
         
         if ChildWindow is not None:
-            test_date =time.ctime(os.path.getmtime(test_file))
-            test_modify = time.ctime(os.path.getctime(test_file))
+            try: 
+                test_date =time.ctime(os.path.getmtime(test_file))
+                test_modify = time.ctime(os.path.getctime(test_file))
+            except Exception:
+                test_date =time.ctime(os.path.getmtime(test_dir))
+                test_modify = time.ctime(os.path.getctime(test_dir))
             secondtextbox = QLineEdit(test_dir)
             secondTextBoxValue = secondtextbox.text()
             thirdtextbox = QLineEdit(test_date)

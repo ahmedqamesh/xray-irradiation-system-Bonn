@@ -4299,3 +4299,221 @@ Analysis 2020-02-22 19:41:34,656 :: INFO :: Analysis initialized
 Analysis 2020-02-22 19:43:02,757 :: INFO :: Analysis initialized
 Analysis 2020-02-22 19:44:49,655 :: INFO :: Analysis initialized
 Analysis 2020-02-22 19:46:25,269 :: INFO :: Analysis initialized
+Analysis 2020-02-27 10:24:21,110 :: INFO :: Analysis initialized
+Analysis 2020-02-27 10:24:21,119 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 10:24:21,232 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-27 10:26:42,256 :: INFO :: Analysis initialized
+Analysis 2020-02-27 10:26:42,257 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 10:26:42,381 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-27 10:28:44,235 :: INFO :: Analysis initialized
+Analysis 2020-02-27 10:28:44,237 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 10:28:44,344 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-27 10:35:18,322 :: INFO :: Analysis initialized
+Analysis 2020-02-27 10:35:18,324 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 10:35:18,431 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-27 10:38:23,299 :: INFO :: Analysis initialized
+Analysis 2020-02-27 10:38:23,301 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 10:38:23,398 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-27 10:41:15,369 :: INFO :: Analysis initialized
+Analysis 2020-02-27 10:41:15,371 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 10:41:15,473 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-27 10:41:51,260 :: INFO :: Analysis initialized
+Analysis 2020-02-27 10:41:51,261 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 10:41:51,379 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 10:41:58,385 :: INFO :: Plotting initialized
+Plotting 2020-02-27 10:41:58,394 :: INFO :: Effect of tube Voltage at 8cm on the Dose
+Analysis 2020-02-27 10:43:06,507 :: INFO :: Analysis initialized
+Analysis 2020-02-27 10:43:06,509 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 10:43:06,610 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 10:43:12,636 :: INFO :: Plotting initialized
+Plotting 2020-02-27 10:43:12,649 :: INFO :: Effect of tube Voltage at 8cm on the Dose
+Analysis 2020-02-27 11:01:59,130 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:01:59,138 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:01:59,245 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-27 11:11:50,675 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:11:50,682 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:11:50,778 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:11:57,108 :: INFO :: Plotting initialized
+Analysis 2020-02-27 11:13:31,516 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:13:31,523 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:13:31,641 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:13:36,695 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:13:36,706 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:13:47,709 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:13:47,716 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:13:47,808 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:13:52,470 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:13:52,479 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:14:15,722 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:14:15,730 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:14:15,832 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-27 11:14:53,765 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:14:53,767 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:14:53,871 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:15:00,095 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:15:00,104 :: INFO :: Effect of tube Voltage at 8cm on the Dose
+Plotting 2020-02-27 11:15:06,595 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:15:06,610 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:17:55,282 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:17:55,293 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:17:55,421 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:18:00,251 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:18:00,261 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:19:03,251 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:19:03,258 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:19:03,353 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:19:08,227 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:19:08,238 :: INFO :: Get the calibration curves for each current
+matplotlib.legend 2020-02-27 11:19:08,243 :: WARNING :: No handles with labels found to put in legend.
+matplotlib.legend 2020-02-27 11:19:08,246 :: WARNING :: No handles with labels found to put in legend.
+Plotting 2020-02-27 11:19:27,648 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:19:27,662 :: INFO :: Get the calibration curves for each current
+matplotlib.legend 2020-02-27 11:19:27,667 :: WARNING :: No handles with labels found to put in legend.
+matplotlib.legend 2020-02-27 11:19:27,671 :: WARNING :: No handles with labels found to put in legend.
+Analysis 2020-02-27 11:20:04,247 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:20:04,254 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:20:04,360 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:20:09,372 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:20:09,384 :: INFO :: Get the calibration curves for each current
+matplotlib.legend 2020-02-27 11:20:09,391 :: WARNING :: No handles with labels found to put in legend.
+matplotlib.legend 2020-02-27 11:20:09,397 :: WARNING :: No handles with labels found to put in legend.
+Analysis 2020-02-27 11:21:03,765 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:21:03,772 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:21:03,882 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-27 11:21:27,120 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:21:27,122 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:21:27,232 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:21:31,647 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:21:31,658 :: INFO :: Get the calibration curves for each current
+matplotlib.legend 2020-02-27 11:21:31,664 :: WARNING :: No handles with labels found to put in legend.
+matplotlib.legend 2020-02-27 11:21:31,669 :: WARNING :: No handles with labels found to put in legend.
+Analysis 2020-02-27 11:22:44,282 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:22:44,289 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:22:44,391 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:22:49,251 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:22:49,260 :: INFO :: Get the calibration curves for each current
+matplotlib.legend 2020-02-27 11:22:49,266 :: WARNING :: No handles with labels found to put in legend.
+matplotlib.legend 2020-02-27 11:22:49,270 :: WARNING :: No handles with labels found to put in legend.
+Analysis 2020-02-27 11:24:36,999 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:24:37,006 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:24:37,110 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:24:41,349 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:24:41,358 :: INFO :: Get the calibration curves for each current
+matplotlib.legend 2020-02-27 11:24:41,362 :: WARNING :: No handles with labels found to put in legend.
+matplotlib.legend 2020-02-27 11:24:41,365 :: WARNING :: No handles with labels found to put in legend.
+Plotting 2020-02-27 11:24:48,587 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:24:48,597 :: INFO :: Get the calibration curves for each current
+matplotlib.legend 2020-02-27 11:24:48,601 :: WARNING :: No handles with labels found to put in legend.
+matplotlib.legend 2020-02-27 11:24:48,604 :: WARNING :: No handles with labels found to put in legend.
+Plotting 2020-02-27 11:24:51,587 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:24:51,596 :: INFO :: Get the calibration curves for each current
+matplotlib.legend 2020-02-27 11:24:51,600 :: WARNING :: No handles with labels found to put in legend.
+matplotlib.legend 2020-02-27 11:24:51,603 :: WARNING :: No handles with labels found to put in legend.
+Plotting 2020-02-27 11:24:53,670 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:24:53,679 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:25:25,019 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:25:25,027 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:25:25,133 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:25:29,628 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:25:29,637 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:26:07,437 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:26:07,444 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:26:07,553 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:26:11,319 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:26:11,329 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:26:58,601 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:26:58,607 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:26:58,703 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:27:09,133 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:27:09,146 :: INFO :: Effect of tube Voltage at 8cm on the Dose
+Analysis 2020-02-27 11:27:19,604 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:27:19,612 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:27:19,724 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:27:25,747 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:27:25,757 :: INFO :: Effect of tube Voltage at 8cm on the Dose
+Analysis 2020-02-27 11:28:48,015 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:28:48,023 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:28:48,135 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:28:53,283 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:28:53,292 :: INFO :: Effect of tube Voltage at 8cm on the Dose
+Analysis 2020-02-27 11:29:05,909 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:29:05,917 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:29:06,017 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:29:11,833 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:29:11,843 :: INFO :: Get the calibration curves for each current
+matplotlib.legend 2020-02-27 11:29:11,849 :: WARNING :: No handles with labels found to put in legend.
+matplotlib.legend 2020-02-27 11:29:11,853 :: WARNING :: No handles with labels found to put in legend.
+Plotting 2020-02-27 11:29:57,460 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:29:57,474 :: INFO :: Effect of tube Voltage at 8cm on the Dose
+Analysis 2020-02-27 11:31:03,924 :: INFO :: Analysis initialized
+Analysis 2020-02-27 11:31:03,931 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-27 11:31:04,027 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-27 11:31:09,950 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:31:09,961 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:32:02,470 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:32:02,669 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:32:02,670 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:36:01,822 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:36:02,028 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:36:02,028 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-27 11:36:23,378 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:36:23,545 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:36:23,546 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-27 11:36:36,674 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:36:36,829 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:36:36,829 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-27 11:36:47,024 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:36:47,241 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:36:47,242 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-27 11:36:59,231 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:36:59,392 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:36:59,392 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-27 11:37:05,862 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:37:06,074 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:37:06,074 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-27 11:37:12,573 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:37:12,740 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:37:12,740 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-27 11:52:40,536 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:52:40,759 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:52:40,760 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:52:52,084 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:52:52,253 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:52:52,253 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:52:59,340 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:52:59,558 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:52:59,558 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:53:30,990 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:53:31,202 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:53:31,202 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:54:23,817 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:54:24,028 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:54:24,029 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:54:39,197 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:54:39,409 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:54:39,409 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:54:48,754 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:54:48,971 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:54:48,971 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:56:38,009 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:56:38,225 :: INFO :: Plotting initialized
+Analysis 2020-02-27 11:57:00,730 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:57:00,932 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:57:00,933 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:57:34,492 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:57:34,689 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:57:34,689 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:58:08,103 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:58:08,313 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:58:08,314 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:58:40,375 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:58:40,601 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:58:40,602 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-27 11:58:56,548 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:58:56,763 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:58:56,763 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-27 11:58:58,089 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-27 11:59:05,974 :: INFO :: Analysis initialized
+Plotting 2020-02-27 11:59:06,140 :: INFO :: Plotting initialized
+Plotting 2020-02-27 11:59:06,140 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-27 11:59:07,116 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
