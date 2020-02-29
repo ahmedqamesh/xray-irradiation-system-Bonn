@@ -21,7 +21,7 @@ Tests:
    current         : ["30kV","40kV"]
    photodiodes    : 
       ---: {"factor": "---"}
-      A: {"factor": "9.85"}
+      A: {"factor": "9.847"}
       B: {"factor": "9.81"}
       C: {"factor": "9.78"}
 

@@ -10,6 +10,9 @@ def inv_linear(y, m, c):
 def Inverse_square(x, a, b, c):
     return a / (x + b)**2 - c
 
+def quadratic(x, a, b, c):
+    return a*x**2+b*x+c
+
 def opening_angle(h=None, r=None):
     #The function will return  radius if h is given 
     #The function will return  height if r is given
@@ -67,8 +70,49 @@ def dose_current(I=None, d= None, depth ="3cm", filter= "without"):
             if depth == "8cm":
                 result=inv_linear(d,0.04,-0.05)
     return result            
+
+
+def dose_voltage(V=None, d= None, current ="10A", filter= "without",  depth ="8cm"):
+    #The function will return  dose if V is given 
+    if filter == "without":
+        if current == "10A":
+            result=quadratic(V,-0.001,0.068,-0.404)
+
+        if current == "20A":
+            result=quadratic(V,-0.001,0.139,-0.919)
+        
+        if current == "30A":
+            result=quadratic(V,-0.002,0.208,-1.423)
+                            
+        if current == "40A":
+            result=quadratic(V,-0.002,0.279,-1.932)                            
+        else: print("Not yet")  
+    else:   print("Not yet")
+        
+    return result 
+
+def dose_depth(h = None, filter = "without"):
+    if h is not None:
+        if filter == "without":
+            result = Inverse_square(h,1391.77,6.20,0.13)
+        
+        if filter == "Al":
+            result = Inverse_square(h,431.19,6.75,0.03)
+    if h is None: 
+        if filter == "without":
+            R2 = 1 
+            h2 = 2
+            result = R2*((h2-6.75)/(h-6.75))**2
+        if filter == "Al":
+            R2 = 1 
+            h2 = 2
+            result = R2*((h-6.75)/(h2-6.75))**2
+                    
+    return result
 if __name__ == '__main__':
     r = opening_angle(h = 60)
     h = opening_angle(r = 5)
-    d = dose_current(I = 40, filter = "Al", depth ="3cm")
-    print (r, h, d)
+    dC = dose_current(I = 40, filter = "Al", depth ="3cm")
+    dV = dose_voltage(V = 30, filter = "without", depth ="8cm")
+    dD = dose_depth(h = 30, filter = "without")
+    print (r, h,dC,dV, dD)

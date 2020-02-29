@@ -88,11 +88,11 @@ class MainWindow(QMainWindow):
         
         # SetLayout
         mainLayout = QGridLayout()
-        mainLayout.addWidget(self.topLeftTabGroupBox, 1, 0)
+        #mainLayout.addWidget(self.topLeftTabGroupBox, 1, 0)
         mainLayout.addWidget(self.topRightGroupBox, 1, 1)
-        mainLayout.addWidget(self.bottomLeftGroupBox, 2, 0)
+        #mainLayout.addWidget(self.bottomLeftGroupBox, 2, 0)
         mainLayout.addWidget(self.bottomRightGroupBox , 2, 1)
-        mainLayout.addWidget(self.progressBar, 3, 0, 1, 2)
+        #mainLayout.addWidget(self.progressBar, 3, 0, 1, 2)
         
         mainFrame.setLayout(mainLayout)
         # 3. Show

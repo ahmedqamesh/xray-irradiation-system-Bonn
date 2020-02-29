@@ -34,7 +34,6 @@ from logging.handlers import RotatingFileHandler
 import coloredlogs as cl
 import verboselogs
 log = logger.setup_derived_logger('analysis utils')
-from daq.dut import Dut
 rootdir = os.path.dirname(os.path.abspath(__file__))
 class BeamSpotScan(object):
 
@@ -57,20 +56,20 @@ class BeamSpotScan(object):
         '''
         size_x = size_x*57000
         size_z=size_z*57000
-        if sourcemeter:
-            #dut = Dut('Scanning_pyserial.yaml')
-            dut = Dut(rootdir[:-8]+"daq/examples/keithley2400_pyserial.yaml")
-            dut.init()
-            dut['sm'].write(":OUTP ON")
-            #dut['sm'].write("*RST")
-            #dut['sm'].write(":SOUR:VOLT:RANG 60")
-            #dut['sm'].write('SENS:CURR:PROT ' + str(CurrentLimit))
-            #print "The Protection Current limit is", dut['sm'].ask("SENS:CURR:PROT?")
-            dut['sm'].write(":SOUR:FUNC VOLT")
-            dut['sm'].write(':SOUR:VOLT 50')
-        else:
-            dut = Dut('motorstage_Pyserial.yaml')
-            dut.init()
+#         if sourcemeter:
+#             #dut = Dut('Scanning_pyserial.yaml')
+#             dut = Dut(rootdir[:-8]+"daq/examples/keithley2400_pyserial.yaml")
+#             dut.init()
+#             dut['sm'].write(":OUTP ON")
+#             #dut['sm'].write("*RST")
+#             #dut['sm'].write(":SOUR:VOLT:RANG 60")
+#             #dut['sm'].write('SENS:CURR:PROT ' + str(CurrentLimit))
+#             #print "The Protection Current limit is", dut['sm'].ask("SENS:CURR:PROT?")
+#             dut['sm'].write(":SOUR:FUNC VOLT")
+#             dut['sm'].write(':SOUR:VOLT 50')
+#         else:
+#             dut = Dut('motorstage_Pyserial.yaml')
+#             dut.init()
         def fill_snake_pattern(step_z=False,sourcemeter = sourcemeter, size_z=None, a=None, b=None , c=None, size_x=None, x_Delay=None, z_Delay=z_Delay, directory=None):            
              first_point = True
              for step_x in tqdm(np.arange(a, b, c) , unit='xstep'):

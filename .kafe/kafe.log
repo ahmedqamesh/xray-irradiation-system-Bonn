@@ -4526,3 +4526,841 @@ analysis.analysis_utils 2020-02-27 16:26:05,270 :: SUCCESS :: Beam Spot Scanning
 analysis.analysis_utils 2020-02-27 16:28:28,118 :: SUCCESS :: Beam Spot Scanning ...
 analysis.analysis_utils 2020-02-27 16:32:05,002 :: SUCCESS :: Beam Spot Scanning ...
 analysis.analysis_utils 2020-02-27 16:32:19,077 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-28 06:21:00,485 :: INFO :: Analysis initialized
+Analysis 2020-02-28 06:21:00,523 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-28 06:21:01,938 :: SUCCESS :: Beam Spot Scanning ...
+Plotting 2020-02-28 06:21:17,301 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:21:17,315 :: INFO :: Effect of tube Voltage at 8cm on the Dose
+Analysis 2020-02-28 06:22:42,064 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:22:42,471 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:22:42,471 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 06:22:46,542 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 06:23:57,951 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:23:58,188 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:23:58,188 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 06:24:35,356 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:24:35,562 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:24:35,563 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 06:25:45,038 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:25:45,252 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:25:45,252 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 06:26:04,264 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:26:04,538 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:26:04,539 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 06:26:33,317 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:26:33,523 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:26:33,523 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 06:27:11,064 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:27:11,269 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:27:11,269 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 06:27:42,356 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:27:42,564 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:27:42,564 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 06:31:54,133 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:31:54,434 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:31:54,435 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 06:31:55,993 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 06:32:00,982 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:32:01,250 :: INFO :: Plotting initialized
+Analysis 2020-02-28 06:32:14,798 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:32:15,039 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:32:15,039 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:32:45,797 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:32:46,027 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:32:46,027 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:33:38,269 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:33:38,498 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:33:38,498 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:35:43,205 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:35:43,417 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:35:43,418 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:36:49,156 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:36:49,384 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:36:49,384 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 06:38:45,138 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:38:45,364 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:38:45,364 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 06:38:58,380 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:38:58,608 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:38:58,608 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:40:39,401 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:40:39,724 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:40:39,724 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:41:42,734 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:41:43,013 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:41:43,013 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 06:43:45,370 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:43:45,660 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:43:45,661 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:45:16,676 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:45:16,892 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:45:16,892 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:47:31,536 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:47:31,761 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:47:31,761 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:48:59,768 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:49:00,094 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:49:00,094 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:49:27,669 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:49:27,893 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:49:27,893 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:49:59,077 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:49:59,347 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:49:59,347 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:50:10,041 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:50:10,281 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:50:10,281 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:50:25,517 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:50:25,758 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:50:25,759 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:53:21,726 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:53:21,950 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:53:21,950 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:53:47,126 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:53:47,342 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:53:47,342 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:54:19,192 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:54:19,414 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:54:19,414 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:54:58,582 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:54:58,816 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:54:58,816 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:55:57,925 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:55:58,146 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:55:58,147 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:58:21,434 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:58:21,736 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:58:21,736 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:58:54,413 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:58:54,643 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:58:54,643 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 06:59:42,798 :: INFO :: Analysis initialized
+Plotting 2020-02-28 06:59:43,019 :: INFO :: Plotting initialized
+Plotting 2020-02-28 06:59:43,019 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 07:00:27,142 :: INFO :: Analysis initialized
+Plotting 2020-02-28 07:00:27,356 :: INFO :: Plotting initialized
+Plotting 2020-02-28 07:00:27,356 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 07:00:48,921 :: INFO :: Analysis initialized
+Plotting 2020-02-28 07:00:49,163 :: INFO :: Plotting initialized
+Plotting 2020-02-28 07:00:49,164 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 07:00:50,739 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 07:02:06,779 :: INFO :: Analysis initialized
+Plotting 2020-02-28 07:02:07,001 :: INFO :: Plotting initialized
+Plotting 2020-02-28 07:02:07,002 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 07:02:08,521 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 07:03:15,991 :: INFO :: Analysis initialized
+Plotting 2020-02-28 07:03:16,209 :: INFO :: Plotting initialized
+Plotting 2020-02-28 07:03:16,209 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 07:03:17,842 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 07:04:10,875 :: INFO :: Analysis initialized
+Plotting 2020-02-28 07:04:11,196 :: INFO :: Plotting initialized
+Plotting 2020-02-28 07:04:11,197 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 07:04:13,544 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+kafe 2020-02-28 07:04:15,274 :: WARNING :: More than one Fit in the same Plot detected. In this case, axis labels default to `x` and `y` and must be set explicitly if something different is desired.
+Analysis 2020-02-28 07:05:08,394 :: INFO :: Analysis initialized
+Plotting 2020-02-28 07:05:08,635 :: INFO :: Plotting initialized
+Plotting 2020-02-28 07:05:08,635 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 07:05:10,207 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 07:05:44,724 :: INFO :: Analysis initialized
+Plotting 2020-02-28 07:05:44,939 :: INFO :: Plotting initialized
+Plotting 2020-02-28 07:05:44,940 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 07:05:46,448 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Analysis 2020-02-28 07:06:24,224 :: INFO :: Analysis initialized
+Plotting 2020-02-28 07:06:24,444 :: INFO :: Plotting initialized
+Plotting 2020-02-28 07:06:24,444 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 07:06:25,975 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+kafe 2020-02-28 07:06:27,149 :: WARNING :: More than one Fit in the same Plot detected. In this case, axis labels default to `x` and `y` and must be set explicitly if something different is desired.
+Analysis 2020-02-28 07:08:37,110 :: INFO :: Analysis initialized
+Plotting 2020-02-28 07:08:37,738 :: INFO :: Plotting initialized
+Plotting 2020-02-28 07:08:37,739 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 07:08:42,104 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+kafe 2020-02-28 07:08:45,835 :: WARNING :: More than one Fit in the same Plot detected. In this case, axis labels default to `x` and `y` and must be set explicitly if something different is desired.
+Analysis 2020-02-28 08:02:36,681 :: INFO :: Analysis initialized
+Plotting 2020-02-28 08:02:42,491 :: INFO :: Plotting initialized
+Plotting 2020-02-28 08:02:42,491 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 08:02:47,533 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+kafe 2020-02-28 08:02:49,286 :: WARNING :: More than one Fit in the same Plot detected. In this case, axis labels default to `x` and `y` and must be set explicitly if something different is desired.
+Analysis 2020-02-28 09:41:34,807 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:41:38,639 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:41:38,639 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 09:41:40,261 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+kafe 2020-02-28 09:41:41,370 :: WARNING :: More than one Fit in the same Plot detected. In this case, axis labels default to `x` and `y` and must be set explicitly if something different is desired.
+Analysis 2020-02-28 09:43:19,554 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:43:19,862 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:43:19,862 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 09:43:42,047 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:43:42,505 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:43:42,505 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 09:44:06,091 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:44:06,293 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:44:06,293 :: INFO :: Get the calibration curves for each current
+Analysis 2020-02-28 09:44:18,499 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:44:18,712 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:44:18,712 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 09:44:20,199 :: INFO :: Effect of tube Voltage at 8cm on the Dose w
+Analysis 2020-02-28 09:44:52,014 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:44:52,221 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:44:52,221 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 09:44:53,650 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+kafe 2020-02-28 09:44:54,721 :: WARNING :: More than one Fit in the same Plot detected. In this case, axis labels default to `x` and `y` and must be set explicitly if something different is desired.
+Analysis 2020-02-28 09:46:29,444 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:46:29,657 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:46:29,658 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 09:46:31,100 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+kafe 2020-02-28 09:46:32,229 :: WARNING :: More than one Fit in the same Plot detected. In this case, axis labels default to `x` and `y` and must be set explicitly if something different is desired.
+Analysis 2020-02-28 09:46:40,803 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:46:41,015 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:46:41,015 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 09:46:42,381 :: INFO :: Get the calibration curves for each current
+Plotting 2020-02-28 09:46:43,289 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+kafe 2020-02-28 09:46:44,302 :: WARNING :: More than one Fit in the same Plot detected. In this case, axis labels default to `x` and `y` and must be set explicitly if something different is desired.
+Analysis 2020-02-28 09:47:27,876 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:47:28,079 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:47:28,079 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-28 09:47:29,482 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-28 09:47:30,335 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+kafe 2020-02-28 09:47:31,365 :: WARNING :: More than one Fit in the same Plot detected. In this case, axis labels default to `x` and `y` and must be set explicitly if something different is desired.
+Analysis 2020-02-28 09:49:55,496 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:49:55,701 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:49:55,701 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-28 09:49:59,964 :: INFO :: Get the calibration curves for each current[Al]
+Analysis 2020-02-28 09:50:40,667 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:50:40,869 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:50:40,870 :: INFO :: Get the calibration curves for each current[without_filter]
+Analysis 2020-02-28 09:51:26,004 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:51:26,209 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:51:26,209 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-28 09:51:26,211 :: INFO :: Get the calibration curves for each current[without_filter] at3cm
+Plotting 2020-02-28 09:51:27,613 :: INFO :: Get the calibration curves for each current[without_filter] at5cm
+Plotting 2020-02-28 09:51:28,526 :: INFO :: Get the calibration curves for each current[without_filter] at8cm
+Plotting 2020-02-28 09:51:29,438 :: INFO :: Get the calibration curves for each current[without_filter] at51cm
+Plotting 2020-02-28 09:51:30,460 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-28 09:51:30,461 :: INFO :: Get the calibration curves for each current[Al] at3cm
+Plotting 2020-02-28 09:51:31,444 :: INFO :: Get the calibration curves for each current[Al] at5cm
+Plotting 2020-02-28 09:51:32,415 :: INFO :: Get the calibration curves for each current[Al] at8cm
+Plotting 2020-02-28 09:51:33,329 :: INFO :: Get the calibration curves for each current[Al] at51cm
+Analysis 2020-02-28 09:51:42,846 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:51:43,072 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:51:43,072 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-28 09:51:43,073 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-28 09:51:44,508 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-28 09:51:45,500 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-28 09:51:46,393 :: INFO :: Get the calibration curves for each current[without_filter] at 51cm
+Plotting 2020-02-28 09:51:47,351 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-28 09:51:47,352 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-28 09:51:48,249 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-28 09:51:49,128 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-28 09:51:50,028 :: INFO :: Get the calibration curves for each current[Al] at 51cm
+Analysis 2020-02-28 09:53:28,894 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:53:29,104 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:53:29,105 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-28 09:53:29,106 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-28 09:53:30,498 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-28 09:53:31,374 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-28 09:53:31,375 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-28 09:53:32,245 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-28 09:53:33,220 :: INFO :: Get the calibration curves for each current[V]
+Plotting 2020-02-28 09:53:33,221 :: INFO :: Get the calibration curves for each current[V] at 3cm
+Analysis 2020-02-28 09:53:42,832 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:53:43,039 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:53:43,040 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-28 09:53:43,041 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-28 09:53:44,522 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-28 09:53:45,515 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-28 09:53:46,473 :: INFO :: Get the calibration curves for each current[without_filter] at 51cm
+Plotting 2020-02-28 09:53:47,511 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-28 09:53:47,512 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-28 09:53:48,523 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Analysis 2020-02-28 09:53:52,071 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:53:52,293 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:53:52,293 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-28 09:53:52,295 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Analysis 2020-02-28 09:53:56,021 :: INFO :: Analysis initialized
+Plotting 2020-02-28 09:53:56,227 :: INFO :: Plotting initialized
+Plotting 2020-02-28 09:53:56,227 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-28 09:53:56,228 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-28 09:53:57,736 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-28 09:53:58,718 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-28 09:53:59,671 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-28 09:53:59,671 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-28 09:54:00,622 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-28 09:54:01,494 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-28 09:54:02,370 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+kafe 2020-02-28 09:54:03,392 :: WARNING :: More than one Fit in the same Plot detected. In this case, axis labels default to `x` and `y` and must be set explicitly if something different is desired.
+Analysis 2020-02-29 06:53:33,942 :: INFO :: Analysis initialized
+Plotting 2020-02-29 06:53:38,952 :: INFO :: Plotting initialized
+Plotting 2020-02-29 06:53:38,952 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 06:53:38,953 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Analysis 2020-02-29 07:04:00,069 :: INFO :: Analysis initialized
+Analysis 2020-02-29 07:05:39,199 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:05:42,525 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:05:42,526 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 07:05:42,528 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Analysis 2020-02-29 07:07:37,548 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:07:38,287 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:07:38,287 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 07:07:38,289 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-29 07:07:41,645 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-29 07:07:42,726 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-29 07:07:43,828 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-29 07:07:43,828 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-29 07:07:45,120 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-29 07:07:46,168 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-29 07:07:47,241 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:07:47,852 :: INFO :: Make a 3d scan at specific depth
+Analysis 2020-02-29 07:09:32,640 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:09:32,911 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:09:32,911 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:09:33,788 :: INFO :: Make a 3d scan at specific depth
+Analysis 2020-02-29 07:10:36,841 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:10:37,112 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:10:37,112 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:10:38,157 :: INFO :: Make a 3d scan at specific depth
+Analysis 2020-02-29 07:10:58,275 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:11:00,730 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:11:00,761 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:11:01,828 :: INFO :: Make a 3d scan at specific depth
+Analysis 2020-02-29 07:13:43,941 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:13:44,181 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:13:44,181 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:13:45,093 :: INFO :: Make a 3d scan at specific depth
+Analysis 2020-02-29 07:14:36,751 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:14:37,326 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:14:37,326 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:14:39,735 :: INFO :: Make a 3d scan at specific depth
+Analysis 2020-02-29 07:15:24,726 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:15:24,954 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:15:24,954 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:15:25,772 :: INFO :: Make a 3d scan at specific depth
+Analysis 2020-02-29 07:16:22,221 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:16:24,930 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:16:24,930 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:16:28,386 :: INFO :: Make a 3d scan at specific depth
+Analysis 2020-02-29 07:17:51,553 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:17:51,960 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:17:51,960 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:17:53,168 :: INFO :: Make a 3d scan at specific depth
+Analysis 2020-02-29 07:19:26,432 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:19:29,737 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:19:29,738 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:19:32,780 :: INFO :: Make a 3d scan at specific depth
+Analysis 2020-02-29 07:23:41,223 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:23:46,952 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:23:46,976 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:24:01,678 :: INFO :: Make a 3d scan at specific depth
+Analysis 2020-02-29 07:25:49,999 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:25:56,429 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:25:56,429 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:26:01,312 :: INFO :: Make a 3d scan at specific depth
+Analysis 2020-02-29 07:28:20,797 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:28:22,077 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:28:22,077 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:28:22,992 :: INFO :: Make a 3d scan at specific depth
+Plotting 2020-02-29 07:28:38,241 :: INFO :: Make a 2d scan at specific depth
+Analysis 2020-02-29 07:30:00,053 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:30:00,592 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:30:00,593 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:30:02,201 :: INFO :: Make a 3d scan at 0 
+Plotting 2020-02-29 07:30:05,838 :: INFO :: Make a 3d scan at 1 
+Plotting 2020-02-29 07:30:09,083 :: INFO :: Make a 3d scan at 2 
+Analysis 2020-02-29 07:30:24,333 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:30:24,567 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:30:24,567 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:30:25,308 :: INFO :: Make a 3d scan at 3cm 
+Plotting 2020-02-29 07:30:28,896 :: INFO :: Make a 3d scan at 8cm 
+Plotting 2020-02-29 07:30:32,104 :: INFO :: Make a 3d scan at 51cm 
+Plotting 2020-02-29 07:30:35,409 :: INFO :: Make a 3d scan at 60cm 
+Plotting 2020-02-29 07:30:38,607 :: INFO :: Make a 2d scan at 3cm 
+Plotting 2020-02-29 07:30:39,508 :: INFO :: Make a 2d scan at 8cm 
+Plotting 2020-02-29 07:30:40,522 :: INFO :: Make a 2d scan at 51cm 
+Plotting 2020-02-29 07:30:41,422 :: INFO :: Make a 2d scan at 60cm 
+Analysis 2020-02-29 07:31:23,405 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:31:23,644 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:31:23,644 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:31:24,471 :: INFO :: Make a 3d scan at 3cm [without_filter]
+Plotting 2020-02-29 07:31:28,321 :: INFO :: Make a 3d scan at 8cm [without_filter]
+Plotting 2020-02-29 07:31:31,931 :: INFO :: Make a 3d scan at 51cm [without_filter]
+Plotting 2020-02-29 07:31:35,628 :: INFO :: Make a 3d scan at 60cm [without_filter]
+Analysis 2020-02-29 07:31:40,861 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:31:41,294 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:31:41,294 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 07:31:42,237 :: INFO :: Make a 3d scan at 3cm [without_filter]
+Plotting 2020-02-29 07:31:46,318 :: INFO :: Make a 3d scan at 8cm [without_filter]
+Plotting 2020-02-29 07:31:50,012 :: INFO :: Make a 3d scan at 51cm [without_filter]
+Plotting 2020-02-29 07:31:53,517 :: INFO :: Make a 3d scan at 60cm [without_filter]
+Plotting 2020-02-29 07:31:56,869 :: INFO :: Make a 2d scan at 3cm [without_filter]
+Plotting 2020-02-29 07:31:57,829 :: INFO :: Make a 2d scan at 8cm [without_filter]
+Plotting 2020-02-29 07:31:59,067 :: INFO :: Make a 2d scan at 51cm [without_filter]
+Plotting 2020-02-29 07:32:00,023 :: INFO :: Make a 2d scan at 60cm [without_filter]
+Analysis 2020-02-29 07:32:32,136 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:32:32,377 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:32:32,378 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 07:32:34,572 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 07:32:35,483 :: INFO :: Estimating the beam radius relative to the depth
+Analysis 2020-02-29 07:33:18,595 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:33:18,823 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:33:18,824 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 07:33:20,334 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 07:33:21,211 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 07:33:22,281 :: INFO :: Draw the cone shape of the opening angle
+Analysis 2020-02-29 07:33:50,438 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:33:50,667 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:33:50,667 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 07:33:52,266 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 07:33:53,153 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 07:33:54,260 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 07:33:55,652 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-29 07:34:36,222 :: INFO :: Analysis initialized
+Plotting 2020-02-29 07:34:36,753 :: INFO :: Plotting initialized
+Plotting 2020-02-29 07:34:36,753 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 07:34:39,116 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 07:34:40,009 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 07:34:41,087 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 07:34:42,453 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 07:34:44,644 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 07:34:44,645 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-29 07:34:45,711 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-29 07:34:46,855 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-29 07:34:48,000 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-29 07:34:48,001 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-29 07:34:49,123 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-29 07:34:50,167 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-29 07:34:51,226 :: INFO :: Dose drop after filters
+Analysis 2020-02-29 08:17:18,332 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:17:18,535 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:17:18,535 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 08:17:19,895 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 08:17:20,730 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 08:17:21,781 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 08:17:23,038 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 08:17:25,046 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 08:17:25,048 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-29 08:17:25,970 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-29 08:17:26,884 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-29 08:17:27,905 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-29 08:17:27,906 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-29 08:17:28,882 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-29 08:17:29,823 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-29 08:17:30,768 :: INFO :: Dose drop after filters
+Analysis 2020-02-29 08:24:04,579 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:24:04,842 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:24:04,842 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 08:24:06,373 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 08:24:07,139 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 08:24:08,146 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 08:24:09,301 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 08:24:11,149 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 08:24:11,150 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-29 08:24:12,066 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-29 08:24:12,956 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-29 08:24:13,905 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-29 08:24:13,906 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-29 08:24:14,846 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-29 08:24:15,719 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-29 08:24:16,613 :: INFO :: Dose drop after filters
+Analysis 2020-02-29 08:25:45,388 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:25:45,677 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:25:45,677 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 08:25:47,219 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 08:25:48,039 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 08:25:49,070 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 08:25:50,384 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 08:25:52,443 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 08:25:52,445 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-29 08:25:53,400 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-29 08:25:54,360 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-29 08:25:55,378 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-29 08:25:55,379 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-29 08:25:56,332 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-29 08:25:57,236 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-29 08:25:58,165 :: INFO :: Dose drop after filters
+Analysis 2020-02-29 08:26:57,613 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:26:57,814 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:26:57,814 :: INFO :: Dose drop after filters
+Analysis 2020-02-29 08:27:14,863 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:27:15,070 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:27:15,070 :: INFO :: Dose drop after filters
+Analysis 2020-02-29 08:28:59,149 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:28:59,460 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:28:59,460 :: INFO :: Dose drop after filters
+Analysis 2020-02-29 08:29:32,012 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:29:32,233 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:29:32,233 :: INFO :: Dose drop after filters
+Plotting 2020-02-29 08:29:33,658 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+kafe 2020-02-29 08:29:35,318 :: WARNING :: More than one Fit in the same Plot detected. In this case, axis labels default to `x` and `y` and must be set explicitly if something different is desired.
+Analysis 2020-02-29 08:30:10,412 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:30:10,617 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:30:10,618 :: INFO :: Dose drop after filters
+Analysis 2020-02-29 08:31:45,208 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:31:45,407 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:31:45,409 :: INFO :: Dose drop after <class 'filter'>
+Analysis 2020-02-29 08:32:21,091 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:32:21,481 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:32:21,483 :: INFO :: Dose drop after Al
+Analysis 2020-02-29 08:32:50,844 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:32:51,051 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:32:51,053 :: INFO :: Dose drop after Al
+Analysis 2020-02-29 08:33:35,123 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:33:35,339 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:33:35,341 :: INFO :: Dose drop after Al
+Analysis 2020-02-29 08:33:56,556 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:33:56,761 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:33:56,763 :: INFO :: Dose drop after Al
+Analysis 2020-02-29 08:34:05,063 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:34:05,263 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:34:05,264 :: INFO :: Dose drop after Al
+Analysis 2020-02-29 08:34:13,082 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:34:13,308 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:34:13,309 :: INFO :: Dose drop after Al
+Analysis 2020-02-29 08:34:24,423 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:34:24,628 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:34:24,630 :: INFO :: Dose drop after Al
+Analysis 2020-02-29 08:35:32,529 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:35:32,731 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:35:32,733 :: INFO :: Dose drop after Al
+Analysis 2020-02-29 08:36:36,059 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:36:36,263 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:36:36,265 :: INFO :: Dose drop after Al
+Analysis 2020-02-29 08:36:50,253 :: INFO :: Analysis initialized
+Plotting 2020-02-29 08:36:50,456 :: INFO :: Plotting initialized
+Plotting 2020-02-29 08:36:50,458 :: INFO :: Dose drop after Al
+Plotting 2020-02-29 08:36:51,880 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:11:37,739 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:11:37,942 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:11:37,942 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:12:38,403 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:12:38,605 :: INFO :: Plotting initialized
+Analysis 2020-02-29 09:13:11,606 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:13:11,808 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:13:11,808 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:13:29,164 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:13:29,384 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:13:29,384 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:13:57,759 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:13:57,969 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:13:57,969 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:14:12,449 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:14:12,653 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:14:12,653 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:15:06,193 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:15:06,402 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:15:06,402 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:15:13,866 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:15:14,066 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:15:14,066 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:15:21,112 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:15:21,313 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:15:21,313 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:16:01,546 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:16:01,749 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:16:01,749 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:16:10,484 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:16:10,688 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:16:10,688 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:16:21,313 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:16:21,511 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:16:21,512 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:16:57,916 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:16:58,112 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:16:58,112 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:18:00,753 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:18:00,964 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:18:00,964 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 09:18:02,509 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Analysis 2020-02-29 09:22:51,240 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:22:51,442 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:22:51,442 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 09:22:52,901 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 09:22:53,719 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Analysis 2020-02-29 09:23:15,107 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:23:15,316 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:23:15,316 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 09:23:16,674 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 09:23:17,567 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Analysis 2020-02-29 09:23:45,854 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:23:46,051 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:23:46,052 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 09:23:47,350 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 09:23:48,112 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-29 09:23:48,651 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 09:23:49,806 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 09:23:51,004 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 09:23:53,088 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 09:23:53,089 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-29 09:23:54,164 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-29 09:23:55,234 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-29 09:23:56,187 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-29 09:23:56,187 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-29 09:23:57,185 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-29 09:23:58,212 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-29 09:23:59,183 :: INFO :: Dose drop after Al
+Plotting 2020-02-29 09:24:00,574 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Plotting 2020-02-29 09:24:01,704 :: INFO :: Effect of tube Voltage at 8cm on the Dose Al
+Analysis 2020-02-29 09:25:55,648 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:25:55,863 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:25:55,864 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 09:25:57,342 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 09:25:58,164 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-29 09:25:58,645 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 09:25:59,798 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 09:26:00,971 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 09:26:03,057 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 09:26:03,058 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-29 09:26:04,047 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-29 09:26:05,173 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-29 09:26:06,154 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-29 09:26:06,154 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-29 09:26:07,127 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-29 09:26:08,180 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-29 09:26:09,108 :: INFO :: Dose drop after Al
+Plotting 2020-02-29 09:26:10,528 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Plotting 2020-02-29 09:26:11,699 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 09:26:12,256 :: INFO :: Make a 3d scan at 3cm [without_filter]
+Plotting 2020-02-29 09:26:15,504 :: INFO :: Make a 3d scan at 8cm [without_filter]
+Plotting 2020-02-29 09:26:18,799 :: INFO :: Make a 3d scan at 51cm [without_filter]
+Plotting 2020-02-29 09:26:21,954 :: INFO :: Make a 3d scan at 60cm [without_filter]
+Plotting 2020-02-29 09:26:25,095 :: INFO :: Make a 2d scan at 3cm [without_filter]
+Plotting 2020-02-29 09:26:26,186 :: INFO :: Make a 2d scan at 8cm [without_filter]
+Plotting 2020-02-29 09:26:27,111 :: INFO :: Make a 2d scan at 51cm [without_filter]
+Plotting 2020-02-29 09:26:27,982 :: INFO :: Make a 2d scan at 60cm [without_filter]
+Plotting 2020-02-29 09:26:28,867 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:27:41,829 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:27:42,041 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:27:42,041 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 09:27:43,392 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 09:27:44,147 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-29 09:27:44,592 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 09:27:45,738 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 09:27:46,982 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 09:27:49,058 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 09:27:49,059 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-29 09:27:50,110 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-29 09:27:51,212 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-29 09:27:52,270 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-29 09:27:52,271 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-29 09:27:53,241 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-29 09:27:54,169 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-29 09:27:55,160 :: INFO :: Dose drop after Al
+Plotting 2020-02-29 09:27:56,444 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Plotting 2020-02-29 09:27:57,572 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 09:27:58,092 :: INFO :: Make a 3d scan at 3cm [without_filter]
+Plotting 2020-02-29 09:28:01,357 :: INFO :: Make a 3d scan at 8cm [without_filter]
+Plotting 2020-02-29 09:28:04,611 :: INFO :: Make a 3d scan at 51cm [without_filter]
+Plotting 2020-02-29 09:28:07,837 :: INFO :: Make a 3d scan at 60cm [without_filter]
+Plotting 2020-02-29 09:28:11,039 :: INFO :: Make a 2d scan at 3cm [without_filter]
+Plotting 2020-02-29 09:28:12,068 :: INFO :: Make a 2d scan at 8cm [without_filter]
+Plotting 2020-02-29 09:28:13,016 :: INFO :: Make a 2d scan at 51cm [without_filter]
+Plotting 2020-02-29 09:28:13,887 :: INFO :: Make a 2d scan at 60cm [without_filter]
+Plotting 2020-02-29 09:28:14,773 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:31:58,900 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:31:59,112 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:31:59,112 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 09:32:00,496 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 09:32:01,288 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-29 09:32:01,770 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 09:32:02,984 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 09:32:04,359 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 09:32:06,533 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 09:32:06,535 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-29 09:32:07,520 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-29 09:32:08,709 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-29 09:32:09,716 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-29 09:32:09,717 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-29 09:32:10,738 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-29 09:32:11,719 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-29 09:32:12,685 :: INFO :: Dose drop after Al
+Plotting 2020-02-29 09:32:14,046 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Plotting 2020-02-29 09:32:15,205 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 09:32:15,752 :: INFO :: Make a 3d scan at 3cm [without_filter]
+Analysis 2020-02-29 09:32:34,016 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:32:34,231 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:32:34,231 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 09:32:35,635 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 09:32:36,435 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-29 09:32:36,879 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 09:32:37,952 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 09:32:39,107 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 09:32:41,073 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 09:32:41,074 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-29 09:32:42,049 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-29 09:32:43,090 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-29 09:32:44,052 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-29 09:32:44,053 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-29 09:32:44,980 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-29 09:32:45,918 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-29 09:32:46,846 :: INFO :: Dose drop after Al
+Plotting 2020-02-29 09:32:48,093 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Plotting 2020-02-29 09:32:49,185 :: INFO :: Calculate the power in each point of I and V
+Analysis 2020-02-29 09:33:30,972 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:33:31,181 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:33:31,181 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 09:33:32,555 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 09:33:33,383 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-29 09:33:33,841 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 09:33:34,987 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 09:33:36,289 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 09:33:38,437 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 09:33:38,439 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-29 09:33:39,507 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-29 09:33:40,692 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-29 09:33:41,658 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-29 09:33:41,658 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-29 09:33:42,847 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-29 09:33:43,919 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-29 09:33:44,931 :: INFO :: Dose drop after Al
+Plotting 2020-02-29 09:33:46,350 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Plotting 2020-02-29 09:33:47,486 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 09:33:48,031 :: INFO :: Make a 3d scan at 3cm [without_filter]
+Plotting 2020-02-29 09:33:51,309 :: INFO :: Make a 3d scan at 8cm [without_filter]
+Plotting 2020-02-29 09:33:54,389 :: INFO :: Make a 3d scan at 51cm [without_filter]
+Plotting 2020-02-29 09:33:57,526 :: INFO :: Make a 3d scan at 60cm [without_filter]
+Plotting 2020-02-29 09:34:00,667 :: INFO :: Make a 2d scan at 3cm [without_filter]
+Plotting 2020-02-29 09:34:01,663 :: INFO :: Make a 2d scan at 8cm [without_filter]
+Plotting 2020-02-29 09:34:02,545 :: INFO :: Make a 2d scan at 51cm [without_filter]
+Plotting 2020-02-29 09:34:03,438 :: INFO :: Make a 2d scan at 60cm [without_filter]
+Plotting 2020-02-29 09:34:04,291 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 09:43:43,888 :: INFO :: Analysis initialized
+Analysis 2020-02-29 09:43:56,539 :: INFO :: Analysis initialized
+Plotting 2020-02-29 09:43:56,744 :: INFO :: Plotting initialized
+Plotting 2020-02-29 09:43:56,745 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 09:43:58,108 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 09:43:58,897 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 09:43:59,380 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-29 09:43:59,785 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 09:44:00,858 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 09:44:02,059 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-29 21:56:14,129 :: INFO :: Analysis initialized
+Plotting 2020-02-29 21:56:22,684 :: INFO :: Plotting initialized
+Plotting 2020-02-29 21:56:22,684 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 21:56:32,530 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 21:56:33,400 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 21:56:33,921 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-29 21:56:34,470 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 21:56:36,212 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 21:56:37,484 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-29 21:58:08,389 :: INFO :: Analysis initialized
+Plotting 2020-02-29 21:58:08,597 :: INFO :: Plotting initialized
+Plotting 2020-02-29 21:58:08,597 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 21:58:10,163 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 21:58:11,072 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 21:58:11,627 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-29 21:58:12,150 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 21:58:13,287 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 21:58:14,575 :: INFO :: Relation between the depth and  the Dose rate
+Analysis 2020-02-29 22:00:02,591 :: INFO :: Analysis initialized
+Plotting 2020-02-29 22:00:05,644 :: INFO :: Plotting initialized
+Plotting 2020-02-29 22:00:05,644 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 22:00:08,106 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 22:00:10,232 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 22:00:10,819 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-29 22:00:11,374 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 22:00:12,684 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 22:00:14,200 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 22:00:17,598 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 22:00:17,600 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Analysis 2020-02-29 22:00:58,845 :: INFO :: Analysis initialized
+Plotting 2020-02-29 22:00:59,548 :: INFO :: Plotting initialized
+Plotting 2020-02-29 22:00:59,548 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 22:01:01,537 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 22:01:02,622 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 22:01:03,239 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-29 22:01:03,778 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 22:01:05,113 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 22:01:06,516 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 22:01:08,819 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 22:01:08,821 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-29 22:01:10,109 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-29 22:01:11,323 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-29 22:01:12,425 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-29 22:01:12,425 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-29 22:01:13,568 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-29 22:01:14,931 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-29 22:01:16,115 :: INFO :: Dose drop after Al
+Analysis 2020-02-29 22:01:37,581 :: INFO :: Analysis initialized
+Plotting 2020-02-29 22:01:37,816 :: INFO :: Plotting initialized
+Plotting 2020-02-29 22:01:37,816 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 22:01:39,326 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 22:01:40,177 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 22:01:40,697 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-29 22:01:41,147 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 22:01:42,271 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 22:01:43,460 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 22:01:45,520 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 22:01:45,522 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-29 22:01:46,596 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-29 22:01:47,534 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-29 22:01:48,463 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-29 22:01:48,464 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-29 22:01:49,506 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-29 22:01:50,725 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-29 22:01:52,178 :: INFO :: Dose drop after Al
+Analysis 2020-02-29 22:02:54,711 :: INFO :: Analysis initialized
+Plotting 2020-02-29 22:02:57,865 :: INFO :: Plotting initialized
+Plotting 2020-02-29 22:02:57,885 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 22:03:02,322 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 22:03:03,241 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 22:03:03,816 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-29 22:03:04,585 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 22:03:05,920 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 22:03:07,284 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 22:03:09,685 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 22:03:09,687 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-29 22:03:10,912 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-29 22:03:12,013 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-29 22:03:13,156 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-29 22:03:13,156 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-29 22:03:14,374 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-29 22:03:15,445 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-29 22:03:16,544 :: INFO :: Dose drop after Al
+Plotting 2020-02-29 22:03:17,998 :: INFO :: Effect of tube Voltage at 8cm on the Dose without_filter
+Plotting 2020-02-29 22:03:19,357 :: INFO :: Make a 3d plot at 3cm [without_filter]
+Plotting 2020-02-29 22:03:23,284 :: INFO :: Make a 3d plot at 8cm [without_filter]
+Plotting 2020-02-29 22:03:28,218 :: INFO :: Make a 3d plot at 51cm [without_filter]
+Plotting 2020-02-29 22:03:31,687 :: INFO :: Make a 3d plot at 60cm [without_filter]
+Plotting 2020-02-29 22:03:35,404 :: INFO :: Make a 2d plot at 3cm [without_filter]
+Plotting 2020-02-29 22:03:36,687 :: INFO :: Make a 2d plot at 8cm [without_filter]
+Plotting 2020-02-29 22:03:37,987 :: INFO :: Make a 2d plot at 51cm [without_filter]
+Plotting 2020-02-29 22:03:39,050 :: INFO :: Make a 2d plot at 60cm [without_filter]
+Plotting 2020-02-29 22:03:40,152 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 22:05:06,215 :: INFO :: Analysis initialized
+Plotting 2020-02-29 22:05:10,909 :: INFO :: Plotting initialized
+Plotting 2020-02-29 22:05:10,909 :: INFO :: Calibration results for the diodes
+Plotting 2020-02-29 22:05:21,720 :: INFO :: Plotting IV curves for diodes ['A', 'B', 'C']
+Plotting 2020-02-29 22:05:22,708 :: INFO :: Calculate the power in each point of I and V
+Plotting 2020-02-29 22:05:23,277 :: INFO :: plot the temperature effect on the diode calibration within 250 seconds of radiation
+Plotting 2020-02-29 22:05:23,839 :: INFO :: Estimating the beam radius relative to the depth
+Plotting 2020-02-29 22:05:25,556 :: INFO :: Draw the cone shape of the opening angle
+Plotting 2020-02-29 22:05:27,060 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 22:05:29,508 :: INFO :: Get the calibration curves for each current[without_filter]
+Plotting 2020-02-29 22:05:29,566 :: INFO :: Get the calibration curves for each current[without_filter] at 3cm
+Plotting 2020-02-29 22:05:30,831 :: INFO :: Get the calibration curves for each current[without_filter] at 5cm
+Plotting 2020-02-29 22:05:32,380 :: INFO :: Get the calibration curves for each current[without_filter] at 8cm
+Plotting 2020-02-29 22:05:33,510 :: INFO :: Get the calibration curves for each current[Al]
+Plotting 2020-02-29 22:05:33,511 :: INFO :: Get the calibration curves for each current[Al] at 3cm
+Plotting 2020-02-29 22:05:35,025 :: INFO :: Get the calibration curves for each current[Al] at 5cm
+Plotting 2020-02-29 22:05:36,096 :: INFO :: Get the calibration curves for each current[Al] at 8cm
+Plotting 2020-02-29 22:05:37,356 :: INFO :: Dose drop after Al
+Plotting 2020-02-29 22:05:38,910 :: INFO :: Effect of tube Voltage at 8cm on the Dose rate [without_filter]
+Plotting 2020-02-29 22:05:40,310 :: INFO :: Make a 3d plot at 3cm [without_filter]
+Plotting 2020-02-29 22:05:44,017 :: INFO :: Make a 3d plot at 8cm [without_filter]
+Plotting 2020-02-29 22:05:48,452 :: INFO :: Make a 3d plot at 51cm [without_filter]
+Plotting 2020-02-29 22:05:53,695 :: INFO :: Make a 3d plot at 60cm [without_filter]
+Plotting 2020-02-29 22:05:57,366 :: INFO :: Make a 2d plot at 3cm [without_filter]
+Plotting 2020-02-29 22:05:58,640 :: INFO :: Make a 2d plot at 8cm [without_filter]
+Plotting 2020-02-29 22:05:59,713 :: INFO :: Make a 2d plot at 51cm [without_filter]
+Plotting 2020-02-29 22:06:00,789 :: INFO :: Make a 2d plot at 60cm [without_filter]
+Plotting 2020-02-29 22:06:01,779 :: INFO :: plot the beamspot The function is alternative to the function Plot_Beam_profile_2d
+Analysis 2020-02-29 22:31:04,973 :: INFO :: Analysis initialized
+Analysis 2020-02-29 22:31:05,041 :: INFO :: Analysis initialized
+analysis.analysis_utils 2020-02-29 22:31:29,235 :: SUCCESS :: Beam Spot Scanning ...
+Analysis 2020-02-29 23:02:23,399 :: INFO :: Analysis initialized
+Plotting 2020-02-29 23:02:27,115 :: INFO :: Plotting initialized
+Plotting 2020-02-29 23:02:27,115 :: INFO :: Effect of tube Voltage at 8cm on the Dose rate [without_filter]
+Analysis 2020-02-29 23:03:28,810 :: INFO :: Analysis initialized
+Plotting 2020-02-29 23:03:29,042 :: INFO :: Plotting initialized
+Plotting 2020-02-29 23:03:29,042 :: INFO :: Effect of tube Voltage at 8cm on the Dose rate [without_filter]
+Analysis 2020-02-29 23:09:29,592 :: INFO :: Analysis initialized
+Plotting 2020-02-29 23:09:29,868 :: INFO :: Plotting initialized
+Plotting 2020-02-29 23:09:29,869 :: INFO :: Relation between the depth and  the Dose rate
+Plotting 2020-02-29 23:09:32,760 :: INFO :: Effect of tube Voltage at 8cm on the Dose rate [without_filter]
+Analysis 2020-02-29 23:24:39,937 :: INFO :: Analysis initialized
