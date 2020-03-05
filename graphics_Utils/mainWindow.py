@@ -74,10 +74,8 @@ class MainWindow(QMainWindow):
         self.menu._createStatusBar(self)
 
         # call widgets
-        self.createTopLeftTabGroupBox()
         self.createTopRightGroupBox()
         self.createBottomRightGroupBox()
-        self.createBottomLeftGroupBox()
         self.createProgressBar()
 
         # Creat a frame in the main menu for the gridlayout
@@ -88,9 +86,7 @@ class MainWindow(QMainWindow):
         
         # SetLayout
         mainLayout = QGridLayout()
-        #mainLayout.addWidget(self.topLeftTabGroupBox, 1, 0)
         mainLayout.addWidget(self.topRightGroupBox, 1, 1)
-        #mainLayout.addWidget(self.bottomLeftGroupBox, 2, 0)
         mainLayout.addWidget(self.bottomRightGroupBox , 2, 1)
         #mainLayout.addWidget(self.progressBar, 3, 0, 1, 2)
         
@@ -116,23 +112,6 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(plotframe)
         plotframe.setLayout(plotLayout)
         self.topRightGroupBox.setLayout(plotLayout)
-
-    def createTopLeftTabGroupBox(self):
-        # Define a group for the whole wedgit
-        self.topLeftTabGroupBox = QGroupBox("Sourcemeter settings")
-        # Define a frame for the figure
-        plotframe = QFrame(self)
-        plotframe.setStyleSheet("QWidget { background-color: #eeeeec; }")
-        plotframe.setLineWidth(0.6)
-        # Define a layout
-        plotLayout = QVBoxLayout()
-        # add the figure to the layout
-        Fig = DataMonitoring.LiveMonitoringData()
-        plotLayout.addStretch(1)
-        plotLayout.addWidget(Fig)
-        self.setCentralWidget(plotframe)
-        plotframe.setLayout(plotLayout)
-        self.topLeftTabGroupBox.setLayout(plotLayout)
     
     def scan_click(self):
         print('Start scanning')
@@ -218,40 +197,6 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(plotframe)
         plotframe.setLayout(gridLayout)
         self.bottomRightGroupBox.setLayout(gridLayout)    
-
-    def createBottomLeftGroupBox(self):
-        self.bottomLeftGroupBox = QGroupBox("Group 3")
-        self.bottomLeftGroupBox.setCheckable(True)
-        self.bottomLeftGroupBox.setChecked(True)
-
-        lineEdit = QLineEdit('s3cRe7')
-        lineEdit.setEchoMode(QLineEdit.Password)
-
-        spinBox = QSpinBox(self.bottomLeftGroupBox)
-        spinBox.setValue(50)
-
-        dateTimeEdit = QDateTimeEdit(self.bottomLeftGroupBox)
-        dateTimeEdit.setDateTime(QDateTime.currentDateTime())
-
-        slider = QSlider(Qt.Horizontal, self.bottomLeftGroupBox)
-        slider.setValue(40)
-
-        scrollBar = QScrollBar(Qt.Horizontal, self.bottomLeftGroupBox)
-        scrollBar.setValue(60)
-
-        dial = QDial(self.bottomLeftGroupBox)
-        dial.setValue(30)
-        dial.setNotchesVisible(True)
-
-        layout = QGridLayout()
-        layout.addWidget(lineEdit, 0, 0, 1, 2)
-        layout.addWidget(spinBox, 1, 0, 1, 2)
-        layout.addWidget(dateTimeEdit, 2, 0, 1, 2)
-        layout.addWidget(slider, 3, 0)
-        layout.addWidget(scrollBar, 4, 0)
-        layout.addWidget(dial, 3, 1, 2, 1)
-        layout.setRowStretch(5, 1)
-        self.bottomLeftGroupBox.setLayout(layout)
 
     def createProgressBar(self):
         self.progressBar = QProgressBar()

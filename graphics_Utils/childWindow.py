@@ -18,7 +18,7 @@ class ChildWindow(QWidget):
        self.test_directory = mainWindow.MainWindow().get_testDirectory()
        
        #self.menu._createStatusBar(self)
-    def outputChildWindow(self, ChildWindow):
+    def OutputChildWindow(self, ChildWindow):
         ChildWindow.setObjectName("OutputWindow")
         ChildWindow.setWindowTitle("Output Window")
         ChildWindow.resize(600, 600) #w*h
@@ -31,7 +31,24 @@ class ChildWindow(QWidget):
         logLayout.addWidget(logEdit)
         self.WindowGroupBox.setLayout(logLayout)
         logframe.setLayout(logLayout) 
+
+    def doseCalculatorWindow(self, ChildWindow):
+        ChildWindow.setObjectName("OutputWindow")
+        ChildWindow.setWindowTitle("Output Window")
+        ChildWindow.resize(600, 600) #w*h
+        logframe = QFrame(ChildWindow)
+        logframe.setLineWidth(0.6)
+        ChildWindow.setCentralWidget(logframe)
+        self.WindowGroupBox = QGroupBox("")
         
+        logEdit= LogWindow.LoggerDialog()
+        logLayout = QVBoxLayout()
+        
+        logLayout.addWidget(logEdit)
+        
+        self.WindowGroupBox.setLayout(logLayout)
+        logframe.setLayout(logLayout) 
+                
     def trendChildWindow(self, ChildWindow):
         ChildWindow.setObjectName("OutputWindow")
         ChildWindow.setWindowTitle("Output Window")

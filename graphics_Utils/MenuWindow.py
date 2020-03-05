@@ -75,30 +75,17 @@ class MenuBar(QWidget):
     # 2. View menu
     def _viewMenu(self, menuBar, mainwindow):
         viewMenu = menuBar.addMenu("&View")
-
-        canSettings_action = QAction('&CAN Settings', mainwindow, checkable=True)
-        canSettings_action.setStatusTip('CAN Settings')
-        canSettings_action.setChecked(False)
-        canSettings_action.triggered.connect(self.canSettingsChildWindow)
-        
-        canMessage_action = QAction('&CAN Message', mainwindow, checkable=True)
-        canMessage_action.setStatusTip('CAN Message')
-        canMessage_action.setChecked(False)
-        canMessage_action.triggered.connect(self.toggleMenu)
-
-        outWindow_action = QAction('&Output Window', mainwindow, checkable=True)
-        outWindow_action.setStatusTip('Output Window')
-        outWindow_action.setChecked(False)
-        outWindow_action.triggered.connect(self.outputChildWindow)
+        doseCalculator_action = QAction('&Dose Calculator', mainwindow)
+        doseCalculator_action.setStatusTip('Dose Calculator')
+        doseCalculator_action.setChecked(True)
+        doseCalculator_action.triggered.connect(self.doseCalculatorWindow)
                 
-        trend_action = QAction('&Data Trending', mainwindow, checkable=True)
+        trend_action = QAction('&Data Trending', mainwindow, checkable = True)
         trend_action.setStatusTip('Data Trending')
         trend_action.setChecked(False)
         trend_action.triggered.connect(self.trendChildWindow)
         
-        viewMenu.addAction(canSettings_action)
-        viewMenu.addAction(canMessage_action)
-        viewMenu.addAction(outWindow_action)
+        viewMenu.addAction(doseCalculator_action)
         viewMenu.addAction(trend_action)
 
      # 3. Test menu
@@ -106,11 +93,11 @@ class MenuBar(QWidget):
         # history_menu = menuBar.addMenu("&History")
         test_menu = menuBar.addMenu("&Tests")
         
-        angle__cone_action = QAction(QIcon('graphics_Utils/icons/icon_angle.png'), '&Opening Angle', mainwindow)        
-        angle__cone_action.setStatusTip('Draw the cone shape of the opening angle')
-        angle__cone_action.setChecked(True)
-        angle__cone_action.triggered.connect(self.openingAngleConeChildMenu)
-        test_menu.addAction(angle__cone_action) 
+        angle_cone_action = QAction(QIcon('graphics_Utils/icons/icon_angle.png'), '&Opening Angle', mainwindow)        
+        angle_cone_action.setStatusTip('Draw the cone shape of the opening angle')
+        angle_cone_action.setChecked(True)
+        angle_cone_action.triggered.connect(self.openingAngleConeChildMenu)
+        test_menu.addAction(angle_cone_action) 
 
         angle_action = QAction(QIcon('graphics_Utils/icons/icon_angle.png'), '&BeamSpot radius vs height', mainwindow)        
         angle_action.setStatusTip('Get the estimated beam radius relative to the depth')
@@ -134,6 +121,7 @@ class MenuBar(QWidget):
         diode_menu.addAction(diode_IV_action) 
         
         current_menu = test_menu.addMenu(QIcon('graphics_Utils/icons/icon_dose.png'), "&Absorbed dose vs. Tube Current")
+        current_menu.setStatusTip('Get the calibration curves for each current')
         dose_action = []
         dose_filtersList = self.__filtersList
         for f in np.arange(0, len(dose_filtersList)):
@@ -176,7 +164,7 @@ class MenuBar(QWidget):
         settings_action = QAction(QIcon('graphics_Utils/icons/icon_settings.png'), '&Settings', mainwindow)        
         settings_action.setStatusTip('settings action')
         settings_action.setChecked(True)
-        settings_action.triggered.connect(self.openWindow)
+        #settings_action.triggered.connect(self.openWindow)
         settings_menu.addAction(settings_action)             
         
     # 4. Help menu
@@ -323,13 +311,6 @@ class MenuBar(QWidget):
                                       plot_prefix="dose_voltage")
         self.mainwindow.show()     
     
-    def outputChildWindow(self, state):
-        if state:
-            self.ui.outputChildWindow(self.mainwindow)
-            self.mainwindow.show()
-        else:
-           self.mainwindow.close()
-    
     def trendChildWindow(self, state):
         if state:
             self.ui.trendChildWindow(self.mainwindow)
@@ -337,21 +318,14 @@ class MenuBar(QWidget):
         else:
            self.mainwindow.close()
             
-    def canSettingsChildWindow(self, state):
-        if state:
-            self.ui.canSettingsChildWindow(self.mainwindow)
-            self.mainwindow.show()
-        else:
-           self.mainwindow.close()
+    def doseCalculatorWindow(self):
+        self.ui.doseCalculatorWindow(self.mainwindow)
+        self.mainwindow.show()
            
     def about(self):
         text="text"
         QMessageBox.about(self, "About",text)
 
-    def openWindow(self):
-        self.ui.settingChannel(self.mainwindow)
-        self.mainwindow.show()
-        
     def clicked(self, q):
         print("is clicked")
 
