@@ -10837,3 +10837,4 @@ root 2020-03-05 15:07:40,713 :: DEBUG :: damn, a bug
 matplotlib.axes._base 2020-03-05 15:07:40,718 :: DEBUG :: title position was updated manually, not adjusting
 root 2020-03-05 15:07:54,946 :: DEBUG :: damn, a bug
 matplotlib.axes._base 2020-03-05 15:07:54,951 :: DEBUG :: title position was updated manually, not adjusting
+Analysis 2020-03-05 19:42:36,148 :: INFO :: Analysis initialized

@@ -1,4 +1,6 @@
 import sys
+from matplotlib.backends.qt_compat import QtCore, QtWidgets
+from matplotlib.backends.backend_qt5agg import FigureCanvas
 from PyQt5.QtCore    import *
 from PyQt5.QtGui     import *
 from PyQt5.QtWidgets import *
@@ -16,6 +18,7 @@ class Slider(QWidget):
         
         self.horizontalLayout = QHBoxLayout()
         spacerItem = QSpacerItem(0, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        
         self.horizontalLayout.addItem(spacerItem)
         self.slider = QSlider(self)
         
@@ -26,6 +29,7 @@ class Slider(QWidget):
         spacerItem1 = QSpacerItem(0, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         
         self.horizontalLayout.addItem(spacerItem1)
+        
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.resize(self.sizeHint())
         
@@ -40,70 +44,68 @@ class Slider(QWidget):
         self.maximum - self.minimum)
         self.label.setText("{0:.4g}".format(self.x))
         
-class Window(QWidget):
-    def __init__(self, parent=None):
-        super(Window, self).__init__(parent)
-        self.setWindowTitle("PyQt5 Sliders")
-        self.resize(425, 392)
-        self.doseCalculatorWindow(ChildWindow=self)        
+class MainWindow(QMainWindow):
+    def __init__(self,parent=None):
+        super(MainWindow, self).__init__(parent)   
         
-    def doseCalculatorWindow(self, ChildWindow):
-        ChildWindow.setObjectName("Dose Calculator")
-        ChildWindow.setWindowTitle("Output Window")
-        ChildWindow.resize(700, 300) #w*h
-        logframe = QFrame(self)
-        logframe.setLineWidth(0.6)
-        #ChildWindow.setCentralWidget(logframe)
-        self.WindowGroupBox = QGroupBox("")
+    def doseCalculatorWindow(self):
+        self.setObjectName("Dose Calculator")
+        self.setWindowTitle("Dose Calculator")
+        self.resize(700, 700) #w*h
+
+        plotframe = QFrame(self)
+        plotframe.setStyleSheet("QWidget { background-color: #eeeeec; }")
+        plotframe.setLineWidth(0.6)
+        self.setCentralWidget(plotframe)
         gridLayout = QGridLayout()
-        scrollWidget = QWidget()
-        scrollWidget.setLayout(gridLayout)
-        
-        scrollArea = QScrollArea()
-        scrollArea.setWidgetResizable(True)
-        scrollArea.setWidget(scrollWidget)   
-        self.WindowGroupBox.setLayout(gridLayout)
-        logframe.setLayout(gridLayout)
-        self.w1 = Slider(-10, 10)
-        gridLayout.addWidget(self.w1,0,0)
-        self.w2 = Slider(-1, 1)
-        gridLayout.addWidget(self.w2,0,1)
-
-        self.w3 = Slider(-10, 10)
-        gridLayout.addWidget(self.w3,0,2)
-
-        self.w4 = Slider(-10, 10)
-        gridLayout.addWidget(self.w4,0,3)
-        row = 0
-       # gridLayout.addWidget(self.createExampleGroup(row, 0,"Tube Voltage [V]"), row, 0)
-       # gridLayout.addWidget(self.createExampleGroup(row, 1, "Tube Current [A]"), row, 1)
-       # gridLayout.addWidget(self.createExampleGroup(row, 2,"Height [cm]"), row, 2)
-       # gridLayout.addWidget(self.createExampleGroup(row, 3, "Beam radius [cm]"), row, 3)
-       # gridLayout.addWidget(self.createExampleGroup(row, 4, "Dose Rate [Mrad/hr]"), row, 4)
-        
+        gridLayout.addWidget(self.createExampleGroup(0, 0,"Tube Voltage [V]"), 0, 0)
+        gridLayout.addWidget(self.createExampleGroup(0, 1, "Tube Current [A]"), 0, 1)
+        gridLayout.addWidget(self.createExampleGroup(0, 2,"Height [cm]"), 0, 2)
+        gridLayout.addWidget(self.createExampleGroup(0, 3, "Beam radius [cm]"), 0, 3)
+        gridLayout.addWidget(self.createExampleGroup(0, 4, "Dose Rate [Mrad/hr]"), 0, 4)
+        plotframe.setLayout(gridLayout)
+        self.show()
 
     def createExampleGroup(self, row, column, Groupname):
         numSlider = row*2+column if row==0 else row*2+column+row
-        groupBox = QGroupBox(Groupname)
-        self.label = QLabel()  
-        #self.label.setObjectName("label{}".format(numSlider))
-
-        slider = QSlider(Qt.Vertical)
+        groupBox = QGroupBox(Groupname) 
+        self.verticalLayout = QVBoxLayout()
+        #Define label
+        self.label = QLabel(self)
+        self.label.setObjectName(Groupname)
+        
+        #Define Slider
+        sliders = ["Tube Voltage [V]","Tube Current [A]","Height [cm]","Beam radius [cm]","Dose Rate [Mrad/hr]" ]
+        #for i in np.arange(lenn(sliders)):
+        slider= QSlider(Qt.Vertical)
         name = "slider{}".format(numSlider)
-        slider.setObjectName(name) 
         setattr(self, name, self.label) 
+        slider.setObjectName(name) 
         slider.setRange(1, 2000000)
         slider.setFocusPolicy(Qt.StrongFocus)
         slider.setTickPosition(QSlider.TicksBothSides)
         slider.setTickInterval(200000)
-        slider.setSingleStep(0.1)
+        slider.setSingleStep(1)
         slider.valueChanged[int].connect(self.changevalue)
+        #slider.valueChanged[int].connect(self.valueSpinBox.setValue)
+        #Define tickbox
+        box = QCheckBox("Fix",self)
+        box.stateChanged.connect(self.clickBox)
 
-        vbox = QVBoxLayout()
-        vbox.addWidget(self.label)
-        vbox.addWidget(slider)
-        vbox.addStretch(1)
-        groupBox.setLayout(vbox)
+        self.verticalLayout.addWidget(self.label)
+        self.horizontalLayout = QHBoxLayout()
+        spacerItem = QSpacerItem(0, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        
+        self.horizontalLayout.addWidget(slider)
+        
+        spacerItem1 = QSpacerItem(0, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        
+        self.horizontalLayout.addItem(spacerItem1)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.verticalLayout.addWidget(box)
+        #self.resize(self.sizeHint())
+        groupBox.setLayout(self.verticalLayout)
         return groupBox
 
     def changevalue(self, value):
@@ -112,8 +114,17 @@ class Window(QWidget):
         label.setText("{:>9,}".format(value))
         print(value)
 
+    def clickBox(self, state):
+
+        if state == QtCore.Qt.Checked:
+            print('Checked')
+        else:
+            print('Unchecked')
+            
 if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    clock = Window()
-    clock.show()
-    sys.exit(app.exec_())
+    qapp = QtWidgets.QApplication(sys.argv)
+    app = MainWindow()
+    app.doseCalculatorWindow()
+    qapp.exec_()
+    
+    
