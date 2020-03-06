@@ -31,7 +31,7 @@ class MainWindow(QMainWindow):
 
         # Read configurations from a file
         if config is None:
-            conf = analysis_utils.open_yaml_file(file ="BeamSpot_cfg.yaml",directory =rootdir[:-14])
+            conf = analysis_utils.open_yaml_file(file ="Xray_irradiation_conf.yaml",directory =rootdir[:-14])
         
         
         self.directory=rootdir[:-14]+"/graphics_Utils/test_files"
@@ -55,6 +55,7 @@ class MainWindow(QMainWindow):
         self.__filtersList = conf['Tests']["filters"]
         self.__depthList = conf['Tests']["depth"]
         self.__currentList = conf['Tests']["current"]
+        
         #Diodes list
         dictionary = dict(conf['Tests']['photodiodes'])
         self.__diodesList = list(dictionary.keys())
@@ -66,7 +67,13 @@ class MainWindow(QMainWindow):
         self.__A_factor  =   A_array[0]["factor"]
         self.__B_factor  =   B_array[0]["factor"]
         self.__C_factor  =   C_array[0]["factor"]
-
+        # Get Info:
+        self.__max_dose = conf['Info']["max_dose"]
+        self.__max_current = conf['Info']["max_current"]
+        self.__max_voltage = conf['Info']["max_voltage"]
+        self.__max_radius= conf['Info']["max_radius"]
+        self.__max_height = conf['Info']["max_height"]
+                
     def Ui_ApplicationWindow(self):
         self.menu= MenuWindow.MenuBar(self)
         self.menu._createMenu(self)
@@ -255,3 +262,11 @@ class MainWindow(QMainWindow):
         if diode =="C": factor = self.__C_factor
         return factor
     
+    def get_Info(self, info):
+        if info =="max_dose": value = self.__max_dose
+        if info =="max_current": value = self.__max_current
+        if info =="max_voltage": value = self.__max_voltage
+        if info =="max_height": value = self.__max_height
+        if info =="max_radius": value = self.__max_radius
+        return value
+            

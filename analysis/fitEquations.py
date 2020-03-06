@@ -1,6 +1,22 @@
-from analysis import plottingCalibration, analysis , analysis_utils
+
 from matplotlib.backends.backend_pdf import PdfPages
 import numpy as np
+import os
+import yaml
+rootdir = os.path.dirname(os.path.abspath(__file__))
+filename = os.path.join(rootdir[:-8], "Xray_irradiation_conf.yaml")
+with open(filename, 'r') as ymlfile:
+    conf = yaml.load(ymlfile, Loader=yaml.FullLoader)
+dose_c = conf["FitFunctions"]["dose_current"]
+c_array =[dose_c[i] for i in ["with"] if i in dose_c]
+
+c = c_array[0]["3cm"]
+print(c)
+cv_array =[c[i] for i in ["30kV"] if i in c]
+print(cv_array[0])
+
+        
+
 def linear(x, m, c):
     return m * x + c
     
@@ -25,29 +41,47 @@ def opening_angle(h=None, r=None):
         result = inv_linear(r,0.072,0.451)
     return result
 
-def dose_current(I=None, d= None, depth ="3cm", filter= "without"):
+def dose_current(I=None, d= None, depth ="3cm", filter= "without", voltage = "40kV"):
     #The function will return  dose if I is given 
     #The function will return  current if d is given
     if I is not None:
         if filter == "without":
             if depth == "3cm":
-                result=linear(I,0.29,-0.14)
-            
+                if voltage == "40kV":
+                    result=linear(I,0.29,-0.14)
+                if voltage == "30kV":
+                    result=linear(I,0.24,-0.12)
+                             
             if depth == "5cm":
-                print("Not yet")
+                if voltage == "40kV":
+                   result=linear(I,0.22,-0.06)
+                if voltage == "30kV":
+                   result=linear(I,0.18,-0.09)
                 
             if depth == "8cm":
-                result=linear(I,0.15,-0.01)
-                    
+                if voltage == "40kV":
+                    result=linear(I,0.14,-0.05)
+                if voltage == "30kV":
+                    result=linear(I,0.11,-0.03)
+                                        
         if filter == "Al":
             if depth == "3cm":
-                result=linear(I,0.08,0)
-                
+                if voltage == "40kV":
+                   result=linear(I,0.08,0)
+                if voltage == "30kV":
+                   result=linear(I,0.06,-0.01)
+                    
             if depth == "5cm":
-                print("Not yet")
+                if voltage == "40kV":
+                   result=linear(I,0.06,-0.02)
+                if voltage == "30kV":
+                   result=linear(I,0.05,0.0)
             
             if depth == "8cm":
-                result=linear(I,0.04,-0.05)
+                if voltage == "40kV":
+                    result=linear(I,0.04,-0.01)
+                if voltage == "30kV":
+                    result=linear(I,0.03,-0.01)
                 
     if d is not None:
         if filter == "without":
@@ -113,6 +147,7 @@ if __name__ == '__main__':
     r = opening_angle(h = 60)
     h = opening_angle(r = 5)
     dC = dose_current(I = 40, filter = "Al", depth ="3cm")
+    dose = dose_current(d = 15, filter = "Al", depth ="3cm")
     dV = dose_voltage(V = 30, filter = "without", depth ="8cm")
     dD = dose_depth(h = 30, filter = "without")
-    print (r, h,dC,dV, dD)
+    print (r, h,dC,dV, dD, dose)

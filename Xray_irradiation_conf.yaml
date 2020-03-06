@@ -1,0 +1,52 @@
+Application: 
+        name : 'Beam Spot scanning'
+
+Settings:
+       size_x    :   1
+       z         :   20
+       x_Delay   :   5
+       z_Delay   :   5
+       period    :   1000
+       x         :   20
+       size_z    :   1
+       depth     :   3
+Info: 
+    max_dose    : 16 #Mrad/hr
+    max_current : 60 # mA  
+    max_voltage : 50 # kV
+    max_height  : 70 # cm
+    max_radius  : 10 # cm
+    
+FitFunctions:
+    dose_current:   
+        with:   {"3cm":{"30kV" :"0.29,-0.14","40kV":"0.29,-0.14"}
+                ,"5cm":{"30kV" :"0.29,-0.14","40kV":"0.29,-0.14"}
+                ,"8cm":{"30kV" :"0.29,-0.14","40kV":"0.29,-0.14"}
+                }
+        Al:     {"3cm":{"30kV" :"0.29,-0.14","40kV":"0.29,-0.14"}
+                ,"5cm":{"30kV" :"0.29,-0.14","40kV":"0.29,-0.14"}
+                ,"8cm":{"30kV" :"0.29,-0.14","40kV":"0.29,-0.14"}
+                }
+                             
+    #dose_voltage:{"function": "linear"}
+    #opening_angle:{"function": "linear"}
+    #dose_depth: {"function": "linear"}
+
+
+Devices:
+       sourcemeter : False
+       MotorStage : False
+
+Tests:
+   test_directory : "tests/"
+   filters        : ["without_filter","Al","Zn","Be","V"]
+   depth         : ["------","3cm","5cm","8cm","51cm"]
+   current         : ["30kV","40kV"]
+   photodiodes    : 
+      ---: {"factor": "---"}
+      A: {"factor": "9.847"}
+      B: {"factor": "9.81"}
+      C: {"factor": "9.78"}
+
+Other:
+    user    :   "Ahmed Qamesh"
