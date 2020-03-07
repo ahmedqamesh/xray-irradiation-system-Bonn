@@ -1,52 +1,129 @@
-Application: 
-        name : 'Beam Spot scanning'
-
+Application:
+   name: Beam Spot scanning
 Settings:
-       size_x    :   1
-       z         :   20
-       x_Delay   :   5
-       z_Delay   :   5
-       period    :   1000
-       x         :   20
-       size_z    :   1
-       depth     :   3
-Info: 
-    max_dose    : 16 #Mrad/hr
-    max_current : 60 # mA  
-    max_voltage : 50 # kV
-    max_height  : 70 # cm
-    max_radius  : 10 # cm
-    
+   size_x: 1
+   z: 20
+   x_Delay: 5
+   z_Delay: 5
+   period: 1000
+   x: 20
+   size_z: 1
+   depth: 3
+Info:
+   max_dose: 16 #Mrad/hr
+   max_current: 60 # mA  
+   max_voltage: 50 # kV
+   max_height: 70 # cm
+   max_radius: 10 # cm
 FitFunctions:
-    dose_current:   
-        with:   {"3cm":{"30kV" :"0.29,-0.14","40kV":"0.29,-0.14"}
-                ,"5cm":{"30kV" :"0.29,-0.14","40kV":"0.29,-0.14"}
-                ,"8cm":{"30kV" :"0.29,-0.14","40kV":"0.29,-0.14"}
-                }
-        Al:     {"3cm":{"30kV" :"0.29,-0.14","40kV":"0.29,-0.14"}
-                ,"5cm":{"30kV" :"0.29,-0.14","40kV":"0.29,-0.14"}
-                ,"8cm":{"30kV" :"0.29,-0.14","40kV":"0.29,-0.14"}
-                }
-                             
-    #dose_voltage:{"function": "linear"}
-    #opening_angle:{"function": "linear"}
-    #dose_depth: {"function": "linear"}
-
-
+   dose_current:
+      without:
+         3cm:
+            30kV:
+               a: 0.24
+               b: -0.12
+            40kV:
+               a: 0.29
+               b: -0.14
+         5cm:
+            30kV:
+               a: 0.18
+               b: -0.09
+            40kV:
+               a: 0.22
+               b: -0.06
+         8cm:
+            30kV:
+               a: 0.11
+               b: -0.03
+            40kV:
+               a: 0.14
+               b: -0.05
+      Al:
+         3cm:
+            30kV:
+               a: 0.06
+               b: -0.01
+            40kV:
+               a: 0.08
+               b: 0.0
+         5cm:
+            30kV:
+               a: 0.05
+               b: 0.0
+            40kV:
+               a: 0.06
+               b: -0.02
+         8cm:
+            30kV:
+               a: 0.03
+               b: -0.01
+            40kV:
+               a: 0.04
+               b: -0.01
+   opening_angle:
+      a: 0.072
+      b: 0.451
+   dose_voltage:
+      without:
+         8cm:
+            10mA:
+               a: -0.001
+               b: 0.068
+               c: -0.404
+            20mA:
+               a: -0.001
+               b: 0.139
+               c: -0.919
+            30mA:
+               a: -0.002
+               b: 0.208
+               c: -1.423
+            40mA:
+               a: -0.002
+               b: 0.279
+               c: -1.932
+   dose_depth:
+      without:
+         40kV:
+            50mA:
+               a: 1391.77
+               b: 6.2
+               c: 0.13
+      Al:
+         40kV:
+            50mA:
+               a: 431.19
+               b: 6.75
+               c: 0.03
 Devices:
-       sourcemeter : False
-       MotorStage : False
-
+   sourcemeter: False
+   MotorStage: False
 Tests:
-   test_directory : "tests/"
-   filters        : ["without_filter","Al","Zn","Be","V"]
-   depth         : ["------","3cm","5cm","8cm","51cm"]
-   current         : ["30kV","40kV"]
-   photodiodes    : 
-      ---: {"factor": "---"}
-      A: {"factor": "9.847"}
-      B: {"factor": "9.81"}
-      C: {"factor": "9.78"}
-
+   test_directory: tests/
+   filters:
+   - without_filter
+   - Al
+   - Zn
+   - Be
+   - V
+   depth:
+   - '------'
+   - 3cm
+   - 5cm
+   - 8cm
+   - 51cm
+   current:
+   - 30kV
+   - 40kV
+   photodiodes:
+      '---':
+         factor: '---'
+      A:
+         factor: '9.847'
+      B:
+         factor: '9.81'
+      C:
+         factor: '9.78'
 Other:
-    user    :   "Ahmed Qamesh"
+   user: Ahmed Qamesh
