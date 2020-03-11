@@ -17,13 +17,13 @@ import matplotlib.pyplot as plt
 from Tkinter import *
 import tkMessageBox
 from tkFont import Font
-class motorstage(HardwareLayer):
+class MotorStage(HardwareLayer):
     '''Driver for  Sourcemeter 
     '''
     def __init__(self, intf, conf):
         self.debug = 0
         self.lock = threading.Lock()
-        super(motorstage, self).__init__(intf, conf)
+        super(MotorStage, self).__init__(intf, conf)
 
     def init(self):
         self._adresses = []

@@ -34,6 +34,7 @@ from logging.handlers import RotatingFileHandler
 import coloredlogs as cl
 import verboselogs
 log = logger.setup_derived_logger('analysis utils')
+from basil.dut import Dut
 rootdir = os.path.dirname(os.path.abspath(__file__))
 class BeamSpotScan(object):
 
@@ -44,7 +45,7 @@ class BeamSpotScan(object):
        self.logger.setLevel(logging.DEBUG)
        self.logger.notice('Beam Spot Scanning ...')
 
-    def compute_move(self,size_x=1, z=20,z_Delay=None, x_Delay=0, x=20, size_z=1, sourcemeter=False, directory=None):
+    def compute_move(self,size_x=None, z=None,currentLimit = 1.000000E-01,z_delay=None, x_delay=None, x=None, size_z=None, sourcemeter=False, directory=None):
         # Initial plot will be generated
         '''
         Assuming that the cabinet door is the -z
@@ -56,30 +57,30 @@ class BeamSpotScan(object):
         '''
         size_x = size_x*57000
         size_z=size_z*57000
-#         if sourcemeter:
-#             #dut = Dut('Scanning_pyserial.yaml')
-#             dut = Dut(rootdir[:-8]+"daq/examples/keithley2400_pyserial.yaml")
-#             dut.init()
-#             dut['sm'].write(":OUTP ON")
-#             #dut['sm'].write("*RST")
-#             #dut['sm'].write(":SOUR:VOLT:RANG 60")
-#             #dut['sm'].write('SENS:CURR:PROT ' + str(CurrentLimit))
-#             #print "The Protection Current limit is", dut['sm'].ask("SENS:CURR:PROT?")
-#             dut['sm'].write(":SOUR:FUNC VOLT")
-#             dut['sm'].write(':SOUR:VOLT 50')
+        if sourcemeter:
+            #dut = Dut('Scanning_pyserial.yaml')
+            dut = Dut(rootdir[:-8]+"devices/source_meter/keithley2400_pyserial.yaml")
+            dut.init()
+            dut['Keithley'].write(":OUTP ON")
+            dut['Keithley'].write("*RST")
+            dut['Keithley'].write(":SOUR:VOLT:RANG 60")
+            dut['Keithley'].write('SENS:CURR:PROT ' + str(currentLimit))
+            print ("The Protection Current limit is", dut['Keithley'].ask("SENS:CURR:PROT?"))
+            dut['Keithley'].write(":SOUR:FUNC VOLT")
+            dut['Keithley'].write(':SOUR:VOLT 50')
 #         else:
 #             dut = Dut('motorstage_Pyserial.yaml')
 #             dut.init()
-        def fill_snake_pattern(step_z=False,sourcemeter = sourcemeter, size_z=None, a=None, b=None , c=None, size_x=None, x_Delay=None, z_Delay=z_Delay, directory=None):            
+        def fill_snake_pattern(step_z=False,sourcemeter = sourcemeter, size_z=None, a=None, b=None , c=None, size_x=None, x_delay=None, z_delay=z_delay, directory=None):            
              first_point = True
              for step_x in tqdm(np.arange(a, b, c) , unit='xstep'):
                  #if not first_point:
                  #    pass
                      # dut["ms"].read_write("MR%d" % (size_x), address=3) # x 50000,100,50 = 4.5 cm left/right
                  #first_point = False
-                 time.sleep(x_Delay)
+                 time.sleep(x_delay)
                  if sourcemeter:
-                     val = dut['sm'].ask(":MEAS:CURR?")
+                     val = dut['Keithley'].ask(":MEAS:CURR?")
                      current = val[15:-43]
                  else:
                      current = random.randint(0, 100)
@@ -90,10 +91,10 @@ class BeamSpotScan(object):
                     save_to_h5(data=beamspot, outname='beamspot_Live.h5', directory= directory)
                  except IndexError:  #open file failure
                     pass
-                 #beamshow  = plt.imshow(beamspot, aspect='auto', origin='upper',  cmap=plt.get_cmap('tab20c'))
-                 #plt.pause(0.05)
+                 beamshow  = plt.imshow(beamspot, aspect='auto', origin='upper',  cmap=plt.get_cmap('tab20c'))
+                 plt.pause(0.05)
              # dut["ms"].read_write("MR%d" % (-size_z), address=2)  # x# x 50000,100,50 = 4.5 cm in/out
-             time.sleep(z_Delay)
+             time.sleep(z_delay)
         
         t0 = time.time()
         length = 20
@@ -102,8 +103,8 @@ class BeamSpotScan(object):
         for step_z in tqdm(np.arange(z), unit='zstep'):
             a, b = config_beamspot[step_z].item(0) , config_beamspot[step_z].item(1)
             c , new_size_x = config_beamspot[step_z].item(2), config_beamspot[step_z].item(3)
-            fill_snake_pattern(step_z=step_z , a=int(a), b=int(b) , c=int(c), size_x=int(new_size_x), x_Delay=x_Delay, z_Delay=z_Delay, directory = directory)
-        #plt.show()
+            fill_snake_pattern(step_z=step_z , a=int(a), b=int(b) , c=int(c), size_x=int(new_size_x), x_delay=x_delay, z_delay=z_delay, directory = directory)
+        plt.show()
         outname='beamspot.h5'
         save_to_h5(data=beamspot, outname=outname, directory=directory) 
         log.info("The beamspot file is saved as " + os.path.join(directory, outname))

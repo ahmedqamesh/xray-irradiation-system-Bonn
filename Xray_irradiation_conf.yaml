@@ -2,11 +2,11 @@ Application:
    name: Beam Spot scanning
 Settings:
    size_x: 1
-   z: 20
-   x_Delay: 5
-   z_Delay: 5
+   z: 5
+   x_delay: 1
+   z_delay: 1
    period: 1000
-   x: 20
+   x: 5
    size_z: 1
    depth: 3
 Info:
@@ -15,6 +15,7 @@ Info:
    max_voltage: 50 # kV
    max_height: 70 # cm
    max_radius: 10 # cm
+   voltage_range:   [40,50]
 FitFunctions:
    dose_current:
       without:

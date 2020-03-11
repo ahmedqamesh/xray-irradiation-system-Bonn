@@ -19,17 +19,16 @@ from analysis import analysis_utils , logger
 
 if __name__ == '__main__':
     rootdir = os.path.dirname(os.path.abspath(__file__))
-    directory= rootdir +"/graphics_Utils/test_files"
-    conf = analysis_utils.open_yaml_file(file ="BeamSpot_cfg.yaml",directory =rootdir)
+    directory= rootdir +"/test_files"
+    conf = analysis_utils.open_yaml_file(file ="Xray_irradiation_conf.yaml",directory =rootdir)
     size_x=conf['Settings']['size_x']
     z=conf['Settings']['z']
-    x_Delay=conf['Settings']['x_Delay']
-    z_Delay = conf['Settings']['z_Delay']
-    period = conf['Settings']['period']
+    x_delay=conf['Settings']['x_delay']
+    z_delay = conf['Settings']['z_delay']
     x=conf['Settings']['x']
     size_z=conf['Settings']['size_z']
     sourcemeter= True
     depth= conf['Settings']['depth'] 
     scan = analysis_utils.BeamSpotScan()
-    s = scan.compute_move(size_x=size_x, z=z,z_Delay=z_Delay, x_Delay=x_Delay, x=x, size_z=size_z,
+    s = scan.compute_move(size_x=size_x, z=z,z_delay=z_delay, x_delay=x_delay, x=x, size_z=size_z,
                                      sourcemeter=sourcemeter, directory=directory)

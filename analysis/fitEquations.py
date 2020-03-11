@@ -20,12 +20,12 @@ def Inverse_square(x, a, b, c):
 def quadratic(x, a, b, c):
     return a*x**2+b*x+c
 
-def opening_angle(h=None, r=None, conf = conf):
-    #The function will return  radius if h is given 
+def opening_angle(depth=None, r=None, conf = conf):
+    #The function will return  radius if depth is given 
     #The function will return  height if r is given
     opening_angle = conf["FitFunctions"]["opening_angle"] 
-    if h is not None:
-        result = linear(h,opening_angle["a"],opening_angle["b"])
+    if depth is not None:
+        result = linear(depth,opening_angle["a"],opening_angle["b"])
     if r is not None:
         result = inv_linear(r,opening_angle["a"],opening_angle["b"])
     return result
@@ -56,7 +56,7 @@ def dose_depth(depth = None, dose = None, filter = "without", conf = conf, curre
         result = np.sqrt(dose_voltage["a"]*(dose+dose_voltage["c"])**(-1))-dose_voltage["b"]
     return result
 if __name__ == '__main__':
-    r = opening_angle(h = 60)
+    r = opening_angle(depth = 60)
     h = opening_angle(r = 5)
     dC = dose_current(I = 40, filter = "without", depth ="3cm",voltage = "40kV")
     dose = dose_current(d = 11.4, filter = "without", depth ="3cm",voltage = "40kV")

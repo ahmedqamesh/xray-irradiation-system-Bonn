@@ -22,9 +22,9 @@ def Restore_intial_positions(Limit=6e6):
     dut = Dut('motorstage_Pyserial.yaml')
     dut.init()
     # Auto-Referencing Option: With standard PI stages
-    dut["ms"]._write_command("FE2", address=1)
-    #dut["ms"]._write_command("FE2", address=2)
-    #dut["ms"]._write_command("FE2", address=3)
+    dut["stage"]._write_command("FE2", address=1)
+    #dut["stage"]._write_command("FE2", address=2)
+    #dut["stage"]._write_command("FE2", address=3)
     # Restore intial positions
     # dut["MotorStage"].Read_Write("MR%d" % Limit, address=1)   # y Move to the Border (In-Out)
     # dut["MotorStage"].Read_Write("MR%d" % Limit, address=2)   # z Move to the Border (Up-Down)

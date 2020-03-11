@@ -22,18 +22,21 @@ class MainWindow(QMainWindow):
         self.__max_voltage = conf['Info']["max_voltage"]
         self.__max_radius = conf['Info']["max_radius"]
         self.__max_height = conf['Info']["max_height"]
+        self.__voltage_range = conf['Info']["voltage_range"]
+        
         self.__filtersList = conf['Tests']["filters"]
+        
 
     def doseCalculatorWindow(self):
         self.setObjectName("Dose Calculator")
         self.setWindowTitle("Dose Calculator")
         self.resize(1200, 700)  # w*h
         
-        self.w1 , w1_Group= self.createSliderGroup(i=0, limit = self.__max_voltage)
-        self.w2 , w2_Group = self.createSliderGroup(i=1, limit =self.__max_current)
-        self.w3 , w3_Group = self.createSliderGroup(i=2, limit = self.__max_height)
-        self.w4 , w4_Group = self.createSliderGroup(i=3, limit = self.__max_radius)
-        self.w5 , w5_Group = self.createSliderGroup(i=4, limit =  self.__max_dose)
+        self.voltage_slider , voltage_Group= self.createSliderGroup(i=0, limit = self.__max_voltage)
+        self.current_slider , current_Group = self.createSliderGroup(i=1, limit =self.__max_current)
+        self.height_slider , height_Group = self.createSliderGroup(i=2, limit = self.__max_height)
+        self.radius_slider , radius_Group = self.createSliderGroup(i=3, limit = self.__max_radius)
+        self.dose_slider , dose_Group = self.createSliderGroup(i=4, limit =  self.__max_dose)
         
         VBox = QVBoxLayout()
         firstHBoxLayout = QHBoxLayout()
@@ -59,31 +62,31 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(mainFrame)
         mainLayout = QGridLayout()
 
-        self.w1.valueChanged.connect(self.changevalue)
-        self.w1.valueChanged.connect(self.update_plot)
+        self.voltage_slider.valueChanged.connect(self.changevalue)
+        self.voltage_slider.valueChanged.connect(self.update_plot)
         
-        self.w2.valueChanged.connect(self.changevalue)
-        self.w2.valueChanged.connect(self.update_plot)
+        self.current_slider.valueChanged.connect(self.changevalue)
+        self.current_slider.valueChanged.connect(self.update_plot)
         
-        self.w3.valueChanged.connect(self.changevalue)
-        self.w3.valueChanged.connect(self.update_plot)
+        self.height_slider.valueChanged.connect(self.changevalue)
+        self.height_slider.valueChanged.connect(self.update_plot)
         
-        self.w4.valueChanged.connect(self.changevalue)
-        self.w4.valueChanged.connect(self.update_plot)
+        self.radius_slider.valueChanged.connect(self.changevalue)
+        self.radius_slider.valueChanged.connect(self.update_plot)
 
-        self.w5.valueChanged.connect(self.changevalue)
-        self.w5.valueChanged.connect(self.update_plot)
+        self.dose_slider.valueChanged.connect(self.changevalue)
+        self.dose_slider.valueChanged.connect(self.update_plot)
                 
-        mainLayout.addWidget(w1_Group, 0, 0)
-        mainLayout.addWidget(w2_Group, 0, 1)
-        mainLayout.addWidget(w3_Group, 0, 2)
-        mainLayout.addWidget(w4_Group, 0, 3)
-        mainLayout.addWidget(w5_Group, 0, 4)
+        mainLayout.addWidget(voltage_Group, 0, 0)
+        mainLayout.addWidget(current_Group, 0, 1)
+        mainLayout.addWidget(height_Group, 0, 2)
+        mainLayout.addWidget(radius_Group, 0, 3)
+        mainLayout.addWidget(dose_Group, 0, 4)
         mainLayout.addLayout(VBox,0,5)
         mainFrame.setLayout(mainLayout)
         self.show()
 
-    def createSliderGroup(self, i=0, limit=20):
+    def createSliderGroup(self, i=0, limit=20, range = [1,2,3]):
         sliders = ["Tube voltage", "Tube current", "Height", "Beam radius", "Dose rate" ]
         groupBox= QGroupBox(sliders[i]) 
         frame = QFrame(self)
@@ -130,9 +133,25 @@ class MainWindow(QMainWindow):
         i = int(sender.objectName())
         label = getattr(self, sender.objectName())
         label.setText("{:>10,}".format(value)+sliders_units[i])
+        if i == 0:
+            dV = f.dose_voltage(V = value, filter = "without", depth ="8cm")
+            print(dV)        
+        if i == 1:
+            dC = f.dose_current(I = value, filter = "without", depth ="3cm",voltage = "40kV")
+            print(dC)    
+        if i == 2:
+            dD = f.dose_depth(depth = value, filter = "without")
+            r = f.opening_angle(depth = value)
+            
+            print(dD, r)
+        if i == 3:
+            height = f.opening_angle(r = value)
+            print(height)     
         if i == 4:
             current = f.dose_current(d = value, filter = "without", depth ="3cm", voltage = "40kV")
             print(current)
+
+        
     def clickBox(self, state):
         if state == QtCore.Qt.Checked:
             print('Checked')
@@ -140,10 +159,10 @@ class MainWindow(QMainWindow):
             print('Unchecked')
     
     def update_plot(self):
-        a = self.w1.value()
-        b = self.w2.value()
-        c = self.w3.value()
-        d = self.w4.value()
+        a = self.voltage_slider.value()
+        b = self.current_slider.value()
+        c = self.height_slider.value()
+        d = self.radius_slider.value()
         x = np.linspace(0, 10, 100)
         data = a + np.cos(x + c * np.pi / 180) * np.exp(-b * x) * d
         self.curve.setData(data)

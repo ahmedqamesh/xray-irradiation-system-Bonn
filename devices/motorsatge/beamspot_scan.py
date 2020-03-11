@@ -26,19 +26,18 @@ def beamspot(size_x=1, z=20, x_Delay=5, x=20,size_z=1,
     if Sourcemeter:
         dut = Dut('Scanning_pyserial.yaml')
         dut.init()
-        dut['sm'].write(":OUTP ON")
-        #dut['sm'].write("*RST")
-        #dut['sm'].write(":SOUR:VOLT:RANG 60")
-        #dut['sm'].write('SENS:CURR:PROT ' + str(CurrentLimit))
-        #print "The Protection Current limit is", dut['sm'].ask("SENS:CURR:PROT?")
-        dut['sm'].write(":SOUR:FUNC VOLT")
-        dut['sm'].write(':SOUR:VOLT 50')
+        dut['Keithley'].write(":OUTP ON")
+        dut['Keithley'].write("*RST")
+        dut['Keithley'].write(":SOUR:VOLT:RANG 60")
+        dut['Keithley'].write('SENS:CURR:PROT ' + str(CurrentLimit))
+        print ("The Protection Current limit is", dut['sm'].ask("SENS:CURR:PROT?"))
+        dut['Keithley'].write(":SOUR:FUNC VOLT")
+        dut['Keithley'].write(':SOUR:VOLT 50')
     else:
         dut = Dut('motorstage_Pyserial.yaml')
         dut.init()
         
     def Move(step_z=False,size_x=size_x,size_z=size_z):
-        
         if step_z % 2 == 0:
             a,b,c = 0,x,1
             print ("Even" , size_x,range(a,b,c))
@@ -54,7 +53,7 @@ def beamspot(size_x=1, z=20, x_Delay=5, x=20,size_z=1,
             first_point = False
             time.sleep(x_Delay)
             if Sourcemeter:
-                val = dut['sm'].ask(":MEAS:CURR?")
+                val = dut['Keithley'].ask(":MEAS:CURR?")
                 current = val[15:-43]
             else:
                 current = random.randint(1, 101)
@@ -63,7 +62,7 @@ def beamspot(size_x=1, z=20, x_Delay=5, x=20,size_z=1,
             plt.imshow(beamspot, aspect='auto', origin='upper',  cmap=plt.get_cmap('tab20c'))
             plt.pause(0.05)
             
-            print (beamspot[step_z,step_x],step_x,step_z)
+            print(beamspot[step_z,step_x],step_x,step_z)
         
         dut["ms"].read_write("MR%d" % (-size_z), address=2)  # x# x 50000,100,50 = 4.5 cm in/out
         time.sleep(2*x_Delay)
@@ -72,7 +71,7 @@ def beamspot(size_x=1, z=20, x_Delay=5, x=20,size_z=1,
     beamspot = np.zeros(shape=(z, x), dtype=np.float64)
     for step_z in range(z):
         Move(step_z=step_z)
-    
+        
     plt.show()
     file = Directory + "beamspot_3cm_collimator.h5"
     with tb.open_file(file, "w") as out_file_h5:
