@@ -67,22 +67,23 @@ class LiveMonitoringData(QtWidgets.QMainWindow):
     
 class MapMonitoringDynamicCanvas(FigureCanvas):
     """A canvas that updates itself every second with a new plot."""
-    def __init__(self, parent=None, width=5, height=4, dpi=100 ,period=None, depth = None, z=None, x=None, z_Delay= None, x_Delay=None,size_x =None, size_z = None, directory=None):
+    def __init__(self, enable_timer = True, parent=None,r = None ,  dpi=100 ,period=None, depth = None, z=None, x=None, z_delay= None, x_delay=None,size_x =None, size_z = None, directory=None):
         self.directory = directory
         self.size_x=size_x
         self.z=z
-        self.x_Delay=x_Delay
-        self. z_Delay = z_Delay
         self.x=x
+        self.x_delay=x_delay
+        self. z_delay = z_delay
         self.size_z=size_z
         self.depth = depth
         self.period = period
-        im , cmap = self.compute_initial_figure(height = height,width=width,dpi=dpi, z=self.z, x=self.x)
-        self.plot_style(im=im , cmap=cmap, z=self.z, x=self.x)
-        self.initiate_timer(period=self.period)
+        im , cmap = self.compute_initial_figure(dpi=dpi, z=self.z, x=self.x)
+        self.plot_style(im=im , cmap=cmap,r = r, z=self.z, x=self.x)
+        if enable_timer:
+            self.initiate_timer(period=self.period)
 
-    def compute_initial_figure(self,height = None,width=None,dpi=None, z=None, x=None, directory= None):
-        fig = Figure(figsize=(width, height), dpi=dpi)
+    def compute_initial_figure(self,dpi=None, z=None, x=None, directory= None):
+        fig = Figure(figsize=(z, x), dpi=dpi)
         self.axes = fig.add_subplot(111)
         FigureCanvas.__init__(self, fig)
         FigureCanvas.setSizePolicy(self,QSizePolicy.Expanding,QSizePolicy.Expanding),FigureCanvas.updateGeometry(self)
@@ -93,17 +94,16 @@ class MapMonitoringDynamicCanvas(FigureCanvas):
         return im , cmap
        
                    
-    def plot_style(self, z=None, x=None, depth=None, im=None, cmap=plt.cm.get_cmap('viridis', 5)):
+    def plot_style(self, r = None, z=None, x=None, depth=None, im=None, cmap=plt.cm.get_cmap('viridis', 5)):
         mid_z = z / 2
         mid_x = x / 2
-        r = 3
-        self.axes.set_title("Beam profile", fontsize=12, y=1.7, x=-0.6)
+        #self.axes.set_title("Beam profile", fontsize=12, y=1.7, x=-0.6)
         #self.axes.set_xlabel('x [mm]')
         #self.axes.set_ylabel('z[mm]')
-        circle = plt.Circle((mid_z, mid_x), r, color='red', fill=False)
+        circle = plt.Circle((mid_z-0.5, mid_x-0.5), r, color='red', fill=False)
         self.axes.add_artist(circle)
-        self.axes.axhline(y=mid_z, linewidth=0.6, color='#d62728', linestyle='dashed')
-        self.axes.axvline(x=mid_x, linewidth=0.6, color='#d62728', linestyle='dashed')
+        self.axes.axhline(y=mid_z-0.5, linewidth=0.6, color='#d62728', linestyle='dashed')
+        self.axes.axvline(x=mid_x-0.5, linewidth=0.6, color='#d62728', linestyle='dashed')
                
     def initiate_timer(self,period=None):    
         timer = QtCore.QTimer(self)
@@ -112,11 +112,14 @@ class MapMonitoringDynamicCanvas(FigureCanvas):
         
     def update_figure(self): 
         try:    
-            beamspot = analysis_utils.open_h5_file(outname='beamspot_Live.h5', directory=self.directory)
-            cmap = plt.cm.get_cmap('tab20c')
-            im = self.axes.imshow(beamspot, aspect='auto', origin='upper', cmap=cmap)
-            self.draw()
-        except IndexError:  #open file failure
+            #beamspot = analysis_utils.open_h5_file(outname='beamspot_Live.h5', directory=self.directory)
+            beamspot = analysis_utils.BeamSpotScan().get_beam_spot()
+            print(beamspot)
+            if beamspot is not None:
+                cmap = plt.cm.get_cmap('tab20c')
+                im = self.axes.imshow(beamspot, aspect='auto', origin='upper', cmap=cmap)
+                self.draw()
+        except IndexError: 
                 pass
     
 class PlottingWindowCanvas(FigureCanvas):

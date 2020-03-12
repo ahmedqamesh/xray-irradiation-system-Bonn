@@ -1,14 +1,17 @@
 Application:
    name: Beam Spot scanning
 Settings:
-   size_x: 1
    z: 5
+   x: 5
+   size_x: 1
+   size_z: 1
    x_delay: 1
    z_delay: 1
-   period: 1000
-   x: 5
-   size_z: 1
+   
+   period: 100
    depth: 3
+   r: 2 
+
 Info:
    max_dose: 16 #Mrad/hr
    max_current: 60 # mA  
@@ -98,7 +101,7 @@ FitFunctions:
                b: 6.75
                c: 0.03
 Devices:
-   sourcemeter: False
+   sourcemeter: True
    MotorStage: False
 Tests:
    test_directory: tests/

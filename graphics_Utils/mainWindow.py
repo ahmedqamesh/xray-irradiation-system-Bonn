@@ -40,17 +40,17 @@ class MainWindow(QMainWindow):
         self.app_name = conf['Application']['name']
         
         #Devices
-        self.sourcemeter= sourcemeter
+        self.sourcemeter= conf["Devices"]["sourcemeter"]
         #Beamspot scan settings
         self.size_x=conf['Settings']['size_x']
         self.z=conf['Settings']['z']
-        self.x_Delay=conf['Settings']['x_Delay']
-        self.z_Delay = conf['Settings']['z_Delay']
+        self.x_delay=conf['Settings']['x_delay']
+        self.z_delay = conf['Settings']['z_delay']
         self.period = conf['Settings']['period']
         self.x=conf['Settings']['x']
         self.size_z=conf['Settings']['size_z']
         self.depth= conf['Settings']['depth'] 
-        
+        self.r = conf['Settings']['r'] 
         #Filters list
         self.__filtersList = conf['Tests']["filters"]
         self.__depthList = conf['Tests']["depth"]
@@ -73,7 +73,7 @@ class MainWindow(QMainWindow):
         self.__max_voltage = conf['Info']["max_voltage"]
         self.__max_radius= conf['Info']["max_radius"]
         self.__max_height = conf['Info']["max_height"]
-                
+       
     def Ui_ApplicationWindow(self):
         self.menu= MenuWindow.MenuBar(self)
         self.menu._createMenu(self)
@@ -83,6 +83,7 @@ class MainWindow(QMainWindow):
         # call widgets
         self.createTopRightGroupBox()
         self.createBottomRightGroupBox()
+        self.createMotorGroupBox()
         self.createProgressBar()
 
         # Creat a frame in the main menu for the gridlayout
@@ -93,8 +94,11 @@ class MainWindow(QMainWindow):
         
         # SetLayout
         mainLayout = QGridLayout()
-        mainLayout.addWidget(self.topRightGroupBox, 1, 1)
-        mainLayout.addWidget(self.bottomRightGroupBox , 2, 1)
+        mainLayout.addWidget(self.topRightGroupBox, 0, 0,1,2)
+        mainLayout.addWidget(self.motorGroupBox , 1, 0)
+        mainLayout.addWidget(self.bottomRightGroupBox ,1, 1)
+        
+        
         #mainLayout.addWidget(self.progressBar, 3, 0, 1, 2)
         
         mainFrame.setLayout(mainLayout)
@@ -112,21 +116,18 @@ class MainWindow(QMainWindow):
         # Define a layout
         plotLayout = QVBoxLayout()
         # add the figure to the layout
-        Fig = DataMonitoring.MapMonitoringDynamicCanvas(width=5, height=5, period =self.period, depth = self.depth, dpi=100,x= self.x ,
-                                                        z = self.z,  z_Delay= self.z_Delay, x_Delay=self.x_Delay, directory = self.directory)
+        Fig = DataMonitoring.MapMonitoringDynamicCanvas(r = self.r, period =self.period, depth = self.depth, dpi=100,x= self.x ,
+                                                        z = self.z,  z_delay= self.z_delay, x_delay=self.x_delay, directory = self.directory)
         plotLayout.addStretch(1)
         plotLayout.addWidget(Fig)
         self.setCentralWidget(plotframe)
         plotframe.setLayout(plotLayout)
         self.topRightGroupBox.setLayout(plotLayout)
-    
-    def scan_click(self):
-        print('Start scanning')
-        analysis_utils.compute_move(size_x=self.size_x, z=self.z, z_Delay = self.z_Delay , x_Delay=self.x_Delay, x=self.x, size_z=self.size_z, sourcemeter=self.sourcemeter, directory=self.directory)
-        
+
     def createBottomRightGroupBox(self):
         self.bottomRightGroupBox = QGroupBox("Scan controllers")
         plotframe = QFrame(self)
+        
         plotframe.setStyleSheet("QWidget { background-color: #eeeeec; }")
         plotframe.setLineWidth(0.6)
         #list Joystick bottons
@@ -144,9 +145,9 @@ class MainWindow(QMainWindow):
         #field_joystick_out_button.setIconSize(QtCore.QSize(24,24))
 
         field_joystick_middle_button = QPushButton("")  
-        field_joystick_middle_button.clicked.connect(self.joystick_middle)
+        field_joystick_middle_button.clicked.connect(self.joystick_middle_scan)
         field_joystick_middle_button.setFixedWidth(w)
-        field_joystick_middle_button.setIcon(QIcon('graphics_Utils/icons/icon_run.png'))
+        field_joystick_middle_button.setIcon(QIcon('graphics_Utils/icons/icon_start.png'))
         #field_joystick_middle_button.setIconSize(QtCore.QSize(24,24))
 
         field_joystick_right_button = QPushButton("")  
@@ -170,8 +171,6 @@ class MainWindow(QMainWindow):
         field_joystick_up_button.setFixedHeight(h)
         field_joystick_up_button.setIcon(QIcon('graphics_Utils/icons/icon_up.png'))
         
-        
-        
         field_joystick_down_button = QPushButton("")  
         field_joystick_down_button.clicked.connect(self.joystick_down)
         field_joystick_down_button.setFixedWidth(w)
@@ -180,15 +179,7 @@ class MainWindow(QMainWindow):
         
         upDownLayout.addWidget(field_joystick_up_button)
         upDownLayout.addWidget(field_joystick_down_button)
-        
-        
-        MontoSettings_button = QPushButton("Montor Settings")
-        MontoSettings_button.clicked.connect(self.openWindow)
-        #MontoSettings_button.setFixedWidth(30)
 
-        btn2 = QPushButton("Restore intial positions")
-        btn2.clicked.connect(self.openWindow)
-        
         gridLayout = QGridLayout()
         gridLayout.addWidget(field_joystick_in_button,0,3)
         gridLayout.addWidget(field_joystick_left_button,1 ,2)
@@ -196,15 +187,71 @@ class MainWindow(QMainWindow):
         gridLayout.addWidget(field_joystick_right_button,1,4)
         gridLayout.addWidget(field_joystick_out_button,2,3)
         gridLayout.addLayout(upDownLayout,0,6, 3,1)
-        
-        #up-down buttons
-        gridLayout.addWidget(MontoSettings_button, 3, 0)
-        gridLayout.addWidget(btn2, 4, 0)
-        
+
         self.setCentralWidget(plotframe)
         plotframe.setLayout(gridLayout)
         self.bottomRightGroupBox.setLayout(gridLayout)    
 
+        
+    def createMotorGroupBox(self):
+        self.motorGroupBox = QGroupBox("Scan settings")
+        plotframe = QFrame(self)
+        plotframe.setStyleSheet("QWidget { background-color: #eeeeec; }")
+        plotframe.setLineWidth(0.6)
+        
+        table = QTableWidget(self)  # Create a table
+        table.setColumnCount(3)     #Set three columns
+        table.setRowCount(3)        # and one row
+        # Set the table headers
+        table.setHorizontalHeaderLabels([" ", "x", "z"])
+        table.setEditTriggers( QAbstractItemView.NoEditTriggers)
+        # Fill the first line
+        table.setItem(0, 0, QTableWidgetItem("Matrix size [cm] :"))
+        table.setItem(1, 0, QTableWidgetItem("Step   size [   ]:"))
+        table.setItem(2, 0, QTableWidgetItem("Delay  time [sec]:"))
+        
+        table.item(0, 0).setBackground(QColor("gray"))
+        table.item(1, 0).setBackground(QColor("gray"))
+        table.item(2, 0).setBackground(QColor("gray"))
+        
+        table.setItem(0, 1, QTableWidgetItem(str(self.x)))
+        table.setItem(0, 2, QTableWidgetItem(str(self.z)))
+
+        table.setItem(1, 1, QTableWidgetItem(str(self.size_x)))
+        table.setItem(1, 2, QTableWidgetItem(str(self.size_z)))
+
+        table.setItem(2, 1, QTableWidgetItem(str(self.x_delay)))
+        table.setItem(2, 2, QTableWidgetItem(str(self.z_delay)))
+                        
+        # Do the resize of the columns by content
+        table.resizeColumnsToContents()
+        table.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        table.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        firstHBoxLayout = QHBoxLayout()
+        firstLabel = QLabel("Matrix Size: ", self)
+        firstLabel.setText("Matrix Size [cm]: ")
+        labelValue = QLabel()
+        labelValue.setText(str(self.z)+"x" +str(self.z))
+        firstHBoxLayout.addWidget(firstLabel)
+        firstHBoxLayout.addWidget(labelValue)
+        
+        montoSettings_button = QPushButton("Montor Settings")
+        montoSettings_button.clicked.connect(self.openWindow)
+        #MontoSettings_button.setFixedWidth(30)
+
+        restore_button = QPushButton("Restore intial positions")
+        restore_button.clicked.connect(self.openWindow)
+        gridLayout = QGridLayout()
+        gridLayout.addLayout(firstHBoxLayout, 0, 0)
+        gridLayout.addWidget(table,1, 0)
+        
+        gridLayout.addWidget(montoSettings_button, 2, 0)
+        gridLayout.addWidget(restore_button, 3, 0)
+        
+        self.setCentralWidget(plotframe)
+        plotframe.setLayout(gridLayout)
+        self.motorGroupBox.setLayout(gridLayout)
+          
     def createProgressBar(self):
         self.progressBar = QProgressBar()
         self.progressBar.setRange(0, 10000)
@@ -227,8 +274,9 @@ class MainWindow(QMainWindow):
         print("Right")
     def joystick_left(self):
         print("Left")
-    def joystick_middle(self):
-        print("middle")
+    def joystick_middle_scan(self):
+        analysis_utils.BeamSpotScan().compute_move(size_x=self.size_x, z=self.z, z_delay = self.z_delay , x_delay=self.x_delay, x=self.x, size_z=self.size_z, sourcemeter=self.sourcemeter, directory=self.directory)
+        
     def joystick_up(self):
         print("Up")
     def joystick_down(self):

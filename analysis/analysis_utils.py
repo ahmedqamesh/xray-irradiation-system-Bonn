@@ -44,7 +44,7 @@ class BeamSpotScan(object):
        self.logger = logging.getLogger(__name__)
        self.logger.setLevel(logging.DEBUG)
        self.logger.notice('Beam Spot Scanning ...')
-
+       self.__beamspot = None
     def compute_move(self,size_x=None, z=None,currentLimit = 1.000000E-01,z_delay=None, x_delay=None, x=None, size_z=None, sourcemeter=False, directory=None):
         # Initial plot will be generated
         '''
@@ -87,12 +87,14 @@ class BeamSpotScan(object):
                  # save for Monitoring 
                  self.set_data(x = current)
                  beamspot[step_z, step_x] = float(current)
+                 self.set_beam_spot(beamspot)
                  try: 
                     save_to_h5(data=beamspot, outname='beamspot_Live.h5', directory= directory)
+                    
                  except IndexError:  #open file failure
                     pass
                  beamshow  = plt.imshow(beamspot, aspect='auto', origin='upper',  cmap=plt.get_cmap('tab20c'))
-                 plt.pause(0.05)
+                 #plt.pause(0.05)
              # dut["ms"].read_write("MR%d" % (-size_z), address=2)  # x# x 50000,100,50 = 4.5 cm in/out
              time.sleep(z_delay)
         
@@ -104,7 +106,7 @@ class BeamSpotScan(object):
             a, b = config_beamspot[step_z].item(0) , config_beamspot[step_z].item(1)
             c , new_size_x = config_beamspot[step_z].item(2), config_beamspot[step_z].item(3)
             fill_snake_pattern(step_z=step_z , a=int(a), b=int(b) , c=int(c), size_x=int(new_size_x), x_delay=x_delay, z_delay=z_delay, directory = directory)
-        plt.show()
+        #plt.show()
         outname='beamspot.h5'
         save_to_h5(data=beamspot, outname=outname, directory=directory) 
         log.info("The beamspot file is saved as " + os.path.join(directory, outname))
@@ -117,7 +119,15 @@ class BeamSpotScan(object):
      
     def get_data(self):
         return self.data 
+    
+    def set_beam_spot(self, x=None):
+        self.__beamspot = x
+     
+    def get_beam_spot(self):
+        return self.__beamspot 
         
+    
+       
 def define_configured_array(size_x=1, z=20, x=20, size_z=1):
     #log.info('Creating a confiiguration array for the snake pattern')
     config_beamspot = np.zeros(shape=(z, 5), dtype=np.float64)
