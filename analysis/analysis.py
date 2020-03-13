@@ -8,14 +8,16 @@ import tables as tb
 from tqdm import tqdm
 from scipy.optimize import curve_fit
 loglevel = logging.getLogger('Analysis').getEffectiveLevel()
-from analysis import logger
 np.warnings.filterwarnings('ignore')
-
+import logging
+from logging.handlers import RotatingFileHandler
+import coloredlogs as cl
+import verboselogs
 class Analysis(object):
     
     def __init__(self):
-        self.log = logger.setup_derived_logger('Analysis')
-        self.log.info('Analysis initialized')
+        self.logger = logging.getLogger(__name__)
+        self.logger.info('Analysis initialized')
     # Fit functions
     def linear(self, x, m, c):
         return m * x + c

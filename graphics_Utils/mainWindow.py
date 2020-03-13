@@ -11,7 +11,7 @@ from pathlib import Path
 import matplotlib as mpl
 import numpy as np
 from matplotlib.figure import Figure
-from graphics_Utils import DataMonitoring , MenuWindow ,LogWindow
+from graphics_Utils import DataMonitoring , MenuWindow ,LogWindow, childWindow
 from analysis import analysis_utils , logger
 # Third party modules
 from logging.handlers import RotatingFileHandler
@@ -40,7 +40,13 @@ class MainWindow(QMainWindow):
         self.app_name = conf['Application']['name']
         
         #Devices
-        self.sourcemeter= conf["Devices"]["sourcemeter"]
+        self.sourcemeter= conf["Devices"]["sourcemeter"]["status"]
+        self.motorstage= conf["Devices"]["motorstage"]["status"]
+        channels = conf["Devices"]["motorstage"]["channels"]
+        self.channel_x = channels[0]["x"]
+        self.channel_y = channels[1]["y"]
+        self.channel_z = channels[2]["z"]
+
         #Beamspot scan settings
         self.size_x=conf['Settings']['size_x']
         self.z=conf['Settings']['z']
@@ -236,11 +242,11 @@ class MainWindow(QMainWindow):
         firstHBoxLayout.addWidget(labelValue)
         
         montoSettings_button = QPushButton("Montor Settings")
-        montoSettings_button.clicked.connect(self.openWindow)
+        montoSettings_button.clicked.connect(self.openSettingsChildWindow)
         #MontoSettings_button.setFixedWidth(30)
 
         restore_button = QPushButton("Restore intial positions")
-        restore_button.clicked.connect(self.openWindow)
+        restore_button.clicked.connect(self.openSettingsChildWindow)
         gridLayout = QGridLayout()
         gridLayout.addLayout(firstHBoxLayout, 0, 0)
         gridLayout.addWidget(table,1, 0)
@@ -275,20 +281,114 @@ class MainWindow(QMainWindow):
     def joystick_left(self):
         print("Left")
     def joystick_middle_scan(self):
-        analysis_utils.BeamSpotScan().compute_move(size_x=self.size_x, z=self.z, z_delay = self.z_delay , x_delay=self.x_delay, x=self.x, size_z=self.size_z, sourcemeter=self.sourcemeter, directory=self.directory)
+        analysis_utils.BeamSpotScan().compute_move(size_x=self.size_x, z=self.z, z_delay = self.z_delay , x_delay=self.x_delay, x=self.x, size_z=self.size_z, sourcemeter=self.sourcemeter,motorstage = self.motorstage, directory=self.directory)
         
     def joystick_up(self):
         print("Up")
     def joystick_down(self):
         print("Down")
-                
-    def openWindow(self):
+
+    def SettingsChildWindow(self, ChildWindow):
+        ChildWindow.setObjectName("settingsChildWindow")
+        ChildWindow.setWindowTitle("Motor settings")
+        ChildWindow.resize(310, 600)  # w*h
+        # Define a frame for that group
+        plotframe = QFrame(ChildWindow)
+        plotframe.setLineWidth(0.6)
+        MainLayout = QGridLayout()
+        FirstGroupBox = QGroupBox("")
+        # comboBox and label for channel
+        FirstGridLayout = QGridLayout() 
+        #self.main.set_bytes(textboxValue[i])
+        channelLabel = QLabel("Channel setup", ChildWindow)
+        channelLabel.setText("Channel setup")
+        channelitems = ["--","1","2","3"]
+        dimitems = ["--","x","y","z"]
+        channelComboBox = QComboBox(self)
+        dimComboBox = QComboBox(self)
+        for item in channelitems: channelComboBox.addItem(item)
+        for item in dimitems: dimComboBox.addItem(item)
+        channelComboBox.activated[str].connect(self.set_channel)
+        dimComboBox.activated[str].connect(self.set_dimention)
+
+        set_button = QPushButton("Set channel")
+        set_button.setIcon(QIcon('graphics_Utils/icons/icon_true.png'))
+        set_button.clicked.connect(self.set_all)
+
+        FirstGridLayout.addWidget(channelLabel, 0, 0)
+        FirstGridLayout.addWidget(channelComboBox, 0, 1)
+        FirstGridLayout.addWidget(dimComboBox, 0, 2)        
+        FirstGridLayout.addWidget(set_button, 0, 3)       
+             
+        FirstGroupBox.setLayout(FirstGridLayout) 
+        
+        SecondGroupBox = QGroupBox("Message Data")
+        # comboBox and label for channel
+        SecondGridLayout = QGridLayout()
+        ByteList = ["Byte0 :", "Byte1 :", "Byte2 :", "Byte3 :", "Byte4 :", "Byte5 :", "Byte6 :", "Byte7 :"] 
+        LabelByte = [ByteList[i] for i in np.arange(len(ByteList))]
+        textbox = [ByteList[i] for i in np.arange(len(ByteList))]
+        textboxValue = [ByteList[i] for i in np.arange(len(ByteList))]
+        for i in np.arange(len(ByteList)):
+            LabelByte[i] = QLabel(ByteList[i], ChildWindow)
+            LabelByte[i].setText(ByteList[i])
+            textbox[i] = QLineEdit("self.__bytes[i]", ChildWindow)
+            textboxValue[i] = textbox[i].text()
+            if i <= 3:
+                SecondGridLayout.addWidget(LabelByte[i], i, 0)
+                SecondGridLayout.addWidget(textbox[i], i, 1)
+            else:
+                SecondGridLayout.addWidget(LabelByte[i], i - 4, 4)
+                SecondGridLayout.addWidget(textbox[i], i - 4, 5)
+        #self.set_bytes(textboxValue)
+        SecondGroupBox.setLayout(SecondGridLayout) 
+        
+        HBox = QHBoxLayout()
+        send_button = QPushButton("Send")
+        send_button.setIcon(QIcon('graphics_Utils/icons/icon_true.png'))
+
+        close_button = QPushButton("close")
+        close_button.setIcon(QIcon('graphics_Utils/icons/icon_close.jpg'))
+        close_button.clicked.connect(ChildWindow.close)
+
+        HBox.addWidget(send_button)
+        HBox.addWidget(close_button)
+                 
+        MainLayout.addWidget(FirstGroupBox , 0, 0)
+        MainLayout.addWidget(SecondGroupBox , 1, 0)
+        MainLayout.addLayout(HBox , 2, 0)
+        
+        ChildWindow.setCentralWidget(plotframe)
+        plotframe.setLayout(MainLayout) 
+        QtCore.QMetaObject.connectSlotsByName(ChildWindow)
+ 
+    def set_channel(self, x):
+        self._channel = x 
+    
+    def set_dimention(self, x): 
+        self._dim = x
+    
+    def set_all(self):
+        dim = self.get_dimention()
+        ch = self.get_channel()
+        text = "channel %s will be set to  %s direction"%(ch,dim)
+        print(text)
+        #self.outLabel.setText(text)
+        #self.outLabel.adjustSize()
+        
+    def openSettingsChildWindow(self):
         self.window = QMainWindow()
-        self.ui = ChildWindow.Ui_ChildWindow()
-        self.ui.settingChannel(self.window)
+        #ui = childWindow.ChildWindow()
+        self.SettingsChildWindow(self.window)
         #MainWindow.hide()
         self.window.show()
+ 
+    def get_channel(self): 
+        return self._channel 
     
+    def get_dimention(self): 
+        return self._dim
+       
     def get_testDirectory(self):
         return self.test_directory
     

@@ -112,9 +112,9 @@ class MapMonitoringDynamicCanvas(FigureCanvas):
         
     def update_figure(self): 
         try:    
-            #beamspot = analysis_utils.open_h5_file(outname='beamspot_Live.h5', directory=self.directory)
-            beamspot = analysis_utils.BeamSpotScan().get_beam_spot()
-            print(beamspot)
+            beamspot = analysis_utils.open_h5_file(outname='beamspot_Live.h5', directory=self.directory)
+            #beamspot = analysis_utils.BeamSpotScan().get_beam_spot()
+            #print(beamspot)
             if beamspot is not None:
                 cmap = plt.cm.get_cmap('tab20c')
                 im = self.axes.imshow(beamspot, aspect='auto', origin='upper', cmap=cmap)

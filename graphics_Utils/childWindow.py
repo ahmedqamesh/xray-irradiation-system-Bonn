@@ -154,7 +154,82 @@ class ChildWindow(QWidget):
             SubSecondGridLayout.addWidget(Fig,4,0, 4,0)
             SubSecondGridLayout.addWidget(close_button,25,5)
         self.SubFilterGroupBox.setLayout(SubSecondGridLayout)
-         
+
+    def SettingsChildWindow(self, ChildWindow):
+        ChildWindow.setObjectName("settingsChildWindow")
+        ChildWindow.setWindowTitle("Motor settings")
+        ChildWindow.resize(310, 600)  # w*h
+        # Define a frame for that group
+        plotframe = QFrame(ChildWindow)
+        plotframe.setLineWidth(0.6)
+        MainLayout = QGridLayout()
+        FirstGroupBox = QGroupBox("")
+        # comboBox and label for channel
+        FirstGridLayout = QGridLayout() 
+        #self.main.set_bytes(textboxValue[i])
+        channelLabel = QLabel("Channel setup", ChildWindow)
+        channelLabel.setText("Channel setup")
+        channelitems = ["--","1","2","3"]
+        dimitems = ["--","x","y","z"]
+        channelComboBox = QComboBox(self)
+        dimComboBox = QComboBox(self)
+        for item in channelitems: channelComboBox.addItem(item)
+        for item in dimitems: dimComboBox.addItem(item)
+        channelComboBox.activated[str].connect(self.set_channel)
+        dimComboBox.activated[str].connect(self.set_dimention)
+
+        set_button = QPushButton("Set channel")
+        set_button.setIcon(QIcon('graphics_Utils/icons/icon_true.png'))
+        set_button.clicked.connect(self.set_all)
+
+        FirstGridLayout.addWidget(channelLabel, 0, 0)
+        FirstGridLayout.addWidget(channelComboBox, 0, 1)
+        FirstGridLayout.addWidget(dimComboBox, 0, 2)        
+        FirstGridLayout.addWidget(set_button, 0, 3)       
+             
+        FirstGroupBox.setLayout(FirstGridLayout) 
+        
+        SecondGroupBox = QGroupBox("Message Data")
+        # comboBox and label for channel
+        SecondGridLayout = QGridLayout()
+        ByteList = ["Byte0 :", "Byte1 :", "Byte2 :", "Byte3 :", "Byte4 :", "Byte5 :", "Byte6 :", "Byte7 :"] 
+        LabelByte = [ByteList[i] for i in np.arange(len(ByteList))]
+        textbox = [ByteList[i] for i in np.arange(len(ByteList))]
+        textboxValue = [ByteList[i] for i in np.arange(len(ByteList))]
+        for i in np.arange(len(ByteList)):
+            LabelByte[i] = QLabel(ByteList[i], ChildWindow)
+            LabelByte[i].setText(ByteList[i])
+            textbox[i] = QLineEdit("self.__bytes[i]", ChildWindow)
+            textboxValue[i] = textbox[i].text()
+            if i <= 3:
+                SecondGridLayout.addWidget(LabelByte[i], i, 0)
+                SecondGridLayout.addWidget(textbox[i], i, 1)
+            else:
+                SecondGridLayout.addWidget(LabelByte[i], i - 4, 4)
+                SecondGridLayout.addWidget(textbox[i], i - 4, 5)
+        #self.set_bytes(textboxValue)
+        SecondGroupBox.setLayout(SecondGridLayout) 
+        
+        HBox = QHBoxLayout()
+        send_button = QPushButton("Send")
+        send_button.setIcon(QIcon('graphics_Utils/icons/icon_true.png'))
+
+        close_button = QPushButton("close")
+        close_button.setIcon(QIcon('graphics_Utils/icons/icon_close.jpg'))
+        close_button.clicked.connect(ChildWindow.close)
+
+        HBox.addWidget(send_button)
+        HBox.addWidget(close_button)
+                 
+        MainLayout.addWidget(FirstGroupBox , 0, 0)
+        MainLayout.addWidget(SecondGroupBox , 1, 0)
+        MainLayout.addLayout(HBox , 2, 0)
+        
+        ChildWindow.setCentralWidget(plotframe)
+        plotframe.setLayout(MainLayout) 
+        QtCore.QMetaObject.connectSlotsByName(ChildWindow)
+
+    # setter method                    
     def set_filter(self, x): 
         self._filter = x 
         
@@ -165,28 +240,10 @@ class ChildWindow(QWidget):
         # x = self.firsttextbox.text()
         self.self_ipAddress =x
         
-        
     def set_label(self, text):
         self.outLabel.setText(text)
 
-    def set_click(self):
-        dim = self.get_dimention()
-        ch = self.get_channel()
-        text = "%s will be set to  %s direction"%(ch,dim)
-        print(text)
-        
-    # setter method 
-    def set_channel(self, x): 
-        self._channel = x 
-    
-    def set_dimention(self, x): 
-        self._dim = x
-        dim = self.get_dimention()
-        ch = self.get_channel()
-        text = "%s will be set to  %s direction"%(ch,dim)
-        self.outLabel.setText(text)
-        self.outLabel.adjustSize()
-        
+   
     # getter methods
     def get_firstItem(self):
         return self.__firstItem
@@ -197,22 +254,9 @@ class ChildWindow(QWidget):
     def set_openingAngleCalculation(self): 
         self.mainWindow.set_interface(self._openingAngleCalculation)
         return self._openingAngleCalculation 
-    
-    def get_self_ipAddress(self):
-        return self_ipAddress
-    
-    def get_channel(self): 
-        return self._channel 
-    
-    def get_dimention(self): 
-        return self._dim
-    
-    
+
     def clicked(self,q):
         print("is clicked")
-                
-
-        
 
 if __name__ == "__main__":
     pass

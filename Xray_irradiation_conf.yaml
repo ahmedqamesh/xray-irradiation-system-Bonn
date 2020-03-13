@@ -8,7 +8,7 @@ Settings:
    x_delay: 1
    z_delay: 1
    
-   period: 100
+   period: 1000000
    depth: 3
    r: 2 
 
@@ -19,6 +19,7 @@ Info:
    max_height: 70 # cm
    max_radius: 10 # cm
    voltage_range:   [40,50]
+
 FitFunctions:
    dose_current:
       without:
@@ -101,8 +102,15 @@ FitFunctions:
                b: 6.75
                c: 0.03
 Devices:
-   sourcemeter: True
-   MotorStage: False
+   sourcemeter: 
+      status: True
+         
+   motorstage: 
+      status: False
+      channels:
+        ["x":1
+        ,"y":2
+        ,"z":3]
 Tests:
    test_directory: tests/
    filters:

@@ -45,7 +45,7 @@ class BeamSpotScan(object):
        self.logger.setLevel(logging.DEBUG)
        self.logger.notice('Beam Spot Scanning ...')
        self.__beamspot = None
-    def compute_move(self,size_x=None, z=None,currentLimit = 1.000000E-01,z_delay=None, x_delay=None, x=None, size_z=None, sourcemeter=False, directory=None):
+    def compute_move(self,size_x=None, z=None,currentLimit = 1.000000E-01,z_delay=None, x_delay=None, x=None, size_z=None, sourcemeter=False, motorstage = None, directory=None):
         # Initial plot will be generated
         '''
         Assuming that the cabinet door is the -z
@@ -68,34 +68,36 @@ class BeamSpotScan(object):
             print ("The Protection Current limit is", dut['Keithley'].ask("SENS:CURR:PROT?"))
             dut['Keithley'].write(":SOUR:FUNC VOLT")
             dut['Keithley'].write(':SOUR:VOLT 50')
-#         else:
-#             dut = Dut('motorstage_Pyserial.yaml')
-#             dut.init()
-        def fill_snake_pattern(step_z=False,sourcemeter = sourcemeter, size_z=None, a=None, b=None , c=None, size_x=None, x_delay=None, z_delay=z_delay, directory=None):            
+        if motorstage:
+            dut = Dut('motorstage_Pyserial.yaml')
+            dut.init()
+            
+        def fill_snake_pattern(step_z=False,sourcemeter = sourcemeter,motorstage = motorstage, size_z=None, a=None, b=None , c=None, size_x=None, x_delay=None, z_delay=z_delay, directory=None):            
              first_point = True
              for step_x in tqdm(np.arange(a, b, c) , unit='xstep'):
-                 #if not first_point:
-                 #    pass
-                     # dut["ms"].read_write("MR%d" % (size_x), address=3) # x 50000,100,50 = 4.5 cm left/right
-                 #first_point = False
-                 time.sleep(x_delay)
-                 if sourcemeter:
+                if motorstage:
+                    if not first_point:
+                        dut["ms"].read_write("MR%d" % (size_x), address=3) # x 50000,100,50 = 4.5 cm left/right
+                    first_point = False
+                time.sleep(x_delay)
+                if sourcemeter:
                      val = dut['Keithley'].ask(":MEAS:CURR?")
                      current = val[15:-43]
-                 else:
+                else:
                      current = random.randint(0, 100)
                  # save for Monitoring 
-                 self.set_data(x = current)
-                 beamspot[step_z, step_x] = float(current)
-                 self.set_beam_spot(beamspot)
-                 try: 
+                self.set_data(x = current)
+                beamspot[step_z, step_x] = float(current)
+                self.set_beam_spot(beamspot)
+                try: 
                     save_to_h5(data=beamspot, outname='beamspot_Live.h5', directory= directory)
                     
-                 except IndexError:  #open file failure
+                except IndexError:  #open file failure
                     pass
-                 beamshow  = plt.imshow(beamspot, aspect='auto', origin='upper',  cmap=plt.get_cmap('tab20c'))
-                 #plt.pause(0.05)
-             # dut["ms"].read_write("MR%d" % (-size_z), address=2)  # x# x 50000,100,50 = 4.5 cm in/out
+                beamshow  = plt.imshow(beamspot, aspect='auto', origin='upper',  cmap=plt.get_cmap('tab20c'))
+                plt.pause(0.05)
+             if motorstage:
+                 dut["ms"].read_write("MR%d" % (-size_z), address=2)  # x# x 50000,100,50 = 4.5 cm in/out
              time.sleep(z_delay)
         
         t0 = time.time()
@@ -113,7 +115,6 @@ class BeamSpotScan(object):
         t1 = time.time()
         log.info("The time Estimated is "+ np.str(t1 - t0)+" s")
 
-
     def set_data(self, x=None):
         self.data = x
      
@@ -125,9 +126,8 @@ class BeamSpotScan(object):
      
     def get_beam_spot(self):
         return self.__beamspot 
-        
+
     
-       
 def define_configured_array(size_x=1, z=20, x=20, size_z=1):
     #log.info('Creating a confiiguration array for the snake pattern')
     config_beamspot = np.zeros(shape=(z, 5), dtype=np.float64)

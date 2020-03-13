@@ -8,6 +8,6 @@ transfer_layer:
         timeout : 0.1
 
 hw_drivers:
-  - name      : stage
+  - name      : Julabo
     type      : motorStage
     interface : Serial_ms

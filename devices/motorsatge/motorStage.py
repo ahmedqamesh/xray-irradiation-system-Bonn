@@ -79,7 +79,7 @@ class MotorStage(HardwareLayer):
         plt.axis([LLimit, ULimit, 0, 11])
         plt.show()
         
-        
+            
     def GUI(self,root =False):
         root.title("x-ray motorstage")
         root.geometry("450x230")
