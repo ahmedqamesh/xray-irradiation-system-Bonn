@@ -20,31 +20,31 @@ def Inverse_square(x, a, b, c):
 def quadratic(x, a, b, c):
     return a*x**2+b*x+c
 
-def opening_angle(depth=None, r=None, conf = conf):
+def opening_angle(depth=None, radius=None, conf = conf):
     #The function will return  radius if depth is given 
     #The function will return  height if r is given
     opening_angle = conf["FitFunctions"]["opening_angle"] 
     if depth is not None:
         result = linear(depth,opening_angle["a"],opening_angle["b"])
-    if r is not None:
-        result = inv_linear(r,opening_angle["a"],opening_angle["b"])
+    if radius is not None:
+        result = inv_linear(radius,opening_angle["a"],opening_angle["b"])
     return result
 
-def dose_current(I=None, d= None, depth ="3cm", filter= "without", voltage = "40kV", conf = conf):
+def dose_current(current=None, dose= None, depth ="3cm", filter= "without", voltage = "40kV", conf = conf):
     #The function will return  dose if I is given 
     #The function will return  current if d is given
     dose_current = conf["FitFunctions"]["dose_current"][filter][depth][voltage]
-    if I is not None:
-        result=linear(I,dose_current["a"],dose_current["b"])
-    if d is not None:
-        result=inv_linear(d,dose_current["a"],dose_current["b"])
+    if current is not None:
+        result=linear(current,dose_current["a"],dose_current["b"])
+    if dose is not None:
+        result=inv_linear(dose,dose_current["a"],dose_current["b"])
     return result            
 
-def dose_voltage(V=None, d= None, current ="10mA", filter= "without",  depth ="8cm", conf = conf):
+def dose_voltage(voltage=None, dose= None, current ="10mA", filter= "without",  depth ="8cm", conf = conf):
     dose_voltage =conf["FitFunctions"]["dose_voltage"][filter][depth][current]
     #The function will return  dose if V is given 
     if filter == "without":
-        result=quadratic(V,dose_voltage["a"],dose_voltage["b"],dose_voltage["c"])
+        result=quadratic(voltage,dose_voltage["a"],dose_voltage["b"],dose_voltage["c"])
     else:   print("Not yet")
     return result 
 

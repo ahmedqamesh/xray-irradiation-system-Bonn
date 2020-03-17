@@ -1,1 +1,1 @@
-pip install basil_daq
+pip install basil_daq==3.0.1

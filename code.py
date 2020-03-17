@@ -11,7 +11,6 @@ from analysis import fitEquations as f
 from analysis import analysis_utils
 rootdir = os.path.dirname(os.path.abspath(__file__))
 
-
 class MainWindow(QMainWindow):
 
     def __init__(self, parent=None):
@@ -120,7 +119,6 @@ class MainWindow(QMainWindow):
         self.horizontalLayout.addItem(spacerItem1)
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.verticalLayout.addWidget(box)
-        # self.resize(self.sizeHint())
         
         self.setCentralWidget(frame)
         frame.setLayout(self.verticalLayout)
@@ -134,23 +132,21 @@ class MainWindow(QMainWindow):
         label = getattr(self, sender.objectName())
         label.setText("{:>10,}".format(value)+sliders_units[i])
         if i == 0:
-            dV = f.dose_voltage(V = value, filter = "without", depth ="8cm")
-            print(dV)        
+            dV = f.dose_voltage(voltage = value, filter = "without", depth ="8cm")
+            self.set_dose(dV)  
         if i == 1:
-            dC = f.dose_current(I = value, filter = "without", depth ="3cm",voltage = "40kV")
-            print(dC)    
+            dC = f.dose_current(current = value, filter = "without", depth ="3cm",voltage = "40kV")
+            self.set_dose(dC)
         if i == 2:
             dD = f.dose_depth(depth = value, filter = "without")
             r = f.opening_angle(depth = value)
-            
             print(dD, r)
         if i == 3:
-            height = f.opening_angle(r = value)
+            height = f.opening_angle(radius = value)
             print(height)     
         if i == 4:
-            current = f.dose_current(d = value, filter = "without", depth ="3cm", voltage = "40kV")
-            print(current)
-
+            current = f.dose_current(dose = value, filter = "without", depth ="3cm", voltage = "40kV")
+            self.set_current(current)
         
     def clickBox(self, state):
         if state == QtCore.Qt.Checked:
@@ -172,13 +168,16 @@ class MainWindow(QMainWindow):
 
     def set_voltage(self,x):
         self.__voltage = x
-
+        self.voltage_slider.setValue(x)
+        
     def set_current(self,x):
         self.__current = x
+        self.current_slider.setValue(x)
 
     def set_dose(self,x):
         self.__dose = x
-    
+        #self.dose_slider.setValue(x)
+        
     def set_height(self,x):
         self.__height = x
     
