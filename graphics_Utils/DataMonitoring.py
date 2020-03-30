@@ -18,6 +18,35 @@ from IPython import display
 import matplotlib as mpl
 from analysis import analysis_utils
 
+class BeamMonitoring(FigureCanvas):
+    """A canvas that updates itself every second with a new plot."""
+    def __init__(self, parent=None):
+        self.fig = Figure(edgecolor = "black",linewidth ="2.5")#, facecolor="#e1ddbf")
+        self.axes = self.fig.add_subplot(111)
+        FigureCanvas.__init__(self, self.fig )
+        #FigureCanvas.setSizePolicy(self,QSizePolicy.Expanding,QSizePolicy.Expanding),FigureCanvas.updateGeometry(self)
+        self.axes.set_xlabel(r'Diameter (d) [cm]', size = 10)
+        self.axes.set_ylabel(r'Height from the the collimator holder(h) [cm]', size = 10) 
+        self.axes.grid(True)
+        self.axes.invert_yaxis()
+        self.axes.set_xlim(-6,6)
+        plt.tight_layout()                 
+        self.axes.set_title('Diameter covered by beam spot', fontsize=12)
+
+    def update_figure(self,x,y,h,r,filter,color):
+        #self.axes.invert_yaxis()
+        self.axes.set_xlabel(r'Diameter (d) [cm]', size = 10)
+        self.axes.set_ylabel(r'Height from the the collimator holder(h) [cm]', size = 10) 
+        self.axes.grid(True)
+        self.axes.set_xlim(-6,6)
+        self.axes.set_title('Diameter covered by beam spot [%s filter]'%filter, fontsize=12)
+        self.axes.plot(x, y, color=color)
+        self.axes.text(0.95, 0.90, "Height = %.2f cm\n radius = %.2f cm"%(h,r),
+               horizontalalignment='right', verticalalignment='top', transform=self.axes.transAxes,
+               bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.7))
+        
+        self.draw()
+        
 class LiveMonitoringData(QtWidgets.QMainWindow):
 
     def __init__(self, parent=None):

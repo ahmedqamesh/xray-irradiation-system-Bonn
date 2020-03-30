@@ -37,6 +37,7 @@ from matplotlib.patches import Rectangle
 from matplotlib.collections import PatchCollection
 from analysis import analysis
 from analysis import logger
+from scipy import interpolate
 colors = ['black', 'red', '#006381', "blue", '#33D1FF', '#F5A9BC', 'grey', '#7e0044', 'orange', "maroon", 'green', "magenta", '#33D1FF', '#7e0044', "yellow"]
 an = analysis.Analysis()
 class PlottingCalibration(object):     
@@ -490,14 +491,14 @@ class PlottingCalibration(object):
                 kafe_plot.save(test_file+depth[0]+"_kafe_Fit.png")
             PdfPages.savefig()
             
-    def dose_drop(self, directory=False, tests = False, PdfPages=False, factor = None, stdev=0.06, depth=[0], voltages=[0]):
+    def dose_drop(self, directory=False, tests = False, PdfPages=False, factor = None, depth=[0], voltages=[0]):
         '''
         Dose drop after Al filter at two Voltages.
         '''
         filter = tests[0]
         col_row = plt.cm.BuPu(np.linspace(0.3, 0.9, len(voltages)))
-        self.log.info('Dose drop after %s' %filter)
         for i in range(len(depth)):
+            self.log.info('Dose drop at %s cm [%s]' %(depth[i],filter))
             fig = plt.figure()
             fig.add_subplot(111)
             ax = plt.gca()
@@ -520,12 +521,16 @@ class PlottingCalibration(object):
                         x1 = np.append(x1, float(row[0]))  # Voltage
                         y1 = np.append(y1, (float(row[1]) - float(row[2])) * float(factor))  # Data with Al filter
                         y2 = np.append(y2, (float(row[3]) - float(row[4])) * float(factor))  # Data without Al filter
-                        difference = np.append(difference, ((float(row[6])) * 100 / float(row[3])))  # (with-bkg) -(without-bkg)
-                        
-                ax.errorbar(x1, difference, yerr=0.0, color=col_row[voltages.index(volt)], fmt='--', label="%s" % volt)
+                difference = [(y2[i]-y1[i])*100/y2[i] for i in np.arange(len(y1))]
+                spline = interpolate.splrep(x1,difference, s=10, k=2)  # create spline interpolation
+                xnew = np.linspace(np.min(x1), np.max(x1), num = 50, endpoint = True)
+                spline_eval = interpolate.splev(xnew, spline)  # evaluate spline
+                plt.plot(xnew,spline_eval,"-", color=col_row[voltages.index(volt)])
+                plt.plot(x1,difference,'o', color=col_row[voltages.index(volt)],label="%s" % volt)
             ax.set_title('Dose drop after Al filter at ' + depth[i], fontsize=12)
             ax.set_ylabel('Dose rate drop [%]')
             ax.set_xlabel('Tube current [mA]')
+            ax.set_ylim(0,100)
             ax.legend(prop={'size': 10})
             ax.grid(True)
             plt.savefig(test_file[:-16]+'dose_current_drop_' + depth[i] + ".png", bbox_inches='tight')

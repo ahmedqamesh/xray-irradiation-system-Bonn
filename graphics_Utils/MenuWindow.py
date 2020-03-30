@@ -80,9 +80,9 @@ class MenuBar(QWidget):
         doseCalculator_action.setChecked(True)
         doseCalculator_action.triggered.connect(self.doseCalculatorWindow)
                 
-        trend_action = QAction('&Data Trending', mainwindow, checkable = True)
+        trend_action = QAction('&Data Trending', mainwindow)
         trend_action.setStatusTip('Data Trending')
-        trend_action.setChecked(False)
+        trend_action.setChecked(True)
         trend_action.triggered.connect(self.trendChildWindow)
         
         viewMenu.addAction(doseCalculator_action)
@@ -311,16 +311,15 @@ class MenuBar(QWidget):
                                       plot_prefix="dose_voltage")
         self.mainwindow.show()     
     
-    def trendChildWindow(self, state):
-        if state:
-            self.ui.trendChildWindow(self.mainwindow)
-            self.mainwindow.show()
-        else:
-           self.mainwindow.close()
+    def trendChildWindow(self):
+        self.trendwindow = QMainWindow()
+        self.ui.trendChildWindow(self.trendwindow)
+        self.trendwindow.show()
             
     def doseCalculatorWindow(self):
-        self.ui.doseCalculatorWindow(self.mainwindow)
-        self.mainwindow.show()
+        self.calculatorwindow = QMainWindow()
+        self.ui.doseCalculatorWindow(self.calculatorwindow)
+        self.calculatorwindow.show()
            
     def about(self):
         text="text"

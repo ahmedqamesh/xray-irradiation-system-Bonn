@@ -1,16 +1,52 @@
 import sys
 from matplotlib.backends.qt_compat import QtCore, QtWidgets
 from matplotlib.backends.backend_qt5agg import FigureCanvas
+
+from matplotlib.figure import Figure
+from matplotlib.widgets import Slider
+
 from PyQt5.QtCore    import *
 from PyQt5.QtGui     import *
 from PyQt5.QtWidgets import *
+import matplotlib.pyplot as plt
 import pyqtgraph as pg
 import numpy as np
 import os
+from IPython.display import clear_output
+from scipy.optimize import curve_fit
 from analysis import fitEquations as f
 from analysis import analysis_utils
 rootdir = os.path.dirname(os.path.abspath(__file__))
 
+class BeamMonitoring(FigureCanvas):
+    """A canvas that updates itself every second with a new plot."""
+    def __init__(self, parent=None):
+        self.fig = Figure(edgecolor = "black",linewidth ="2.5")#, facecolor="#e1ddbf")
+        self.axes = self.fig.add_subplot(111)
+        FigureCanvas.__init__(self, self.fig )
+        #FigureCanvas.setSizePolicy(self,QSizePolicy.Expanding,QSizePolicy.Expanding),FigureCanvas.updateGeometry(self)
+        self.axes.set_xlabel(r'Diameter (d) [cm]', size = 10)
+        self.axes.set_ylabel(r'Height from the the collimator holder(h) [cm]', size = 10) 
+        self.axes.grid(True)
+        self.axes.invert_yaxis()
+        self.axes.set_xlim(-6,6)
+        plt.tight_layout()                 
+        self.axes.set_title('Diameter covered by beam spot', fontsize=12)
+
+    def update_figure(self,x,y,h,r,filter,color):
+        #self.axes.invert_yaxis()
+        self.axes.set_xlabel(r'Diameter (d) [cm]', size = 10)
+        self.axes.set_ylabel(r'Height from the the collimator holder(h) [cm]', size = 10) 
+        self.axes.grid(True)
+        self.axes.set_xlim(-6,6)
+        self.axes.set_title('Diameter covered by beam spot [%s filter]'%filter, fontsize=12)
+        self.axes.plot(x, y, color=color)
+        self.axes.text(0.95, 0.90, "Height = %.2f cm\n radius = %.2f cm"%(h,r),
+               horizontalalignment='right', verticalalignment='top', transform=self.axes.transAxes,
+               bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.7))
+        
+        self.draw()
+                   
 class MainWindow(QMainWindow):
 
     def __init__(self, parent=None):
@@ -24,76 +60,133 @@ class MainWindow(QMainWindow):
         self.__voltage_range = conf['Info']["voltage_range"]
         
         self.__filtersList = conf['Tests']["filters"]
+        self.__depthList = conf['Tests']["depth"]
+        self.__currentList = conf['Tests']["current"]
+        self.__voltageList = conf['Tests']["voltage"]
         
-
+        self.__voltage = 0
+        self.__current = 0
+        self.__filterItem = 0
+        self.__height   = 0
+                
     def doseCalculatorWindow(self):
         self.setObjectName("Dose Calculator")
         self.setWindowTitle("Dose Calculator")
-        self.resize(1200, 700)  # w*h
+        self.resize(600, 700)  # w*h
+        font = QFont('Open Sans',20, QFont.Bold)
+        style = "background-color: black;""color: #00ff00;""border: 2px solid red;"
         
-        self.voltage_slider , voltage_Group= self.createSliderGroup(i=0, limit = self.__max_voltage)
-        self.current_slider , current_Group = self.createSliderGroup(i=1, limit =self.__max_current)
-        self.height_slider , height_Group = self.createSliderGroup(i=2, limit = self.__max_height)
-        self.radius_slider , radius_Group = self.createSliderGroup(i=3, limit = self.__max_radius)
-        self.dose_slider , dose_Group = self.createSliderGroup(i=4, limit =  self.__max_dose)
+        tubeLabel = QLabel("Tube parameters: ")
+        tubeLabel.setText("Tube parameters: ")
+        tubeLabel.setFont(QFont("Times", 12, QFont.Bold))
         
-        VBox = QVBoxLayout()
-        firstHBoxLayout = QHBoxLayout()
-        firstLabel = QLabel("Test Type: ")
-        firstLabel.setText("                            Test Type: ")
+        self.currentLabel = QLabel("Current: ")
+        self.currentLabel.setText("      Current [mA] ")
         
-        firstComboBox = QComboBox()
-        for item in self.__filtersList: firstComboBox.addItem(item)
-        firstComboBox.activated[str].connect(self.set_filterItem)
-        firstHBoxLayout.addWidget(firstLabel)
-        firstHBoxLayout.addWidget(firstComboBox)
-        self.win = pg.GraphicsWindow(title="Basic plotting examples")
-        self.p6 = self.win.addPlot(title="My Plot")
-        self.curve = self.p6.plot(pen='r')
-        self.update_plot()
+        voltageLabel = QLabel("Voltage: ")
+        voltageLabel.setText("      Voltage [kV]    ") 
+                
+        self.tubeCurrentComboBox = QComboBox()
+        for item in self.__currentList: self.tubeCurrentComboBox.addItem(item)
+        self.tubeCurrentComboBox.activated[str].connect(self.set_current)
         
-        VBox.addLayout(firstHBoxLayout)
-        VBox.addWidget(self.win)
+        self.tubeCurrentDial = QDial()
+        self.tubeCurrentDial.setMinimum(0);
+        self.tubeCurrentDial.setMaximum(self.__max_current);
+        self.tubeCurrentDial.setNotchesVisible(True)
+        self.tubeCurrentDial.valueChanged.connect(self.change_dose)
+        
+        self.tubeVoltageComboBox = QComboBox()
+        for item in self.__voltageList: self.tubeVoltageComboBox.addItem(item)
+        self.tubeVoltageComboBox.activated[str].connect(self.set_voltage)
+        
+        depthLabel = QLabel("Depth: ")
+        depthLabel.setText("           Depth [cm] ")
+        
+        self.depthComboBox = QComboBox()
+        for item in self.__depthList : self.depthComboBox.addItem(item)
+        self.depthComboBox.activated[str].connect(self.set_height)
+        
+        filterLabel = QLabel("Filter: ")
+        filterLabel.setText("     Filter")
 
+        self.filterComboBox = QComboBox()
+        for item in self.__filtersList: self.filterComboBox.addItem(item)
+        self.filterComboBox.activated[str].connect(self.set_filterItem)
+        
+        
+        line = QFrame()
+        line.setGeometry(QRect(320, 150, 118, 3))
+        line.setFrameShape(QFrame.HLine)
+        line.setFrameShadow(QFrame.Sunken)
+        
+        testLabel = QLabel("Beam Spot Size: ")
+        testLabel.setText("Beam Spot Size: ")
+        testLabel.setFont(QFont("Times", 12, QFont.Bold))
+                
+        labelLayout  = QVBoxLayout()         
+        self.doseDepthLabel = QLabel("        ")
+        self.doseDepthLabel.setFont(font)
+        self.doseDepthLabel.setStyleSheet(style)
+        labelLayout.addWidget(self.doseDepthLabel)
+        
+        refresh_button = QPushButton("")
+        refresh_button.setIcon(QIcon('graphics_Utils/icons/icon_reset.png' ))
+        refresh_button.clicked.connect(self.change_dose)  
+        
+        # Define label
+        VLayout = QVBoxLayout()
+        doseDepthLabel = QLabel("")
+        doseDepthLabel.setText("  Dose rate [50mA /40kV]")
+        self.doseLabel = QLabel("        ")
+        self.doseLabel.setFont(font)
+        self.doseLabel.setStyleSheet(style)
+
+        self.label = QLabel(self)
+        HLayout = QHBoxLayout()
+        self.height_slider , height_Group = self.createSliderGroup(i=2, limit = self.__max_height)
+        self.height_slider.valueChanged.connect(self.update_plot)
+        
+        self.fig = BeamMonitoring()
+        HLayout.addWidget(self.height_slider)
+        HLayout.addWidget(self.fig)
+        stop_button = QPushButton("close")
+        stop_button.setIcon(QIcon('graphics_Utils/icons/icon_close.png' ))
+        stop_button.clicked.connect(self.close)  
+        
         mainFrame = QFrame(self)
         mainFrame.setStyleSheet("QWidget { background-color: #eeeeec; }")
         mainFrame.setLineWidth(0.6)
         self.setCentralWidget(mainFrame)
         mainLayout = QGridLayout()
-
-        self.voltage_slider.valueChanged.connect(self.changevalue)
-        self.voltage_slider.valueChanged.connect(self.update_plot)
+        mainLayout.addWidget(tubeLabel, 0, 0)
+        mainLayout.addLayout(labelLayout,0,2)#, 1, 5,2,1)
+        mainLayout.addWidget(refresh_button,0,3)
+        mainLayout.addWidget(self.currentLabel, 1, 0)
+        mainLayout.addWidget(voltageLabel, 1, 1)
+        mainLayout.addWidget(depthLabel,1, 2)
+        mainLayout.addWidget(filterLabel,1, 3)
+        mainLayout.addWidget(self.tubeCurrentDial, 2, 0)
+        mainLayout.addWidget(self.tubeVoltageComboBox, 2, 1)
+        mainLayout.addWidget(self.depthComboBox,2, 2)
+        mainLayout.addWidget(self.filterComboBox,2,3)
+        mainLayout.addWidget(line,3, 0, 2, 6)
+        mainLayout.addWidget(testLabel,5,0)
+        mainLayout.addWidget(doseDepthLabel,6,2)
+        mainLayout.addWidget(self.doseLabel,7,2)
         
-        self.current_slider.valueChanged.connect(self.changevalue)
-        self.current_slider.valueChanged.connect(self.update_plot)
-        
-        self.height_slider.valueChanged.connect(self.changevalue)
-        self.height_slider.valueChanged.connect(self.update_plot)
-        
-        self.radius_slider.valueChanged.connect(self.changevalue)
-        self.radius_slider.valueChanged.connect(self.update_plot)
-
-        self.dose_slider.valueChanged.connect(self.changevalue)
-        self.dose_slider.valueChanged.connect(self.update_plot)
-                
-        mainLayout.addWidget(voltage_Group, 0, 0)
-        mainLayout.addWidget(current_Group, 0, 1)
-        mainLayout.addWidget(height_Group, 0, 2)
-        mainLayout.addWidget(radius_Group, 0, 3)
-        mainLayout.addWidget(dose_Group, 0, 4)
-        mainLayout.addLayout(VBox,0,5)
+        mainLayout.addLayout(HLayout,8, 0,1,4)
+        mainLayout.addWidget(stop_button,10,3)
         mainFrame.setLayout(mainLayout)
         self.show()
 
     def createSliderGroup(self, i=0, limit=20, range = [1,2,3]):
-        sliders = ["Tube voltage", "Tube current", "Height", "Beam radius", "Dose rate" ]
-        groupBox= QGroupBox(sliders[i]) 
+        self.sliders = ["Tube voltage", "Tube current", "Height:", "  Beam radius", "Dose rate" ]
+        groupBox= QGroupBox()#sliders[i]) 
         frame = QFrame(self)
-        frame.setStyleSheet("QWidget { background-color: #eeeeec; }")
+        frame.setStyleSheet("background-color: w;")
         frame.setLineWidth(0.9)
         self.verticalLayout = QVBoxLayout()
-        # Define label
-        self.label = QLabel(self)
         # Define Slider
         slider = QSlider(Qt.Vertical)
         name = "{}".format(i)
@@ -102,82 +195,74 @@ class MainWindow(QMainWindow):
         slider.setRange(0, limit)
         slider.setFocusPolicy(Qt.StrongFocus)
         slider.setTickPosition(QSlider.TicksBothSides)
-
-        # Define tickbox
-        box = QCheckBox("Fix", self)
-        box.stateChanged.connect(self.clickBox)
-
-        self.verticalLayout.addWidget(self.label)
+        slider.setInvertedAppearance(True)
+        
         self.horizontalLayout = QHBoxLayout()
-        spacerItem = QSpacerItem(0, 10, QSizePolicy.Expanding, QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem)
-        
-        self.horizontalLayout.addWidget(slider)
-        
-        spacerItem1 = QSpacerItem(0, 10, QSizePolicy.Expanding, QSizePolicy.Minimum)
-        
+        spacerItem1 = QSpacerItem(0, 5, QSizePolicy.Expanding, QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem1)
-        self.verticalLayout.addLayout(self.horizontalLayout)
-        self.verticalLayout.addWidget(box)
-        
+        self.horizontalLayout.addWidget(slider)
+        spacerItem2 = QSpacerItem(0, 5, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem2)
+
         self.setCentralWidget(frame)
-        frame.setLayout(self.verticalLayout)
-        groupBox.setLayout(self.verticalLayout)
+        frame.setLayout(self.horizontalLayout)
+        groupBox.setLayout(self.horizontalLayout)
         return slider , groupBox
 
     def changevalue(self, value):
-        sliders_units = [" [kV]", " [mA]", " [cm]", " [cm]", " [Mrad/hr]"]
         sender = self.sender()
         i = int(sender.objectName())
         label = getattr(self, sender.objectName())
-        label.setText("{:>10,}".format(value)+sliders_units[i])
         if i == 0:
-            dV = f.dose_voltage(voltage = value, filter = "without", depth ="8cm")
-            self.set_dose(dV)  
+            dV = f.dose_voltage(V = value, filter = "without", depth ="8cm")
+            print(dV)        
         if i == 1:
-            dC = f.dose_current(current = value, filter = "without", depth ="3cm",voltage = "40kV")
-            self.set_dose(dC)
+            dC = f.dose_current(I = value, filter = "without", depth ="3cm",voltage = "40kV")
+            print(dC)    
         if i == 2:
-            dD = f.dose_depth(depth = value, filter = "without")
-            r = f.opening_angle(depth = value)
-            print(dD, r)
+            dD = f.dose_depth(depth = value, filter = self.get_filterItem(), current =self.get_current(),voltage = self.get_voltage())
+            r = f.opening_angle(depth = value,filter= self.get_filterItem())
+            self.doseDepthLabel.setText(str(dD)[0:5]+"  Mrad/hr")
         if i == 3:
-            height = f.opening_angle(radius = value)
+            height = f.opening_angle(r = value)
             print(height)     
         if i == 4:
-            current = f.dose_current(dose = value, filter = "without", depth ="3cm", voltage = "40kV")
-            self.set_current(current)
-        
-    def clickBox(self, state):
-        if state == QtCore.Qt.Checked:
-            print('Checked')
-        else:
-            print('Unchecked')
+            current = f.dose_current(d = value, filter = "without", depth ="3cm", voltage = "40kV")
+            print(current)
     
+    def change_dose(self,value):
+        self.set_current(float(value))
+        self.currentLabel.setText("    "+str(self.get_current()) + "[mA] ")
+        dC = f.dose_current(I = self.get_current(), filter = self.get_filterItem(), depth =self.get_height(),voltage = self.get_voltage())
+        self.doseDepthLabel.setText(str(dC)[0:5]+"  Mrad/hr")
+                            
     def update_plot(self):
-        a = self.voltage_slider.value()
-        b = self.current_slider.value()
-        c = self.height_slider.value()
-        d = self.radius_slider.value()
-        x = np.linspace(0, 10, 100)
-        data = a + np.cos(x + c * np.pi / 180) * np.exp(-b * x) * d
-        self.curve.setData(data)
-    
+        # Plot a cone represents the beam spot radius
+        h = self.height_slider.value()
+        dD = f.dose_depth(depth = h, filter = "without", current ="50mA",voltage = "40kV")
+        self.doseLabel.setText(str(dD)[0:5]+"  Mrad/hr")
+        h_space = np.linspace(0, h, 20)
+        r_space = f.opening_angle(depth = h_space,filter= self.get_filterItem())
+        r = f.opening_angle(depth = h,filter= self.get_filterItem())
+        self.fig.axes.cla()
+        col_row = plt.cm.BuPu(np.linspace(0.3, 0.9, len(r_space)))
+        for i in range(len(r_space)):
+            x, y = np.linspace(-r_space[i], r_space[i], 2), [h_space[i] for _ in np.arange(2)]
+            self.fig.update_figure(x, y,h,r,self.get_filterItem(), col_row[-i])
+            self.fig.axes.invert_yaxis()
+            
     def set_filterItem(self, x): 
         self.__filterItem = x 
 
     def set_voltage(self,x):
         self.__voltage = x
-        self.voltage_slider.setValue(x)
-        
+
     def set_current(self,x):
         self.__current = x
-        self.current_slider.setValue(x)
 
     def set_dose(self,x):
         self.__dose = x
-        #self.dose_slider.setValue(x)
-        
+    
     def set_height(self,x):
         self.__height = x
     
@@ -185,20 +270,32 @@ class MainWindow(QMainWindow):
         self.__radius = x 
 
     def get_filterItem(self): 
-        return self.__filterItem
-        
+        if self.__filterItem !=0:
+            return self.__filterItem
+        else:
+            return str(self.filterComboBox.currentText())
+
     def get_voltage(self):
-        return self.__voltage 
-
+        if self.__voltage !=0:
+            return self.__voltage
+        else:
+            return str(self.tubeVoltageComboBox.currentText())
+        
     def get_current(self):
-        return self.__current 
-
+        if self.__current !=0:
+            return self.__current 
+        else:
+            return float(self.tubeCurrentDial.value())
+        
     def get_dose(self):
         return self.__dose  
     
     def get_height(self):
-        return self.__height
-     
+        if self.__height !=0:
+            return self.__height
+        else:
+            return str(self.depthComboBox.currentText())
+
     def get_radius(self):
         return self.__radius
                    

@@ -22,7 +22,7 @@ Info:
 
 FitFunctions:
    dose_current:
-      without:
+      without_filter:
          3cm:
             30kV:
                a: 0.24
@@ -67,10 +67,15 @@ FitFunctions:
                a: 0.04
                b: -0.01
    opening_angle:
-      a: 0.072
-      b: 0.451
+      without_filter:
+        a: 0.072
+        b: 0.451
+      Al:
+        a: 0.039
+        b: 0.242
+           
    dose_voltage:
-      without:
+      without_filter:
          8cm:
             10mA:
                a: -0.001
@@ -89,7 +94,7 @@ FitFunctions:
                b: 0.279
                c: -1.932
    dose_depth:
-      without:
+      without_filter:
          40kV:
             50mA:
                a: 1391.77
@@ -120,12 +125,15 @@ Tests:
    - Be
    - V
    depth:
-   - '------'
    - 3cm
    - 5cm
    - 8cm
    - 51cm
    current:
+   - 30mA
+   - 40mA
+   - 50mA
+   voltage:
    - 30kV
    - 40kV
    photodiodes:
