@@ -34,7 +34,10 @@ from logging.handlers import RotatingFileHandler
 import coloredlogs as cl
 import verboselogs
 log = logger.setup_derived_logger('analysis utils')
-from basil.dut import Dut
+try:
+    from basil.dut import Dut
+except:
+    print("No module named 'basil'")
 rootdir = os.path.dirname(os.path.abspath(__file__))
 class BeamSpotScan(object):
 

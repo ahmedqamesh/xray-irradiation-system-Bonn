@@ -1,4 +1,4 @@
-from analysis import plotting_Attenuation
+from analysis import plotting_attenuation
 from matplotlib.backends.backend_pdf import PdfPages
 if __name__ == '__main__':
     Directory = "Attenuation/"

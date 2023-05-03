@@ -6,7 +6,7 @@ from PyQt5.QtCore    import *
 from PyQt5.QtGui     import *
 from PyQt5.QtWidgets import *
 import os
-from analysis import analysis_utils,  plottingCalibration, analysis
+from analysis import analysis_utils,  plotting_calibration, analysis
 from analysis import fitEquations as f
 from graphics_Utils import mainWindow , DataMonitoring , MenuWindow , LogWindow , plottingCanvas
 import numpy as np
