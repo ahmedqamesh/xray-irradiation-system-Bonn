@@ -21,7 +21,9 @@ from analysis import analysis_utils
 class BeamMonitoring(FigureCanvas):
     """A canvas that updates itself every second with a new plot."""
     def __init__(self, parent=None):
-        self.fig = Figure(edgecolor = "black",linewidth ="2.5")#, facecolor="#e1ddbf")
+        super(BeamMonitoring, self).__init__(Figure())
+        self.setParent(parent)
+        self.fig = Figure(edgecolor = "black")#, facecolor="#e1ddbf")
         self.axes = self.fig.add_subplot(111)
         FigureCanvas.__init__(self, self.fig )
         #FigureCanvas.setSizePolicy(self,QSizePolicy.Expanding,QSizePolicy.Expanding),FigureCanvas.updateGeometry(self)

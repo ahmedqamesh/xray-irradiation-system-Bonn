@@ -12,7 +12,7 @@ from ROOT import TCanvas, TPad, TFormula, TF1, TPaveLabel, TH1F, TFile, TH1D
 from ROOT import gROOT, gBenchmark
 import matplotlib.pyplot as plt
 
-class Root_Utils(object):
+class RootUtils(object):
     def __init__(self):
         self.log = logger.setup_derived_logger('Root')
         self.log.info('Root utils initialized')   
@@ -71,6 +71,7 @@ class Root_Utils(object):
 
     def get_spectrum(self,Directory=False, PdfPages=False, test=False, hist_id=[0], location=False, save=True, Ratio=False, colors=False,
                      title=False, xtitle='Energy [keV]', outputname=False, logx=False, logy=False, file=False, labels=False, style=False, xmax=False, xmin=False):
+        
         fig = plt.figure()
         ax = fig.add_subplot(111)
         Entries = []
@@ -78,7 +79,6 @@ class Root_Utils(object):
             file = Directory + location + "/gammaSpectrum_" + test[i] + ".root"
             f = ROOT.TFile(file)
             t = f.Get(hist_id[i])
-            print (t.GetEntries(), hist_id[i], test[i])
             Entries = np.append(Entries, t.GetEntries())
             # t.Draw("t")
             data, x = self.readHistogram(filename=file, histname=t, overflow=False)
@@ -92,6 +92,7 @@ class Root_Utils(object):
             else:
                 style = '-'
             ax.errorbar(x[:], data[:], fmt=style, color=colors[i], markersize=1, label=label)
+            ax.legend(loc="upper right")
     #             ax.fill_between(x[1:], 0, data[1:], facecolor=colors[i], interpolate=True)
         if Ratio:
             if outputname == "RD53":
@@ -104,7 +105,6 @@ class Root_Utils(object):
                 loss3 = np.float(Entries[2] - Entries[3]) / np.float(Entries[2]) * 100
                 ax.text(0.98, 0.70, "W/Be = %5.2f $\%%$ \n Be/Al = %5.2f $\%%$ \n Al/Chip = %5.2f $\%%$ " % (loss1, loss2, loss3), horizontalalignment='right', verticalalignment='top', transform=ax.transAxes,
                         bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5), multialignment="left")
-    
         if title:
             ax.set_title(title)
         ax.set_xlabel(xtitle)
@@ -126,7 +126,7 @@ class Root_Utils(object):
             PdfPages.savefig()
         else:
             plt.show()
-        
+        return None
         
     def getListOfHistograms(self, filename):
         rootFile = TFile("file:%s" % filename)

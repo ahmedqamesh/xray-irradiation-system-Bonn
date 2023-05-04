@@ -22,7 +22,7 @@ Info:
 
 FitFunctions:
    dose_current:
-      without_filter:
+      without_Al_filter:
          3cm:
             30kV:
                a: 0.24
@@ -67,7 +67,7 @@ FitFunctions:
                a: 0.04
                b: -0.01
    opening_angle:
-      without_filter:
+      without_Al_filter:
         a: 0.072
         b: 0.451
       Al:
@@ -75,7 +75,7 @@ FitFunctions:
         b: 0.242
            
    dose_voltage:
-      without_filter:
+      without_Al_filter:
          8cm:
             10mA:
                a: -0.001
@@ -94,7 +94,7 @@ FitFunctions:
                b: 0.279
                c: -1.932
    dose_depth:
-      without_filter:
+      without_Al_filter:
          40kV:
             50mA:
                a: 1391.77
@@ -119,8 +119,8 @@ Devices:
 Tests:
    test_directory: tests/
    filters:
-   - without_filter
-   - Al
+   - without_Al_filter
+   - with_Al_filter
    - Zn
    - Be
    - V
@@ -130,6 +130,8 @@ Tests:
    - 8cm
    - 51cm
    current:
+   - 10mA
+   - 20mA
    - 30mA
    - 40mA
    - 50mA

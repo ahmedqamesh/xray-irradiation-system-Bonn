@@ -23,7 +23,6 @@ class MainWindow(QMainWindow):
     def __init__(self,parent=None , config =None , sourcemeter =None):
         super(MainWindow, self).__init__(parent)
         # Initialize logger
-        logger.extend_logging()
         verboselogs.install()
         self.logger = logging.getLogger(__name__)
         """:obj:`~logging.Logger`: Main logger for this class"""

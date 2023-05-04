@@ -92,29 +92,6 @@ def _add_success_level(logger):
 def _reset_all_loggers():
     logging.root.handlers = []
 
-
-def extend_logging():
-    """Some extras for users of the Anaconda Prompt on Windows.
-
-    This customizes the coloredlogs module so that bold fonts are displayed
-    correctly. Note that detects the usage of the Anaconda Prompt and Spyder
-    console via its window title.
-    """
-    cl.DEFAULT_DATE_FORMAT = '%Y-%m-%d %H:%M:%S.%f'
-    if cl.WINDOWS:
-        SPYDER = GetWindowText(GetForegroundWindow()).startswith('Spyder')
-        if SPYDER:
-            print('Spyder detected!')
-        cl.NEED_COLORAMA = not SPYDER
-        ANACONDA = GetWindowText(GetForegroundWindow()).startswith('Anaconda')
-        if ANACONDA:
-            print('Anaconda detected!')
-        cl.CAN_USE_BOLD_FONT = not cl.NEED_COLORAMA or ANACONDA
-        cl.DEFAULT_FIELD_STYLES['levelname']['bold'] = cl.CAN_USE_BOLD_FONT
-        cl.DEFAULT_LEVEL_STYLES['success']['bold'] = cl.CAN_USE_BOLD_FONT
-        cl.DEFAULT_LEVEL_STYLES['critical']['bold'] = cl.CAN_USE_BOLD_FONT
-
-
 def removeAllHandlers(logger):
     """Ensure that all each :class:`~logging.FileHandler` is removed.
 
