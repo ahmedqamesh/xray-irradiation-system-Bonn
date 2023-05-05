@@ -1,7 +1,7 @@
 from analysis import plotting_attenuation
 from matplotlib.backends.backend_pdf import PdfPages
 if __name__ == '__main__':
-    Directory = "Attenuation/"
+    Directory = "attenuation_test/"
     pdf_file = 'output_data/Attenuation.pdf'
     PdfPages = PdfPages(pdf_file)
     targets = ["Al", "W", "Fe", "Mn", "Ni", "V", "Zr" ,"Be","pb","Cu"]

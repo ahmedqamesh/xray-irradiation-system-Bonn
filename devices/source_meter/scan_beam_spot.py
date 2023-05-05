@@ -23,7 +23,7 @@ sys.path.append(rootdir[:-21])
 from analysis import analysis_utils , logger
 if __name__ == '__main__':
     
-    directory = rootdir[:-21] + "/test_files"
+    directory = "/test_files"
     conf = analysis_utils.open_yaml_file(file="Xray_irradiation_conf.yaml", directory=rootdir[:-21])
     size_x = conf['Settings']['size_x']
     z = conf['Settings']['z']
